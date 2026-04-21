@@ -43,6 +43,25 @@
         <div id="stats-view" class="view-container">
             <div class="scroll-box" id="genre-stats-content"></div>
         </div>
+
+        <div id="settings-view" class="view-container">
+            <div class="scroll-box settings-page">
+                <h2>Einstellungen</h2>
+                <div class="settings-group">
+                    <p>Aktualisiere die App, um die neuesten Band-Bestätigungen zu laden.</p>
+                    <button id="update-app-btn" class="action-btn gold-btn">App jetzt aktualisieren</button>
+                </div>
+
+                <div class="settings-group">
+                    <p>Vorsicht: Hiermit werden alle markierten Favoriten von allen Festivals unwiderruflich gelöscht.</p>
+                    <button id="reset-favs-btn" class="action-btn red-btn">Favoriten zurücksetzen</button>
+                </div>
+
+                <div class="settings-footer">
+                    Version 1.0.3 Build 2026
+                </div>
+            </div>
+        </div>
     </main>
 
     <nav class="tab-bar">
@@ -53,6 +72,10 @@
         <button class="tab-btn" data-target="stats-view">
             <span class="tab-icon">📊</span>
             <span class="tab-label">Genre</span>
+        </button>
+        <button class="tab-btn" data-target="settings-view">
+            <span class="tab-icon">⚙️</span>
+            <span class="tab-label">Setup</span>
         </button>
     </nav>
 
