@@ -4,27 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wacken 2026 - Table View</title>
+    <title>Wacken 2026 - Lineup Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <header>
         <h1>WACKEN 2026</h1>
-        <div class="controls">
-            <input type="text" id="search" placeholder="Filter nach Name, Land oder Genre...">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Suche Band, Land oder Genre...">
         </div>
-        <div id="stats">Wird geladen...</div>
+        <div id="stats">Lade Lineup...</div>
     </header>
 
-    <div class="table-container">
-        <table id="band-table">
+    <div class="table-wrapper">
+        <table id="lineup-table">
             <thead>
                 <tr>
-                    <th style="width: 40px;">★</th>
-                    <th>Band Name</th>
-                    <th>Herkunft</th>
-                    <th>Genre</th>
+                    <th class="col-fav">★</th>
+                    <th class="col-band">Band</th>
+                    <th class="col-genre">Genre</th>
                 </tr>
             </thead>
             <tbody id="table-body">
