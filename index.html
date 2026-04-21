@@ -7,8 +7,6 @@
     <title>Metal Festival Guide</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#f1c40f">
-    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 
 <body>
@@ -18,12 +16,13 @@
             <select id="festival-selector"></select>
             <button id="exclusive-btn">Exklusiv-Bands</button>
         </div>
+
         <h1 id="festival-title">FESTIVAL GUIDE</h1>
 
-        <div class="tab-bar">
-            <button class="tab-btn active" data-target="lineup-view">Lineup</button>
-            <button class="tab-btn" data-target="stats-view">Genre-Check</button>
-        </div>
+        <nav class="tab-bar">
+            <button class="tab-btn active" data-target="lineup-view">Bands</button>
+            <button class="tab-btn" data-target="stats-view">Genre</button>
+        </nav>
 
         <div id="search-container">
             <input type="text" id="search" placeholder="Suche Band, Land oder Genre...">
@@ -31,25 +30,26 @@
         <div id="stats">Lade Daten...</div>
     </header>
 
-    <div id="lineup-view" class="view-container active">
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="col-fav">★</th>
-                        <th>Band</th>
-                        <th>Genre</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body"></tbody>
-            </table>
+    <main class="content-area">
+        <div id="lineup-view" class="view-container active">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-fav">★</th>
+                            <th>Band</th>
+                            <th class="col-genre">Genre</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
-    <div id="stats-view" class="view-container">
-        <div class="stats-wrapper" id="genre-stats-content">
+        <div id="stats-view" class="view-container">
+            <div class="stats-wrapper" id="genre-stats-content"></div>
         </div>
-    </div>
+    </main>
 
     <script src="countries.js"></script>
     <script src="festivals.js"></script>

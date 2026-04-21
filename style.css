@@ -1,4 +1,4 @@
-/* --- GLOBALER FIX --- */
+/* --- GLOBALER RESET & BOX-MODELL --- */
 
 *,
 *::before,
@@ -17,6 +17,9 @@
     --fav-bg: rgba(241, 196, 15, 0.05);
 }
 
+
+/* --- APP-LAYOUT (FIXIERT) --- */
+
 html,
 body {
     height: 100%;
@@ -24,59 +27,46 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: var(--bg-color);
+    font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+    color: var(--text-primary);
 }
 
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    color: var(--text-primary);
 }
 
 
-/* --- HEADER BEREICH --- */
+/* --- HEADER & NAVIGATION --- */
 
 header {
     flex-shrink: 0;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 15px 15px 5px 15px;
-    text-align: center;
+    padding: 15px 0 0 0;
     background-color: var(--bg-color);
     z-index: 1000;
 }
 
 .top-nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    padding: 0 15px;
     margin-bottom: 10px;
 }
 
-#festival-selector {
-    background: var(--surface-color);
-    color: var(--accent-color);
-    border: 1px solid var(--border-color);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    cursor: pointer;
-}
-
-
-/* Exklusiv Button Styling */
-
+#festival-selector,
 #exclusive-btn {
     background: var(--surface-color);
     color: var(--text-secondary);
     border: 1px solid var(--border-color);
-    padding: 6px 15px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     cursor: pointer;
-    transition: all 0.2s;
+    outline: none;
 }
 
 #exclusive-btn.active {
@@ -87,46 +77,107 @@ header {
 }
 
 h1 {
-    margin: 0 0 12px 0;
+    margin: 5px 0 15px 0;
     font-size: 1.5rem;
     letter-spacing: 3px;
     color: var(--accent-color);
     text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* --- APP TABS (MATERIAL DESIGN) --- */
+
+.tab-bar {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 12px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    outline: none;
+    transition: color 0.2s;
+}
+
+.tab-btn.active {
+    color: var(--accent-color);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+
+/* --- SUCHE & STATS --- */
+
+#search-container {
+    padding: 15px 15px 5px 15px;
 }
 
 #search {
     width: 100%;
     max-width: 500px;
-    padding: 10px 18px;
-    border-radius: 25px;
+    padding: 12px 18px;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
     background-color: var(--surface-color);
     color: white;
-    font-size: 0.9rem;
+    font-size: 1rem;
     outline: none;
+    display: block;
     margin: 0 auto;
 }
 
 #stats {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
-    margin-top: 8px;
-    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 
-/* --- TABELLE --- */
+/* --- CONTENT AREAS --- */
 
-.table-wrapper {
+.view-container {
+    display: none;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.view-container.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-wrapper,
+.stats-wrapper {
     flex: 1;
     overflow-y: auto;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    background-color: var(--surface-color);
-    border-top: 1px solid var(--border-color);
     -webkit-overflow-scrolling: touch;
 }
+
+
+/* --- TABELLE --- */
 
 table {
     width: 100%;
@@ -148,16 +199,9 @@ thead th {
 }
 
 tbody td {
-    padding: 10px 15px;
+    padding: 12px 15px;
+    border-bottom: 1px solid #222;
     vertical-align: middle;
-}
-
-tbody tr {
-    border-bottom: 1px solid #2a2a2a;
-}
-
-tbody tr.is-fav {
-    background-color: var(--fav-bg);
 }
 
 .col-fav {
@@ -166,12 +210,12 @@ tbody tr.is-fav {
 }
 
 .col-genre {
-    width: 95px;
+    width: 100px;
     text-align: right;
 }
 
 .fav-star {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .dimmed-star {
@@ -183,23 +227,23 @@ tbody tr.is-fav {
 }
 
 
-/* --- BAND CELLS --- */
+/* --- BAND INFO & BADGES --- */
 
 .band-info-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 4px;
 }
 
 .band-main-line {
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .flag-icon {
-    margin-right: 10px;
+    margin-right: 12px;
     border-radius: 2px;
     flex-shrink: 0;
 }
@@ -222,93 +266,16 @@ tbody tr.is-fav {
 
 .genre-cell {
     color: var(--text-secondary);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-style: italic;
 }
 
 
-/* --- MOBILE --- */
-
-@media (max-width: 600px) {
-    header {
-        padding: 10px;
-    }
-    h1 {
-        font-size: 1.1rem;
-    }
-    #search {
-        padding: 8px 15px;
-    }
-    .col-genre {
-        width: 80px;
-    }
-    .band-main-line {
-        font-size: 0.85rem;
-    }
-}
-
-
-/* ... Vorherige Styles behalten ... */
-
-
-/* Tab Navigation */
-
-.tab-bar {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-bottom: 15px;
-}
-
-.tab-btn {
-    background: #222;
-    color: var(--text-secondary);
-    border: 1px solid var(--border-color);
-    padding: 8px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-.tab-btn.active {
-    background: var(--surface-color);
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-
-/* View Handling */
-
-.view-container {
-    display: none;
-    flex: 1;
-    /* Das sorgt dafür, dass die Ansicht den Platz einnimmt */
-    width: 100%;
-    overflow: hidden;
-    /* Verhindert, dass der Container selbst ausbricht */
-}
-
-.view-container.active {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Genre Statistik Styling */
+/* --- GENRE STATS --- */
 
 .stats-wrapper {
-    flex: 1;
-    overflow-y: auto;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
     padding: 20px;
-    -webkit-overflow-scrolling: touch;
 }
-
-
-/* Genre Balken Korrekturen */
 
 .genre-row {
     margin-bottom: 18px;
@@ -317,9 +284,8 @@ tbody tr.is-fav {
 .genre-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 6px;
     font-size: 0.85rem;
-    font-weight: 600;
+    margin-bottom: 6px;
 }
 
 .genre-bar-bg {
@@ -333,12 +299,28 @@ tbody tr.is-fav {
     background: var(--accent-color);
     height: 100%;
     border-radius: 5px;
-    transition: width 0.6s ease-out;
+    transition: width 0.6s;
 }
 
 
-/* Suchfeld ausblenden wenn in Stats-Ansicht */
+/* --- UI STATES --- */
 
-.hide-search #search-container {
+.hide-search #search-container,
+.hide-search #stats {
     display: none;
+}
+
+
+/* --- MOBILE --- */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .col-genre {
+        width: 85px;
+    }
+    tbody td {
+        padding: 10px;
+    }
 }
