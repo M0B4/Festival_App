@@ -1,61 +1,59 @@
-// Konfiguration
 const DATA_PATH = 'festivaldata/wacken_2026_raw_bands.json';
 
-async function initApp() {
+async function init() {
     try {
-        const response = await fetch(DATA_PATH);
-        const data = await response.json();
+        const res = await fetch(DATA_PATH);
+        const bands = await res.json();
 
-        const grid = document.getElementById('band-grid');
+        const tbody = document.getElementById('table-body');
         const searchInput = document.getElementById('search');
         const stats = document.getElementById('stats');
 
-        // Favoriten aus dem Speicher laden
-        let favorites = JSON.parse(localStorage.getItem('wacken_favs')) || [];
+        let favs = JSON.parse(localStorage.getItem('wacken_favs')) || [];
 
-        function render(filter = "") {
-            grid.innerHTML = "";
-            const filtered = data.filter(b =>
-                b.name.toLowerCase().includes(filter.toLowerCase())
-            );
+        function render(term = "") {
+            tbody.innerHTML = "";
+            const filtered = bands.filter(b => {
+                const searchStr = `${b.name} ${b.origin} ${b.genres.join(' ')}`.toLowerCase();
+                return searchStr.includes(term.toLowerCase());
+            });
 
-            stats.innerText = `${filtered.length} von 153 Bands angezeigt`;
+            stats.innerText = `${filtered.length} Bands gefunden`;
 
             filtered.forEach(band => {
-                const isFav = favorites.includes(band.name);
-                const card = document.createElement('div');
-                card.className = `band-card ${isFav ? 'is-favorite' : ''}`;
+                const isFav = favs.includes(band.name);
+                const tr = document.createElement('tr');
+                if (isFav) tr.className = 'is-fav';
 
-                card.innerHTML = `
-                    <div class="fav-star">${isFav ? '★' : '☆'}</div>
-                    <span class="band-name">${band.name}</span>
-                    <span class="origin">🚩 ${band.origin}</span>
-                    <div class="genre-tag">${band.genres[0] || 'Metal'}</div>
+                tr.innerHTML = `
+                    <td class="fav-btn">${isFav ? '★' : '☆'}</td>
+                    <td>${band.name}</td>
+                    <td>🚩 ${band.origin}</td>
+                    <td>${band.genres[0] || '-'}</td>
                 `;
 
-                // Klick-Event für Favoriten
-                card.onclick = () => toggleFavorite(band.name);
-                grid.appendChild(card);
+                // Favorit umschalten bei Klick auf die Zeile oder den Stern
+                tr.onclick = () => {
+                    toggleFav(band.name);
+                    render(searchInput.value);
+                };
+
+                tbody.appendChild(tr);
             });
         }
 
-        function toggleFavorite(name) {
-            if (favorites.includes(name)) {
-                favorites = favorites.filter(n => n !== name);
-            } else {
-                favorites.push(name);
-            }
-            localStorage.setItem('wacken_favs', JSON.stringify(favorites));
-            render(searchInput.value);
+        function toggleFav(name) {
+            favs = favs.includes(name) ? favs.filter(n => n !== name) : [...favs, name];
+            localStorage.setItem('wacken_favs', JSON.stringify(favs));
         }
 
         searchInput.oninput = (e) => render(e.target.value);
         render();
 
-    } catch (err) {
-        console.error("Daten konnten nicht geladen werden:", err);
-        document.getElementById('stats').innerText = "Fehler beim Laden der JSON!";
+    } catch (e) {
+        console.error("Datenfehler:", e);
+        stats.innerText = "Fehler beim Laden!";
     }
 }
 
-initApp();
+init();
