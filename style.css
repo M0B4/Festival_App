@@ -1,15 +1,22 @@
+/* --- BASIS VARIABLEN --- */
+
 :root {
     --bg-color: #0d0d0d;
     --surface-color: #1a1a1a;
     --accent-color: #f1c40f;
-    /* Wacken Gold */
+    /* Wacken Gold / Metal Gelb */
     --text-primary: #ffffff;
     --text-secondary: #a0a0a0;
     --border-color: #333;
+    --row-hover: #222;
+    --fav-bg: rgba(241, 196, 15, 0.05);
 }
 
 
-/* 1. Den Viewport fixieren, damit die Seite nicht als Ganzes scrollt */
+/* --- LAYOUT FIXIERUNG --- */
+
+
+/* Verhindert das Scrollen der ganzen Seite, damit nur die Tabelle scrollt */
 
 html,
 body {
@@ -23,18 +30,19 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
     color: var(--text-primary);
+    line-height: 1.4;
 }
 
 
-/* 2. Header Bereich (Fixiert) */
+/* --- HEADER BEREICH (FIXIERT) --- */
 
 header {
     flex-shrink: 0;
-    /* Verhindert das Stauchen */
+    /* Header darf nicht gestaucht werden */
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px 15px 10px 15px;
     text-align: center;
@@ -47,25 +55,27 @@ header {
     background: var(--surface-color);
     color: var(--accent-color);
     border: 1px solid var(--border-color);
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
     outline: none;
     cursor: pointer;
+    font-weight: 600;
 }
 
 h1 {
-    margin: 5px 0 15px 0;
+    margin: 0 0 15px 0;
     font-size: 1.8rem;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: var(--accent-color);
     text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(241, 196, 15, 0.2);
 }
 
 #search {
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     padding: 12px 20px;
     border-radius: 25px;
     border: 1px solid var(--border-color);
@@ -73,34 +83,37 @@ h1 {
     color: white;
     font-size: 1rem;
     outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 #search:focus {
     border-color: var(--accent-color);
+    box-shadow: 0 0 8px rgba(241, 196, 15, 0.1);
 }
 
 #stats {
     font-size: 0.75rem;
     color: var(--text-secondary);
-    margin-top: 8px;
+    margin-top: 10px;
     padding-bottom: 5px;
+    letter-spacing: 0.5px;
 }
 
 
-/* 3. Scrollbarer Tabellen-Bereich */
+/* --- SCROLLBARER TABELLEN-BEREICH --- */
 
 .table-wrapper {
     flex-grow: 1;
-    /* Nimmt den restlichen Platz ein */
+    /* Füllt den restlichen Platz aus */
     overflow-y: auto;
-    /* Nur hier wird gescrollt */
+    /* Interner Scrollbalken */
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     background-color: var(--surface-color);
     border-top: 1px solid var(--border-color);
+    /* Für geschmeidiges Scrollen auf mobilen Geräten */
     -webkit-overflow-scrolling: touch;
-    /* Smoothes Scrollen für iOS */
 }
 
 table {
@@ -109,7 +122,7 @@ table {
 }
 
 
-/* Sticky Tabellenkopf innerhalb des Wrappers */
+/* Tabellenkopf fixiert am oberen Rand des Wrappers */
 
 thead th {
     position: sticky;
@@ -121,29 +134,34 @@ thead th {
     border-bottom: 2px solid var(--accent-color);
     font-size: 0.75rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
     z-index: 10;
 }
+
+
+/* --- ZEILEN STYLING --- */
 
 tbody tr {
     border-bottom: 1px solid #2a2a2a;
     cursor: pointer;
+    transition: background 0.15s;
 }
 
 tbody tr:hover {
-    background-color: #222;
+    background-color: var(--row-hover);
 }
 
 tbody tr.is-fav {
-    background-color: rgba(241, 196, 15, 0.05);
+    background-color: var(--fav-bg);
 }
 
 tbody td {
-    padding: 14px 15px;
+    padding: 12px 15px;
     vertical-align: middle;
 }
 
 
-/* Spalten Details */
+/* --- SPALTEN DETAILS --- */
 
 .col-fav {
     width: 45px;
@@ -151,8 +169,7 @@ tbody td {
 }
 
 .fav-star {
-    font-size: 1.3rem;
-    transition: color 0.2s;
+    font-size: 1.4rem;
 }
 
 .dimmed-star {
@@ -163,21 +180,100 @@ tbody td {
     color: var(--accent-color);
 }
 
+
+/* --- BAND INFO (NAME + BADGES) --- */
+
 .band-cell {
     display: flex;
     align-items: center;
-    font-weight: 500;
+}
+
+.band-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.band-main-line {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.05rem;
 }
 
 .flag-icon {
     margin-right: 12px;
     border-radius: 2px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
     flex-shrink: 0;
 }
+
+
+/* --- BADGES (WO DIE BAND NOCH SPIELT) --- */
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.fest-badge {
+    background-color: #2a2a2a;
+    color: var(--accent-color);
+    font-size: 0.6rem;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+
+/* --- GENRE SPALTE --- */
 
 .genre-cell {
     color: var(--text-secondary);
     font-size: 0.85rem;
     text-align: right;
+    font-style: italic;
+}
+
+
+/* --- SCROLLBAR LOOK (Optional für Desktop) --- */
+
+.table-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+
+/* --- MOBILE OPTIMIERUNG --- */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+    tbody td {
+        padding: 10px 8px;
+    }
+    .band-main-line {
+        font-size: 0.95rem;
+    }
+    .genre-cell {
+        font-size: 0.75rem;
+    }
 }

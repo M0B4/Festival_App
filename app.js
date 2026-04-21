@@ -1,5 +1,6 @@
 const BASE_PATH = 'festivaldata/';
 
+let allFestivalsData = {}; // Speichert alle Bandlisten: { "wacken_2026": [...], "summer_breeze": [...] }
 let currentFestival = festivalRegistry[0];
 let currentBands = [];
 let favorites = [];
@@ -11,7 +12,30 @@ const searchInput = document.getElementById('search');
 const stats = document.getElementById('stats');
 const tableWrapper = document.querySelector('.table-wrapper');
 
-// 1. Initialisiere das Festival-Auswahlmenü
+// 1. Initialisierung: Alle Daten einmal laden
+async function initApp() {
+    setupSelector();
+
+    stats.textContent = "Lade alle Lineups...";
+
+    try {
+        // Lädt alle Dateien parallel für den Abgleich
+        const loads = festivalRegistry.map(async(fest) => {
+            const res = await fetch(BASE_PATH + fest.file);
+            const data = await res.json();
+            allFestivalsData[fest.id] = data;
+        });
+
+        await Promise.all(loads);
+
+        // Erstes Festival anzeigen
+        loadFestival(currentFestival);
+    } catch (err) {
+        console.error("Initialisierungsfehler:", err);
+        stats.textContent = "Fehler beim Laden der Datenbank.";
+    }
+}
+
 function setupSelector() {
     festivalRegistry.forEach(fest => {
         const opt = document.createElement('option');
@@ -26,33 +50,16 @@ function setupSelector() {
     });
 }
 
-// 2. Daten für das gewählte Festival laden
-async function loadFestival(fest) {
+function loadFestival(fest) {
     currentFestival = fest;
     title.textContent = fest.name;
+    currentBands = allFestivalsData[fest.id] || [];
+    favorites = JSON.parse(localStorage.getItem(`favs_${fest.id}`)) || [];
 
-    // Tabelle beim Wechsel nach oben scrollen
     if (tableWrapper) tableWrapper.scrollTop = 0;
-    searchInput.value = ""; // Suchfeld leeren
-
-    try {
-        const response = await fetch(BASE_PATH + fest.file);
-        if (!response.ok) throw new Error('File not found');
-
-        currentBands = await response.json();
-
-        // Spezifische Favoriten für dieses Festival laden
-        favorites = JSON.parse(localStorage.getItem(`favs_${fest.id}`)) || [];
-
-        renderTable();
-    } catch (error) {
-        console.error("Fehler beim Laden:", error);
-        tbody.innerHTML = `<tr><td colspan="3" style="text-align:center; padding:20px;">Datei ${fest.file} nicht im Ordner festivaldata gefunden!</td></tr>`;
-        stats.textContent = "Ladefehler";
-    }
+    renderTable();
 }
 
-// 3. Die Tabelle generieren
 function renderTable() {
     const term = searchInput.value.toLowerCase();
     tbody.innerHTML = "";
@@ -65,38 +72,57 @@ function renderTable() {
     stats.textContent = `${filtered.length} Bands gefunden`;
 
     filtered.forEach(band => {
-        const isFav = favorites.includes(band.name);
-        const tr = document.createElement('tr');
-        if (isFav) tr.classList.add('is-fav');
+                const isFav = favorites.includes(band.name);
+                const tr = document.createElement('tr');
+                if (isFav) tr.classList.add('is-fav');
 
-        // ISO-Code für Flagge ermitteln
-        const countryLower = band.origin.toLowerCase();
-        const iso = countryCodes[countryLower] || null;
+                // FLAGGE
+                const iso = countryCodes[band.origin.toLowerCase()] || null;
+                const flagHtml = iso ?
+                    `<img src="https://flagcdn.com/w40/${iso}.png" class="flag-icon" width="20">` :
+                    `<span class="flag-icon">🏳️</span>`;
 
-        const flagHtml = iso ?
-            `<img src="https://flagcdn.com/w40/${iso}.png" class="flag-icon" width="20" alt="${band.origin}">` :
-            `<span class="flag-icon">🏳️</span>`;
+                // CROSS-CHECK: Wo spielt die Band noch?
+                let otherFestsHtml = "";
+                const matches = [];
+
+                for (const [festId, bands] of Object.entries(allFestivalsData)) {
+                    // Wenn es nicht das aktuelle Festival ist UND die Band dort vorkommt
+                    if (festId !== currentFestival.id) {
+                        const found = bands.find(b => b.name.toLowerCase() === band.name.toLowerCase());
+                        if (found) {
+                            const festInfo = festivalRegistry.find(f => f.id === festId);
+                            matches.push(festInfo.name);
+                        }
+                    }
+                }
+
+                if (matches.length > 0) {
+                    otherFestsHtml = `<div class="badge-container">
+                ${matches.map(name => `<span class="fest-badge">${name}</span>`).join('')}
+            </div>`;
+        }
 
         tr.innerHTML = `
             <td class="col-fav">
                 <span class="fav-star ${isFav ? '' : 'dimmed-star'}">${isFav ? '★' : '☆'}</span>
             </td>
             <td class="band-cell">
-                ${flagHtml}
-                <span>${band.name}</span>
+                <div class="band-info-wrapper">
+                    <div class="band-main-line">
+                        ${flagHtml} <span>${band.name}</span>
+                    </div>
+                    ${otherFestsHtml}
+                </div>
             </td>
             <td class="genre-cell">${band.genres[0] || '-'}</td>
         `;
 
-        tr.onclick = (e) => {
-            toggleFavorite(band.name);
-        };
-
+        tr.onclick = () => toggleFavorite(band.name);
         tbody.appendChild(tr);
     });
 }
 
-// 4. Favoriten umschalten und speichern
 function toggleFavorite(name) {
     if (favorites.includes(name)) {
         favorites = favorites.filter(n => n !== name);
@@ -107,9 +133,5 @@ function toggleFavorite(name) {
     renderTable();
 }
 
-// Suche bei Eingabe ausführen
 searchInput.addEventListener('input', renderTable);
-
-// App starten
-setupSelector();
-loadFestival(currentFestival);
+initApp();

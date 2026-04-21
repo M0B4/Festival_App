@@ -1,0 +1,639 @@
+[
+    {
+        "name": "A Day To Remember",
+        "origin": "United States",
+        "genres": [
+            "Easycore"
+        ]
+    },
+    {
+        "name": "A.A. Williams",
+        "origin": "United Kingdom",
+        "genres": [
+            "Doomgaze"
+        ]
+    },
+    {
+        "name": "Aneuma",
+        "origin": "Spain",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Angelus Apatrida",
+        "origin": "Spain",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Annisokay",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Anthrax",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Authority Zero",
+        "origin": "United States",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Belvedere",
+        "origin": "Canada",
+        "genres": [
+            "Melodic Hardcore"
+        ]
+    },
+    {
+        "name": "Black Maracas",
+        "origin": "Spain",
+        "genres": [
+            "Garage Rock"
+        ]
+    },
+    {
+        "name": "Blaze The Trail",
+        "origin": "Spain",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Bleed From Within",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Blood Command",
+        "origin": "Norway",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Blood Incantation",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Blood Vulture",
+        "origin": "United States",
+        "genres": [
+            "Gothic / Sludge Metal"
+        ]
+    },
+    {
+        "name": "Blues Pills",
+        "origin": "Sweden",
+        "genres": [
+            "Blues Rock"
+        ]
+    },
+    {
+        "name": "Borknagar",
+        "origin": "Norway",
+        "genres": [
+            "Progressive Black Metal"
+        ]
+    },
+    {
+        "name": "Burning Witches",
+        "origin": "Switzerland",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Caliban",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Cardiac",
+        "origin": "Switzerland",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Caskets",
+        "origin": "United Kingdom",
+        "genres": [
+            "Post-Hardcore"
+        ]
+    },
+    {
+        "name": "Cavalera Conspiracy",
+        "origin": "United States",
+        "genres": [
+            "Groove / Thrash / Death Metal"
+        ]
+    },
+    {
+        "name": "Ciclonautas",
+        "origin": "Spain",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Converge",
+        "origin": "United States",
+        "genres": [
+            "Mathcore"
+        ]
+    },
+    {
+        "name": "Crowded",
+        "origin": "Spain",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Cwfen",
+        "origin": "United Kingdom",
+        "genres": [
+            "Doomgaze"
+        ]
+    },
+    {
+        "name": "Distant",
+        "origin": "Netherlands",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Dogma",
+        "origin": "Mexico",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Donuts Hole",
+        "origin": "Spain",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Dying Wish",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "End It",
+        "origin": "United States",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Faetooth",
+        "origin": "United States",
+        "genres": [
+            "Doomgaze"
+        ]
+    },
+    {
+        "name": "Falllen At Dawn",
+        "origin": "Spain",
+        "genres": [
+            "Post-Hardcore"
+        ]
+    },
+    {
+        "name": "Family Man",
+        "origin": "Canada",
+        "genres": [
+            "Power Pop"
+        ]
+    },
+    {
+        "name": "Feuerschwanz",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Metal"
+        ]
+    },
+    {
+        "name": "Frontierer",
+        "origin": "United Kingdom",
+        "genres": [
+            "Mathcore"
+        ]
+    },
+    {
+        "name": "Fuet!",
+        "origin": "Spain",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Gaerea",
+        "origin": "Portugal",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Get The Shot",
+        "origin": "Canada",
+        "genres": [
+            "Hardcore Crossover"
+        ]
+    },
+    {
+        "name": "God Complex",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Gridiron",
+        "origin": "United States",
+        "genres": [
+            "Rap Metal"
+        ]
+    },
+    {
+        "name": "Hamlet",
+        "origin": "Spain",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Hand Of Juno",
+        "origin": "Italy",
+        "genres": [
+            "Industrial Metal"
+        ]
+    },
+    {
+        "name": "Harm's Way",
+        "origin": "United States",
+        "genres": [
+            "Hardcore"
+        ]
+    },
+    {
+        "name": "Her Anxiety",
+        "origin": "Spain",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "High Vis",
+        "origin": "United Kingdom",
+        "genres": [
+            "Post-Punk"
+        ]
+    },
+    {
+        "name": "House Of Protection",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Hulder",
+        "origin": "United States",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Imminence",
+        "origin": "Sweden",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Immortal Disfigurement",
+        "origin": "United States",
+        "genres": [
+            "Symphonic Deathcore"
+        ]
+    },
+    {
+        "name": "Initiate",
+        "origin": "United States",
+        "genres": [
+            "Emocore"
+        ]
+    },
+    {
+        "name": "Iron Maiden",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Iscream Never Ground",
+        "origin": "Japan",
+        "genres": [
+            "Electronicore"
+        ]
+    },
+    {
+        "name": "Kruddö",
+        "origin": "Spain",
+        "genres": [
+            "Groove Metal"
+        ]
+    },
+    {
+        "name": "LAMPR3A",
+        "origin": "Spain",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Last Train",
+        "origin": "France",
+        "genres": [
+            "Rock & Roll"
+        ]
+    },
+    {
+        "name": "Limp Bizkit",
+        "origin": "United States",
+        "genres": [
+            "Nu Metal"
+        ]
+    },
+    {
+        "name": "Lionheart",
+        "origin": "United States",
+        "genres": [
+            "Hardcore"
+        ]
+    },
+    {
+        "name": "Madmess",
+        "origin": "Spain",
+        "genres": [
+            "Psychedelic Rock"
+        ]
+    },
+    {
+        "name": "Man With A Mission",
+        "origin": "Japan",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Marilyn Manson",
+        "origin": "United States",
+        "genres": [
+            "Industrial Rock"
+        ]
+    },
+    {
+        "name": "Mastodon",
+        "origin": "United States",
+        "genres": [
+            "Progressive Sludge Metal"
+        ]
+    },
+    {
+        "name": "Mourir",
+        "origin": "France",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Nevertel",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Not Yet",
+        "origin": "Spain",
+        "genres": [
+            "Post-Hardcore"
+        ]
+    },
+    {
+        "name": "Nukore",
+        "origin": "Spain",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Okkultist",
+        "origin": "Portugal",
+        "genres": [
+            "Blackened Death Metal"
+        ]
+    },
+    {
+        "name": "Oslo Ovnies",
+        "origin": "Spain",
+        "genres": [
+            "Rock"
+        ]
+    },
+    {
+        "name": "P.O.D.",
+        "origin": "United States",
+        "genres": [
+            "Rap Rock"
+        ]
+    },
+    {
+        "name": "Pants Off",
+        "origin": "Spain",
+        "genres": [
+            "Rock"
+        ]
+    },
+    {
+        "name": "President",
+        "origin": "United Kingdom",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Psychonaut",
+        "origin": "Belgium",
+        "genres": [
+            "Progressive Post-Metal"
+        ]
+    },
+    {
+        "name": "Return To Dust",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Rosalie Cunningham",
+        "origin": "United Kingdom",
+        "genres": [
+            "Psychedelic Rock"
+        ]
+    },
+    {
+        "name": "Sabaton",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Self Deception",
+        "origin": "Sweden",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Stellvris",
+        "origin": "Czechia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "TSS",
+        "origin": "France",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Testament",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "The Browning",
+        "origin": "United States",
+        "genres": [
+            "Electronicore"
+        ]
+    },
+    {
+        "name": "The Callous Daoboys",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "The Funeral Portrait",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "The Gems",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "The Pretty Wild",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "The Rasmus",
+        "origin": "Finland",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "The Scratch",
+        "origin": "Ireland",
+        "genres": [
+            "Folk Rock"
+        ]
+    },
+    {
+        "name": "The Vintage Caravan",
+        "origin": "Iceland",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Thrown",
+        "origin": "Sweden",
+        "genres": [
+            "Nu Metalcore"
+        ]
+    },
+    {
+        "name": "TodoMal",
+        "origin": "Spain",
+        "genres": [
+            "Doom Metal"
+        ]
+    },
+    {
+        "name": "Trivium",
+        "origin": "United States",
+        "genres": [
+            "Melodic Metalcore"
+        ]
+    },
+    {
+        "name": "Vulvarine",
+        "origin": "Austria",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Witch Club Satan",
+        "origin": "Norway",
+        "genres": [
+            "Black Metal"
+        ]
+    }
+]

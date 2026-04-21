@@ -1,0 +1,646 @@
+[
+    {
+        "name": "AMH",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Abandon Agony",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Adept",
+        "origin": "Sweden",
+        "genres": [
+            "Post-Hardcore"
+        ]
+    },
+    {
+        "name": "Alestorm",
+        "origin": "United Kingdom",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Allt",
+        "origin": "Sweden",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Ambush",
+        "origin": "Sweden",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Ashes Of Billy",
+        "origin": "Denmark",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "BABYMETAL",
+        "origin": "Japan",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Black Label Society",
+        "origin": "United States",
+        "genres": [
+            "Southern Metal"
+        ]
+    },
+    {
+        "name": "Blood Incantation",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Blue Benders",
+        "origin": "Sweden",
+        "genres": [
+            "Blues Rock"
+        ]
+    },
+    {
+        "name": "Bring Me The Horizon",
+        "origin": "United Kingdom",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Bronze",
+        "origin": "Spain",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Candlemass",
+        "origin": "Sweden",
+        "genres": [
+            "Epic Doom Metal"
+        ]
+    },
+    {
+        "name": "Clawfinger",
+        "origin": "Sweden",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Coroner",
+        "origin": "Switzerland",
+        "genres": [
+            "Technical Thrash Metal"
+        ]
+    },
+    {
+        "name": "Crashdïet",
+        "origin": "Sweden",
+        "genres": [
+            "Glam Metal"
+        ]
+    },
+    {
+        "name": "Dirkschneider",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Down",
+        "origin": "United States",
+        "genres": [
+            "Southern Metal"
+        ]
+    },
+    {
+        "name": "Dundertåget",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Eclipse",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Ego Kill Talent",
+        "origin": "Brazil",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Elvenking",
+        "origin": "Italy",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Evergrey",
+        "origin": "Sweden",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Floor Jansen",
+        "origin": "Netherlands",
+        "genres": [
+            "Symphonic Rock"
+        ]
+    },
+    {
+        "name": "Foreigner",
+        "origin": "United States",
+        "genres": [
+            "AOR"
+        ]
+    },
+    {
+        "name": "From North",
+        "origin": "Sweden",
+        "genres": [
+            "Viking Metal"
+        ]
+    },
+    {
+        "name": "Gatecreeper",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Gehennah",
+        "origin": "Sweden",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Grave",
+        "origin": "Sweden",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Hard-Ons",
+        "origin": "Australia",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Hellbutcher",
+        "origin": "Sweden",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Helloween",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Hostilia",
+        "origin": "Sweden",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Hällas",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Iron Maiden",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Jared James Nichols",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Jayler",
+        "origin": "United Kingdom",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Jelusick",
+        "origin": "Croatia",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Joan Jett & The Blackhearts",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "John 5",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "K L P S",
+        "origin": "Sweden",
+        "genres": [
+            "Post Metal"
+        ]
+    },
+    {
+        "name": "Kanonenfieber",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Black Metal"
+        ]
+    },
+    {
+        "name": "Korslagda",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Lakeview",
+        "origin": "United States",
+        "genres": [
+            "Pop Punk"
+        ]
+    },
+    {
+        "name": "Lion's Share",
+        "origin": "Sweden",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Lýsis",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Magnus Uggla",
+        "origin": "Sweden",
+        "genres": [
+            "Glam Rock"
+        ]
+    },
+    {
+        "name": "Majestica",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Masterplan",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Michael Monroe",
+        "origin": "Finland",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Nikki Hill",
+        "origin": "United States",
+        "genres": [
+            "Rock & Roll"
+        ]
+    },
+    {
+        "name": "Occrasy",
+        "origin": "Sweden",
+        "genres": [
+            "Garage Rock"
+        ]
+    },
+    {
+        "name": "Only Human",
+        "origin": "Denmark",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Overkill",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Palaye Royale",
+        "origin": "Canada",
+        "genres": [
+            "Glam Rock"
+        ]
+    },
+    {
+        "name": "Robin Mcauley",
+        "origin": "Ireland",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Roy Khan",
+        "origin": "Norway",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "S.o.r.m",
+        "origin": "Sweden",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "SYRACUSÆ",
+        "origin": "Colombia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Savatage",
+        "origin": "United States",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Saxon",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Self Deception",
+        "origin": "Sweden",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Seven Spires",
+        "origin": "United States",
+        "genres": [
+            "Symphonic Metal"
+        ]
+    },
+    {
+        "name": "Sha-Boom",
+        "origin": "Sweden",
+        "genres": [
+            "Arena Rock"
+        ]
+    },
+    {
+        "name": "Sister",
+        "origin": "Sweden",
+        "genres": [
+            "Sleaze Rock"
+        ]
+    },
+    {
+        "name": "Skyclad",
+        "origin": "United Kingdom",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Social Distortion",
+        "origin": "United States",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Static-X",
+        "origin": "United States",
+        "genres": [
+            "Industrial Metal"
+        ]
+    },
+    {
+        "name": "Strevellna",
+        "origin": "Sweden",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Ström",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Tailgunner",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "The Crown",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "The Flower Kings",
+        "origin": "Sweden",
+        "genres": [
+            "Progressive Rock"
+        ]
+    },
+    {
+        "name": "The Gathering",
+        "origin": "Netherlands",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "The Halo Effect",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "The Hellacopters",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "The Offspring",
+        "origin": "United States",
+        "genres": [
+            "Pop Punk"
+        ]
+    },
+    {
+        "name": "The Poodles",
+        "origin": "Sweden",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Three Days Grace",
+        "origin": "Canada",
+        "genres": [
+            "Post-grunge"
+        ]
+    },
+    {
+        "name": "Thrown",
+        "origin": "Sweden",
+        "genres": [
+            "Nu Metalcore"
+        ]
+    },
+    {
+        "name": "Tom Morello",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Treat",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Trivium",
+        "origin": "United States",
+        "genres": [
+            "Melodic Metalcore"
+        ]
+    },
+    {
+        "name": "Uncle Acid & The Deadbeats",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Psych"
+        ]
+    },
+    {
+        "name": "Unpeople",
+        "origin": "United Kingdom",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Venom Inc.",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Volbeat",
+        "origin": "Denmark",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Vreid",
+        "origin": "Norway",
+        "genres": [
+            "Melodic Black Metal"
+        ]
+    },
+    {
+        "name": "Wilmer X",
+        "origin": "Sweden",
+        "genres": [
+            "Rock & Roll"
+        ]
+    },
+    {
+        "name": "Yngwie Malmsteen",
+        "origin": "Sweden",
+        "genres": [
+            "Neoclassical Metal"
+        ]
+    },
+    {
+        "name": "Zan/Cody",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    }
+]

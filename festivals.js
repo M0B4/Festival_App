@@ -22,5 +22,20 @@ const festivalRegistry = [{
         id: "rock_am_ring_2026",
         name: "Rock am Ring 2026",
         file: "rock_am_ring_2026_raw_bands.json"
+    },
+    {
+        id: "sweden_rock_2026",
+        name: "Sweden Rock 2026",
+        file: "sweden_rock_2026_raw_bands.json"
+    },
+    {
+        id: "copenhell_2026",
+        name: "Copenhell 2026",
+        file: "copenhell_2026_raw_bands.json"
+    },
+    {
+        id: "resurrection_fest_2026",
+        name: "Resurrection Fest 2026",
+        file: "resurrection_fest_2026_raw_bands.json"
     }
 ];
