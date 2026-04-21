@@ -2,7 +2,6 @@
     --bg-color: #0d0d0d;
     --surface-color: #1a1a1a;
     --accent-color: #f1c40f;
-    /* Wacken Gold */
     --text-primary: #ffffff;
     --text-secondary: #a0a0a0;
     --border-color: #333;
@@ -11,8 +10,7 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
     padding: 0 15px 40px 15px;
     display: flex;
     flex-direction: column;
@@ -23,19 +21,35 @@ header {
     width: 100%;
     max-width: 800px;
     text-align: center;
-    padding: 30px 0;
+    padding: 20px 0;
     position: sticky;
     top: 0;
     background-color: var(--bg-color);
     z-index: 100;
 }
 
-h1 {
-    margin: 0 0 15px 0;
-    font-size: 2rem;
-    letter-spacing: 5px;
+#festival-selector {
+    background: var(--surface-color);
     color: var(--accent-color);
-    text-shadow: 0 0 10px rgba(241, 196, 15, 0.3);
+    border: 1px solid var(--border-color);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+h1 {
+    margin: 5px 0 15px 0;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+.search-container {
+    margin-bottom: 10px;
 }
 
 #search {
@@ -46,19 +60,11 @@ h1 {
     border: 1px solid var(--border-color);
     background-color: var(--surface-color);
     color: white;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-#search:focus {
-    border-color: var(--accent-color);
 }
 
 #stats {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
-    margin-top: 10px;
 }
 
 .table-wrapper {
@@ -66,8 +72,8 @@ h1 {
     max-width: 800px;
     background-color: var(--surface-color);
     border-radius: 12px;
-    overflow: hidden;
     border: 1px solid var(--border-color);
+    overflow: hidden;
 }
 
 table {
@@ -79,23 +85,15 @@ thead th {
     background-color: #252525;
     padding: 15px;
     text-align: left;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
-    position: sticky;
-    top: 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
 }
 
 tbody tr {
     border-bottom: 1px solid #2a2a2a;
     cursor: pointer;
-    transition: background 0.2s;
-}
-
-tbody tr:hover {
-    background-color: #252525;
 }
 
 tbody tr.is-fav {
@@ -103,42 +101,25 @@ tbody tr.is-fav {
 }
 
 tbody td {
-    padding: 14px 15px;
+    padding: 12px 15px;
+    vertical-align: middle;
 }
-
-
-/* Spalten-Styling */
 
 .col-fav {
     width: 40px;
     text-align: center;
 }
 
-.col-band {
-    display: flex;
-    align-items: center;
-}
-
-.col-genre {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-}
-
-
-/* Flaggen-Icon */
-
-.flag-icon {
-    margin-right: 12px;
-    border-radius: 2px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
-    flex-shrink: 0;
-}
-
 .fav-star {
-    color: var(--accent-color);
     font-size: 1.2rem;
 }
 
 .dimmed-star {
-    color: #444;
+    color: #333;
+}
+
+.flag-icon {
+    margin-right: 10px;
+    border-radius: 2px;
+    vertical-align: middle;
 }

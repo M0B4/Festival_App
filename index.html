@@ -4,35 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wacken 2026 - Lineup Guide</title>
+    <title>Metal Festival Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>WACKEN 2026</h1>
+        <select id="festival-selector"></select>
+        <h1 id="festival-title">FESTIVAL GUIDE</h1>
+
         <div class="search-container">
             <input type="text" id="search" placeholder="Suche Band, Land oder Genre...">
         </div>
-        <div id="stats">Lade Lineup...</div>
+        <div id="stats">Lade Daten...</div>
     </header>
 
     <div class="table-wrapper">
-        <table id="lineup-table">
+        <table>
             <thead>
                 <tr>
                     <th class="col-fav">★</th>
-                    <th class="col-band">Band</th>
-                    <th class="col-genre">Genre</th>
+                    <th>Band</th>
+                    <th>Genre</th>
                 </tr>
             </thead>
-            <tbody id="table-body">
-            </tbody>
+            <tbody id="table-body"></tbody>
         </table>
     </div>
 
     <script src="countries.js"></script>
+    <script src="festivals.js"></script>
     <script src="app.js"></script>
 </body>
 

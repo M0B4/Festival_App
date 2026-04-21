@@ -1,0 +1,940 @@
+[
+    {
+        "name": "200 Stab Wounds",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "802",
+        "origin": "Denmark",
+        "genres": [
+            "Post-Metal"
+        ]
+    },
+    {
+        "name": "Aesthetic Perfection",
+        "origin": "United States",
+        "genres": [
+            "Futurepop"
+        ]
+    },
+    {
+        "name": "Airbourne",
+        "origin": "Australia",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Alcest",
+        "origin": "France",
+        "genres": [
+            "Blackgaze"
+        ]
+    },
+    {
+        "name": "Alestorm",
+        "origin": "United Kingdom",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Alien Ant Farm",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Amorphis",
+        "origin": "Finland",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Arch Enemy",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Avalanche Effect",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Backstabbed",
+        "origin": "Germany",
+        "genres": [
+            "Hardcore"
+        ]
+    },
+    {
+        "name": "Betontod",
+        "origin": "Germany",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Bizarrekult",
+        "origin": "Russian Federation",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Blackbraid",
+        "origin": "United States",
+        "genres": [
+            "Atmospheric Black Metal"
+        ]
+    },
+    {
+        "name": "Blacktoothed",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Blasmusik Illenschwang",
+        "origin": "Germany",
+        "genres": [
+            "Classic"
+        ]
+    },
+    {
+        "name": "Blood Command",
+        "origin": "Norway",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Bloodred Hourglass",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Born Hanged",
+        "origin": "Germany",
+        "genres": [
+            "Hardcore / Death Metal"
+        ]
+    },
+    {
+        "name": "Brainstorm",
+        "origin": "Germany",
+        "genres": [
+            "Heavy / Power Metal"
+        ]
+    },
+    {
+        "name": "Broken By The Scream",
+        "origin": "Japan",
+        "genres": [
+            "Kawaii Metal"
+        ]
+    },
+    {
+        "name": "Brothers Of Metal",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Brymir",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Cabal",
+        "origin": "Denmark",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Castle Rat",
+        "origin": "United States",
+        "genres": [
+            "Doom Metal"
+        ]
+    },
+    {
+        "name": "Cryptopsy",
+        "origin": "Canada",
+        "genres": [
+            "Technical Death Metal"
+        ]
+    },
+    {
+        "name": "Cân Bardd",
+        "origin": "Switzerland",
+        "genres": [
+            "Atmospheric Black Metal"
+        ]
+    },
+    {
+        "name": "Dartagnan",
+        "origin": "Germany",
+        "genres": [
+            "Folk Rock"
+        ]
+    },
+    {
+        "name": "Das Lumpenpack",
+        "origin": "Germany",
+        "genres": [
+            "Rock, Pop, Indie"
+        ]
+    },
+    {
+        "name": "Deafheaven",
+        "origin": "United States",
+        "genres": [
+            "Blackgaze"
+        ]
+    },
+    {
+        "name": "Decapitated",
+        "origin": "Poland",
+        "genres": [
+            "Technical Death Metal"
+        ]
+    },
+    {
+        "name": "Deicide",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Der Weg Einer Freiheit",
+        "origin": "Germany",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Deserted Fear",
+        "origin": "Germany",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Dethroned",
+        "origin": "Germany",
+        "genres": [
+            "Death Metal / Hardcore"
+        ]
+    },
+    {
+        "name": "Die Habenichtse",
+        "origin": "Germany",
+        "genres": [
+            "Folk Rock"
+        ]
+    },
+    {
+        "name": "Eisbrecher",
+        "origin": "Germany",
+        "genres": [
+            "Industrial Metal"
+        ]
+    },
+    {
+        "name": "Eivør",
+        "origin": "Faroe Islands",
+        "genres": [
+            "Art Pop"
+        ]
+    },
+    {
+        "name": "Erdling",
+        "origin": "Germany",
+        "genres": [
+            "Industrial Metal"
+        ]
+    },
+    {
+        "name": "Excrementory Grindfuckers",
+        "origin": "Germany",
+        "genres": [
+            "Grindcore"
+        ]
+    },
+    {
+        "name": "Filth",
+        "origin": "United States",
+        "genres": [
+            "Downtempo Deathcore"
+        ]
+    },
+    {
+        "name": "Fireborn",
+        "origin": "Germany",
+        "genres": [
+            "Hard Rock | Metal"
+        ]
+    },
+    {
+        "name": "Fit For An Autopsy",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "From Fall To Spring",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Fulci",
+        "origin": "Italy",
+        "genres": [
+            "Brutal Death Metal"
+        ]
+    },
+    {
+        "name": "Future Palace",
+        "origin": "Germany",
+        "genres": [
+            "Post-Hardcore"
+        ]
+    },
+    {
+        "name": "Ghetto Justice",
+        "origin": "Germany",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Grand Magus",
+        "origin": "Sweden",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Green Lung",
+        "origin": "United Kingdom",
+        "genres": [
+            "Stoner Metal"
+        ]
+    },
+    {
+        "name": "Groza",
+        "origin": "Germany",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Hackneyed",
+        "origin": "Germany",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Haggefugg",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Rock"
+        ]
+    },
+    {
+        "name": "Hatebreed",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Heaven.exe",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Heavysaurus",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Helloween",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Hopsydian",
+        "origin": "Italy",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Hæresis",
+        "origin": "Germany",
+        "genres": [
+            "Post Black Metal"
+        ]
+    },
+    {
+        "name": "I Am Your God",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death / Power Metal"
+        ]
+    },
+    {
+        "name": "Illdisposed",
+        "origin": "Denmark",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Imminence",
+        "origin": "Sweden",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "In Flames",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Inhuman Nature",
+        "origin": "United Kingdom",
+        "genres": [
+            "Thrash Metal/crossover"
+        ]
+    },
+    {
+        "name": "Inner Space",
+        "origin": "Germany",
+        "genres": [
+            "Hardcore / Metalcore"
+        ]
+    },
+    {
+        "name": "Kadavar",
+        "origin": "Germany",
+        "genres": [
+            "Stoner Rock"
+        ]
+    },
+    {
+        "name": "Katerfahrt",
+        "origin": "Germany",
+        "genres": [
+            "Mittelalter Rock"
+        ]
+    },
+    {
+        "name": "Kim Dracula",
+        "origin": "Australia",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "King Nuggent Gang",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Fast Food Trap"
+        ]
+    },
+    {
+        "name": "Kllsignl",
+        "origin": "Germany",
+        "genres": [
+            "Industrial"
+        ]
+    },
+    {
+        "name": "Lamb Of God",
+        "origin": "United States",
+        "genres": [
+            "Groove Metal"
+        ]
+    },
+    {
+        "name": "Lost In Hollywood",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Luna Kills",
+        "origin": "Finland",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Manntra",
+        "origin": "Croatia",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Massive Wagons",
+        "origin": "United Kingdom",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Minus Youth",
+        "origin": "Germany",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Miracle Of Sound",
+        "origin": "Ireland",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Misery Index",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Mittel Alta",
+        "origin": "Germany",
+        "genres": [
+            "Rap"
+        ]
+    },
+    {
+        "name": "Motorjesus",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Municipal Waste",
+        "origin": "United States",
+        "genres": [
+            "Crossover Thrash"
+        ]
+    },
+    {
+        "name": "Mushroomhead",
+        "origin": "United States",
+        "genres": [
+            "Nu Metal"
+        ]
+    },
+    {
+        "name": "Møl",
+        "origin": "Denmark",
+        "genres": [
+            "Blackgaze"
+        ]
+    },
+    {
+        "name": "Nanowar Of Steel",
+        "origin": "Italy",
+        "genres": [
+            "Parody Metal"
+        ]
+    },
+    {
+        "name": "Neckbreakker",
+        "origin": "Denmark",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Northlane",
+        "origin": "Australia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Nytt Land",
+        "origin": "Russian Federation",
+        "genres": [
+            "Dark Folk"
+        ]
+    },
+    {
+        "name": "Ochmoneks",
+        "origin": "Germany",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Orbit Culture",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Our Promise",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Paleface Swiss",
+        "origin": "Switzerland",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Paradise Lost",
+        "origin": "United Kingdom",
+        "genres": [
+            "Gothic Metal"
+        ]
+    },
+    {
+        "name": "Parasite Inc.",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Perchta",
+        "origin": "Austria",
+        "genres": [
+            "Atmospheric Black Metal"
+        ]
+    },
+    {
+        "name": "Persecutor",
+        "origin": "Denmark",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Phantom Corporation",
+        "origin": "Germany",
+        "genres": [
+            "Crust | Death Metal"
+        ]
+    },
+    {
+        "name": "Plume",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Pridian",
+        "origin": "Estonia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Randale",
+        "origin": "Germany",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Rectal Smegma",
+        "origin": "Netherlands",
+        "genres": [
+            "Goregrind"
+        ]
+    },
+    {
+        "name": "Rodscha Aus Kambodscha Und Tom Palme",
+        "origin": "Germany",
+        "genres": [
+            "Pop Rock"
+        ]
+    },
+    {
+        "name": "SETYØURSAILS",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Sanguisugabogg",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Saor",
+        "origin": "United Kingdom",
+        "genres": [
+            "Atmospheric Black Metal"
+        ]
+    },
+    {
+        "name": "Saxon",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Serpents",
+        "origin": "Poland",
+        "genres": [
+            "Post-Hardcore"
+        ]
+    },
+    {
+        "name": "Skeleton Pit",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Skindred",
+        "origin": "United Kingdom",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Slomosa",
+        "origin": "Norway",
+        "genres": [
+            "Stoner Rock"
+        ]
+    },
+    {
+        "name": "Soen",
+        "origin": "Sweden",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Soulbound",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Soulfly",
+        "origin": "United States",
+        "genres": [
+            "Groove Metal"
+        ]
+    },
+    {
+        "name": "Speed",
+        "origin": "Australia",
+        "genres": [
+            "Hardcore"
+        ]
+    },
+    {
+        "name": "Stam1na",
+        "origin": "Finland",
+        "genres": [
+            "Progressive Thrash Metal"
+        ]
+    },
+    {
+        "name": "Sun Eater",
+        "origin": "Germany",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Terror",
+        "origin": "United States",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Testament",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "The Butcher Sisters",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "The Ghost Inside",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "The Narrator",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "The Sons Of Huens",
+        "origin": "Germany",
+        "genres": [
+            "Rock"
+        ]
+    },
+    {
+        "name": "Thormesis",
+        "origin": "Germany",
+        "genres": [
+            "Pagan Black Metal"
+        ]
+    },
+    {
+        "name": "Thundermother",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Thy Art Is Murder",
+        "origin": "Australia",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Trollfest",
+        "origin": "Norway",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Unprocessed",
+        "origin": "Germany",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Urne",
+        "origin": "United Kingdom",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Versengold",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Rock"
+        ]
+    },
+    {
+        "name": "Vulvarine",
+        "origin": "Austria",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Warfield",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Waves Like Walls",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Wolves In The Throne Room",
+        "origin": "United States",
+        "genres": [
+            "Atmospheric Black Metal"
+        ]
+    },
+    {
+        "name": "Wucan",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Psych"
+        ]
+    },
+    {
+        "name": "Zerre",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "ten56.",
+        "origin": "France",
+        "genres": [
+            "Deathcore"
+        ]
+    }
+]
