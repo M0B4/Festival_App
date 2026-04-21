@@ -1,10 +1,10 @@
 const BASE_PATH = 'festivaldata/';
 
 let allFestivalsData = {};
-let currentFestival = festivalRegistry[0];
+let currentFestival = null;
 let currentBands = [];
 let favorites = [];
-let showExclusiveOnly = false; // Neuer Filter-Status
+let showExclusiveOnly = false;
 
 const selector = document.getElementById('festival-selector');
 const title = document.getElementById('festival-title');
@@ -15,25 +15,36 @@ const tableWrapper = document.querySelector('.table-wrapper');
 
 // 1. Initialisierung
 async function initApp() {
+    // FESTIVALS ALPHABETISCH SORTIEREN
+    festivalRegistry.sort((a, b) => a.name.localeCompare(b.name));
+
     setupUI();
     stats.textContent = "Lade alle Lineups...";
 
     try {
         const loads = festivalRegistry.map(async(fest) => {
             const res = await fetch(BASE_PATH + fest.file);
-            const data = await res.json();
+            let data = await res.json();
+
+            // BANDS INNERHALB DES FESTIVALS SORTIEREN
+            data.sort((a, b) => a.name.localeCompare(b.name));
+
             allFestivalsData[fest.id] = data;
         });
+
         await Promise.all(loads);
+
+        // Erstes Festival der sortierten Liste laden
+        currentFestival = festivalRegistry[0];
         loadFestival(currentFestival);
     } catch (err) {
-        console.error("Fehler:", err);
-        stats.textContent = "Datenfehler!";
+        console.error("Initialisierungsfehler:", err);
+        stats.textContent = "Fehler beim Laden der Datenbank.";
     }
 }
 
 function setupUI() {
-    // Selector füllen
+    // Selektor mit sortierten Festivals füllen
     festivalRegistry.forEach(fest => {
         const opt = document.createElement('option');
         opt.value = fest.id;
@@ -43,12 +54,11 @@ function setupUI() {
 
     selector.addEventListener('change', (e) => {
         const selected = festivalRegistry.find(f => f.id === e.target.value);
-        showExclusiveOnly = false; // Filter zurücksetzen bei Wechsel
+        showExclusiveOnly = false;
         document.getElementById('exclusive-btn').classList.remove('active');
         loadFestival(selected);
     });
 
-    // Exklusiv-Button Event
     const exclBtn = document.getElementById('exclusive-btn');
     exclBtn.onclick = () => {
         showExclusiveOnly = !showExclusiveOnly;
@@ -61,6 +71,7 @@ function setupUI() {
 
 function loadFestival(fest) {
     currentFestival = fest;
+    selector.value = fest.id; // Falls wir das Festival programmatisch wechseln
     title.textContent = fest.name;
     currentBands = allFestivalsData[fest.id] || [];
     favorites = JSON.parse(localStorage.getItem(`favs_${fest.id}`)) || [];
@@ -75,11 +86,9 @@ function renderTable() {
 
     let overlapTotalCount = 0;
 
-    // Wir filtern erst die gesamte Liste
     const filtered = currentBands.filter(band => {
         const matchesTerm = `${band.name} ${band.origin} ${band.genres.join(' ')}`.toLowerCase().includes(term);
 
-        // Check Überschneidungen für die Statistik
         const otherFests = [];
         for (const [festId, bands] of Object.entries(allFestivalsData)) {
             if (festId !== currentFestival.id) {
@@ -92,15 +101,12 @@ function renderTable() {
 
         const hasOverlap = otherFests.length > 0;
         if (hasOverlap) overlapTotalCount++;
-
-        // Exklusiv-Filter Logik: Wenn Filter aktiv, zeige nur Bands OHNE Overlap
         if (showExclusiveOnly && hasOverlap) return false;
 
-        band.currentMatches = otherFests; // Zwischenspeichern für den Render
+        band.currentMatches = otherFests;
         return matchesTerm;
     });
 
-    // Statistik Anzeige
     stats.innerHTML = `
         <b>${filtered.length}</b> Bands angezeigt | 
         <span style="color: var(--accent-color)">${overlapTotalCount}</span> haben Überschneidungen
@@ -118,6 +124,8 @@ function renderTable() {
 
                 let otherFestsHtml = "";
                 if (band.currentMatches.length > 0) {
+                    // Auch die Overlap-Badges alphabetisch sortieren
+                    band.currentMatches.sort((a, b) => a.localeCompare(b));
                     otherFestsHtml = `<div class="badge-container">
                 ${band.currentMatches.map(name => `<span class="fest-badge">${name}</span>`).join('')}
             </div>`;
