@@ -25,7 +25,11 @@ header {
     position: sticky;
     top: 0;
     background-color: var(--bg-color);
-    z-index: 100;
+    /* Muss exakt die Hintergrundfarbe haben */
+    z-index: 1000;
+    /* Sehr hoch, damit nichts drüber rutscht */
+    border-bottom: 1px solid var(--border-color);
+    /* Optional: Trennlinie beim Scrollen */
 }
 
 #festival-selector {
@@ -74,6 +78,10 @@ h1 {
     border-radius: 12px;
     border: 1px solid var(--border-color);
     overflow: hidden;
+    margin-top: 10px;
+    /* Kleiner Puffer zum Header */
+    z-index: 1;
+    /* Niedriger als der Header */
 }
 
 table {
@@ -87,8 +95,8 @@ thead th {
     text-align: left;
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
-    font-size: 0.7rem;
-    text-transform: uppercase;
+    /* Entferne hier 'position: sticky' und 'top: 0', 
+       wenn die Tabelle einfach unter den Header rutschen soll. */
 }
 
 tbody tr {
@@ -122,4 +130,14 @@ tbody td {
     margin-right: 10px;
     border-radius: 2px;
     vertical-align: middle;
+}
+
+.band-cell {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    /* Verhindert das Umbrechen des Namens */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Fügt ... hinzu, falls der Name zu lang ist */
 }
