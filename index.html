@@ -16,16 +16,21 @@
 
     <header>
         <div class="app-logo-container">
-            <img src="icons/header.svg" class="app-header-logo" alt="Festival Guide Logo">
+            <img src="icons/header.svg" class="app-header-logo" alt="Logo">
         </div>
 
         <div class="top-nav">
-            <select id="festival-selector"></select>
+            <div class="selector-row">
+                <select id="festival-selector"></select>
+                <button id="search-toggle-btn" title="Suche öffnen">
+                <div class="tab-icon icon-search"></div>
+            </button>
+            </div>
             <button id="exclusive-btn">Exklusiv</button>
         </div>
 
-        <div id="search-container">
-            <input type="text" id="search" placeholder="Suchen...">
+        <div id="search-container" class="collapsed">
+            <input type="text" id="search" placeholder="Band suchen...">
             <div id="stats">Lade...</div>
         </div>
     </header>
