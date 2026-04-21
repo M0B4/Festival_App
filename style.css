@@ -365,26 +365,59 @@ tbody td {
 
 /* --- NEU: Logo Styling --- */
 
+
+/* --- Logo Bereich --- */
+
 .app-logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 15px 0 5px 0;
+    /* Weniger Abstand nach unten */
     width: 100%;
 }
 
 .app-header-logo {
-    height: 50px;
-    /* Höhe nach Bedarf anpassen */
-    max-width: 80%;
+    height: 30px;
+    /* Deutlich kleiner für mehr Platz */
+    max-width: 60%;
     object-fit: contain;
-    /* OPTIONAL: Falls das Logo rot leuchten soll wie der Rest (funktioniert bei schwarzen SVGs) */
-    /* filter: invert(37%) sepia(93%) saturate(3470%) hue-rotate(346deg) brightness(95%) contrast(88%); */
 }
 
 
-/* Platzierung korrigieren, damit h1-Styles (falls noch vorhanden) nicht stören */
+/* --- Header & Navigation --- */
 
-header h1 {
+.top-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 15px 10px 15px;
+    /* Padding oben reduziert */
+    gap: 12px;
+}
+
+#festival-selector {
+    width: 100%;
+    max-width: 500px;
+    background: var(--surf);
+    color: var(--txt);
+    border: 2px solid var(--brd);
+    padding: 10px 15px;
+    /* Etwas flacher */
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    outline: none;
+    text-align: center;
+}
+
+
+/* In den Einstellungen bleibt das Logo klein, aber die Auswahl verschwindet */
+
+.hide-nav .top-nav {
     display: none;
+}
+
+.hide-nav .app-logo-container {
+    padding: 20px 0;
 }
