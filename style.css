@@ -118,7 +118,7 @@ h1 {
 /* --- TABELLE --- */
 
 .table-wrapper {
-    flex-grow: 1;
+    flex: 1;
     overflow-y: auto;
     width: 100%;
     max-width: 900px;
@@ -282,7 +282,11 @@ tbody tr.is-fav {
 
 .view-container {
     display: none;
+    flex: 1;
+    /* Das sorgt dafür, dass die Ansicht den Platz einnimmt */
     width: 100%;
+    overflow: hidden;
+    /* Verhindert, dass der Container selbst ausbricht */
 }
 
 .view-container.active {
@@ -294,37 +298,42 @@ tbody tr.is-fav {
 /* Genre Statistik Styling */
 
 .stats-wrapper {
+    flex: 1;
+    overflow-y: auto;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
+
+/* Genre Balken Korrekturen */
+
 .genre-row {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .genre-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
-    font-size: 0.9rem;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .genre-bar-bg {
     background: #222;
-    height: 12px;
-    border-radius: 6px;
+    height: 10px;
+    border-radius: 5px;
     width: 100%;
-    overflow: hidden;
 }
 
 .genre-bar-fill {
     background: var(--accent-color);
     height: 100%;
-    border-radius: 6px;
-    transition: width 0.5s ease-out;
+    border-radius: 5px;
+    transition: width 0.6s ease-out;
 }
 
 
