@@ -1,11 +1,11 @@
 {
     "name": "Metal Festival Guide 2026",
     "short_name": "FestGuide",
-    "description": "Dein Lineup-Planer für Wacken & Co.",
+    "description": "Dein aggressiver Lineup-Planer für die Festival-Saison.",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#0d0d0d",
-    "theme_color": "#f1c40f",
+    "theme_color": "#e74c3c",
     "icons": [{
             "src": "icon-192.png",
             "sizes": "192x192",
