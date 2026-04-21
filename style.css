@@ -1,79 +1,73 @@
 :root {
-    --bg-color: #121212;
-    --card-bg: #1e1e1e;
+    --bg: #0a0a0a;
+    --card: #1a1a1a;
     --accent: #f1c40f;
-    /* Wacken-Gelb */
-    --text: #e0e0e0;
+    --text: #eee;
 }
 
 body {
-    background-color: var(--bg-color);
+    background: var(--bg);
     color: var(--text);
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    margin: 0;
+    font-family: 'Inter', sans-serif;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    letter-spacing: 4px;
-    color: var(--accent);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 10px 0;
+    z-index: 100;
 }
 
 #search {
     width: 100%;
-    max-width: 400px;
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    background: var(--card-bg);
+    padding: 15px;
+    background: var(--card);
+    border: 1px solid #333;
     color: white;
-    margin-bottom: 20px;
+    border-radius: 30px;
+    margin: 15px 0;
 }
 
 #band-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 15px;
 }
 
 .band-card {
-    background: var(--card-bg);
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    transition: transform 0.2s;
-    border-bottom: 3px solid transparent;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
 }
 
-.band-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-5px);
+.is-favorite {
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.2);
+}
+
+.fav-star {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: var(--accent);
 }
 
 .band-name {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1.1em;
-}
-
-.origin {
-    font-size: 0.8em;
-    color: #888;
+    font-weight: 800;
+    font-size: 1rem;
     display: block;
 }
 
 .genre-tag {
-    display: inline-block;
-    background: #333;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.7em;
-    margin-top: 10px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
     color: var(--accent);
+    margin-top: 10px;
+    letter-spacing: 1px;
 }
