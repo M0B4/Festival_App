@@ -1,4 +1,5 @@
 const BASE_PATH = 'festivaldata/';
+
 let allFestivalsData = {};
 let currentFestival = null;
 let currentBands = [];
@@ -13,13 +14,17 @@ const genreContent = document.getElementById('genre-stats-content');
 const contentArea = document.querySelector('.content-area');
 
 async function initApp() {
-    festivalRegistry.sort((a, b) => a.name.localeCompare(b.name));
+    if (typeof festivalRegistry !== 'undefined') {
+        festivalRegistry.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
     setupUI();
     setupSwipeHandlers();
 
     try {
         const loads = festivalRegistry.map(async(fest) => {
             const res = await fetch(BASE_PATH + fest.file);
+            if (!res.ok) throw new Error(`Fetch failed for ${fest.file}`);
             let data = await res.json();
             data.sort((a, b) => a.name.localeCompare(b.name));
             allFestivalsData[fest.id] = data;
@@ -27,7 +32,9 @@ async function initApp() {
         await Promise.all(loads);
         currentFestival = festivalRegistry[0];
         loadFestival(currentFestival);
-    } catch (err) { console.error(err); }
+    } catch (err) {
+        console.error(err);
+    }
 
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js').catch(console.error);
@@ -42,7 +49,7 @@ function switchTab(targetViewId) {
 
     document.getElementById(targetViewId).classList.add('active');
 
-    // Wichtig: Button nur im Lineup-View zeigen
+    // UI-Elemente wie Suche und Exklusiv-Button ausblenden, wenn nicht im Lineup
     const isLineup = targetViewId === 'lineup-view';
     document.body.classList.toggle('hide-search', !isLineup);
 
@@ -93,7 +100,33 @@ function setupUI() {
 
     searchInput.oninput = renderTable;
 
-    document.getElementById('update-app-btn').onclick = () => window.location.reload();
+    // --- HARD UPDATE LOGIK ---
+    document.getElementById('update-app-btn').onclick = async function() {
+        this.textContent = "Aktualisiere alles...";
+        this.disabled = true;
+
+        try {
+            // 1. Alle Caches löschen (löscht CSS, HTML, JS und JSON-Daten)
+            if ('caches' in window) {
+                const names = await caches.keys();
+                await Promise.all(names.map(name => caches.delete(name)));
+            }
+
+            // 2. Service Worker deinstallieren
+            if ('serviceWorker' in navigator) {
+                const registrations = await navigator.serviceWorker.getRegistrations();
+                for (let reg of registrations) {
+                    await reg.unregister();
+                }
+            }
+
+            // 3. Harter Reload vom Server
+            window.location.reload(true);
+        } catch (err) {
+            window.location.reload();
+        }
+    };
+
     document.getElementById('reset-favs-btn').onclick = () => {
         if (confirm("Alle Favoriten löschen?")) {
             Object.keys(localStorage).forEach(key => { if (key.startsWith('favs_')) localStorage.removeItem(key); });

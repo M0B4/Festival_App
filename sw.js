@@ -1,4 +1,4 @@
-const CACHE_NAME = 'metal-fest-guide-v3';
+const CACHE_NAME = 'metal-fest-guide-v3.2';
 const STATIC_ASSETS = [
     'index.html',
     'style.css',

@@ -1,5 +1,3 @@
-/* --- 1. GLOBALER RESET --- */
-
 *,
 *::before,
 *::after {
@@ -8,13 +6,13 @@
 }
 
 :root {
-    --bg: #0a0a0a;
-    --surf: #161616;
+    --bg: #0d0d0d;
+    --surf: #1a1a1a;
     --acc: #e74c3c;
-    /* NEU: Aggressives Rot */
+    /* Sattes Rot */
     --txt: #ffffff;
-    --txt-sec: #888888;
-    --brd: #222;
+    --txt-sec: #a0a0a0;
+    --brd: #333;
 }
 
 html,
@@ -24,7 +22,7 @@ body {
     margin: 0;
     overflow: hidden;
     background-color: var(--bg);
-    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;
     color: var(--txt);
 }
 
@@ -33,22 +31,18 @@ body {
     flex-direction: column;
 }
 
-
-/* --- 2. HEADER --- */
-
 header {
     flex: 0 0 auto;
     background: var(--bg);
     z-index: 100;
-    padding-top: 15px;
 }
 
 .top-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    padding: 0 20px;
+    padding: 15px 15px 10px 15px;
+    gap: 12px;
 }
 
 
@@ -56,25 +50,17 @@ header {
 
 #festival-selector {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     background: var(--surf);
     color: var(--txt);
     border: 2px solid var(--brd);
-    padding: 12px 20px;
-    /* Deutlich größer */
+    padding: 12px 15px;
     border-radius: 12px;
     font-size: 1.1rem;
-    /* Größere Schrift */
     font-weight: bold;
-    cursor: pointer;
     outline: none;
+    cursor: pointer;
     text-align: center;
-    appearance: none;
-    /* Entfernt Standard-Pfeil */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 20px;
 }
 
 #festival-selector:focus {
@@ -93,7 +79,6 @@ header {
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
-    transition: all 0.2s;
 }
 
 #exclusive-btn.active {
@@ -102,7 +87,7 @@ header {
 }
 
 
-/* Sichtbarkeit des Buttons steuern */
+/* Exklusiv-Button nur im Band-Tab anzeigen */
 
 .hide-search #exclusive-btn {
     display: none;
@@ -112,21 +97,21 @@ h1 {
     font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    margin: 10px 0;
+    letter-spacing: 3px;
+    margin: 5px 0;
     color: var(--txt-sec);
-    font-weight: 300;
+    opacity: 0.5;
 }
 
 #search-container {
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-bottom: 1px solid var(--brd);
 }
 
 #search {
     width: 100%;
     padding: 12px 15px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid var(--brd);
     background: var(--surf);
     color: white;
@@ -142,11 +127,8 @@ h1 {
     font-size: 0.65rem;
     color: var(--txt-sec);
     text-align: center;
-    margin-top: 8px;
+    margin-top: 5px;
 }
-
-
-/* --- 3. CONTENT & TABS --- */
 
 .content-area {
     flex: 1 1 auto;
@@ -171,15 +153,17 @@ h1 {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     -webkit-overflow-scrolling: touch;
 }
 
+
+/* TAB BAR */
+
 .tab-bar {
-    flex: 0 0 70px;
+    flex: 0 0 65px;
     display: flex;
-    background: #000;
-    /* Tiefschwarz für die Leiste */
+    background: var(--surf);
     border-top: 1px solid var(--brd);
     z-index: 200;
 }
@@ -192,19 +176,19 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #555;
-    /* Inaktiv sehr dunkel */
-    gap: 5px;
+    color: var(--txt-sec);
+    cursor: pointer;
+    gap: 4px;
     position: relative;
 }
 
 .tab-icon {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .tab-label {
-    font-size: 0.65rem;
-    font-weight: bold;
+    font-size: 0.7rem;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -216,14 +200,14 @@ h1 {
     content: '';
     position: absolute;
     top: 0;
-    width: 35%;
-    height: 4px;
+    width: 40%;
+    height: 3px;
     background: var(--acc);
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 4px 4px;
 }
 
 
-/* --- 4. TABELLEN & CONTENT --- */
+/* TABELLEN */
 
 table {
     width: 100%;
@@ -233,49 +217,46 @@ table {
 thead th {
     position: sticky;
     top: 0;
-    background: #111;
+    background: #1a1a1a;
     z-index: 2;
-    padding: 12px 15px;
+    padding: 10px 15px;
     text-align: left;
     color: var(--acc);
     font-size: 0.6rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 tbody td {
     padding: 14px 15px;
-    border-bottom: 1px solid #161616;
+    border-bottom: 1px solid #222;
     color: var(--txt);
 }
 
 .band-info-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
 }
 
 .band-main-line {
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .flag-icon {
-    margin-right: 12px;
+    margin-right: 10px;
     border-radius: 2px;
-    filter: grayscale(0.2);
 }
 
 .fest-badge {
-    background: transparent;
+    border: 1px solid var(--acc);
     color: var(--acc);
     font-size: 0.55rem;
-    padding: 2px 6px;
-    border-radius: 4px;
-    border: 1px solid var(--acc);
-    margin-right: 4px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 3px;
     text-transform: uppercase;
 }
 
@@ -285,53 +266,45 @@ tbody td {
     text-align: right;
 }
 
-.fav-star {
-    font-size: 1.3rem;
-    transition: transform 0.1s;
-}
 
-.is-fav {
-    background: rgba(231, 76, 60, 0.05);
-}
-
-
-/* --- 5. EINSTELLUNGEN --- */
+/* SETTINGS */
 
 .settings-page {
     padding: 25px;
+    color: var(--txt);
 }
 
 .settings-page h2 {
     color: var(--acc);
-    font-size: 1.3rem;
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
     text-transform: uppercase;
 }
 
 .settings-group {
     background: var(--surf);
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 12px;
     margin-bottom: 20px;
     border: 1px solid var(--brd);
 }
 
 .settings-group p {
     font-size: 0.9rem;
-    color: #ccc;
+    color: var(--txt);
     margin-bottom: 15px;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .action-btn {
     width: 100%;
-    padding: 16px;
+    padding: 14px;
     border: none;
-    border-radius: 10px;
-    font-weight: 800;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
     cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .gold-btn {
@@ -345,9 +318,6 @@ tbody td {
     border: 2px solid var(--acc);
 }
 
-
-/* --- 6. GENRE STATS --- */
-
 .genre-row {
     padding: 15px 20px;
 }
@@ -355,22 +325,21 @@ tbody td {
 .genre-info {
     display: flex;
     justify-content: space-between;
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    color: var(--txt);
 }
 
 .genre-bar-bg {
     background: #222;
-    height: 12px;
-    border-radius: 6px;
+    height: 10px;
+    border-radius: 5px;
 }
 
 .genre-bar-fill {
     background: var(--acc);
     height: 100%;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
+    border-radius: 5px;
 }
 
 .hide-search #search-container {
