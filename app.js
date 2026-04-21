@@ -1,18 +1,11 @@
-/**
- * FESTIVAL GUIDE 2026 - MASTER LOGIC
- * Features: 3-Tab-System, Swipe-Gesten, Overlap-Check, Genre-Stats, Hard-Update, Spezial-Flags
- */
-
 const BASE_PATH = 'festivaldata/';
 
-// --- GLOBALE ZUSTÄNDE ---
 let allFestivalsData = {};
 let currentFestival = null;
 let currentBands = [];
 let favorites = [];
 let showExclusiveOnly = false;
 
-// --- UI REFERENZEN ---
 const selector = document.getElementById('festival-selector');
 const tbody = document.getElementById('table-body');
 const searchInput = document.getElementById('search');
@@ -20,11 +13,7 @@ const stats = document.getElementById('stats');
 const genreContent = document.getElementById('genre-stats-content');
 const contentArea = document.querySelector('.content-area');
 
-/**
- * 1. INITIALISIERUNG
- */
 async function initApp() {
-    // Festivals alphabetisch sortieren
     if (typeof festivalRegistry !== 'undefined') {
         festivalRegistry.sort((a, b) => a.name.localeCompare(b.name));
     }
@@ -33,71 +22,49 @@ async function initApp() {
     setupSwipeHandlers();
 
     try {
-        // Alle Festival-Daten parallel laden
         const loads = festivalRegistry.map(async(fest) => {
             const res = await fetch(BASE_PATH + fest.file);
-            if (!res.ok) throw new Error(`Fehler bei ${fest.file}`);
-
+            if (!res.ok) throw new Error(`Fetch failed for ${fest.file}`);
             let data = await res.json();
             data.sort((a, b) => a.name.localeCompare(b.name));
             allFestivalsData[fest.id] = data;
         });
-
         await Promise.all(loads);
-
-        // Erstes Festival als Standard setzen
         currentFestival = festivalRegistry[0];
         loadFestival(currentFestival);
-
     } catch (err) {
         console.error("Datenbank-Fehler:", err);
     }
 
-    // Service Worker Registrierung
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js').catch(console.error);
     }
 }
 
-/**
- * 2. ZENTRALE TAB-STEUERUNG
- */
 function switchTab(targetViewId) {
     document.querySelectorAll('.tab-btn, .view-container').forEach(el => el.classList.remove('active'));
 
     const activeBtn = document.querySelector(`[data-target="${targetViewId}"]`);
     if (activeBtn) activeBtn.classList.add('active');
 
-    const targetView = document.getElementById(targetViewId);
-    if (targetView) targetView.classList.add('active');
+    document.getElementById(targetViewId).classList.add('active');
 
-    // UI-Elemente (Suche & Exklusiv-Button) ausblenden, wenn nicht im Lineup-Tab
+    // Exklusiv-Button und Suche nur im Lineup anzeigen
     const isLineup = targetViewId === 'lineup-view';
     document.body.classList.toggle('hide-search', !isLineup);
 
-    if (targetViewId === 'stats-view') {
-        renderGenreStats();
-    } else if (isLineup) {
-        renderTable();
-    }
+    if (targetViewId === 'stats-view') renderGenreStats();
 }
 
-/**
- * 3. SWIPE-GESTEN (3-Tabs Navigation)
- */
 function setupSwipeHandlers() {
     let touchStartX = 0;
     const views = ['lineup-view', 'stats-view', 'settings-view'];
 
-    contentArea.addEventListener('touchstart', e => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
+    contentArea.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
     contentArea.addEventListener('touchend', e => {
         const touchEndX = e.changedTouches[0].screenX;
         const threshold = 80;
-        const currentViewId = document.querySelector('.view-container.active').id;
-        const currentIndex = views.indexOf(currentViewId);
+        const currentIndex = views.indexOf(document.querySelector('.view-container.active').id);
 
         if (touchEndX < touchStartX - threshold && currentIndex < views.length - 1) {
             switchTab(views[currentIndex + 1]);
@@ -108,9 +75,6 @@ function setupSwipeHandlers() {
     }, { passive: true });
 }
 
-/**
- * 4. UI SETUP & EVENT LISTENER
- */
 function setupUI() {
     festivalRegistry.forEach(fest => {
         const opt = document.createElement('option');
@@ -136,11 +100,9 @@ function setupUI() {
 
     searchInput.oninput = renderTable;
 
-    // HARD UPDATE LOGIK (Löscht Cache & SW)
+    // HARD UPDATE: Löscht Cache & deinstalliert SW
     document.getElementById('update-app-btn').onclick = async function() {
         this.textContent = "Updating...";
-        this.disabled = true;
-
         try {
             if ('caches' in window) {
                 const names = await caches.keys();
@@ -151,60 +113,47 @@ function setupUI() {
                 for (let reg of regs) { await reg.unregister(); }
             }
             window.location.reload(true);
-        } catch (e) {
-            window.location.reload();
-        }
+        } catch (e) { window.location.reload(); }
     };
 
     document.getElementById('reset-favs-btn').onclick = () => {
-        if (confirm("Wirklich ALLE Favoriten löschen?")) {
-            Object.keys(localStorage).forEach(key => {
-                if (key.startsWith('favs_')) localStorage.removeItem(key);
-            });
+        if (confirm("Wirklich alle Favoriten löschen?")) {
+            Object.keys(localStorage).forEach(key => { if (key.startsWith('favs_')) localStorage.removeItem(key); });
             loadFestival(currentFestival);
         }
     };
 }
 
-/**
- * 5. DATEN RENDERN
- */
 function loadFestival(fest) {
     currentFestival = fest;
     selector.value = fest.id;
     currentBands = allFestivalsData[fest.id] || [];
     favorites = JSON.parse(localStorage.getItem(`favs_${fest.id}`)) || [];
 
-    const activeScrollBox = document.querySelector('.view-container.active .scroll-box');
-    if (activeScrollBox) activeScrollBox.scrollTop = 0;
-
     renderTable();
-    if (document.body.classList.contains('hide-search') &&
-        document.querySelector('#stats-view').classList.contains('active')) {
-        renderGenreStats();
-    }
+    if (document.querySelector('#stats-view').classList.contains('active')) renderGenreStats();
 }
 
 function renderTable() {
     const term = searchInput.value.toLowerCase();
     tbody.innerHTML = "";
-    let overlapsCount = 0;
+    let overlaps = 0;
 
     const filtered = currentBands.filter(band => {
         const match = `${band.name} ${band.origin} ${band.genres.join(' ')}`.toLowerCase().includes(term);
-        const otherFests = [];
+        const fests = [];
         for (const [id, data] of Object.entries(allFestivalsData)) {
             if (id !== currentFestival.id && data.some(b => b.name.toLowerCase() === band.name.toLowerCase())) {
-                otherFests.push(festivalRegistry.find(f => f.id === id).name);
+                fests.push(festivalRegistry.find(f => f.id === id).name);
             }
         }
-        if (otherFests.length > 0) overlapsCount++;
-        if (showExclusiveOnly && otherFests.length > 0) return false;
-        band.currentMatches = otherFests.sort((a, b) => a.localeCompare(b));
+        if (fests.length > 0) overlaps++;
+        if (showExclusiveOnly && fests.length > 0) return false;
+        band.currentMatches = fests;
         return match;
     });
 
-    stats.innerHTML = `<b>${filtered.length}</b> Bands | <span style="color:var(--acc)">${overlapsCount}</span> Overlaps`;
+    stats.innerHTML = `<b>${filtered.length}</b> Bands | <span style="color:var(--acc)">${overlaps}</span> Overlaps`;
 
     filtered.forEach(band => {
                 const isFav = favorites.includes(band.name);
@@ -212,7 +161,9 @@ function renderTable() {
                 if (isFav) tr.classList.add('is-fav');
 
                 // FLAGGEN LOGIK (Inkl. Spezial-Flags für EU und Welt)
-                const iso = countryCodes[band.origin.toLowerCase()] || null;
+                const originClean = (band.origin || "").toLowerCase().trim();
+                const iso = countryCodes[originClean] || null;
+
                 let flagHtml = "🏳️ ";
                 if (iso === "world") {
                     flagHtml = `<span class="flag-icon" style="font-size: 1.2rem; margin-right: 10px;">🌎</span>`;
@@ -230,13 +181,9 @@ function renderTable() {
             </td>
             <td class="genre-cell">${band.genres[0] || '-'}</td>
         `;
-        
+
         tr.onclick = () => {
-            if (favorites.includes(band.name)) {
-                favorites = favorites.filter(n => n !== band.name);
-            } else {
-                favorites.push(band.name);
-            }
+            favorites = favorites.includes(band.name) ? favorites.filter(n => n !== band.name) : [...favorites, band.name];
             localStorage.setItem(`favs_${currentFestival.id}`, JSON.stringify(favorites));
             renderTable();
         };
@@ -245,7 +192,7 @@ function renderTable() {
 }
 
 function renderGenreStats() {
-    genreContent.innerHTML = `<h2 style="color:var(--acc); text-align:center; font-size: 1rem; margin: 20px 0;">TOP 10 GENRES</h2>`;
+    genreContent.innerHTML = `<h2 style="color:var(--acc); text-align:center; font-size: 1rem; margin: 20px 0;">Top 10 Genres</h2>`;
     const counts = {};
     currentBands.forEach(b => {
         let g = b.genres[0] || "Unknown";
@@ -255,7 +202,6 @@ function renderGenreStats() {
         else if (low.includes("black")) g = "Black Metal";
         else if (low.includes("power")) g = "Power Metal";
         else if (low.includes("heavy")) g = "Heavy Metal";
-        else if (low.includes("core")) g = "Core (Metal/Death)";
         counts[g] = (counts[g] || 0) + 1;
     });
     const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]).slice(0,10);
