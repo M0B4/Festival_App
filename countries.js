@@ -224,5 +224,12 @@ const countryCodes = {
     "nauru": "nr",
     "palau": "pw",
     "micronesia": "fm",
-    "marshall islands": "mh"
+    "marshall islands": "mh",
+
+    // --- SONSTIGE / UNKLARE ---
+    "europe": "eu",
+    "europa": "eu",
+    "world": "world",
+    "welt": "world",
+    "international": "world"
 };
