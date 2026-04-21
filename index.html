@@ -16,13 +16,7 @@
             <select id="festival-selector"></select>
             <button id="exclusive-btn">Exklusiv</button>
         </div>
-
         <h1>Festival Guide</h1>
-
-        <nav class="tab-bar">
-            <button class="tab-btn active" data-target="lineup-view">Bands</button>
-            <button class="tab-btn" data-target="stats-view">Genre</button>
-        </nav>
 
         <div id="search-container">
             <input type="text" id="search" placeholder="Suchen...">
@@ -50,6 +44,17 @@
             <div class="scroll-box" id="genre-stats-content"></div>
         </div>
     </main>
+
+    <nav class="tab-bar">
+        <button class="tab-btn active" data-target="lineup-view">
+            <span class="tab-icon">🎸</span>
+            <span class="tab-label">Bands</span>
+        </button>
+        <button class="tab-btn" data-target="stats-view">
+            <span class="tab-icon">📊</span>
+            <span class="tab-label">Genre</span>
+        </button>
+    </nav>
 
     <script src="countries.js"></script>
     <script src="festivals.js"></script>
