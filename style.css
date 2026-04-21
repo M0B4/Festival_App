@@ -390,12 +390,10 @@ header {
 
 .app-header-logo {
     /* Hier erzwingen wir die kleine Größe */
-    height: 40px !important;
+    height: 70px !important;
     width: auto !important;
     max-width: 180px !important;
     display: block;
-    /* Dieser Filter wandelt das Weiß der SVG in dein Rot (#e74c3c) um */
-    filter: invert(37%) sepia(93%) saturate(3470%) hue-rotate(346deg) brightness(95%) contrast(88%);
 }
 
 
