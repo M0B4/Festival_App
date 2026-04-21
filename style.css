@@ -54,6 +54,33 @@ table {
 }
 
 
+/* Styling für die Herkunfts-Zelle */
+
+.origin-cell {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.origin-cell img {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    /* Kleiner Schatten für weiße Flaggen */
+    flex-shrink: 0;
+}
+
+.origin-cell span {
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+
+/* Anpassung der Spaltenbreite */
+
+table th:nth-child(3) {
+    width: 180px;
+}
+
+
 /* Sticky Header */
 
 thead th {

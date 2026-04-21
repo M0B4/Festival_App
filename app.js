@@ -1,5 +1,7 @@
 const DATA_PATH = 'festivaldata/wacken_2026_raw_bands.json';
 
+// Der countryCodes Block ist hier jetzt entfernt!
+
 async function init() {
     try {
         const res = await fetch(DATA_PATH);
@@ -7,7 +9,6 @@ async function init() {
 
         const tbody = document.getElementById('table-body');
         const searchInput = document.getElementById('search');
-        const stats = document.getElementById('stats');
 
         let favs = JSON.parse(localStorage.getItem('wacken_favs')) || [];
 
@@ -18,26 +19,30 @@ async function init() {
                 return searchStr.includes(term.toLowerCase());
             });
 
-            stats.innerText = `${filtered.length} Bands gefunden`;
-
             filtered.forEach(band => {
                 const isFav = favs.includes(band.name);
                 const tr = document.createElement('tr');
                 if (isFav) tr.className = 'is-fav';
 
+                // Greift direkt auf countryCodes aus countries.js zu
+                const countryLower = band.origin.toLowerCase();
+                const iso = countryCodes[countryLower] || null;
+
+                const flagHtml = iso ?
+                    `<img src="https://flagcdn.com/w40/${iso}.png" width="22" alt="${band.origin}" style="margin-right: 10px; border-radius: 2px;">` :
+                    "🏳️ ";
+
                 tr.innerHTML = `
                     <td class="fav-btn">${isFav ? '★' : '☆'}</td>
                     <td>${band.name}</td>
-                    <td>🚩 ${band.origin}</td>
+                    <td class="origin-cell">${flagHtml} <span>${band.origin}</span></td>
                     <td>${band.genres[0] || '-'}</td>
                 `;
 
-                // Favorit umschalten bei Klick auf die Zeile oder den Stern
                 tr.onclick = () => {
                     toggleFav(band.name);
                     render(searchInput.value);
                 };
-
                 tbody.appendChild(tr);
             });
         }
@@ -51,8 +56,7 @@ async function init() {
         render();
 
     } catch (e) {
-        console.error("Datenfehler:", e);
-        stats.innerText = "Fehler beim Laden!";
+        console.error("Fehler:", e);
     }
 }
 
