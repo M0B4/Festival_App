@@ -1,5 +1,4 @@
-[
-    {
+[{
         "name": "5th Avenue",
         "origin": "Germany",
         "genres": [
@@ -329,7 +328,7 @@
         ]
     },
     {
-        "name": "Electric Callboy",
+        "name": "Electric Bassboy",
         "origin": "Germany",
         "genres": [
             "Electronicore"
