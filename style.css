@@ -183,7 +183,45 @@ h1 {
 }
 
 .tab-icon {
-    font-size: 1.2rem;
+    width: 24px;
+    height: 24px;
+    background-color: currentColor;
+    /* Benutzt die Textfarbe des Buttons */
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+
+/* Pfade zu deinen Dateien im /icons Ordner */
+
+.icon-bands {
+    mask-image: url('icons/bands.svg');
+    -webkit-mask-image: url('icons/bands.svg');
+}
+
+.icon-genre {
+    mask-image: url('icons/genre.svg');
+    -webkit-mask-image: url('icons/genre.svg');
+}
+
+.icon-settings {
+    mask-image: url('icons/settings.svg');
+    -webkit-mask-image: url('icons/settings.svg');
+}
+
+.tab-btn {
+    /* ... rest bleibt gleich ... */
+    color: var(--txt-sec);
+    /* Inaktive Icons sind grau */
+}
+
+.tab-btn.active {
+    color: var(--acc);
+    /* Aktive Icons werden rot */
 }
 
 .tab-label {
