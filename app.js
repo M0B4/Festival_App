@@ -210,5 +210,11 @@ function toggleFavorite(name) {
     localStorage.setItem(`favs_${currentFestival.id}`, JSON.stringify(favorites));
     renderTable();
 }
-
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+            .then(reg => console.log('Service Worker registriert!'))
+            .catch(err => console.log('SW Registrierung fehlgeschlagen', err));
+    });
+}
 initApp();
