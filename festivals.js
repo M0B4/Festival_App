@@ -37,5 +37,10 @@ const festivalRegistry = [{
         id: "resurrection_fest_2026",
         name: "Resurrection Fest 2026",
         file: "resurrection_fest_2026_raw_bands.json"
+    },
+    {
+        id: "rock_hard_2026",
+        name: "Rock Hard 2026",
+        file: "rock_hard_2026_raw_bands.json"
     }
 ];

@@ -1,0 +1,163 @@
+[
+    {
+        "name": "Ambush",
+        "origin": "Sweden",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Angel Witch",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Armored Saint",
+        "origin": "United States",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Coroner",
+        "origin": "Switzerland",
+        "genres": [
+            "Technical Thrash Metal"
+        ]
+    },
+    {
+        "name": "Dark Tranquillity",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Hirax",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Hällas",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Lucifer",
+        "origin": "Germany",
+        "genres": [
+            "Occult Rock"
+        ]
+    },
+    {
+        "name": "Maamuut",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Majak",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Mikkey Dee with Friends",
+        "origin": "Sweden",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Nailed To Obscurity",
+        "origin": "Germany",
+        "genres": [
+            "Death Doom Metal"
+        ]
+    },
+    {
+        "name": "Neckbreakker",
+        "origin": "Denmark",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Paradise Lost",
+        "origin": "United Kingdom",
+        "genres": [
+            "Gothic Metal"
+        ]
+    },
+    {
+        "name": "Prophets Of The Rising Dead",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Ronnie Romero & Gus G.",
+        "origin": "World",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Saxon",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Slime",
+        "origin": "Germany",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Smorrah",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "The Great Sea",
+        "origin": "Germany",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "The Neptune Power Federation",
+        "origin": "Australia",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Uli Jon Roth",
+        "origin": "Germany",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Wytch Hazel",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    }
+]

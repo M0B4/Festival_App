@@ -1,22 +1,21 @@
-/* --- BASIS VARIABLEN --- */
+/* --- GLOBALER FIX --- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 :root {
     --bg-color: #0d0d0d;
     --surface-color: #1a1a1a;
     --accent-color: #f1c40f;
-    /* Wacken Gold / Metal Gelb */
     --text-primary: #ffffff;
     --text-secondary: #a0a0a0;
     --border-color: #333;
     --row-hover: #222;
     --fav-bg: rgba(241, 196, 15, 0.05);
 }
-
-
-/* --- LAYOUT FIXIERUNG --- */
-
-
-/* Verhindert das Scrollen der ganzen Seite, damit nur die Tabelle scrollt */
 
 html,
 body {
@@ -30,146 +29,149 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;
     color: var(--text-primary);
-    line-height: 1.4;
 }
 
 
-/* --- HEADER BEREICH (FIXIERT) --- */
+/* --- HEADER BEREICH --- */
 
 header {
     flex-shrink: 0;
-    /* Header darf nicht gestaucht werden */
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px 15px 10px 15px;
+    padding: 15px 15px 5px 15px;
     text-align: center;
     background-color: var(--bg-color);
-    box-sizing: border-box;
     z-index: 1000;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 #festival-selector {
     background: var(--surface-color);
     color: var(--accent-color);
     border: 1px solid var(--border-color);
-    padding: 6px 14px;
+    padding: 6px 12px;
     border-radius: 20px;
-    font-size: 0.85rem;
-    margin-bottom: 12px;
-    outline: none;
+    font-size: 0.8rem;
     cursor: pointer;
-    font-weight: 600;
+}
+
+
+/* Exklusiv Button Styling */
+
+#exclusive-btn {
+    background: var(--surface-color);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#exclusive-btn.active {
+    background: var(--accent-color);
+    color: #000;
+    border-color: var(--accent-color);
+    font-weight: bold;
 }
 
 h1 {
-    margin: 0 0 15px 0;
-    font-size: 1.8rem;
-    letter-spacing: 4px;
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
     color: var(--accent-color);
     text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(241, 196, 15, 0.2);
 }
 
 #search {
     width: 100%;
     max-width: 500px;
-    padding: 12px 20px;
+    padding: 10px 18px;
     border-radius: 25px;
     border: 1px solid var(--border-color);
     background-color: var(--surface-color);
     color: white;
-    font-size: 1rem;
+    font-size: 0.9rem;
     outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-#search:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 8px rgba(241, 196, 15, 0.1);
+    margin: 0 auto;
 }
 
 #stats {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: var(--text-secondary);
-    margin-top: 10px;
+    margin-top: 8px;
     padding-bottom: 5px;
-    letter-spacing: 0.5px;
 }
 
 
-/* --- SCROLLBARER TABELLEN-BEREICH --- */
+/* --- TABELLE --- */
 
 .table-wrapper {
     flex-grow: 1;
-    /* Füllt den restlichen Platz aus */
     overflow-y: auto;
-    /* Interner Scrollbalken */
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
     background-color: var(--surface-color);
     border-top: 1px solid var(--border-color);
-    /* Für geschmeidiges Scrollen auf mobilen Geräten */
     -webkit-overflow-scrolling: touch;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 }
-
-
-/* Tabellenkopf fixiert am oberen Rand des Wrappers */
 
 thead th {
     position: sticky;
     top: 0;
     background-color: #252525;
-    padding: 15px;
+    padding: 8px 15px;
     text-align: left;
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
     z-index: 10;
 }
 
-
-/* --- ZEILEN STYLING --- */
+tbody td {
+    padding: 10px 15px;
+    vertical-align: middle;
+}
 
 tbody tr {
     border-bottom: 1px solid #2a2a2a;
-    cursor: pointer;
-    transition: background 0.15s;
-}
-
-tbody tr:hover {
-    background-color: var(--row-hover);
 }
 
 tbody tr.is-fav {
     background-color: var(--fav-bg);
 }
 
-tbody td {
-    padding: 12px 15px;
-    vertical-align: middle;
-}
-
-
-/* --- SPALTEN DETAILS --- */
-
 .col-fav {
     width: 45px;
     text-align: center;
 }
 
+.col-genre {
+    width: 95px;
+    text-align: right;
+}
+
 .fav-star {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .dimmed-star {
@@ -181,99 +183,66 @@ tbody td {
 }
 
 
-/* --- BAND INFO (NAME + BADGES) --- */
-
-.band-cell {
-    display: flex;
-    align-items: center;
-}
+/* --- BAND CELLS --- */
 
 .band-info-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
 }
 
 .band-main-line {
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
 }
 
 .flag-icon {
-    margin-right: 12px;
+    margin-right: 10px;
     border-radius: 2px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
     flex-shrink: 0;
 }
-
-
-/* --- BADGES (WO DIE BAND NOCH SPIELT) --- */
 
 .badge-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 3px;
 }
 
 .fest-badge {
     background-color: #2a2a2a;
     color: var(--accent-color);
-    font-size: 0.6rem;
-    padding: 1px 6px;
-    border-radius: 4px;
+    font-size: 0.55rem;
+    padding: 1px 5px;
+    border-radius: 3px;
     border: 1px solid #444;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
 }
-
-
-/* --- GENRE SPALTE --- */
 
 .genre-cell {
     color: var(--text-secondary);
-    font-size: 0.85rem;
-    text-align: right;
+    font-size: 0.75rem;
     font-style: italic;
 }
 
 
-/* --- SCROLLBAR LOOK (Optional für Desktop) --- */
-
-.table-wrapper::-webkit-scrollbar {
-    width: 6px;
-}
-
-.table-wrapper::-webkit-scrollbar-track {
-    background: var(--bg-color);
-}
-
-.table-wrapper::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 10px;
-}
-
-.table-wrapper::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-color);
-}
-
-
-/* --- MOBILE OPTIMIERUNG --- */
+/* --- MOBILE --- */
 
 @media (max-width: 600px) {
-    h1 {
-        font-size: 1.4rem;
-        letter-spacing: 2px;
+    header {
+        padding: 10px;
     }
-    tbody td {
-        padding: 10px 8px;
+    h1 {
+        font-size: 1.1rem;
+    }
+    #search {
+        padding: 8px 15px;
+    }
+    .col-genre {
+        width: 80px;
     }
     .band-main-line {
-        font-size: 0.95rem;
-    }
-    .genre-cell {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
     }
 }
