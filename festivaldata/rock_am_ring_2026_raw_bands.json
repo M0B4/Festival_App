@@ -1,0 +1,520 @@
+[
+    {
+        "name": "A Perfect Circle",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Alter Bridge",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Ankor",
+        "origin": "Spain",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Architects",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "BABYMETAL",
+        "origin": "Japan",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Bad Nerves",
+        "origin": "United Kingdom",
+        "genres": [
+            "Garage Punk"
+        ]
+    },
+    {
+        "name": "Bad Omens",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Badflower",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Basement",
+        "origin": "United Kingdom",
+        "genres": [
+            "Emocore"
+        ]
+    },
+    {
+        "name": "Bilmuri",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Black Veil Brides",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Blood Incantation",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Bloodywood",
+        "origin": "India",
+        "genres": [
+            "Nu Metal"
+        ]
+    },
+    {
+        "name": "Boundaries",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Breaking Benjamin",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Bury Tomorrow",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Bush",
+        "origin": "United Kingdom",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Catch Your Breath",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Danko Jones",
+        "origin": "Canada",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Don Broco",
+        "origin": "United Kingdom",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Drain",
+        "origin": "United States",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Dying Wish",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Ecca Vandal",
+        "origin": "South Africa",
+        "genres": [
+            "Post-Punk"
+        ]
+    },
+    {
+        "name": "Ego Kill Talent",
+        "origin": "Brazil",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Electric Callboy",
+        "origin": "Germany",
+        "genres": [
+            "Electronicore"
+        ]
+    },
+    {
+        "name": "Finch",
+        "origin": "United States",
+        "genres": [
+            "Post-Hardcore"
+        ]
+    },
+    {
+        "name": "Gatecreeper",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "H-Blockx",
+        "origin": "Germany",
+        "genres": [
+            "Rap Rock"
+        ]
+    },
+    {
+        "name": "High Vis",
+        "origin": "United Kingdom",
+        "genres": [
+            "Post-Punk"
+        ]
+    },
+    {
+        "name": "Hollywood Undead",
+        "origin": "United States",
+        "genres": [
+            "Rap Rock"
+        ]
+    },
+    {
+        "name": "Ice Nine Kills",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Iron Maiden",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Kublai Khan TX",
+        "origin": "United States",
+        "genres": [
+            "Beatdown Hardcore"
+        ]
+    },
+    {
+        "name": "Landmvrks",
+        "origin": "France",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Letlive.",
+        "origin": "United States",
+        "genres": [
+            "Post-Hardcore"
+        ]
+    },
+    {
+        "name": "Limp Bizkit",
+        "origin": "United States",
+        "genres": [
+            "Nu Metal"
+        ]
+    },
+    {
+        "name": "Linkin Park",
+        "origin": "United States",
+        "genres": [
+            "Nu Metal"
+        ]
+    },
+    {
+        "name": "Loathe",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Magnolia Park",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Malevolence",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Marteria",
+        "origin": "Germany",
+        "genres": [
+            "Pop Rap"
+        ]
+    },
+    {
+        "name": "Mastodon",
+        "origin": "United States",
+        "genres": [
+            "Progressive Sludge Metal"
+        ]
+    },
+    {
+        "name": "Max Grimm",
+        "origin": "Germany",
+        "genres": [
+            "Ambient"
+        ]
+    },
+    {
+        "name": "Mehnersmoos",
+        "origin": "Germany",
+        "genres": [
+            "Rap"
+        ]
+    },
+    {
+        "name": "Mouth Culture",
+        "origin": "United Kingdom",
+        "genres": [
+            "Indie Rock"
+        ]
+    },
+    {
+        "name": "Palaye Royale",
+        "origin": "Canada",
+        "genres": [
+            "Glam Rock"
+        ]
+    },
+    {
+        "name": "Paleface Swiss",
+        "origin": "Switzerland",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Papa Roach",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "President",
+        "origin": "United Kingdom",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Return To Dust",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Sabaton",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Set It Off",
+        "origin": "United States",
+        "genres": [
+            "Pop Rock"
+        ]
+    },
+    {
+        "name": "Slay Squad",
+        "origin": "United States",
+        "genres": [
+            "Rap Metal"
+        ]
+    },
+    {
+        "name": "Social Distortion",
+        "origin": "United States",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Sondaschule",
+        "origin": "Germany",
+        "genres": [
+            "Ska Punk"
+        ]
+    },
+    {
+        "name": "TX2",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "TesseracT",
+        "origin": "United Kingdom",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "The Butcher Sisters",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "The Funeral Portrait",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "The Garden",
+        "origin": "United States",
+        "genres": [
+            "Art Punk"
+        ]
+    },
+    {
+        "name": "The Hives",
+        "origin": "Sweden",
+        "genres": [
+            "Garage Rock"
+        ]
+    },
+    {
+        "name": "The Offspring",
+        "origin": "United States",
+        "genres": [
+            "Pop Punk"
+        ]
+    },
+    {
+        "name": "The Plot In You",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "The Pretty Reckless",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "The Story So Far",
+        "origin": "United States",
+        "genres": [
+            "Pop Punk"
+        ]
+    },
+    {
+        "name": "The Subways",
+        "origin": "United Kingdom",
+        "genres": [
+            "Garage Rock"
+        ]
+    },
+    {
+        "name": "Thornhill",
+        "origin": "Australia",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Three Days Grace",
+        "origin": "Canada",
+        "genres": [
+            "Post-grunge"
+        ]
+    },
+    {
+        "name": "Tom Morello",
+        "origin": "United States",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Trivium",
+        "origin": "United States",
+        "genres": [
+            "Melodic Metalcore"
+        ]
+    },
+    {
+        "name": "Volbeat",
+        "origin": "Denmark",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Wargasm",
+        "origin": "United Kingdom",
+        "genres": [
+            "Nu Metal"
+        ]
+    },
+    {
+        "name": "We Came As Romans",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Within Temptation",
+        "origin": "Netherlands",
+        "genres": [
+            "Symphonic Metal"
+        ]
+    }
+]

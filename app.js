@@ -9,8 +9,9 @@ const title = document.getElementById('festival-title');
 const tbody = document.getElementById('table-body');
 const searchInput = document.getElementById('search');
 const stats = document.getElementById('stats');
+const tableWrapper = document.querySelector('.table-wrapper');
 
-// 1. Selector füllen
+// 1. Initialisiere das Festival-Auswahlmenü
 function setupSelector() {
     festivalRegistry.forEach(fest => {
         const opt = document.createElement('option');
@@ -25,26 +26,33 @@ function setupSelector() {
     });
 }
 
-// 2. Festival Daten laden
+// 2. Daten für das gewählte Festival laden
 async function loadFestival(fest) {
     currentFestival = fest;
     title.textContent = fest.name;
 
+    // Tabelle beim Wechsel nach oben scrollen
+    if (tableWrapper) tableWrapper.scrollTop = 0;
+    searchInput.value = ""; // Suchfeld leeren
+
     try {
         const response = await fetch(BASE_PATH + fest.file);
+        if (!response.ok) throw new Error('File not found');
+
         currentBands = await response.json();
 
-        // Favoriten spezifisch für dieses Festival laden
+        // Spezifische Favoriten für dieses Festival laden
         favorites = JSON.parse(localStorage.getItem(`favs_${fest.id}`)) || [];
 
         renderTable();
     } catch (error) {
-        console.error("Ladefehler:", error);
-        stats.textContent = "Datei nicht gefunden!";
+        console.error("Fehler beim Laden:", error);
+        tbody.innerHTML = `<tr><td colspan="3" style="text-align:center; padding:20px;">Datei ${fest.file} nicht im Ordner festivaldata gefunden!</td></tr>`;
+        stats.textContent = "Ladefehler";
     }
 }
 
-// 3. Tabelle zeichnen
+// 3. Die Tabelle generieren
 function renderTable() {
     const term = searchInput.value.toLowerCase();
     tbody.innerHTML = "";
@@ -61,24 +69,34 @@ function renderTable() {
         const tr = document.createElement('tr');
         if (isFav) tr.classList.add('is-fav');
 
-        const iso = countryCodes[band.origin.toLowerCase()] || null;
+        // ISO-Code für Flagge ermitteln
+        const countryLower = band.origin.toLowerCase();
+        const iso = countryCodes[countryLower] || null;
+
         const flagHtml = iso ?
-            `<img src="https://flagcdn.com/w40/${iso}.png" class="flag-icon" width="18">` :
-            "🏳️ ";
+            `<img src="https://flagcdn.com/w40/${iso}.png" class="flag-icon" width="20" alt="${band.origin}">` :
+            `<span class="flag-icon">🏳️</span>`;
 
         tr.innerHTML = `
             <td class="col-fav">
                 <span class="fav-star ${isFav ? '' : 'dimmed-star'}">${isFav ? '★' : '☆'}</span>
             </td>
-            <td>${flagHtml} ${band.name}</td>
-            <td style="color:#888; font-size:0.8rem">${band.genres[0] || '-'}</td>
+            <td class="band-cell">
+                ${flagHtml}
+                <span>${band.name}</span>
+            </td>
+            <td class="genre-cell">${band.genres[0] || '-'}</td>
         `;
 
-        tr.onclick = () => toggleFavorite(band.name);
+        tr.onclick = (e) => {
+            toggleFavorite(band.name);
+        };
+
         tbody.appendChild(tr);
     });
 }
 
+// 4. Favoriten umschalten und speichern
 function toggleFavorite(name) {
     if (favorites.includes(name)) {
         favorites = favorites.filter(n => n !== name);
@@ -89,8 +107,9 @@ function toggleFavorite(name) {
     renderTable();
 }
 
+// Suche bei Eingabe ausführen
 searchInput.addEventListener('input', renderTable);
 
-// Start
+// App starten
 setupSelector();
 loadFestival(currentFestival);
