@@ -9,7 +9,6 @@
     --bg: #0d0d0d;
     --surf: #1a1a1a;
     --acc: #e74c3c;
-    /* Sattes Rot */
     --txt: #ffffff;
     --txt-sec: #a0a0a0;
     --brd: #333;
@@ -45,9 +44,6 @@ header {
     gap: 12px;
 }
 
-
-/* GROSSER SELECTOR */
-
 #festival-selector {
     width: 100%;
     max-width: 500px;
@@ -67,9 +63,6 @@ header {
     border-color: var(--acc);
 }
 
-
-/* EXKLUSIV BUTTON */
-
 #exclusive-btn {
     background: transparent;
     color: var(--acc);
@@ -84,13 +77,6 @@ header {
 #exclusive-btn.active {
     background: var(--acc);
     color: #000;
-}
-
-
-/* Exklusiv-Button nur im Band-Tab anzeigen */
-
-.hide-search #exclusive-btn {
-    display: none;
 }
 
 h1 {
@@ -158,7 +144,7 @@ h1 {
 }
 
 
-/* TAB BAR */
+/* TAB BAR & SVG ICONS */
 
 .tab-bar {
     flex: 0 0 65px;
@@ -186,7 +172,6 @@ h1 {
     width: 24px;
     height: 24px;
     background-color: currentColor;
-    /* Benutzt die Textfarbe des Buttons */
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -194,9 +179,6 @@ h1 {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
 }
-
-
-/* Pfade zu deinen Dateien im /icons Ordner */
 
 .icon-bands {
     mask-image: url('icons/bands.svg');
@@ -211,17 +193,6 @@ h1 {
 .icon-settings {
     mask-image: url('icons/settings.svg');
     -webkit-mask-image: url('icons/settings.svg');
-}
-
-.tab-btn {
-    /* ... rest bleibt gleich ... */
-    color: var(--txt-sec);
-    /* Inaktive Icons sind grau */
-}
-
-.tab-btn.active {
-    color: var(--acc);
-    /* Aktive Icons werden rot */
 }
 
 .tab-label {
@@ -305,7 +276,7 @@ tbody td {
 }
 
 
-/* SETTINGS */
+/* SETTINGS & HIDE LOGIC */
 
 .settings-page {
     padding: 25px;
@@ -380,6 +351,13 @@ tbody td {
     border-radius: 5px;
 }
 
+
+/* HIDE RULES */
+
 .hide-search #search-container {
+    display: none;
+}
+
+.hide-nav .top-nav {
     display: none;
 }

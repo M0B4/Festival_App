@@ -1,7 +1,7 @@
 /**
- * FESTIVAL GUIDE 2026 - ULTIMATIVE MASTER-LOGIK
+ * FESTIVAL GUIDE 2026 - MASTER LOGIC
  * Features: 3-Tab-System, Swipe-Navigation, Overlap-Check, Genre-Stats, 
- * Nuclear-Hard-Update, Case-Insensitive Flag-Logic (incl. EU & World).
+ * Nuclear-Hard-Update, Case-Insensitive Flag-Logic, UI-Hiding Logic.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -74,9 +74,12 @@ function switchTab(targetViewId) {
     const targetView = document.getElementById(targetViewId);
     if (targetView) targetView.classList.add('active');
 
-    // UI-Anpassung: Suche & Exklusiv-Button nur im Lineup zeigen
+    // UI-Anpassung: Suche & Exklusiv-Button nur im Lineup zeigen, Nav-Auswahl in Einstellungen verstecken
     const isLineup = targetViewId === 'lineup-view';
+    const isSettings = targetViewId === 'settings-view';
+
     document.body.classList.toggle('hide-search', !isLineup);
+    document.body.classList.toggle('hide-nav', isSettings);
 
     if (targetViewId === 'stats-view') {
         renderGenreStats();
@@ -145,7 +148,7 @@ function setupUI() {
     // --- NUCLEAR HARD UPDATE ---
     document.getElementById('update-app-btn').onclick = async function() {
         const btn = this;
-        btn.textContent = "Bereinige...";
+        btn.textContent = "Updating...";
         btn.disabled = true;
 
         try {
@@ -204,7 +207,7 @@ function renderTable() {
     let overlapsCount = 0;
 
     const filtered = currentBands.filter(band => {
-        const matchesSearch = `${band.name} ${band.origin} ${band.genres.join(' ')}`.toLowerCase().includes(term);
+        const match = `${band.name} ${band.origin} ${band.genres.join(' ')}`.toLowerCase().includes(term);
 
         const otherFests = [];
         for (const [id, data] of Object.entries(allFestivalsData)) {
@@ -217,7 +220,7 @@ function renderTable() {
         if (showExclusiveOnly && otherFests.length > 0) return false;
 
         band.currentMatches = otherFests.sort((a, b) => a.localeCompare(b));
-        return matchesSearch;
+        return match;
     });
 
     stats.innerHTML = `<b>${filtered.length}</b> Bands | <span style="color:var(--acc)">${overlapsCount}</span> Overlaps`;
