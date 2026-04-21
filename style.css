@@ -361,3 +361,30 @@ tbody td {
 .hide-nav .top-nav {
     display: none;
 }
+
+
+/* --- NEU: Logo Styling --- */
+
+.app-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.app-header-logo {
+    height: 50px;
+    /* Höhe nach Bedarf anpassen */
+    max-width: 80%;
+    object-fit: contain;
+    /* OPTIONAL: Falls das Logo rot leuchten soll wie der Rest (funktioniert bei schwarzen SVGs) */
+    /* filter: invert(37%) sepia(93%) saturate(3470%) hue-rotate(346deg) brightness(95%) contrast(88%); */
+}
+
+
+/* Platzierung korrigieren, damit h1-Styles (falls noch vorhanden) nicht stören */
+
+header h1 {
+    display: none;
+}
