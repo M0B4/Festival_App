@@ -1,0 +1,79 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --accent: #f1c40f;
+    /* Wacken-Gelb */
+    --text: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    letter-spacing: 4px;
+    color: var(--accent);
+}
+
+#search {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: var(--card-bg);
+    color: white;
+    margin-bottom: 20px;
+}
+
+#band-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.band-card {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s;
+    border-bottom: 3px solid transparent;
+}
+
+.band-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.band-name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.origin {
+    font-size: 0.8em;
+    color: #888;
+    display: block;
+}
+
+.genre-tag {
+    display: inline-block;
+    background: #333;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7em;
+    margin-top: 10px;
+    color: var(--accent);
+}
