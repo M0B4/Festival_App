@@ -1,4 +1,4 @@
-/* --- 1. GLOBALER RESET & FIX --- */
+/* --- 1. GLOBALER RESET --- */
 
 *,
 *::before,
@@ -8,13 +8,13 @@
 }
 
 :root {
-    --bg: #0d0d0d;
-    --surf: #1a1a1a;
-    --acc: #f1c40f;
+    --bg: #0a0a0a;
+    --surf: #161616;
+    --acc: #e74c3c;
+    /* NEU: Aggressives Rot */
     --txt: #ffffff;
-    --txt-sec: #a0a0a0;
-    --brd: #333;
-    --red: #e74c3c;
+    --txt-sec: #888888;
+    --brd: #222;
 }
 
 html,
@@ -22,12 +22,10 @@ body {
     height: 100vh;
     height: -webkit-fill-available;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: var(--bg);
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
     color: var(--txt);
-    /* Globaler Standard auf Weiß */
 }
 
 body {
@@ -42,48 +40,93 @@ header {
     flex: 0 0 auto;
     background: var(--bg);
     z-index: 100;
+    padding-top: 15px;
 }
 
 .top-nav {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
 }
 
-#festival-selector,
-#exclusive-btn {
+
+/* GROSSER SELECTOR */
+
+#festival-selector {
+    width: 100%;
+    max-width: 400px;
     background: var(--surf);
-    color: var(--txt-sec);
-    border: 1px solid var(--brd);
-    padding: 5px 12px;
+    color: var(--txt);
+    border: 2px solid var(--brd);
+    padding: 12px 20px;
+    /* Deutlich größer */
+    border-radius: 12px;
+    font-size: 1.1rem;
+    /* Größere Schrift */
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    appearance: none;
+    /* Entfernt Standard-Pfeil */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+#festival-selector:focus {
+    border-color: var(--acc);
+}
+
+
+/* EXKLUSIV BUTTON */
+
+#exclusive-btn {
+    background: transparent;
+    color: var(--acc);
+    border: 1px solid var(--acc);
+    padding: 6px 15px;
     border-radius: 20px;
     font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s;
 }
 
 #exclusive-btn.active {
     background: var(--acc);
     color: #000;
-    font-weight: bold;
+}
+
+
+/* Sichtbarkeit des Buttons steuern */
+
+.hide-search #exclusive-btn {
+    display: none;
 }
 
 h1 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 5px 0;
-    color: var(--acc);
+    letter-spacing: 4px;
+    margin: 10px 0;
+    color: var(--txt-sec);
+    font-weight: 300;
 }
 
 #search-container {
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-bottom: 1px solid var(--brd);
 }
 
 #search {
     width: 100%;
-    padding: 10px 15px;
-    border-radius: 8px;
+    padding: 12px 15px;
+    border-radius: 10px;
     border: 1px solid var(--brd);
     background: var(--surf);
     color: white;
@@ -91,15 +134,19 @@ h1 {
     outline: none;
 }
 
+#search:focus {
+    border-color: var(--acc);
+}
+
 #stats {
     font-size: 0.65rem;
     color: var(--txt-sec);
     text-align: center;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 
-/* --- 3. CONTENT AREA --- */
+/* --- 3. CONTENT & TABS --- */
 
 .content-area {
     flex: 1 1 auto;
@@ -124,17 +171,15 @@ h1 {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     -webkit-overflow-scrolling: touch;
 }
 
-
-/* --- 4. BOTTOM TAB BAR --- */
-
 .tab-bar {
-    flex: 0 0 65px;
+    flex: 0 0 70px;
     display: flex;
-    background: var(--surf);
+    background: #000;
+    /* Tiefschwarz für die Leiste */
     border-top: 1px solid var(--brd);
     z-index: 200;
 }
@@ -147,19 +192,19 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--txt-sec);
-    cursor: pointer;
-    gap: 4px;
+    color: #555;
+    /* Inaktiv sehr dunkel */
+    gap: 5px;
     position: relative;
 }
 
 .tab-icon {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .tab-label {
-    font-size: 0.7rem;
-    font-weight: 600;
+    font-size: 0.65rem;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -171,76 +216,133 @@ h1 {
     content: '';
     position: absolute;
     top: 0;
-    width: 40%;
-    height: 3px;
+    width: 35%;
+    height: 4px;
     background: var(--acc);
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 5px 5px;
 }
 
 
-/* --- 5. TABELLEN & LISTE --- */
+/* --- 4. TABELLEN & CONTENT --- */
 
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
 }
 
 thead th {
     position: sticky;
     top: 0;
-    background: #222;
+    background: #111;
     z-index: 2;
-    padding: 8px 15px;
+    padding: 12px 15px;
     text-align: left;
     color: var(--acc);
     font-size: 0.6rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 tbody td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #222;
+    padding: 14px 15px;
+    border-bottom: 1px solid #161616;
     color: var(--txt);
 }
 
 .band-info-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
 }
 
 .band-main-line {
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .flag-icon {
-    margin-right: 10px;
+    margin-right: 12px;
     border-radius: 2px;
-    flex-shrink: 0;
+    filter: grayscale(0.2);
 }
 
 .fest-badge {
-    background: #2a2a2a;
+    background: transparent;
     color: var(--acc);
     font-size: 0.55rem;
-    padding: 2px 5px;
-    border-radius: 3px;
-    margin-right: 3px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--acc);
+    margin-right: 4px;
     text-transform: uppercase;
-    border: 1px solid #444;
 }
 
 .genre-cell {
     color: var(--txt-sec);
     font-size: 0.75rem;
     text-align: right;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+}
+
+.fav-star {
+    font-size: 1.3rem;
+    transition: transform 0.1s;
+}
+
+.is-fav {
+    background: rgba(231, 76, 60, 0.05);
+}
+
+
+/* --- 5. EINSTELLUNGEN --- */
+
+.settings-page {
+    padding: 25px;
+}
+
+.settings-page h2 {
+    color: var(--acc);
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.settings-group {
+    background: var(--surf);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--brd);
+}
+
+.settings-group p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gold-btn {
+    background: var(--acc);
+    color: #fff;
+}
+
+.red-btn {
+    background: transparent;
+    color: var(--acc);
+    border: 2px solid var(--acc);
 }
 
 
@@ -253,90 +355,23 @@ tbody td {
 .genre-info {
     display: flex;
     justify-content: space-between;
-    font-size: 0.85rem;
-    margin-bottom: 5px;
-    color: var(--txt);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
 .genre-bar-bg {
     background: #222;
-    height: 8px;
-    border-radius: 4px;
+    height: 12px;
+    border-radius: 6px;
 }
 
 .genre-bar-fill {
     background: var(--acc);
     height: 100%;
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
 }
-
-
-/* --- 7. EINSTELLUNGEN (FIXED CONTRAST) --- */
-
-.settings-page {
-    padding: 20px;
-    color: var(--txt);
-}
-
-.settings-page h2 {
-    color: var(--acc);
-    font-size: 1.2rem;
-    margin: 0 0 25px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.settings-group {
-    background: var(--surf);
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border: 1px solid var(--brd);
-}
-
-
-/* Hier wird sichergestellt, dass der Text lesbar ist */
-
-.settings-group p {
-    font-size: 0.9rem;
-    color: var(--txt);
-    /* Geändert von txt-sec auf txt für maximalen Kontrast */
-    margin: 0 0 15px 0;
-    line-height: 1.5;
-}
-
-.action-btn {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-.gold-btn {
-    background: var(--acc);
-    color: #000;
-}
-
-.red-btn {
-    background: transparent;
-    color: var(--red);
-    border: 2px solid var(--red);
-}
-
-.settings-footer {
-    text-align: center;
-    font-size: 0.7rem;
-    color: var(--txt-sec);
-    margin-top: 40px;
-    opacity: 0.5;
-}
-
-
-/* --- 8. UI STATES --- */
 
 .hide-search #search-container {
     display: none;
