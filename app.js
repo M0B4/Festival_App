@@ -157,8 +157,12 @@ function setupUI() {
             const isCollapsed = searchContainer.classList.toggle('collapsed');
             searchToggle.classList.toggle('active', !isCollapsed);
             if (!isCollapsed && searchInput) setTimeout(() => searchInput.focus(), 300);
-            else { if (searchInput) { searchInput.value = "";
-                    renderTable(); } }
+            else {
+                if (searchInput) {
+                    searchInput.value = "";
+                    renderTable();
+                }
+            }
         };
     }
     const exclBtn = document.getElementById('exclusive-btn');
@@ -173,13 +177,37 @@ function setupUI() {
     if (updateBtn) {
         updateBtn.onclick = async function() {
             this.textContent = "Updating...";
+            this.style.background = "#555";
+
             try {
+                // 1. Alle Caches löschen
                 if ('caches' in window) {
-                    const names = await caches.keys();
-                    for (let name of names) await caches.delete(name);
+                    const cacheNames = await caches.keys();
+                    await Promise.all(
+                        cacheNames.map(name => caches.delete(name))
+                    );
                 }
-                window.location.replace(window.location.href.split('?')[0] + '?u=' + Date.now());
-            } catch (e) { window.location.reload(true); }
+
+                // 2. Alle Service Worker finden und unregistrieren
+                if ('serviceWorker' in navigator) {
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    for (let registration of registrations) {
+                        await registration.unregister();
+                    }
+                }
+
+                // 3. Kurze Pause für das System
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                // 4. Hard Reload mit Cache-Busting-Parameter
+                // Das fügt ?v=TIMESTAMP an die URL an, was das Handy zwingt, alles neu zu laden
+                const cleanURL = window.location.href.split('?')[0];
+                window.location.replace(cleanURL + '?update=' + Date.now());
+
+            } catch (e) {
+                // Notfall-Fallback
+                window.location.reload(true);
+            }
         };
     }
 }
