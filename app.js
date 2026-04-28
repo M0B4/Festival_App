@@ -1,6 +1,7 @@
 /**
- * FESTIVAL GUIDE 2026 - MASTER BUNDLE
- * Features: New Festival Tab, Dynamic Metric Stats, Deduplication.
+ * FESTIVAL GUIDE 2026 - ULTIMATE MASTER
+ * Features: Sortable Festival Table, Auto-Hide Nav, 
+ * Persistent Metrics, Deduplication.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -18,6 +19,10 @@ let currentSortMode = 'listeners';
 let isSortAsc = false;
 let currentMetric = localStorage.getItem('pref_metric') || 'listeners';
 
+// --- NEU: FESTIVAL TAB SORTIERUNG ---
+let festSortMode = 'name';
+let festSortAsc = true;
+
 const selector = document.getElementById('festival-selector');
 const tbody = document.getElementById('table-body');
 const searchInput = document.getElementById('search');
@@ -34,7 +39,6 @@ function formatGenre(str) {
     }).join(' ');
 }
 
-// Hilfsfunktion für Zahlenformatierung (M/k)
 function formatNumber(num) {
     if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
     if (num >= 1000) return (num / 1000).toFixed(0) + "k";
@@ -77,28 +81,40 @@ function switchTab(targetViewId) {
     if (activeBtn) activeBtn.classList.add('active');
     target.classList.add('active');
 
-    // UI-Elemente Steuerung
-    document.body.classList.toggle('hide-search', targetViewId !== 'lineup-view');
-    document.body.classList.toggle('hide-nav', targetViewId === 'settings-view');
+    // UI-LOGIK: Nav verstecken in Settings UND Festivals
+    const isLineup = targetViewId === 'lineup-view';
+    const isSettings = targetViewId === 'settings-view';
+    const isFestTab = targetViewId === 'festivals-view';
+
+    document.body.classList.toggle('hide-search', !isLineup);
+    document.body.classList.toggle('hide-nav', isSettings || isFestTab);
 
     if (searchContainer) {
         searchContainer.classList.add('collapsed');
         if (searchToggle) searchToggle.classList.remove('active');
     }
 
-    // Trigger für die speziellen Views
     if (targetViewId === 'stats-view') renderGenreStats();
     if (targetViewId === 'festivals-view') renderFestivalsView();
 }
 
 function handleSort(mode) {
-    if (currentSortMode === mode) {
-        isSortAsc = !isSortAsc;
-    } else {
+    if (currentSortMode === mode) isSortAsc = !isSortAsc;
+    else {
         currentSortMode = mode;
         isSortAsc = (mode === 'name' || mode === 'genre');
     }
     renderTable();
+}
+
+// NEU: Sortierung für die Festival-Tabelle
+function handleFestSort(mode) {
+    if (festSortMode === mode) festSortAsc = !festSortAsc;
+    else {
+        festSortMode = mode;
+        festSortAsc = (mode === 'name');
+    }
+    renderFestivalsView();
 }
 
 function setupUI() {
@@ -115,13 +131,15 @@ function setupUI() {
         btn.onclick = () => switchTab(btn.dataset.target);
     });
 
-    const sortBtnName = document.getElementById('sort-name');
-    const sortBtnList = document.getElementById('sort-listeners');
-    const sortBtnGenre = document.getElementById('sort-genre');
+    // Lineup Sortierung
+    if (document.getElementById('sort-name')) document.getElementById('sort-name').onclick = () => handleSort('name');
+    if (document.getElementById('sort-listeners')) document.getElementById('sort-listeners').onclick = () => handleSort('listeners');
+    if (document.getElementById('sort-genre')) document.getElementById('sort-genre').onclick = () => handleSort('genre');
 
-    if (sortBtnName) sortBtnName.onclick = () => handleSort('name');
-    if (sortBtnList) sortBtnList.onclick = () => handleSort('listeners');
-    if (sortBtnGenre) sortBtnGenre.onclick = () => handleSort('genre');
+    // NEU: Festival Sortierung
+    if (document.getElementById('fest-sort-name')) document.getElementById('fest-sort-name').onclick = () => handleFestSort('name');
+    if (document.getElementById('fest-sort-bands')) document.getElementById('fest-sort-bands').onclick = () => handleFestSort('bands');
+    if (document.getElementById('fest-sort-metric')) document.getElementById('fest-sort-metric').onclick = () => handleFestSort('metric');
 
     const metricSelector = document.getElementById('metric-selector');
     if (metricSelector) {
@@ -130,7 +148,6 @@ function setupUI() {
             currentMetric = this.value;
             localStorage.setItem('pref_metric', currentMetric);
             renderTable();
-            // Falls man im Festival-Tab ist, auch dort aktualisieren
             if (document.getElementById('festivals-view').classList.contains('active')) renderFestivalsView();
         };
     }
@@ -177,71 +194,62 @@ function loadFestival(fest) {
 }
 
 /**
- * NEU: FESTIVAL ÜBERSICHT RENDERN
+ * ÜBERSICHT RENDERN ALS TABELLE
  */
 function renderFestivalsView() {
     const summary = document.getElementById('festivals-summary');
-    const list = document.getElementById('festivals-list-container');
-    if (!summary || !list) return;
+    const fTbody = document.getElementById('festivals-table-body');
+    if (!summary || !fTbody) return;
 
-    list.innerHTML = "";
+    fTbody.innerHTML = "";
     const uniqueBands = new Set();
-    const metricLabel = (currentMetric === 'listeners' ? "Hörer" : "Scrobbles");
+    const metricLabel = (currentMetric === 'listeners' ? "Hörer" : "Plays");
 
-    festivalRegistry.forEach(fest => {
+    // Header aktualisieren
+    const arrow = festSortAsc ? " ▲" : " ▼";
+    document.getElementById('fest-sort-name').innerHTML = "Festival" + (festSortMode === 'name' ? arrow : " ↕");
+    document.getElementById('fest-sort-bands').innerHTML = "Bands" + (festSortMode === 'bands' ? arrow : " ↕");
+    document.getElementById('fest-sort-metric').innerHTML = metricLabel + (festSortMode === 'metric' ? arrow : " ↕");
+
+    // Daten für Sortierung vorbereiten
+    let festList = festivalRegistry.map(fest => {
         const bands = allFestivalsData[fest.id] || [];
         let totalMetric = 0;
-
-        bands.forEach(band => {
-            uniqueBands.add(band.name.toLowerCase());
-            const mData = bandMasterData[band.name.toLowerCase()];
+        bands.forEach(b => {
+            uniqueBands.add(b.name.toLowerCase());
+            const mData = bandMasterData[b.name.toLowerCase()];
             if (mData) totalMetric += (mData[currentMetric] || 0);
         });
+        return { id: fest.id, name: fest.name, bandCount: bands.length, metric: totalMetric, raw: fest };
+    });
 
-        const card = document.createElement('div');
-        card.className = "fest-card";
-        card.innerHTML = `
-            <div class="fest-card-info">
-                <h3>${fest.name}</h3>
-                <div class="fest-card-stats">${bands.length} Bands insgesamt</div>
-            </div>
-            <div class="fest-card-metric">
-                <span class="metric-value">${formatNumber(totalMetric)}</span>
-                <span class="metric-unit">${metricLabel}</span>
-            </div>
+    // Sortierung anwenden
+    festList.sort((a, b) => {
+        let res = 0;
+        if (festSortMode === 'bands') res = a.bandCount - b.bandCount;
+        else if (festSortMode === 'metric') res = a.metric - b.metric;
+        else res = a.name.localeCompare(b.name);
+        return festSortAsc ? res : -res;
+    });
+
+    festList.forEach(item => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td style="font-weight:600;">${item.name}</td>
+            <td style="text-align:right;">${item.bandCount}</td>
+            <td class="listener-cell">${formatNumber(item.metric)}</td>
         `;
-        // Optional: Klick auf Karte lädt das Festival
-        card.onclick = () => {
-            loadFestival(fest);
+        tr.onclick = () => {
+            loadFestival(item.raw);
             switchTab('lineup-view');
         };
-        list.appendChild(card);
+        fTbody.appendChild(tr);
     });
 
     summary.innerHTML = `
         <span class="summary-sub">Festival Saison 2026</span>
         <span class="summary-big-note">${uniqueBands.size} Eindeutige Bands</span>
-        <p style="font-size:0.7rem; color:var(--txt-sec); margin-top:5px;">Verteilt auf ${festivalRegistry.length} Festivals</p>
     `;
-}
-
-// ... Rest der renderTable(), renderGenreStats() und setupSwipeHandlers() bleibt wie gehabt ...
-// Achte darauf, dass du am Ende der app.js noch die Swipe-Liste aktualisierst:
-function setupSwipeHandlers() {
-    if (!contentArea) return;
-    let touchStartX = 0;
-    // Neue View in die Swipe-Reihenfolge aufnehmen!
-    const views = ['lineup-view', 'festivals-view', 'stats-view', 'settings-view'];
-    contentArea.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
-    contentArea.addEventListener('touchend', e => {
-        const touchEndX = e.changedTouches[0].screenX;
-        const threshold = 80;
-        const activeView = document.querySelector('.view-container.active');
-        if (!activeView) return;
-        const currentIndex = views.indexOf(activeView.id);
-        if (touchEndX < touchStartX - threshold && currentIndex < views.length - 1) switchTab(views[currentIndex + 1]);
-        if (touchEndX > touchStartX + threshold && currentIndex > 0) switchTab(views[currentIndex - 1]);
-    }, { passive: true });
 }
 
 function renderTable() {
@@ -293,7 +301,6 @@ function renderTable() {
         const mDataA = bandMasterData[nameA];
         const mDataB = bandMasterData[nameB];
         let result = 0;
-
         if (currentSortMode === 'listeners') {
             const valA = mDataA ? mDataA[currentMetric] : 0;
             const valB = mDataB ? mDataB[currentMetric] : 0;
@@ -304,9 +311,7 @@ function renderTable() {
             if (gA === '-' && gB !== '-') return 1;
             if (gA !== '-' && gB === '-') return -1;
             result = gA.localeCompare(gB);
-        } else {
-            result = a.name.localeCompare(b.name);
-        }
+        } else result = a.name.localeCompare(b.name);
         if (result === 0) return a.name.localeCompare(b.name);
         return isSortAsc ? result : -result;
     });
@@ -317,30 +322,19 @@ function renderTable() {
         const isFav = favorites.includes(band.name);
         const tr = document.createElement('tr');
         if (isFav) tr.classList.add('is-fav');
-
         const originClean = (band.origin || "").toLowerCase().trim();
         const iso = countryCodes[originClean] || null;
         let flagHtml = "🏳️ ";
         if (iso === "world") flagHtml = "<span style='font-size: 1.1rem; margin-right: 8px;'>🌎</span>";
         else if (iso) flagHtml = "<img src='https://flagcdn.com/w40/" + iso + ".png' width='18' style='margin-right:8px; border-radius:2px;'>";
-
         const mData = bandMasterData[band.name.toLowerCase()];
         const countValue = mData ? mData[currentMetric] : 0;
         let lDisplay = "-";
-
         if (countValue >= 1000000) lDisplay = (countValue / 1000000).toFixed(1) + "M";
         else if (countValue >= 1000) lDisplay = (countValue / 1000).toFixed(0) + "k";
         else if (countValue > 0) lDisplay = countValue;
-
-        const rawGenre = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (band.genres && band.genres[0] ? band.genres[0] : '-');
-        const genre = formatGenre(rawGenre);
-
-        tr.innerHTML = "<td><span style='color:" + (isFav ? 'var(--acc)' : '#333') + "'>" + (isFav ? '★' : '☆') + "</span></td>" +
-            "<td><div class='band-info-wrapper'><div class='band-main-line'>" + flagHtml + " <span>" + band.name + "</span></div>" +
-            "<div class='badge-container'>" + band.currentMatches.map(m => "<span class='fest-badge'>" + m + "</span>").join('') + "</div></div></td>" +
-            "<td class='listener-cell'>" + lDisplay + "</td>" +
-            "<td class='genre-cell'>" + genre + "</td>";
-
+        const genre = formatGenre((mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (band.genres && band.genres[0] ? band.genres[0] : '-'));
+        tr.innerHTML = "<td><span style='color:" + (isFav ? 'var(--acc)' : '#333') + "'>" + (isFav ? '★' : '☆') + "</span></td><td><div class='band-info-wrapper'><div class='band-main-line'>" + flagHtml + " <span>" + band.name + "</span></div><div class='badge-container'>" + band.currentMatches.map(m => "<span class='fest-badge'>" + m + "</span>").join('') + "</div></div></td><td class='listener-cell'>" + lDisplay + "</td><td class='genre-cell'>" + genre + "</td>";
         tr.onclick = () => {
             if (favorites.includes(band.name)) favorites = favorites.filter(n => n !== band.name);
             else favorites.push(band.name);
@@ -351,14 +345,29 @@ function renderTable() {
     });
 }
 
+function setupSwipeHandlers() {
+    if (!contentArea) return;
+    let touchStartX = 0;
+    const views = ['lineup-view', 'festivals-view', 'stats-view', 'settings-view'];
+    contentArea.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    contentArea.addEventListener('touchend', e => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const threshold = 80;
+        const activeView = document.querySelector('.view-container.active');
+        if (!activeView) return;
+        const currentIndex = views.indexOf(activeView.id);
+        if (touchEndX < touchStartX - threshold && currentIndex < views.length - 1) switchTab(views[currentIndex + 1]);
+        if (touchEndX > touchStartX + threshold && currentIndex > 0) switchTab(views[currentIndex - 1]);
+    }, { passive: true });
+}
+
 function renderGenreStats() {
     if (!genreContent) return;
     genreContent.innerHTML = "<h2 style='color:var(--acc); text-align:center; font-size: 1rem; margin: 20px 0;'>Top 10 Genres</h2>";
     const counts = {};
     currentBands.forEach(b => {
         const mData = bandMasterData[b.name.toLowerCase()];
-        let g = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (b.genres && b.genres[0] ? b.genres[0] : "Unknown");
-        g = formatGenre(g);
+        let g = formatGenre((mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (b.genres && b.genres[0] ? b.genres[0] : "Unknown"));
         const low = g.toLowerCase();
         if (low.includes("thrash")) g = "Thrash Metal";
         else if (low.includes("death")) g = "Death Metal";

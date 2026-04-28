@@ -58,7 +58,16 @@
         <div id="festivals-view" class="view-container">
             <div class="scroll-box">
                 <div id="festivals-summary"></div>
-                <div id="festivals-list-container"></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="fest-sort-name" class="sortable">Festival ↕</th>
+                            <th id="fest-sort-bands" class="sortable" style="text-align: right;">Bands ↕</th>
+                            <th id="fest-sort-metric" class="sortable" style="text-align: right;">Hörer ↕</th>
+                        </tr>
+                    </thead>
+                    <tbody id="festivals-table-body"></tbody>
+                </table>
             </div>
         </div>
         <div id="settings-view" class="view-container">

@@ -1,25 +1,20 @@
-/* --- BASIS RESETS & PWA FEEL --- */
+/* --- BASIS & LAYOUT --- */
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    /* Verhindert blauen Kasten beim Klicken auf Mobile */
 }
 
 :root {
     --bg: #0d0d0d;
-    /* Tiefschwarz */
     --surf: #1a1a1a;
-    /* Dunkelgrau für Karten/Header */
     --acc: #e74c3c;
     /* Blood Red */
     --txt: #ffffff;
     --txt-sec: #a0a0a0;
-    /* Sekundärtext grau */
     --brd: #333;
-    /* Border Farbe */
 }
 
 html,
@@ -27,7 +22,6 @@ body {
     height: 100vh;
     height: -webkit-fill-available;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: var(--bg);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -40,7 +34,7 @@ body {
 }
 
 
-/* --- HEADER (Logo & Festivalauswahl) --- */
+/* --- HEADER & NAVIGATION --- */
 
 header {
     flex: 0 0 auto;
@@ -52,12 +46,13 @@ header {
     display: flex;
     justify-content: center;
     padding: 15px 0 5px 0;
+    transition: padding 0.3s ease;
 }
 
 .app-header-logo {
     height: 30px !important;
     width: auto !important;
-    max-width: 65% !important;
+    max-width: 60% !important;
     display: block;
 }
 
@@ -67,6 +62,17 @@ header {
     align-items: center;
     padding: 5px 15px 10px 15px;
     gap: 12px;
+}
+
+
+/* Verstecken des Selektors in bestimmten Tabs */
+
+.hide-nav .top-nav {
+    display: none !important;
+}
+
+.hide-nav .app-logo-container {
+    padding: 25px 0 15px 0;
 }
 
 .selector-row {
@@ -98,7 +104,6 @@ header {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 #search-toggle-btn.active {
@@ -115,7 +120,6 @@ header {
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
-    transition: all 0.2s ease;
 }
 
 #exclusive-btn.active {
@@ -161,7 +165,7 @@ header {
 }
 
 
-/* --- HAUPTBEREICH & TABELLE --- */
+/* --- CONTENT AREAS --- */
 
 .content-area {
     flex: 1 1 auto;
@@ -189,6 +193,9 @@ header {
     padding-bottom: 40px;
     -webkit-overflow-scrolling: touch;
 }
+
+
+/* --- TABELLEN STYLING (Lineup & Festivals) --- */
 
 table {
     width: 100%;
@@ -226,7 +233,7 @@ tbody td {
 }
 
 
-/* --- BAND DETAILS & BADGES --- */
+/* Band Details & Badges */
 
 .band-info-wrapper {
     display: flex;
@@ -244,17 +251,13 @@ tbody td {
 .badge-container {
     display: flex;
     flex-wrap: wrap;
-    /* Erlaubt Umbruch in neue Zeile */
     gap: 4px;
-    /* Abstand zwischen den Badges */
     margin-top: 2px;
 }
 
 .fest-badge {
     display: inline-block;
-    /* Wichtig für white-space */
     white-space: nowrap;
-    /* Verhindert Umbruch IM Namen (z.B. Summer Breeze) */
     border: 1px solid var(--acc);
     color: var(--acc);
     font-size: 0.55rem;
@@ -266,7 +269,7 @@ tbody td {
 
 .listener-cell {
     text-align: right;
-    font-family: 'Courier New', monospace;
+    font-family: monospace;
     font-size: 0.75rem;
     color: var(--txt-sec);
 }
@@ -274,21 +277,48 @@ tbody td {
 .genre-cell {
     color: var(--txt-sec);
     font-size: 0.65rem;
-    /* Etwas kleiner, damit mehr in eine Zeile passt */
     text-align: right;
     line-height: 1.1;
-    /* Engerer Zeilenabstand für den Umbruch */
     white-space: normal;
-    /* Erlaubt Zeilenumbruch */
     word-wrap: break-word;
-    /* Bricht extrem lange Wörter zur Not hart um */
-    min-width: 75px;
-    /* Gibt der Spalte eine gesunde Mindestbreite */
-    padding-left: 5px;
+    min-width: 80px;
+    padding-left: 8px;
 }
 
 
-/* --- BOTTOM TAB BAR --- */
+/* Favoriten Markierung */
+
+tr.is-fav {
+    background: rgba(231, 76, 60, 0.03);
+}
+
+
+/* --- FESTIVAL SUMMARY (New Tab) --- */
+
+#festivals-summary {
+    padding: 25px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--surf), var(--bg));
+    border-bottom: 1px solid var(--brd);
+}
+
+.summary-big-note {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--acc);
+    display: block;
+    margin-top: 5px;
+}
+
+.summary-sub {
+    font-size: 0.7rem;
+    color: var(--txt-sec);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* --- TAB BAR (Bottom) --- */
 
 .tab-bar {
     flex: 0 0 65px;
@@ -325,21 +355,21 @@ tbody td {
 }
 
 
-/* Pfade zu deinen SVGs */
+/* Icon Masken */
 
 .icon-bands {
     mask-image: url('icons/bands.svg');
     -webkit-mask-image: url('icons/bands.svg');
 }
 
-.icon-genre {
-    mask-image: url('icons/genre.svg');
-    -webkit-mask-image: url('icons/genre.svg');
-}
-
 .icon-festivals {
     mask-image: url('icons/festivals.svg');
     -webkit-mask-image: url('icons/festivals.svg');
+}
+
+.icon-genre {
+    mask-image: url('icons/genre.svg');
+    -webkit-mask-image: url('icons/genre.svg');
 }
 
 .icon-settings {
@@ -354,7 +384,7 @@ tbody td {
 }
 
 .tab-label {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -374,7 +404,7 @@ tbody td {
 }
 
 
-/* --- SETTINGS & BUTTONS --- */
+/* --- SETTINGS --- */
 
 .settings-page {
     padding: 25px;
@@ -388,11 +418,17 @@ tbody td {
     border: 1px solid var(--brd);
 }
 
+.settings-group h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: var(--acc);
+}
+
 .settings-group p {
-    font-size: 0.85rem;
-    line-height: 1.4;
+    font-size: 0.8rem;
     color: var(--txt-sec);
     margin-bottom: 15px;
+    line-height: 1.4;
 }
 
 .action-btn {
@@ -414,18 +450,18 @@ tbody td {
     background: transparent;
     color: var(--acc);
     border: 2px solid var(--acc);
+    margin-top: 10px;
 }
 
 
-/* Logik zum Ausblenden */
+/* Hide Search logic */
 
-.hide-search #search-container,
-.hide-nav .top-nav {
+.hide-search #search-container {
     display: none !important;
 }
 
 
-/* --- GENRE STATS BARS --- */
+/* --- GENRE STATS --- */
 
 .genre-row {
     padding: 15px 20px;
@@ -448,68 +484,5 @@ tbody td {
     background: var(--acc);
     height: 100%;
     border-radius: 4px;
-    transition: width 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-}
-
-
-/* --- FESTIVAL TAB STYLES --- */
-
-#festivals-summary {
-    padding: 20px;
-    text-align: center;
-    background: linear-gradient(to bottom, var(--surf), var(--bg));
-    border-bottom: 1px solid var(--brd);
-}
-
-.summary-big-note {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--acc);
-    display: block;
-}
-
-.summary-sub {
-    font-size: 0.75rem;
-    color: var(--txt-sec);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.fest-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #222;
-    background: var(--bg);
-}
-
-.fest-card-info h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: var(--txt);
-}
-
-.fest-card-stats {
-    font-size: 0.8rem;
-    color: var(--txt-sec);
-    margin-top: 4px;
-}
-
-.fest-card-metric {
-    text-align: right;
-}
-
-.metric-value {
-    display: block;
-    font-weight: bold;
-    color: var(--acc);
-    font-size: 1rem;
-    font-family: monospace;
-}
-
-.metric-unit {
-    font-size: 0.6rem;
-    color: var(--txt-sec);
-    text-transform: uppercase;
+    transition: width 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
