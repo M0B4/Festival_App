@@ -1,3 +1,8 @@
+/**
+ * FESTIVAL GUIDE 2026 - FINAL COMPLETE EDITION
+ * Fixed: ReferenceError, Title Case Genres, Interactive Sorting.
+ */
+
 const BASE_PATH = 'festivaldata/';
 const MASTER_DATA_PATH = 'bands_master_data.json';
 
@@ -18,6 +23,7 @@ const contentArea = document.querySelector('.content-area');
 const searchContainer = document.getElementById('search-container');
 const searchToggle = document.getElementById('search-toggle-btn');
 
+// --- HILFSFUNKTIONEN ---
 function formatGenre(str) {
     if (!str || str === '-' || str === 'Unknown') return '-';
     return str.split(' ').map(function(word) {
@@ -30,25 +36,32 @@ async function initApp() {
         if (typeof festivalRegistry !== 'undefined') {
             festivalRegistry.sort((a, b) => a.name.localeCompare(b.name));
         }
+
         setupUI();
         setupSwipeHandlers();
+
         try {
             const masterRes = await fetch(MASTER_DATA_PATH);
             if (masterRes.ok) bandMasterData = await masterRes.json();
         } catch (e) { console.warn("Master-Daten nicht verfügbar."); }
+
         const loads = festivalRegistry.map(async(fest) => {
             try {
                 const res = await fetch(BASE_PATH + fest.file);
                 if (res.ok) allFestivalsData[fest.id] = await res.json();
             } catch (e) { console.error("Fehler bei " + fest.file); }
         });
+
         await Promise.all(loads);
         if (festivalRegistry.length > 0) {
             currentFestival = festivalRegistry[0];
             loadFestival(currentFestival);
         }
     } catch (err) { console.error("Kritischer Fehler:", err); }
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function() {});
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(function() {});
+    }
 }
 
 function switchTab(targetViewId) {
@@ -81,7 +94,6 @@ function setupUI() {
         btn.onclick = () => switchTab(btn.dataset.target);
     });
 
-    // --- SORTIER EVENT LISTENER ---
     const sortBtnName = document.getElementById('sort-name');
     const sortBtnList = document.getElementById('sort-listeners');
     const sortBtnGenre = document.getElementById('sort-genre');
@@ -109,6 +121,20 @@ function setupUI() {
         renderTable();
     };
     if (searchInput) searchInput.oninput = renderTable;
+
+    const updateBtn = document.getElementById('update-app-btn');
+    if (updateBtn) {
+        updateBtn.onclick = async function() {
+            this.textContent = "Updating...";
+            try {
+                if ('caches' in window) {
+                    const names = await caches.keys();
+                    for (let name of names) await caches.delete(name);
+                }
+                window.location.replace(window.location.href.split('?')[0] + '?u=' + Date.now());
+            } catch (e) { window.location.reload(true); }
+        };
+    }
 }
 
 function loadFestival(fest) {
@@ -125,7 +151,6 @@ function renderTable() {
     const term = (searchInput && searchInput.value) ? searchInput.value.toLowerCase().trim() : "";
     tbody.innerHTML = "";
 
-    // Header-Zustand aktualisieren
     const sortBtnName = document.getElementById('sort-name');
     const sortBtnList = document.getElementById('sort-listeners');
     const sortBtnGenre = document.getElementById('sort-genre');
@@ -151,7 +176,6 @@ function renderTable() {
         return match;
     });
 
-    // --- ERWEITERTE SORTIER LOGIK ---
     filtered.sort((a, b) => {
         const mDataA = bandMasterData[a.name.toLowerCase()];
         const mDataB = bandMasterData[b.name.toLowerCase()];
@@ -163,7 +187,6 @@ function renderTable() {
         } else if (currentSortMode === 'genre') {
             const gA = formatGenre((mDataA && mDataA.genres) ? mDataA.genres[0] : (a.genres[0] || '-'));
             const gB = formatGenre((mDataB && mDataB.genres) ? mDataB.genres[0] : (b.genres[0] || '-'));
-            // Nach Genre sortieren, bei gleichem Genre nach Name
             return gA.localeCompare(gB) || a.name.localeCompare(b.name);
         }
         return a.name.localeCompare(b.name);
@@ -207,6 +230,44 @@ function renderTable() {
     });
 }
 
-// ... Rest der Funktionen (renderGenreStats, setupSwipeHandlers) bleiben gleich ...
+function setupSwipeHandlers() {
+    if (!contentArea) return;
+    let touchStartX = 0;
+    const views = ['lineup-view', 'stats-view', 'settings-view'];
+    contentArea.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    contentArea.addEventListener('touchend', e => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const threshold = 80;
+        const activeView = document.querySelector('.view-container.active');
+        if (!activeView) return;
+        const currentIndex = views.indexOf(activeView.id);
+        if (touchEndX < touchStartX - threshold && currentIndex < views.length - 1) switchTab(views[currentIndex + 1]);
+        if (touchEndX > touchStartX + threshold && currentIndex > 0) switchTab(views[currentIndex - 1]);
+    }, { passive: true });
+}
+
+function renderGenreStats() {
+    if (!genreContent) return;
+    genreContent.innerHTML = "<h2 style='color:var(--acc); text-align:center; font-size: 1rem; margin: 20px 0;'>Top 10 Genres</h2>";
+    const counts = {};
+    currentBands.forEach(b => {
+        const mData = bandMasterData[b.name.toLowerCase()];
+        let g = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (b.genres[0] || "Unknown");
+        g = formatGenre(g);
+        const low = g.toLowerCase();
+        if (low.includes("thrash")) g = "Thrash Metal";
+        else if (low.includes("death")) g = "Death Metal";
+        else if (low.includes("black")) g = "Black Metal";
+        else if (low.includes("power")) g = "Power Metal";
+        else if (low.includes("heavy")) g = "Heavy Metal";
+        counts[g] = (counts[g] || 0) + 1;
+    });
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 10);
+    const max = sorted[0] ? sorted[0][1] : 0;
+    sorted.forEach(([n, c]) => {
+        const p = (c / max) * 100;
+        genreContent.innerHTML += "<div class='genre-row'><div class='genre-info'><span>" + n + "</span><span>" + c + "</span></div><div class='genre-bar-bg'><div class='genre-bar-fill' style='width:" + p + "%'></div></div></div>";
+    });
+}
 
 initApp();
