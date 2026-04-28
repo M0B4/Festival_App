@@ -1,7 +1,7 @@
 /**
  * FESTIVAL GUIDE 2026 - ULTIMATE EDITION
- * Features: Toggle Ascending/Descending Sort, Non-breaking Badges, 
- * Title Case Genres, Last.fm Integration.
+ * Features: Toggle Metric (Listeners/Playcount), Sorting, 
+ * Non-breaking Badges, Title Case Genres.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -14,9 +14,10 @@ let currentBands = [];
 let favorites = [];
 let showExclusiveOnly = false;
 
-// --- NEU: SORTIER-EINSTELLUNGEN ---
+// --- SORTIER- & METRIK-EINSTELLUNGEN ---
 let currentSortMode = 'listeners';
-let isSortAsc = false; // Bei Hörern starten wir standardmäßig absteigend (Große zuerst)
+let isSortAsc = false;
+let currentMetric = 'listeners'; // 'listeners' oder 'playcount'
 
 const selector = document.getElementById('festival-selector');
 const tbody = document.getElementById('table-body');
@@ -78,15 +79,11 @@ function switchTab(targetViewId) {
     if (targetViewId === 'stats-view') renderGenreStats();
 }
 
-// --- NEU: LOGIK FÜR DEN SORTIER-KLICK ---
 function handleSort(mode) {
     if (currentSortMode === mode) {
-        // Wenn bereits aktiv: Richtung umkehren
         isSortAsc = !isSortAsc;
     } else {
-        // Neuer Modus: Standard-Richtung festlegen
         currentSortMode = mode;
-        // Bei Hörerzahlen wollen wir meistens die Großen zuerst (desc), bei Text A-Z (asc)
         isSortAsc = (mode === 'name' || mode === 'genre');
     }
     renderTable();
@@ -113,6 +110,16 @@ function setupUI() {
     if (sortBtnName) sortBtnName.onclick = () => handleSort('name');
     if (sortBtnList) sortBtnList.onclick = () => handleSort('listeners');
     if (sortBtnGenre) sortBtnGenre.onclick = () => handleSort('genre');
+
+    // --- METRIK TOGGLE (NEU) ---
+    const metricBtn = document.getElementById('toggle-metric-btn');
+    if (metricBtn) {
+        metricBtn.onclick = function() {
+            currentMetric = (currentMetric === 'listeners') ? 'playcount' : 'listeners';
+            this.textContent = "Metrik: " + (currentMetric === 'listeners' ? "Hörer (All-time)" : "Scrobbles (Total)");
+            renderTable();
+        };
+    }
 
     if (searchToggle) {
         searchToggle.onclick = () => {
@@ -164,14 +171,15 @@ function renderTable() {
     const sortBtnList = document.getElementById('sort-listeners');
     const sortBtnGenre = document.getElementById('sort-genre');
 
-    // --- Pfeile im Header aktualisieren ---
     const arrow = isSortAsc ? " ▲" : " ▼";
+    const metricLabel = (currentMetric === 'listeners' ? "Hörer" : "Plays");
+
     if (sortBtnName) {
         sortBtnName.innerHTML = "Band" + (currentSortMode === 'name' ? arrow : " ↕");
         sortBtnName.classList.toggle('active-sort', currentSortMode === 'name');
     }
     if (sortBtnList) {
-        sortBtnList.innerHTML = "Hörer" + (currentSortMode === 'listeners' ? arrow : " ↕");
+        sortBtnList.innerHTML = metricLabel + (currentSortMode === 'listeners' ? arrow : " ↕");
         sortBtnList.classList.toggle('active-sort', currentSortMode === 'listeners');
     }
     if (sortBtnGenre) {
@@ -197,7 +205,6 @@ function renderTable() {
         return match;
     });
 
-    // --- SORTIER LOGIK MIT RICHTUNG ---
     filtered.sort((a, b) => {
         const nameA = a.name.toLowerCase();
         const nameB = b.name.toLowerCase();
@@ -207,13 +214,13 @@ function renderTable() {
         let result = 0;
 
         if (currentSortMode === 'listeners') {
-            const lA = mDataA ? mDataA.listeners : 0;
-            const lB = mDataB ? mDataB.listeners : 0;
-            result = lA - lB; // Basis: aufsteigend
+            // Hier nutzen wir jetzt die gewählte Metrik (listeners oder playcount)
+            const valA = mDataA ? mDataA[currentMetric] : 0;
+            const valB = mDataB ? mDataB[currentMetric] : 0;
+            result = valA - valB;
         } else if (currentSortMode === 'genre') {
             const gA = formatGenre((mDataA && mDataA.genres && mDataA.genres[0]) ? mDataA.genres[0] : (a.genres && a.genres[0] ? a.genres[0] : '-'));
             const gB = formatGenre((mDataB && mDataB.genres && mDataB.genres[0]) ? mDataB.genres[0] : (b.genres && b.genres[0] ? b.genres[0] : '-'));
-
             if (gA === '-' && gB !== '-') return 1;
             if (gA !== '-' && gB === '-') return -1;
             result = gA.localeCompare(gB);
@@ -221,10 +228,7 @@ function renderTable() {
             result = a.name.localeCompare(b.name);
         }
 
-        // Wenn die Werte gleich sind, immer alphabetisch nach Name als Fallback
         if (result === 0) return a.name.localeCompare(b.name);
-
-        // Richtung anwenden
         return isSortAsc ? result : -result;
     });
 
@@ -242,10 +246,13 @@ function renderTable() {
         else if (iso) flagHtml = "<img src='https://flagcdn.com/w40/" + iso + ".png' width='18' style='margin-right:8px; border-radius:2px;'>";
 
         const mData = bandMasterData[band.name.toLowerCase()];
-        const lCount = mData ? mData.listeners : 0;
+        const countValue = mData ? mData[currentMetric] : 0;
         let lDisplay = "-";
-        if (lCount >= 1000000) lDisplay = (lCount / 1000000).toFixed(1) + "M";
-        else if (lCount >= 1000) lDisplay = (lCount / 1000).toFixed(0) + "k";
+
+        // Formatierung der Zahlen
+        if (countValue >= 1000000) lDisplay = (countValue / 1000000).toFixed(1) + "M";
+        else if (countValue >= 1000) lDisplay = (countValue / 1000).toFixed(0) + "k";
+        else if (countValue > 0) lDisplay = countValue;
 
         const rawGenre = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (band.genres && band.genres[0] ? band.genres[0] : '-');
         const genre = formatGenre(rawGenre);
