@@ -1,7 +1,6 @@
 /**
- * FESTIVAL GUIDE 2026 - MASTER BUNDLE
- * Features: Non-breaking Festival Badges, Interactive Sorting,
- * Title Case Genres, Last.fm Integration, Swipe Nav.
+ * FESTIVAL GUIDE 2026 - FINAL STABLE
+ * Fixed: Strict alphabetical sorting within genres.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -24,6 +23,7 @@ const contentArea = document.querySelector('.content-area');
 const searchContainer = document.getElementById('search-container');
 const searchToggle = document.getElementById('search-toggle-btn');
 
+// --- HILFSFUNKTIONEN ---
 function formatGenre(str) {
     if (!str || str === '-' || str === 'Unknown') return '-';
     return str.split(' ').map(function(word) {
@@ -34,7 +34,7 @@ function formatGenre(str) {
 async function initApp() {
     try {
         if (typeof festivalRegistry !== 'undefined') {
-            festivalRegistry.sort((a, b) => a.name.localeCompare(b.name));
+            festivalRegistry.sort(function(a, b) { return a.name.localeCompare(b.name); });
         }
         setupUI();
         setupSwipeHandlers();
@@ -169,6 +169,7 @@ function renderTable() {
         return match;
     });
 
+    // --- KORRIGIERTE SORTIER LOGIK ---
     filtered.sort((a, b) => {
         const mDataA = bandMasterData[a.name.toLowerCase()];
         const mDataB = bandMasterData[b.name.toLowerCase()];
@@ -180,8 +181,18 @@ function renderTable() {
         } else if (currentSortMode === 'genre') {
             const gA = formatGenre((mDataA && mDataA.genres) ? mDataA.genres[0] : (a.genres[0] || '-'));
             const gB = formatGenre((mDataB && mDataB.genres) ? mDataB.genres[0] : (b.genres[0] || '-'));
-            return gA.localeCompare(gB) || a.name.localeCompare(b.name);
+
+            // 1. Unbekannte Genres (-) nach unten
+            if (gA === '-' && gB !== '-') return 1;
+            if (gA !== '-' && gB === '-') return -1;
+
+            // 2. Primär nach Genre alphabetisch
+            if (gA !== gB) return gA.localeCompare(gB);
+
+            // 3. Innerhalb des Genres REIN ALPHABETISCH (Hörer spielen hier keine Rolle mehr)
+            return a.name.localeCompare(b.name);
         }
+        // Standard: Alphabetisch
         return a.name.localeCompare(b.name);
     });
 
@@ -207,7 +218,6 @@ function renderTable() {
         const rawGenre = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (band.genres[0] || '-');
         const genre = formatGenre(rawGenre);
 
-        // HIER: badge-container hinzugefügt für korrekten Umbruch
         tr.innerHTML = "<td><span style='color:" + (isFav ? 'var(--acc)' : '#333') + "'>" + (isFav ? '★' : '☆') + "</span></td>" +
             "<td><div class='band-info-wrapper'><div class='band-main-line'>" + flagHtml + " <span>" + band.name + "</span></div>" +
             "<div class='badge-container'>" + band.currentMatches.map(m => "<span class='fest-badge'>" + m + "</span>").join('') + "</div></div></td>" +
