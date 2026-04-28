@@ -1,7 +1,7 @@
 /**
- * FESTIVAL GUIDE 2026 - ULTIMATE EDITION
- * Features: Dropdown Metric Selection (Listeners/Playcount), 
- * Toggle Sorting, Title Case Genres, Last.fm Integration.
+ * FESTIVAL GUIDE 2026 - FINAL MOBILE STABLE
+ * Features: Persistent Metric Selection, Cache-Safe UI, 
+ * Non-breaking Badges, Title Case Genres.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -14,10 +14,10 @@ let currentBands = [];
 let favorites = [];
 let showExclusiveOnly = false;
 
-// --- SORTIER- & METRIK-EINSTELLUNGEN ---
+// --- PERSISTENTE EINSTELLUNGEN ---
 let currentSortMode = 'listeners';
 let isSortAsc = false;
-let currentMetric = 'listeners';
+let currentMetric = localStorage.getItem('pref_metric') || 'listeners';
 
 const selector = document.getElementById('festival-selector');
 const tbody = document.getElementById('table-body');
@@ -111,12 +111,13 @@ function setupUI() {
     if (sortBtnList) sortBtnList.onclick = () => handleSort('listeners');
     if (sortBtnGenre) sortBtnGenre.onclick = () => handleSort('genre');
 
-    // --- DROPDOWN METRIK (NEU) ---
+    // --- METRIK SELECTOR (PERSISTENT) ---
     const metricSelector = document.getElementById('metric-selector');
     if (metricSelector) {
-        metricSelector.value = currentMetric; // Setzt den Initialwert (listeners)
-        metricSelector.onchange = function() {
+        metricSelector.value = currentMetric;
+        metricSelector.oninput = function() {
             currentMetric = this.value;
+            localStorage.setItem('pref_metric', currentMetric);
             renderTable();
         };
     }
@@ -210,7 +211,6 @@ function renderTable() {
         const nameB = b.name.toLowerCase();
         const mDataA = bandMasterData[nameA];
         const mDataB = bandMasterData[nameB];
-
         let result = 0;
 
         if (currentSortMode === 'listeners') {
@@ -226,7 +226,6 @@ function renderTable() {
         } else {
             result = a.name.localeCompare(b.name);
         }
-
         if (result === 0) return a.name.localeCompare(b.name);
         return isSortAsc ? result : -result;
     });
