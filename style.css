@@ -1,17 +1,25 @@
+/* --- BASIS RESETS & PWA FEEL --- */
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
+    /* Verhindert blauen Kasten beim Klicken auf Mobile */
 }
 
 :root {
     --bg: #0d0d0d;
+    /* Tiefschwarz */
     --surf: #1a1a1a;
+    /* Dunkelgrau für Karten/Header */
     --acc: #e74c3c;
+    /* Blood Red */
     --txt: #ffffff;
     --txt-sec: #a0a0a0;
+    /* Sekundärtext grau */
     --brd: #333;
+    /* Border Farbe */
 }
 
 html,
@@ -19,9 +27,10 @@ body {
     height: 100vh;
     height: -webkit-fill-available;
     margin: 0;
+    padding: 0;
     overflow: hidden;
     background-color: var(--bg);
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: var(--txt);
 }
 
@@ -31,7 +40,7 @@ body {
 }
 
 
-/* --- HEADER BEREICH --- */
+/* --- HEADER (Logo & Festivalauswahl) --- */
 
 header {
     flex: 0 0 auto;
@@ -46,9 +55,10 @@ header {
 }
 
 .app-header-logo {
-    height: 70px !important;
+    height: 30px !important;
     width: auto !important;
-    max-width: 60% !important;
+    max-width: 65% !important;
+    display: block;
 }
 
 .top-nav {
@@ -76,6 +86,7 @@ header {
     font-size: 1.05rem;
     font-weight: bold;
     outline: none;
+    cursor: pointer;
 }
 
 #search-toggle-btn {
@@ -87,6 +98,7 @@ header {
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #search-toggle-btn.active {
@@ -103,6 +115,7 @@ header {
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
+    transition: all 0.2s ease;
 }
 
 #exclusive-btn.active {
@@ -111,7 +124,7 @@ header {
 }
 
 
-/* --- SUCHE COLLAPSIBLE --- */
+/* --- SUCHE (Collapsible) --- */
 
 #search-container {
     padding: 10px 15px;
@@ -148,7 +161,7 @@ header {
 }
 
 
-/* --- TABELLE --- */
+/* --- HAUPTBEREICH & TABELLE --- */
 
 .content-area {
     flex: 1 1 auto;
@@ -173,7 +186,7 @@ header {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -194,6 +207,7 @@ thead th {
     text-transform: uppercase;
     letter-spacing: 1px;
     user-select: none;
+    border-bottom: 1px solid var(--brd);
 }
 
 thead th.sortable {
@@ -211,6 +225,9 @@ tbody td {
     vertical-align: middle;
 }
 
+
+/* --- BAND DETAILS & BADGES --- */
+
 .band-info-wrapper {
     display: flex;
     flex-direction: column;
@@ -224,18 +241,32 @@ tbody td {
     font-size: 0.95rem;
 }
 
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Erlaubt Umbruch in neue Zeile */
+    gap: 4px;
+    /* Abstand zwischen den Badges */
+    margin-top: 2px;
+}
+
 .fest-badge {
+    display: inline-block;
+    /* Wichtig für white-space */
+    white-space: nowrap;
+    /* Verhindert Umbruch IM Namen (z.B. Summer Breeze) */
     border: 1px solid var(--acc);
     color: var(--acc);
     font-size: 0.55rem;
-    padding: 1px 5px;
+    padding: 1px 6px;
     border-radius: 3px;
-    margin-right: 3px;
+    text-transform: uppercase;
+    background: rgba(231, 76, 60, 0.05);
 }
 
 .listener-cell {
     text-align: right;
-    font-family: monospace;
+    font-family: 'Courier New', monospace;
     font-size: 0.75rem;
     color: var(--txt-sec);
 }
@@ -244,14 +275,14 @@ tbody td {
     color: var(--txt-sec);
     font-size: 0.7rem;
     text-align: right;
-    max-width: 80px;
+    max-width: 90px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 
-/* --- TAB BAR --- */
+/* --- BOTTOM TAB BAR --- */
 
 .tab-bar {
     flex: 0 0 65px;
@@ -286,6 +317,9 @@ tbody td {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
 }
+
+
+/* Pfade zu deinen SVGs */
 
 .icon-bands {
     mask-image: url('icons/bands.svg');
@@ -329,7 +363,7 @@ tbody td {
 }
 
 
-/* --- SETTINGS --- */
+/* --- SETTINGS & BUTTONS --- */
 
 .settings-page {
     padding: 25px;
@@ -369,8 +403,10 @@ tbody td {
     background: transparent;
     color: var(--acc);
     border: 2px solid var(--acc);
-    margin-top: 10px;
 }
+
+
+/* Logik zum Ausblenden */
 
 .hide-search #search-container,
 .hide-nav .top-nav {
@@ -378,7 +414,7 @@ tbody td {
 }
 
 
-/* --- STATS --- */
+/* --- GENRE STATS BARS --- */
 
 .genre-row {
     padding: 15px 20px;
@@ -401,5 +437,5 @@ tbody td {
     background: var(--acc);
     height: 100%;
     border-radius: 4px;
-    transition: width 0.5s ease;
+    transition: width 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }

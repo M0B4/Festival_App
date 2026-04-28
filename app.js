@@ -1,6 +1,7 @@
 /**
- * FESTIVAL GUIDE 2026 - FINAL COMPLETE EDITION
- * Fixed: ReferenceError, Title Case Genres, Interactive Sorting.
+ * FESTIVAL GUIDE 2026 - MASTER BUNDLE
+ * Features: Non-breaking Festival Badges, Interactive Sorting,
+ * Title Case Genres, Last.fm Integration, Swipe Nav.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -12,7 +13,7 @@ let currentFestival = null;
 let currentBands = [];
 let favorites = [];
 let showExclusiveOnly = false;
-let currentSortMode = 'listeners'; // 'name', 'listeners' oder 'genre'
+let currentSortMode = 'listeners';
 
 const selector = document.getElementById('festival-selector');
 const tbody = document.getElementById('table-body');
@@ -23,7 +24,6 @@ const contentArea = document.querySelector('.content-area');
 const searchContainer = document.getElementById('search-container');
 const searchToggle = document.getElementById('search-toggle-btn');
 
-// --- HILFSFUNKTIONEN ---
 function formatGenre(str) {
     if (!str || str === '-' || str === 'Unknown') return '-';
     return str.split(' ').map(function(word) {
@@ -36,32 +36,25 @@ async function initApp() {
         if (typeof festivalRegistry !== 'undefined') {
             festivalRegistry.sort((a, b) => a.name.localeCompare(b.name));
         }
-
         setupUI();
         setupSwipeHandlers();
-
         try {
             const masterRes = await fetch(MASTER_DATA_PATH);
             if (masterRes.ok) bandMasterData = await masterRes.json();
         } catch (e) { console.warn("Master-Daten nicht verfügbar."); }
-
         const loads = festivalRegistry.map(async(fest) => {
             try {
                 const res = await fetch(BASE_PATH + fest.file);
                 if (res.ok) allFestivalsData[fest.id] = await res.json();
             } catch (e) { console.error("Fehler bei " + fest.file); }
         });
-
         await Promise.all(loads);
         if (festivalRegistry.length > 0) {
             currentFestival = festivalRegistry[0];
             loadFestival(currentFestival);
         }
     } catch (err) { console.error("Kritischer Fehler:", err); }
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js').catch(function() {});
-    }
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function() {});
 }
 
 function switchTab(targetViewId) {
@@ -214,9 +207,10 @@ function renderTable() {
         const rawGenre = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (band.genres[0] || '-');
         const genre = formatGenre(rawGenre);
 
+        // HIER: badge-container hinzugefügt für korrekten Umbruch
         tr.innerHTML = "<td><span style='color:" + (isFav ? 'var(--acc)' : '#333') + "'>" + (isFav ? '★' : '☆') + "</span></td>" +
             "<td><div class='band-info-wrapper'><div class='band-main-line'>" + flagHtml + " <span>" + band.name + "</span></div>" +
-            "<div>" + band.currentMatches.map(m => "<span class='fest-badge'>" + m + "</span>").join('') + "</div></div></td>" +
+            "<div class='badge-container'>" + band.currentMatches.map(m => "<span class='fest-badge'>" + m + "</span>").join('') + "</div></div></td>" +
             "<td class='listener-cell'>" + lDisplay + "</td>" +
             "<td class='genre-cell'>" + genre + "</td>";
 
