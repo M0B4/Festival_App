@@ -273,12 +273,18 @@ tbody td {
 
 .genre-cell {
     color: var(--txt-sec);
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    /* Etwas kleiner, damit mehr in eine Zeile passt */
     text-align: right;
-    max-width: 90px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 1.1;
+    /* Engerer Zeilenabstand für den Umbruch */
+    white-space: normal;
+    /* Erlaubt Zeilenumbruch */
+    word-wrap: break-word;
+    /* Bricht extrem lange Wörter zur Not hart um */
+    min-width: 75px;
+    /* Gibt der Spalte eine gesunde Mindestbreite */
+    padding-left: 5px;
 }
 
 
