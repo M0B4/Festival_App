@@ -30,14 +30,14 @@ body {
     flex-direction: column;
 }
 
+
+/* --- HEADER BEREICH --- */
+
 header {
     flex: 0 0 auto;
     background: var(--bg);
     z-index: 100;
 }
-
-
-/* LOGO */
 
 .app-logo-container {
     display: flex;
@@ -50,9 +50,6 @@ header {
     width: auto !important;
     max-width: 60% !important;
 }
-
-
-/* NAVIGATION */
 
 .top-nav {
     display: flex;
@@ -88,6 +85,8 @@ header {
     padding: 0 12px;
     color: var(--txt);
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 #search-toggle-btn.active {
@@ -112,7 +111,7 @@ header {
 }
 
 
-/* SUCHE COLLAPSIBLE */
+/* --- SUCHE COLLAPSIBLE --- */
 
 #search-container {
     padding: 10px 15px;
@@ -149,7 +148,7 @@ header {
 }
 
 
-/* MAIN AREA */
+/* --- TABELLE --- */
 
 .content-area {
     flex: 1 1 auto;
@@ -178,8 +177,81 @@ header {
     -webkit-overflow-scrolling: touch;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-/* TAB BAR & ICONS */
+thead th {
+    position: sticky;
+    top: 0;
+    background: #1a1a1a;
+    z-index: 2;
+    padding: 12px 15px;
+    text-align: left;
+    color: var(--acc);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    user-select: none;
+}
+
+thead th.sortable {
+    cursor: pointer;
+}
+
+thead th.active-sort {
+    color: #fff;
+    text-decoration: underline;
+}
+
+tbody td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #222;
+    vertical-align: middle;
+}
+
+.band-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.band-main-line {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.fest-badge {
+    border: 1px solid var(--acc);
+    color: var(--acc);
+    font-size: 0.55rem;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+.listener-cell {
+    text-align: right;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--txt-sec);
+}
+
+.genre-cell {
+    color: var(--txt-sec);
+    font-size: 0.7rem;
+    text-align: right;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* --- TAB BAR --- */
 
 .tab-bar {
     flex: 0 0 65px;
@@ -257,60 +329,7 @@ header {
 }
 
 
-/* TABLE */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-thead th {
-    position: sticky;
-    top: 0;
-    background: #1a1a1a;
-    z-index: 2;
-    padding: 10px 15px;
-    text-align: left;
-    color: var(--acc);
-    font-size: 0.6rem;
-    text-transform: uppercase;
-}
-
-tbody td {
-    padding: 14px 15px;
-    border-bottom: 1px solid #222;
-}
-
-.band-info-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.band-main-line {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.fest-badge {
-    border: 1px solid var(--acc);
-    color: var(--acc);
-    font-size: 0.55rem;
-    padding: 1px 5px;
-    border-radius: 3px;
-    margin-right: 3px;
-}
-
-.genre-cell {
-    color: var(--txt-sec);
-    font-size: 0.75rem;
-    text-align: right;
-}
-
-
-/* SETTINGS & HIDE RULES */
+/* --- SETTINGS --- */
 
 .settings-page {
     padding: 25px;
@@ -324,6 +343,13 @@ tbody td {
     border: 1px solid var(--brd);
 }
 
+.settings-group p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--txt-sec);
+    margin-bottom: 15px;
+}
+
 .action-btn {
     width: 100%;
     padding: 14px;
@@ -331,7 +357,6 @@ tbody td {
     border: none;
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -344,12 +369,16 @@ tbody td {
     background: transparent;
     color: var(--acc);
     border: 2px solid var(--acc);
+    margin-top: 10px;
 }
 
 .hide-search #search-container,
 .hide-nav .top-nav {
     display: none !important;
 }
+
+
+/* --- STATS --- */
 
 .genre-row {
     padding: 15px 20px;
@@ -372,4 +401,5 @@ tbody td {
     background: var(--acc);
     height: 100%;
     border-radius: 4px;
+    transition: width 0.5s ease;
 }

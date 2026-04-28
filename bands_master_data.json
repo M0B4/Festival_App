@@ -1,0 +1,6397 @@
+{
+    "lagwagon": {
+        "name": "Lagwagon",
+        "listeners": 566273,
+        "playcount": 18704879,
+        "genres": [
+            "punk rock",
+            "punk",
+            "pop punk"
+        ]
+    },
+    "bad omens": {
+        "name": "Bad Omens",
+        "listeners": 800277,
+        "playcount": 88737777,
+        "genres": [
+            "metalcore",
+            "post-hardcore",
+            "alternative metal"
+        ]
+    },
+    "gaerea": {
+        "name": "Gaerea",
+        "listeners": 67505,
+        "playcount": 2324717,
+        "genres": [
+            "black metal",
+            "portuguese",
+            "Blackened Death Metal"
+        ]
+    },
+    "decapitated": {
+        "name": "Decapitated",
+        "listeners": 299750,
+        "playcount": 12462484,
+        "genres": [
+            "death metal",
+            "Technical Death Metal",
+            "Brutal Death Metal"
+        ]
+    },
+    "uravena": {
+        "name": "Uravena",
+        "listeners": 143,
+        "playcount": 744,
+        "genres": [
+            "french",
+            "metal",
+            "French Polynesia"
+        ]
+    },
+    "avalanche effect": {
+        "name": "Avalanche Effect",
+        "listeners": 27161,
+        "playcount": 253041,
+        "genres": [
+            "metalcore",
+            "german",
+            "post-hardcore"
+        ]
+    },
+    "locomuerte": {
+        "name": "Locomuerte",
+        "listeners": 1778,
+        "playcount": 14093,
+        "genres": [
+            "french",
+            "hardcore",
+            "metal"
+        ]
+    },
+    "battle beast": {
+        "name": "Battle Beast",
+        "listeners": 170685,
+        "playcount": 8792680,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "finnish"
+        ]
+    },
+    "def leppard": {
+        "name": "Def Leppard",
+        "listeners": 1845742,
+        "playcount": 47723280,
+        "genres": [
+            "hard rock",
+            "classic rock",
+            "rock"
+        ]
+    },
+    "john coffey": {
+        "name": "John Coffey",
+        "listeners": 35543,
+        "playcount": 734087,
+        "genres": [
+            "hardcore",
+            "Southern Rock",
+            "melodic hardcore"
+        ]
+    },
+    "k l p s": {
+        "name": "K L P S",
+        "listeners": 115,
+        "playcount": 1195,
+        "genres": [
+            "post metal",
+            "sludge metal",
+            "atmospheric sludge metal"
+        ]
+    },
+    "henret": {
+        "name": "HENRET",
+        "listeners": 1061,
+        "playcount": 7631,
+        "genres": [
+            "metalcore",
+            "metallic hardcore",
+            "hardcore"
+        ]
+    },
+    "bush": {
+        "name": "Bush",
+        "listeners": 1781241,
+        "playcount": 35673320,
+        "genres": [
+            "Grunge",
+            "alternative rock",
+            "rock"
+        ]
+    },
+    "elvenking": {
+        "name": "Elvenking",
+        "listeners": 228168,
+        "playcount": 9782647,
+        "genres": [
+            "folk metal",
+            "Power metal",
+            "Folk Power Metal"
+        ]
+    },
+    "helloween": {
+        "name": "Helloween",
+        "listeners": 911237,
+        "playcount": 53275264,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "speed metal"
+        ]
+    },
+    "electric callboy": {
+        "name": "Electric Callboy",
+        "listeners": 307459,
+        "playcount": 19781602,
+        "genres": [
+            "metalcore",
+            "trancecore",
+            "german"
+        ]
+    },
+    "divlje jagode": {
+        "name": "Divlje Jagode",
+        "listeners": 30826,
+        "playcount": 834361,
+        "genres": [
+            "hard rock",
+            "heavy metal",
+            "ex-yu"
+        ]
+    },
+    "turbonegro": {
+        "name": "Turbonegro",
+        "listeners": 452217,
+        "playcount": 16426521,
+        "genres": [
+            "death punk",
+            "punk rock",
+            "punk"
+        ]
+    },
+    "psychonaut": {
+        "name": "Psychonaut",
+        "listeners": 41532,
+        "playcount": 821230,
+        "genres": [
+            "Post-Metal",
+            "Progressive metal",
+            "Sludge"
+        ]
+    },
+    "crematory": {
+        "name": "Crematory",
+        "listeners": 203163,
+        "playcount": 7735924,
+        "genres": [
+            "Gothic Metal",
+            "death metal",
+            "doom metal"
+        ]
+    },
+    "avatar": {
+        "name": "Avatar",
+        "listeners": 280290,
+        "playcount": 12398595,
+        "genres": [
+            "Melodic Death Metal",
+            "death metal",
+            "swedish"
+        ]
+    },
+    "haggefugg": {
+        "name": "Haggefugg",
+        "listeners": 3989,
+        "playcount": 74936,
+        "genres": [
+            "germany",
+            "medieval",
+            "folk metal"
+        ]
+    },
+    "bizarrekult": {
+        "name": "Bizarrekult",
+        "listeners": 6378,
+        "playcount": 83970,
+        "genres": [
+            "black metal",
+            "tatar black metal",
+            "Post-Black Metal"
+        ]
+    },
+    "sister": {
+        "name": "Sister",
+        "listeners": 62060,
+        "playcount": 666338,
+        "genres": [
+            "sleaze rock",
+            "hard rock",
+            "sleaze"
+        ]
+    },
+    "dartagnan": {
+        "name": "Dartagnan",
+        "listeners": 54469,
+        "playcount": 1580270,
+        "genres": [
+            "folk metal",
+            "heavy metal",
+            "Deutschrock"
+        ]
+    },
+    "unzucht": {
+        "name": "Unzucht",
+        "listeners": 31467,
+        "playcount": 605236,
+        "genres": [
+            "Gothic Rock",
+            "german",
+            "Gothic"
+        ]
+    },
+    "skyclad": {
+        "name": "Skyclad",
+        "listeners": 83220,
+        "playcount": 3328012,
+        "genres": [
+            "folk metal",
+            "heavy metal",
+            "metal"
+        ]
+    },
+    "heaven.exe": {
+        "name": "HEAVEN.EXE",
+        "listeners": 936,
+        "playcount": 5533,
+        "genres": [
+            "Nu Metal",
+            "metalcore",
+            "Progressive Metalcore"
+        ]
+    },
+    "point mort": {
+        "name": "Point Mort",
+        "listeners": 2028,
+        "playcount": 24223,
+        "genres": [
+            "post-hardcore",
+            "Post-Metal",
+            "france"
+        ]
+    },
+    "slime": {
+        "name": "Slime",
+        "listeners": 121716,
+        "playcount": 2377810,
+        "genres": [
+            "punk",
+            "deutschpunk",
+            "punk rock"
+        ]
+    },
+    "terrorizer": {
+        "name": "Terrorizer",
+        "listeners": 160322,
+        "playcount": 4333699,
+        "genres": [
+            "grindcore",
+            "death metal",
+            "deathgrind"
+        ]
+    },
+    "hollywood undead": {
+        "name": "Hollywood Undead",
+        "listeners": 1519060,
+        "playcount": 83571989,
+        "genres": [
+            "rapcore",
+            "rap",
+            "hardcore"
+        ]
+    },
+    "i am your god": {
+        "name": "I Am Your God",
+        "listeners": 14460,
+        "playcount": 171658,
+        "genres": [
+            "Melodic Death Metal",
+            "metal",
+            "finnish"
+        ]
+    },
+    "scimitar": {
+        "name": "Scimitar",
+        "listeners": 5986,
+        "playcount": 64594,
+        "genres": [
+            "heavy metal",
+            "black metal",
+            "blackened heavy metal"
+        ]
+    },
+    "false reality": {
+        "name": "False Reality",
+        "listeners": 10707,
+        "playcount": 102187,
+        "genres": [
+            "hardcore",
+            "metallic hardcore",
+            "metalcore"
+        ]
+    },
+    "backstabbed": {
+        "name": "Backstabbed",
+        "listeners": 3508,
+        "playcount": 41360,
+        "genres": [
+            "hardcore",
+            "german",
+            "beatdown"
+        ]
+    },
+    "firespawn": {
+        "name": "Firespawn",
+        "listeners": 15848,
+        "playcount": 277396,
+        "genres": [
+            "death metal",
+            "Swedish Death Metal",
+            "swedish"
+        ]
+    },
+    "blood command": {
+        "name": "Blood Command",
+        "listeners": 96866,
+        "playcount": 2506664,
+        "genres": [
+            "post-hardcore",
+            "punk",
+            "norwegian"
+        ]
+    },
+    "pridian": {
+        "name": "Pridian",
+        "listeners": 2874,
+        "playcount": 21551,
+        "genres": [
+            "metalcore",
+            "metal",
+            "industrial metal"
+        ]
+    },
+    "skyline": {
+        "name": "Skyline",
+        "listeners": 78895,
+        "playcount": 970436,
+        "genres": [
+            "electronic",
+            "Drum and bass",
+            "Czech"
+        ]
+    },
+    "the funeral portrait": {
+        "name": "The Funeral Portrait",
+        "listeners": 91212,
+        "playcount": 1904489,
+        "genres": [
+            "post-hardcore",
+            "emo",
+            "metalcore"
+        ]
+    },
+    "primal fear": {
+        "name": "Primal Fear",
+        "listeners": 273918,
+        "playcount": 8250932,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "speed metal"
+        ]
+    },
+    "subway to sally": {
+        "name": "Subway to Sally",
+        "listeners": 208528,
+        "playcount": 16955368,
+        "genres": [
+            "folk metal",
+            "german",
+            "Mittelalter"
+        ]
+    },
+    "airbourne": {
+        "name": "Airbourne",
+        "listeners": 653406,
+        "playcount": 16992629,
+        "genres": [
+            "hard rock",
+            "rock",
+            "australian"
+        ]
+    },
+    "black label society": {
+        "name": "Black Label Society",
+        "listeners": 1035495,
+        "playcount": 39366299,
+        "genres": [
+            "heavy metal",
+            "Southern metal",
+            "hard rock"
+        ]
+    },
+    "michael monroe": {
+        "name": "Michael Monroe",
+        "listeners": 53047,
+        "playcount": 1269661,
+        "genres": [
+            "hard rock",
+            "glam rock",
+            "finnish"
+        ]
+    },
+    "the troops of doom": {
+        "name": "The Troops of Doom",
+        "listeners": 11955,
+        "playcount": 155239,
+        "genres": [
+            "thrash metal",
+            "death metal",
+            "death thrash metal"
+        ]
+    },
+    "end it": {
+        "name": "End It",
+        "listeners": 69366,
+        "playcount": 1940918,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "powerviolence"
+        ]
+    },
+    "nevertel": {
+        "name": "Nevertel",
+        "listeners": 112202,
+        "playcount": 3100721,
+        "genres": [
+            "rapcore",
+            "alternative rock",
+            "alternative"
+        ]
+    },
+    "erdling": {
+        "name": "Erdling",
+        "listeners": 51973,
+        "playcount": 995706,
+        "genres": [
+            "industrial metal",
+            "industrial",
+            "german"
+        ]
+    },
+    "powerplant": {
+        "name": "Powerplant",
+        "listeners": 91665,
+        "playcount": 1254633,
+        "genres": [
+            "egg punk",
+            "synthpunk",
+            "Garage Punk"
+        ]
+    },
+    "setyøursails": {
+        "name": "SETYØURSAILS",
+        "listeners": 18576,
+        "playcount": 282902,
+        "genres": [
+            "metalcore",
+            "post-hardcore",
+            "german"
+        ]
+    },
+    "impureza": {
+        "name": "Impureza",
+        "listeners": 6314,
+        "playcount": 130763,
+        "genres": [
+            "death metal",
+            "Flamenco",
+            "Brutal Death Metal"
+        ]
+    },
+    "serpents": {
+        "name": "Serpents",
+        "listeners": 6357,
+        "playcount": 82609,
+        "genres": [
+            "deathcore",
+            "blackened deathcore",
+            "ebm"
+        ]
+    },
+    "aesthetic perfection": {
+        "name": "Aesthetic Perfection",
+        "listeners": 127631,
+        "playcount": 5372746,
+        "genres": [
+            "ebm",
+            "dark electro",
+            "industrial"
+        ]
+    },
+    "megadeth": {
+        "name": "Megadeth",
+        "listeners": 2318215,
+        "playcount": 192891297,
+        "genres": [
+            "thrash metal",
+            "heavy metal",
+            "speed metal"
+        ]
+    },
+    "black tusk": {
+        "name": "Black Tusk",
+        "listeners": 108615,
+        "playcount": 1891124,
+        "genres": [
+            "Sludge",
+            "sludge metal",
+            "stoner metal"
+        ]
+    },
+    "cradle of filth": {
+        "name": "Cradle of Filth",
+        "listeners": 805415,
+        "playcount": 49689769,
+        "genres": [
+            "black metal",
+            "Symphonic Black Metal",
+            "Gothic Metal"
+        ]
+    },
+    "nikki hill": {
+        "name": "Nikki Hill",
+        "listeners": 6009,
+        "playcount": 51792,
+        "genres": [
+            "soul",
+            "blues",
+            "rhythm and blues"
+        ]
+    },
+    "marduk": {
+        "name": "Marduk",
+        "listeners": 278354,
+        "playcount": 18527913,
+        "genres": [
+            "black metal",
+            "swedish black metal",
+            "swedish"
+        ]
+    },
+    "the hardkiss": {
+        "name": "The Hardkiss",
+        "listeners": 58281,
+        "playcount": 2446063,
+        "genres": [
+            "Ukrainian",
+            "electronic",
+            "dance"
+        ]
+    },
+    "angel witch": {
+        "name": "Angel Witch",
+        "listeners": 137594,
+        "playcount": 2851970,
+        "genres": [
+            "heavy metal",
+            "NWOBHM",
+            "metal"
+        ]
+    },
+    "die spitz": {
+        "name": "Die Spitz",
+        "listeners": 108818,
+        "playcount": 1481907,
+        "genres": [
+            "Garage Punk",
+            "punk rock",
+            "riot grrrl"
+        ]
+    },
+    "six feet under": {
+        "name": "Six Feet Under",
+        "listeners": 261424,
+        "playcount": 10804298,
+        "genres": [
+            "death metal",
+            "Brutal Death Metal",
+            "groove metal"
+        ]
+    },
+    "suicidal angels": {
+        "name": "Suicidal Angels",
+        "listeners": 60486,
+        "playcount": 1745733,
+        "genres": [
+            "thrash metal",
+            "speed metal",
+            "Greek"
+        ]
+    },
+    "initiate": {
+        "name": "Initiate",
+        "listeners": 25145,
+        "playcount": 510331,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "female vocal"
+        ]
+    },
+    "snot": {
+        "name": "Snot",
+        "listeners": 414968,
+        "playcount": 8202742,
+        "genres": [
+            "Nu Metal",
+            "hardcore",
+            "metal"
+        ]
+    },
+    "blood red throne": {
+        "name": "Blood Red Throne",
+        "listeners": 88801,
+        "playcount": 2811704,
+        "genres": [
+            "death metal",
+            "Brutal Death Metal",
+            "Technical Death Metal"
+        ]
+    },
+    "gehenna": {
+        "name": "Gehenna",
+        "listeners": 103009,
+        "playcount": 2699983,
+        "genres": [
+            "black metal",
+            "Norwegian Black Metal",
+            "norwegian"
+        ]
+    },
+    "the callous daoboys": {
+        "name": "The Callous Daoboys",
+        "listeners": 93013,
+        "playcount": 4330077,
+        "genres": [
+            "mathcore",
+            "metalcore",
+            "experimental"
+        ]
+    },
+    "the gems": {
+        "name": "The Gems",
+        "listeners": 20521,
+        "playcount": 112326,
+        "genres": [
+            "blues",
+            "soul",
+            "hard rock"
+        ]
+    },
+    "slift": {
+        "name": "Slift",
+        "listeners": 84306,
+        "playcount": 1394807,
+        "genres": [
+            "Psychedelic Rock",
+            "Stoner Rock",
+            "space rock"
+        ]
+    },
+    "three days grace": {
+        "name": "Three Days Grace",
+        "listeners": 3886999,
+        "playcount": 186382513,
+        "genres": [
+            "alternative rock",
+            "rock",
+            "hard rock"
+        ]
+    },
+    "vígljós": {
+        "name": "Vígljós",
+        "listeners": 6539,
+        "playcount": 56800,
+        "genres": [
+            "black metal",
+            "swiss black metal",
+            "swiss"
+        ]
+    },
+    "blackbraid": {
+        "name": "Blackbraid",
+        "listeners": 48498,
+        "playcount": 1349281,
+        "genres": [
+            "black metal",
+            "atmospheric black metal",
+            "melodic black metal"
+        ]
+    },
+    "jelusick": {
+        "name": "Jelusick",
+        "listeners": 6865,
+        "playcount": 91783,
+        "genres": [
+            "Progressive metal",
+            "hard rock",
+            "heavy metal"
+        ]
+    },
+    "ström": {
+        "name": "Ström",
+        "listeners": 111747,
+        "playcount": 817734,
+        "genres": [
+            "hard rock",
+            "Sweden",
+            "jazz"
+        ]
+    },
+    "man with a mission": {
+        "name": "MAN WITH A MISSION",
+        "listeners": 284698,
+        "playcount": 8738522,
+        "genres": [
+            "J-rock",
+            "japanese",
+            "rock"
+        ]
+    },
+    "sanguisugabogg": {
+        "name": "Sanguisugabogg",
+        "listeners": 116011,
+        "playcount": 3469140,
+        "genres": [
+            "death metal",
+            "Brutal Death Metal",
+            "metal"
+        ]
+    },
+    "a perfect circle": {
+        "name": "A Perfect Circle",
+        "listeners": 2202228,
+        "playcount": 114834904,
+        "genres": [
+            "alternative rock",
+            "Progressive rock",
+            "alternative"
+        ]
+    },
+    "mayhem": {
+        "name": "Mayhem",
+        "listeners": 588378,
+        "playcount": 25177309,
+        "genres": [
+            "black metal",
+            "Norwegian Black Metal",
+            "norwegian"
+        ]
+    },
+    "mr. hurley & die pulveraffen": {
+        "name": "Mr. Hurley & Die Pulveraffen",
+        "listeners": 20296,
+        "playcount": 726446,
+        "genres": [
+            "folk",
+            "pirate",
+            "grog n roll"
+        ]
+    },
+    "saxon": {
+        "name": "Saxon",
+        "listeners": 561289,
+        "playcount": 15740361,
+        "genres": [
+            "heavy metal",
+            "NWOBHM",
+            "hard rock"
+        ]
+    },
+    "iron maiden": {
+        "name": "Iron Maiden",
+        "listeners": 3207633,
+        "playcount": 267463019,
+        "genres": [
+            "heavy metal",
+            "metal",
+            "NWOBHM"
+        ]
+    },
+    "psycho mosher": {
+        "name": "PSYCHO MOSHER",
+        "listeners": 6,
+        "playcount": 17,
+        "genres": []
+    },
+    "wucan": {
+        "name": "Wucan",
+        "listeners": 31858,
+        "playcount": 294450,
+        "genres": [
+            "Psychedelic Rock",
+            "blues rock",
+            "Stoner Rock"
+        ]
+    },
+    "mouth culture": {
+        "name": "Mouth Culture",
+        "listeners": 35642,
+        "playcount": 675434,
+        "genres": [
+            "alternative rock",
+            "indie",
+            "mexico"
+        ]
+    },
+    "abandon agony": {
+        "name": "Abandon Agony",
+        "listeners": 393,
+        "playcount": 1407,
+        "genres": [
+            "Melodic Death Metal",
+            "metal",
+            "melodic"
+        ]
+    },
+    "dragunov": {
+        "name": "Dragunov",
+        "listeners": 1444,
+        "playcount": 16236,
+        "genres": [
+            "Post-Metal",
+            "instrumental",
+            "Doom"
+        ]
+    },
+    "non est deus": {
+        "name": "Non Est Deus",
+        "listeners": 18600,
+        "playcount": 400992,
+        "genres": [
+            "black metal",
+            "melodic black metal",
+            "German Black Metal"
+        ]
+    },
+    "immortal disfigurement": {
+        "name": "Immortal Disfigurement",
+        "listeners": 26295,
+        "playcount": 535433,
+        "genres": [
+            "deathcore",
+            "symphonic deathcore",
+            "blackened deathcore"
+        ]
+    },
+    "rap martin rap": {
+        "name": "Rap Martin Rap",
+        "listeners": 46,
+        "playcount": 130,
+        "genres": []
+    },
+    "wargasm": {
+        "name": "Wargasm",
+        "listeners": 9152,
+        "playcount": 145414,
+        "genres": [
+            "thrash metal",
+            "old school thrash metal",
+            "american"
+        ]
+    },
+    "hopsydian": {
+        "name": "Hopsydian",
+        "listeners": 6708,
+        "playcount": 27829,
+        "genres": []
+    },
+    "blood fire death": {
+        "name": "Blood Fire Death",
+        "listeners": 71,
+        "playcount": 811,
+        "genres": []
+    },
+    "kllsignl": {
+        "name": "Kllsignl",
+        "listeners": 557,
+        "playcount": 2937,
+        "genres": []
+    },
+    "faetooth": {
+        "name": "Faetooth",
+        "listeners": 99379,
+        "playcount": 1534764,
+        "genres": [
+            "doom metal",
+            "Sludge",
+            "DOOMGAZE"
+        ]
+    },
+    "persecutor": {
+        "name": "Persecutor",
+        "listeners": 3100,
+        "playcount": 34872,
+        "genres": [
+            "blackened thrash metal",
+            "thrash metal",
+            "polish"
+        ]
+    },
+    "s.o.r.m": {
+        "name": "S.O.R.M",
+        "listeners": 809,
+        "playcount": 4355,
+        "genres": [
+            "hard rock",
+            "classic rock",
+            "heavy metal"
+        ]
+    },
+    "occrasy": {
+        "name": "Occrasy",
+        "listeners": 943,
+        "playcount": 3877,
+        "genres": []
+    },
+    "wings of steel": {
+        "name": "Wings of Steel",
+        "listeners": 10277,
+        "playcount": 95455,
+        "genres": [
+            "heavy metal",
+            "los angeles",
+            "traditional heavy metal"
+        ]
+    },
+    "moonspell": {
+        "name": "Moonspell",
+        "listeners": 435844,
+        "playcount": 26286750,
+        "genres": [
+            "Gothic Metal",
+            "doom metal",
+            "black metal"
+        ]
+    },
+    "gehennah": {
+        "name": "Gehennah",
+        "listeners": 26653,
+        "playcount": 674136,
+        "genres": [
+            "thrash metal",
+            "blackened thrash metal",
+            "black metal"
+        ]
+    },
+    "omsorg": {
+        "name": "Omsorg",
+        "listeners": 1155,
+        "playcount": 13075,
+        "genres": [
+            "screamo",
+            "black metal",
+            "depressive"
+        ]
+    },
+    "sleep theory": {
+        "name": "Sleep Theory",
+        "listeners": 194235,
+        "playcount": 5682455,
+        "genres": [
+            "alternative metal",
+            "alternative",
+            "metalcore"
+        ]
+    },
+    "split": {
+        "name": "Split",
+        "listeners": 11809,
+        "playcount": 104157,
+        "genres": [
+            "punk",
+            "hardcore",
+            "All"
+        ]
+    },
+    "massive wagons": {
+        "name": "Massive Wagons",
+        "listeners": 26808,
+        "playcount": 387897,
+        "genres": [
+            "hard rock",
+            "rock",
+            "british"
+        ]
+    },
+    "tempt fate": {
+        "name": "Tempt Fate",
+        "listeners": 801,
+        "playcount": 2662,
+        "genres": [
+            "death metal",
+            "france"
+        ]
+    },
+    "house of protection": {
+        "name": "House of Protection",
+        "listeners": 69630,
+        "playcount": 1141028,
+        "genres": [
+            "electronic",
+            "alternative metal",
+            "alternative"
+        ]
+    },
+    "terror": {
+        "name": "Terror",
+        "listeners": 302251,
+        "playcount": 14631178,
+        "genres": [
+            "hardcore",
+            "metalcore",
+            "hardcore punk"
+        ]
+    },
+    "smorrah": {
+        "name": "SMORRAH",
+        "listeners": 273,
+        "playcount": 2837,
+        "genres": [
+            "thrash metal",
+            "death metal",
+            "groove metal"
+        ]
+    },
+    "evil jared": {
+        "name": "Evil Jared",
+        "listeners": 2,
+        "playcount": 21,
+        "genres": []
+    },
+    "håndgemeng": {
+        "name": "Håndgemeng",
+        "listeners": 5866,
+        "playcount": 56319,
+        "genres": [
+            "stoner metal",
+            "doom metal",
+            "stoner"
+        ]
+    },
+    "rezn": {
+        "name": "REZN",
+        "listeners": 61774,
+        "playcount": 966753,
+        "genres": [
+            "doom metal",
+            "stoner metal",
+            "Psychedelic Rock"
+        ]
+    },
+    "crypta": {
+        "name": "Crypta",
+        "listeners": 49116,
+        "playcount": 1545683,
+        "genres": [
+            "death metal",
+            "metal",
+            "thrash metal"
+        ]
+    },
+    "urne": {
+        "name": "Urne",
+        "listeners": 16845,
+        "playcount": 193649,
+        "genres": [
+            "Progressive metal",
+            "sludge metal",
+            "metalcore"
+        ]
+    },
+    "harakiri for the sky": {
+        "name": "Harakiri for the Sky",
+        "listeners": 121119,
+        "playcount": 4315255,
+        "genres": [
+            "Post-Black Metal",
+            "black metal",
+            "atmospheric black metal"
+        ]
+    },
+    "guilt trip": {
+        "name": "Guilt Trip",
+        "listeners": 96323,
+        "playcount": 1989951,
+        "genres": [
+            "hardcore",
+            "metalcore",
+            "hardcore punk"
+        ]
+    },
+    "versengold": {
+        "name": "Versengold",
+        "listeners": 42209,
+        "playcount": 1766646,
+        "genres": [
+            "folk",
+            "medieval",
+            "Mittelalter"
+        ]
+    },
+    "expellow": {
+        "name": "Expellow",
+        "listeners": 1863,
+        "playcount": 28307,
+        "genres": [
+            "metalcore",
+            "hardcore",
+            "swiss"
+        ]
+    },
+    "thy light": {
+        "name": "Thy Light",
+        "listeners": 88468,
+        "playcount": 1749801,
+        "genres": [
+            "depressive black metal",
+            "black metal",
+            "Suicidal Black Metal"
+        ]
+    },
+    "the neptune power federation": {
+        "name": "The Neptune Power Federation",
+        "listeners": 2924,
+        "playcount": 58475,
+        "genres": [
+            "hard rock",
+            "Stoner Rock",
+            "australia"
+        ]
+    },
+    "pig destroyer": {
+        "name": "Pig Destroyer",
+        "listeners": 254657,
+        "playcount": 16544690,
+        "genres": [
+            "grindcore",
+            "death metal",
+            "Grind"
+        ]
+    },
+    "das lumpenpack": {
+        "name": "Das Lumpenpack",
+        "listeners": 44171,
+        "playcount": 1606308,
+        "genres": [
+            "indie",
+            "alternative",
+            "comedy"
+        ]
+    },
+    "møl": {
+        "name": "MØL",
+        "listeners": 84256,
+        "playcount": 2241669,
+        "genres": [
+            "Post-Black Metal",
+            "blackgaze",
+            "shoegaze"
+        ]
+    },
+    "joan jett & the blackhearts": {
+        "name": "Joan Jett & The Blackhearts",
+        "listeners": 1256446,
+        "playcount": 15330327,
+        "genres": []
+    },
+    "brainstorm": {
+        "name": "Brainstorm",
+        "listeners": 330794,
+        "playcount": 8299188,
+        "genres": [
+            "rock",
+            "latvian",
+            "Power metal"
+        ]
+    },
+    "kärbholz": {
+        "name": "Kärbholz",
+        "listeners": 20363,
+        "playcount": 835310,
+        "genres": [
+            "Deutschrock",
+            "german",
+            "punk rock"
+        ]
+    },
+    "triptykon": {
+        "name": "Triptykon",
+        "listeners": 101082,
+        "playcount": 2703441,
+        "genres": [
+            "doom metal",
+            "black metal",
+            "Avant-garde Metal"
+        ]
+    },
+    "venom inc.": {
+        "name": "Venom Inc.",
+        "listeners": 15720,
+        "playcount": 136525,
+        "genres": [
+            "heavy metal",
+            "thrash metal",
+            "metal"
+        ]
+    },
+    "dethroned": {
+        "name": "Dethroned",
+        "listeners": 7320,
+        "playcount": 74914,
+        "genres": [
+            "death metal",
+            "black metal",
+            "Brutal Death Metal"
+        ]
+    },
+    "9mm headshot": {
+        "name": "9mm Headshot",
+        "listeners": 5,
+        "playcount": 7,
+        "genres": []
+    },
+    "wolves in the throne room": {
+        "name": "Wolves in the Throne Room",
+        "listeners": 204037,
+        "playcount": 7133316,
+        "genres": [
+            "black metal",
+            "atmospheric black metal",
+            "progressive black metal"
+        ]
+    },
+    "carpenter brut": {
+        "name": "Carpenter Brut",
+        "listeners": 500094,
+        "playcount": 22291009,
+        "genres": [
+            "synthwave",
+            "retro electro",
+            "electronic"
+        ]
+    },
+    "alestorm": {
+        "name": "Alestorm",
+        "listeners": 471256,
+        "playcount": 25967628,
+        "genres": [
+            "folk metal",
+            "pirate metal",
+            "Power metal"
+        ]
+    },
+    "foreigner": {
+        "name": "Foreigner",
+        "listeners": 2405040,
+        "playcount": 33491772,
+        "genres": [
+            "classic rock",
+            "rock",
+            "hard rock"
+        ]
+    },
+    "lakeview": {
+        "name": "Lakeview",
+        "listeners": 31472,
+        "playcount": 462256,
+        "genres": [
+            "post-hardcore",
+            "pop punk",
+            "melodic hardcore"
+        ]
+    },
+    "the halo effect": {
+        "name": "The Halo Effect",
+        "listeners": 80275,
+        "playcount": 2914643,
+        "genres": [
+            "Melodic Death Metal",
+            "death metal",
+            "swedish"
+        ]
+    },
+    "arch enemy": {
+        "name": "Arch Enemy",
+        "listeners": 914753,
+        "playcount": 61833870,
+        "genres": [
+            "Melodic Death Metal",
+            "death metal",
+            "Female fronted metal"
+        ]
+    },
+    "bronze": {
+        "name": "Bronze",
+        "listeners": 80075,
+        "playcount": 866014,
+        "genres": [
+            "city pop",
+            "Stoner Rock",
+            "heavy metal"
+        ]
+    },
+    "the poodles": {
+        "name": "The Poodles",
+        "listeners": 63525,
+        "playcount": 1266767,
+        "genres": [
+            "hard rock",
+            "heavy metal",
+            "swedish"
+        ]
+    },
+    "acid bath": {
+        "name": "Acid Bath",
+        "listeners": 401158,
+        "playcount": 19330673,
+        "genres": [
+            "Sludge",
+            "doom metal",
+            "sludge metal"
+        ]
+    },
+    "5th avenue": {
+        "name": "5th Avenue",
+        "listeners": 1761,
+        "playcount": 6744,
+        "genres": [
+            "melodic rock",
+            "hard rock",
+            "wacken"
+        ]
+    },
+    "vreid": {
+        "name": "Vreid",
+        "listeners": 70612,
+        "playcount": 2473906,
+        "genres": [
+            "black metal",
+            "melodic black metal",
+            "norwegian"
+        ]
+    },
+    "metaklapa": {
+        "name": "Metaklapa",
+        "listeners": 646,
+        "playcount": 5516,
+        "genres": []
+    },
+    "rosalie cunningham": {
+        "name": "Rosalie Cunningham",
+        "listeners": 26066,
+        "playcount": 328344,
+        "genres": [
+            "Psychedelic Rock",
+            "psychedelic",
+            "female vocalists"
+        ]
+    },
+    "resolve": {
+        "name": "Resolve",
+        "listeners": 68366,
+        "playcount": 1816237,
+        "genres": [
+            "metalcore",
+            "hardcore punk",
+            "youth crew"
+        ]
+    },
+    "cult of luna": {
+        "name": "Cult of Luna",
+        "listeners": 314044,
+        "playcount": 17359250,
+        "genres": [
+            "Post-Metal",
+            "Sludge",
+            "doom metal"
+        ]
+    },
+    "fulci": {
+        "name": "Fulci",
+        "listeners": 65415,
+        "playcount": 1606273,
+        "genres": [
+            "Brutal Death Metal",
+            "death metal",
+            "drone"
+        ]
+    },
+    "bring me the horizon": {
+        "name": "Bring Me the Horizon",
+        "listeners": 2832428,
+        "playcount": 325000254,
+        "genres": [
+            "deathcore",
+            "metalcore",
+            "screamo"
+        ]
+    },
+    "the butcher sisters": {
+        "name": "The Butcher Sisters",
+        "listeners": 32401,
+        "playcount": 1329725,
+        "genres": [
+            "rapcore",
+            "hardcore",
+            "beatdown"
+        ]
+    },
+    "trivium": {
+        "name": "Trivium",
+        "listeners": 1364608,
+        "playcount": 82971597,
+        "genres": [
+            "metalcore",
+            "thrash metal",
+            "metal"
+        ]
+    },
+    "winterfylleth": {
+        "name": "Winterfylleth",
+        "listeners": 75176,
+        "playcount": 2305174,
+        "genres": [
+            "black metal",
+            "atmospheric black metal",
+            "pagan black metal"
+        ]
+    },
+    "the gathering": {
+        "name": "The Gathering",
+        "listeners": 424318,
+        "playcount": 24401174,
+        "genres": [
+            "Gothic Metal",
+            "Progressive metal",
+            "Female fronted metal"
+        ]
+    },
+    "knocked loose": {
+        "name": "Knocked Loose",
+        "listeners": 469890,
+        "playcount": 35496920,
+        "genres": [
+            "hardcore",
+            "metalcore",
+            "beatdown hardcore"
+        ]
+    },
+    "p.o.d.": {
+        "name": "P.O.D.",
+        "listeners": 1780212,
+        "playcount": 39153180,
+        "genres": [
+            "Nu Metal",
+            "rapcore",
+            "alternative"
+        ]
+    },
+    "torche": {
+        "name": "Torche",
+        "listeners": 213941,
+        "playcount": 6708284,
+        "genres": [
+            "Sludge",
+            "Stoner Rock",
+            "stoner metal"
+        ]
+    },
+    "bloodywood": {
+        "name": "Bloodywood",
+        "listeners": 163690,
+        "playcount": 3195840,
+        "genres": []
+    },
+    "einherjer": {
+        "name": "Einherjer",
+        "listeners": 109427,
+        "playcount": 2802610,
+        "genres": [
+            "viking metal",
+            "folk metal",
+            "black metal"
+        ]
+    },
+    "wytch hazel": {
+        "name": "Wytch Hazel",
+        "listeners": 16470,
+        "playcount": 553400,
+        "genres": [
+            "heavy metal",
+            "hard rock",
+            "christian metal"
+        ]
+    },
+    "aura noir": {
+        "name": "Aura Noir",
+        "listeners": 71633,
+        "playcount": 2346032,
+        "genres": [
+            "black metal",
+            "thrash metal",
+            "blackened thrash metal"
+        ]
+    },
+    "prophets of the rising dead": {
+        "name": "Prophets Of The Rising Dead",
+        "listeners": 307,
+        "playcount": 2161,
+        "genres": [
+            "Modern Melodic Death Metal"
+        ]
+    },
+    "parasite inc.": {
+        "name": "Parasite Inc.",
+        "listeners": 51580,
+        "playcount": 1131637,
+        "genres": [
+            "Melodic Death Metal",
+            "death metal",
+            "german"
+        ]
+    },
+    "bleed from within": {
+        "name": "Bleed from Within",
+        "listeners": 215689,
+        "playcount": 8387360,
+        "genres": [
+            "deathcore",
+            "metalcore",
+            "death metal"
+        ]
+    },
+    "unprocessed": {
+        "name": "Unprocessed",
+        "listeners": 159899,
+        "playcount": 5640936,
+        "genres": [
+            "Progressive metal",
+            "DJENT",
+            "metalcore"
+        ]
+    },
+    "combust": {
+        "name": "Combust",
+        "listeners": 21185,
+        "playcount": 465394,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "nyhc"
+        ]
+    },
+    "korslagda": {
+        "name": "Korslagda",
+        "listeners": 4222,
+        "playcount": 58093,
+        "genres": [
+            "rock",
+            "punk",
+            "swedish"
+        ]
+    },
+    "zerre": {
+        "name": "Zerre",
+        "listeners": 2199,
+        "playcount": 21008,
+        "genres": [
+            "thrash metal",
+            "punk",
+            "crossover"
+        ]
+    },
+    "floor jansen": {
+        "name": "Floor Jansen",
+        "listeners": 40242,
+        "playcount": 891868,
+        "genres": [
+            "symphonic metal",
+            "Female fronted metal",
+            "Better than Tarja"
+        ]
+    },
+    "perchta": {
+        "name": "Perchta",
+        "listeners": 2587,
+        "playcount": 41727,
+        "genres": [
+            "folk metal",
+            "black metal",
+            "atmospheric black metal"
+        ]
+    },
+    "caliban": {
+        "name": "Caliban",
+        "listeners": 425607,
+        "playcount": 23231145,
+        "genres": [
+            "metalcore",
+            "hardcore",
+            "german"
+        ]
+    },
+    "oslo ovnies": {
+        "name": "Oslo Ovnies",
+        "listeners": 724,
+        "playcount": 12957,
+        "genres": [
+            "alternative rock",
+            "post-hardcore"
+        ]
+    },
+    "elder": {
+        "name": "Elder",
+        "listeners": 155024,
+        "playcount": 4143622,
+        "genres": [
+            "doom metal",
+            "stoner metal",
+            "stoner doom"
+        ]
+    },
+    "pennywise": {
+        "name": "Pennywise",
+        "listeners": 897773,
+        "playcount": 27538897,
+        "genres": [
+            "punk rock",
+            "punk",
+            "hardcore"
+        ]
+    },
+    "hatebreed": {
+        "name": "Hatebreed",
+        "listeners": 779905,
+        "playcount": 34976806,
+        "genres": [
+            "hardcore",
+            "metalcore",
+            "moshcore"
+        ]
+    },
+    "crowded": {
+        "name": "Crowded",
+        "listeners": 193,
+        "playcount": 960,
+        "genres": []
+    },
+    "la dispute": {
+        "name": "La Dispute",
+        "listeners": 700048,
+        "playcount": 49056220,
+        "genres": [
+            "post-hardcore",
+            "screamo",
+            "experimental"
+        ]
+    },
+    "the dwarves": {
+        "name": "The Dwarves",
+        "listeners": 20336,
+        "playcount": 493155,
+        "genres": []
+    },
+    "animals as leaders": {
+        "name": "Animals as Leaders",
+        "listeners": 392706,
+        "playcount": 23578456,
+        "genres": [
+            "Progressive metal",
+            "instrumental",
+            "math metal"
+        ]
+    },
+    "the offspring": {
+        "name": "The Offspring",
+        "listeners": 4581911,
+        "playcount": 214515757,
+        "genres": [
+            "punk rock",
+            "punk",
+            "rock"
+        ]
+    },
+    "armored saint": {
+        "name": "Armored Saint",
+        "listeners": 111398,
+        "playcount": 2169652,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "metal"
+        ]
+    },
+    "quicksand": {
+        "name": "Quicksand",
+        "listeners": 206852,
+        "playcount": 4458282,
+        "genres": [
+            "post-hardcore",
+            "alternative rock",
+            "rock"
+        ]
+    },
+    "severe torture": {
+        "name": "Severe Torture",
+        "listeners": 50045,
+        "playcount": 1202840,
+        "genres": [
+            "Brutal Death Metal",
+            "death metal",
+            "Technical Death Metal"
+        ]
+    },
+    "hirax": {
+        "name": "Hirax",
+        "listeners": 78254,
+        "playcount": 1397593,
+        "genres": [
+            "thrash metal",
+            "speed metal",
+            "crossover"
+        ]
+    },
+    "uli jon roth": {
+        "name": "Uli Jon Roth",
+        "listeners": 33618,
+        "playcount": 537695,
+        "genres": [
+            "hard rock",
+            "guitar virtuoso",
+            "Symphonic Rock"
+        ]
+    },
+    "dirty shirt": {
+        "name": "Dirty Shirt",
+        "listeners": 18982,
+        "playcount": 333285,
+        "genres": [
+            "alternative metal",
+            "folk metal",
+            "industrial metal"
+        ]
+    },
+    "blackgold": {
+        "name": "Blackgold",
+        "listeners": 22768,
+        "playcount": 208235,
+        "genres": []
+    },
+    "electric bassboy": {
+        "name": "ELECTRIC BASSBOY",
+        "listeners": 6211,
+        "playcount": 41759,
+        "genres": [
+            "german",
+            "electronic"
+        ]
+    },
+    "therapy?": {
+        "name": "Therapy?",
+        "listeners": 299600,
+        "playcount": 7437197,
+        "genres": [
+            "alternative rock",
+            "rock",
+            "alternative"
+        ]
+    },
+    "mourir": {
+        "name": "Mourir",
+        "listeners": 3149,
+        "playcount": 39008,
+        "genres": [
+            "black metal",
+            "atmospheric black metal",
+            "Post-Black Metal"
+        ]
+    },
+    "chopper": {
+        "name": "Chopper",
+        "listeners": 6466,
+        "playcount": 81921,
+        "genres": [
+            "pop punk",
+            "punk rock",
+            "metal"
+        ]
+    },
+    "gnome": {
+        "name": "Gnome",
+        "listeners": 40376,
+        "playcount": 592166,
+        "genres": [
+            "black metal",
+            "atmospheric black metal",
+            "japanese black metal"
+        ]
+    },
+    "the scratch": {
+        "name": "The Scratch",
+        "listeners": 39525,
+        "playcount": 491707,
+        "genres": [
+            "irish",
+            "rock",
+            "folk rock"
+        ]
+    },
+    "neckbreakker": {
+        "name": "NECKBREAKKER",
+        "listeners": 8128,
+        "playcount": 64834,
+        "genres": [
+            "death metal",
+            "metal",
+            "metalcore"
+        ]
+    },
+    "the pretty reckless": {
+        "name": "The Pretty Reckless",
+        "listeners": 1329623,
+        "playcount": 56963155,
+        "genres": [
+            "rock",
+            "alternative",
+            "female vocalists"
+        ]
+    },
+    "wilmer x": {
+        "name": "Wilmer X",
+        "listeners": 25606,
+        "playcount": 432597,
+        "genres": [
+            "swedish",
+            "rock",
+            "Pop-Rock"
+        ]
+    },
+    "magnolia park": {
+        "name": "Magnolia Park",
+        "listeners": 258463,
+        "playcount": 6107677,
+        "genres": [
+            "pop punk",
+            "emo",
+            "alternative rock"
+        ]
+    },
+    "okkultist": {
+        "name": "Okkultist",
+        "listeners": 5081,
+        "playcount": 55266,
+        "genres": [
+            "death metal",
+            "black metal",
+            "Female fronted metal"
+        ]
+    },
+    "hackneyed": {
+        "name": "Hackneyed",
+        "listeners": 16328,
+        "playcount": 604057,
+        "genres": [
+            "death metal",
+            "Brutal Death Metal",
+            "german"
+        ]
+    },
+    "chaosbay": {
+        "name": "chaosbay",
+        "listeners": 28453,
+        "playcount": 430060,
+        "genres": [
+            "Progressive metal",
+            "metalcore",
+            "Progressive Metalcore"
+        ]
+    },
+    "municipal waste": {
+        "name": "Municipal Waste",
+        "listeners": 425354,
+        "playcount": 17864649,
+        "genres": [
+            "thrash metal",
+            "crossover",
+            "hardcore"
+        ]
+    },
+    "sha-boom": {
+        "name": "Sha-Boom",
+        "listeners": 7751,
+        "playcount": 59324,
+        "genres": [
+            "norwegian",
+            "rock",
+            "80s"
+        ]
+    },
+    "strevellna": {
+        "name": "Strevellna",
+        "listeners": 1479,
+        "playcount": 10172,
+        "genres": [
+            "heavy metal",
+            "hard rock",
+            "Power metal"
+        ]
+    },
+    "cardiac": {
+        "name": "Cardiac",
+        "listeners": 9768,
+        "playcount": 103768,
+        "genres": [
+            "metalcore",
+            "hardcore",
+            "brazilian"
+        ]
+    },
+    "vexed": {
+        "name": "Vexed",
+        "listeners": 44000,
+        "playcount": 574023,
+        "genres": [
+            "metalcore",
+            "thrash metal",
+            "Progressive Metalcore"
+        ]
+    },
+    "hulder": {
+        "name": "Hulder",
+        "listeners": 36709,
+        "playcount": 705355,
+        "genres": [
+            "black metal",
+            "metal",
+            "belgian black metal"
+        ]
+    },
+    "limp bizkit": {
+        "name": "Limp Bizkit",
+        "listeners": 4135498,
+        "playcount": 180050986,
+        "genres": [
+            "Nu Metal",
+            "rapcore",
+            "alternative"
+        ]
+    },
+    "bad nerves": {
+        "name": "Bad Nerves",
+        "listeners": 198308,
+        "playcount": 3541929,
+        "genres": [
+            "punk",
+            "punk rock",
+            "Garage Punk"
+        ]
+    },
+    "grade 2": {
+        "name": "Grade 2",
+        "listeners": 19643,
+        "playcount": 308543,
+        "genres": [
+            "punk",
+            "punk rock",
+            "Oi"
+        ]
+    },
+    "deserted fear": {
+        "name": "Deserted Fear",
+        "listeners": 24029,
+        "playcount": 489067,
+        "genres": [
+            "death metal",
+            "old school death metal",
+            "german"
+        ]
+    },
+    "finsterforst": {
+        "name": "Finsterforst",
+        "listeners": 76397,
+        "playcount": 1630442,
+        "genres": [
+            "folk metal",
+            "viking metal",
+            "pagan metal"
+        ]
+    },
+    "leprous": {
+        "name": "Leprous",
+        "listeners": 206169,
+        "playcount": 18244936,
+        "genres": [
+            "Progressive metal",
+            "Avant-garde Metal",
+            "Avant-Garde"
+        ]
+    },
+    "mantar": {
+        "name": "Mantar",
+        "listeners": 44953,
+        "playcount": 1171394,
+        "genres": [
+            "Sludge",
+            "sludge metal",
+            "black metal"
+        ]
+    },
+    "bloodred hourglass": {
+        "name": "Bloodred Hourglass",
+        "listeners": 55549,
+        "playcount": 2117760,
+        "genres": [
+            "Melodic Death Metal",
+            "thrash metal",
+            "metalcore"
+        ]
+    },
+    "static-x": {
+        "name": "Static-X",
+        "listeners": 1569618,
+        "playcount": 45503256,
+        "genres": [
+            "industrial metal",
+            "Nu Metal",
+            "metal"
+        ]
+    },
+    "rivers of nihil": {
+        "name": "Rivers of Nihil",
+        "listeners": 118349,
+        "playcount": 5507546,
+        "genres": [
+            "Technical Death Metal",
+            "death metal",
+            "progressive death metal"
+        ]
+    },
+    "slomosa": {
+        "name": "Slomosa",
+        "listeners": 60905,
+        "playcount": 1036149,
+        "genres": [
+            "Stoner Rock",
+            "stoner metal",
+            "norwegian"
+        ]
+    },
+    "ghetto justice": {
+        "name": "Ghetto Justice",
+        "listeners": 1889,
+        "playcount": 35513,
+        "genres": [
+            "hardcore",
+            "german",
+            "fastcore"
+        ]
+    },
+    "katla": {
+        "name": "Katla",
+        "listeners": 11270,
+        "playcount": 152604,
+        "genres": [
+            "post-rock",
+            "Post-Metal",
+            "doom metal"
+        ]
+    },
+    "lost in hollywood": {
+        "name": "LOST IN HOLLYWOOD",
+        "listeners": 19015,
+        "playcount": 167111,
+        "genres": [
+            "metalcore",
+            "german",
+            "alternative metal"
+        ]
+    },
+    "napalm death": {
+        "name": "Napalm Death",
+        "listeners": 512702,
+        "playcount": 29509934,
+        "genres": [
+            "grindcore",
+            "death metal",
+            "Brutal Death Metal"
+        ]
+    },
+    "seven spires": {
+        "name": "Seven Spires",
+        "listeners": 26508,
+        "playcount": 1489317,
+        "genres": [
+            "sympho metal",
+            "symphonic metal",
+            "Power metal"
+        ]
+    },
+    "hostilia": {
+        "name": "Hostilia",
+        "listeners": 1385,
+        "playcount": 23383,
+        "genres": [
+            "thrash metal",
+            "swedish",
+            "heavy metal"
+        ]
+    },
+    "black tish": {
+        "name": "Black Tish",
+        "listeners": 84,
+        "playcount": 271,
+        "genres": []
+    },
+    "catch your breath": {
+        "name": "Catch Your Breath",
+        "listeners": 235683,
+        "playcount": 6848112,
+        "genres": [
+            "metalcore",
+            "post-hardcore",
+            "hardcore"
+        ]
+    },
+    "soen": {
+        "name": "Soen",
+        "listeners": 219034,
+        "playcount": 11915021,
+        "genres": [
+            "Progressive metal",
+            "Progressive rock",
+            "metal"
+        ]
+    },
+    "heartless human harvest": {
+        "name": "Heartless Human Harvest",
+        "listeners": 575,
+        "playcount": 3498,
+        "genres": [
+            "deathcore",
+            "metalcore"
+        ]
+    },
+    "the ghost inside": {
+        "name": "The Ghost Inside",
+        "listeners": 365649,
+        "playcount": 18851962,
+        "genres": [
+            "metalcore",
+            "hardcore",
+            "melodic hardcore"
+        ]
+    },
+    "wacken firefighters": {
+        "name": "Wacken Firefighters",
+        "listeners": 7,
+        "playcount": 81,
+        "genres": []
+    },
+    "the adicts": {
+        "name": "The Adicts",
+        "listeners": 313916,
+        "playcount": 8129102,
+        "genres": [
+            "punk",
+            "punk rock",
+            "Oi"
+        ]
+    },
+    "rotting christ": {
+        "name": "Rotting Christ",
+        "listeners": 263083,
+        "playcount": 18716879,
+        "genres": [
+            "black metal",
+            "melodic black metal",
+            "Dark metal"
+        ]
+    },
+    "defeated sanity": {
+        "name": "Defeated Sanity",
+        "listeners": 80324,
+        "playcount": 3668881,
+        "genres": [
+            "Brutal Death Metal",
+            "Technical Death Metal",
+            "death metal"
+        ]
+    },
+    "don broco": {
+        "name": "Don Broco",
+        "listeners": 260543,
+        "playcount": 13210470,
+        "genres": [
+            "post-hardcore",
+            "alternative rock",
+            "rock"
+        ]
+    },
+    "jared james nichols": {
+        "name": "Jared James Nichols",
+        "listeners": 29350,
+        "playcount": 199709,
+        "genres": [
+            "hard rock",
+            "blues rock",
+            "blues"
+        ]
+    },
+    "blackrain": {
+        "name": "BlackRain",
+        "listeners": 10442,
+        "playcount": 342011,
+        "genres": [
+            "hard rock",
+            "Glam Metal",
+            "sleaze rock"
+        ]
+    },
+    "agnostic front": {
+        "name": "Agnostic Front",
+        "listeners": 325415,
+        "playcount": 11635543,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "nyhc"
+        ]
+    },
+    "maid of ace": {
+        "name": "Maid of Ace",
+        "listeners": 6497,
+        "playcount": 112051,
+        "genres": [
+            "punk",
+            "punk rock",
+            "Grunge"
+        ]
+    },
+    "gatecreeper": {
+        "name": "Gatecreeper",
+        "listeners": 97299,
+        "playcount": 2947909,
+        "genres": [
+            "death metal",
+            "hardcore",
+            "metal"
+        ]
+    },
+    "jakob stegelmann": {
+        "name": "Jakob stegelmann",
+        "listeners": 3,
+        "playcount": 20,
+        "genres": []
+    },
+    "the hellacopters": {
+        "name": "The Hellacopters",
+        "listeners": 352117,
+        "playcount": 12045701,
+        "genres": [
+            "hard rock",
+            "rock",
+            "Garage Rock"
+        ]
+    },
+    "drain": {
+        "name": "Drain",
+        "listeners": 154914,
+        "playcount": 4901906,
+        "genres": [
+            "hardcore",
+            "crossover thrash",
+            "crossover"
+        ]
+    },
+    "uada": {
+        "name": "UADA",
+        "listeners": 59554,
+        "playcount": 1539941,
+        "genres": [
+            "black metal",
+            "melodic black metal",
+            "atmospheric black metal"
+        ]
+    },
+    "nukore": {
+        "name": "Nukore",
+        "listeners": 1188,
+        "playcount": 10308,
+        "genres": [
+            "rapcore",
+            "Nu Metal",
+            "rap-metal"
+        ]
+    },
+    "zeltinger band": {
+        "name": "Zeltinger Band",
+        "listeners": 5581,
+        "playcount": 41690,
+        "genres": [
+            "german",
+            "rock",
+            "Deutschrock"
+        ]
+    },
+    "speed": {
+        "name": "Speed",
+        "listeners": 191414,
+        "playcount": 4795672,
+        "genres": [
+            "j-pop",
+            "hardcore",
+            "japanese"
+        ]
+    },
+    "djerv": {
+        "name": "Djerv",
+        "listeners": 105680,
+        "playcount": 1096288,
+        "genres": [
+            "alternative metal",
+            "hard rock",
+            "metal"
+        ]
+    },
+    "a day to remember": {
+        "name": "A Day to Remember",
+        "listeners": 1924619,
+        "playcount": 156205518,
+        "genres": [
+            "post-hardcore",
+            "pop punk",
+            "hardcore"
+        ]
+    },
+    "the haunted": {
+        "name": "The Haunted",
+        "listeners": 333298,
+        "playcount": 12949797,
+        "genres": [
+            "thrash metal",
+            "Melodic Death Metal",
+            "death metal"
+        ]
+    },
+    "minus youth": {
+        "name": "MINUS YOUTH",
+        "listeners": 4307,
+        "playcount": 43107,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "germany"
+        ]
+    },
+    "faun": {
+        "name": "Faun",
+        "listeners": 291468,
+        "playcount": 10885627,
+        "genres": [
+            "folk",
+            "medieval",
+            "pagan folk"
+        ]
+    },
+    "ego kill talent": {
+        "name": "Ego Kill Talent",
+        "listeners": 46173,
+        "playcount": 597379,
+        "genres": [
+            "rock",
+            "brazil",
+            "hard rock"
+        ]
+    },
+    "eclipse": {
+        "name": "Eclipse",
+        "listeners": 276642,
+        "playcount": 5227504,
+        "genres": [
+            "hard rock",
+            "Progressive rock",
+            "melodic hard rock"
+        ]
+    },
+    "bloodstain": {
+        "name": "bloodstain",
+        "listeners": 6288,
+        "playcount": 61341,
+        "genres": [
+            "thrash metal",
+            "hardcore",
+            "Need to Rate"
+        ]
+    },
+    "sonata arctica": {
+        "name": "Sonata Arctica",
+        "listeners": 762437,
+        "playcount": 72495221,
+        "genres": [
+            "Power metal",
+            "symphonic metal",
+            "melodic metal"
+        ]
+    },
+    "wind rose": {
+        "name": "Wind Rose",
+        "listeners": 189272,
+        "playcount": 4546996,
+        "genres": [
+            "Power metal",
+            "folk metal",
+            "Progressive metal"
+        ]
+    },
+    "skáld": {
+        "name": "Skáld",
+        "listeners": 114797,
+        "playcount": 2601843,
+        "genres": [
+            "folk",
+            "neofolk",
+            "nordic folk"
+        ]
+    },
+    "killus": {
+        "name": "Killus",
+        "listeners": 16039,
+        "playcount": 168813,
+        "genres": [
+            "industrial metal",
+            "industrial",
+            "alternative metal"
+        ]
+    },
+    "soulbound": {
+        "name": "Soulbound",
+        "listeners": 13179,
+        "playcount": 189459,
+        "genres": [
+            "modern metal",
+            "german",
+            "alternative metal"
+        ]
+    },
+    "forbidden": {
+        "name": "Forbidden",
+        "listeners": 119297,
+        "playcount": 2375009,
+        "genres": [
+            "thrash metal",
+            "Technical Thrash Metal",
+            "speed metal"
+        ]
+    },
+    "the vintage caravan": {
+        "name": "The Vintage Caravan",
+        "listeners": 47908,
+        "playcount": 842681,
+        "genres": [
+            "Stoner Rock",
+            "hard rock",
+            "rock"
+        ]
+    },
+    "warfield": {
+        "name": "Warfield",
+        "listeners": 15495,
+        "playcount": 137326,
+        "genres": [
+            "thrash metal",
+            "black metal",
+            "mexican"
+        ]
+    },
+    "europe": {
+        "name": "Europe",
+        "listeners": 1793228,
+        "playcount": 21862574,
+        "genres": [
+            "hard rock",
+            "rock",
+            "classic rock"
+        ]
+    },
+    "unpeople": {
+        "name": "Unpeople",
+        "listeners": 23588,
+        "playcount": 241565,
+        "genres": [
+            "alternative rock",
+            "metal",
+            "alternative metal"
+        ]
+    },
+    "kim dracula": {
+        "name": "Kim Dracula",
+        "listeners": 217059,
+        "playcount": 5259604,
+        "genres": [
+            "Trap Metal",
+            "trap",
+            "alternative metal"
+        ]
+    },
+    "broken by the scream": {
+        "name": "Broken By The Scream",
+        "listeners": 33916,
+        "playcount": 950652,
+        "genres": [
+            "deathcore",
+            "kawaii metal",
+            "metalcore"
+        ]
+    },
+    "hämatom": {
+        "name": "Hämatom",
+        "listeners": 63035,
+        "playcount": 1765047,
+        "genres": [
+            "industrial metal",
+            "groove metal",
+            "Neue Deutsche Haerte"
+        ]
+    },
+    "witch club satan": {
+        "name": "Witch Club Satan",
+        "listeners": 18082,
+        "playcount": 191372,
+        "genres": [
+            "black metal",
+            "Norway",
+            "Norwegian Black Metal"
+        ]
+    },
+    "poison the preacher": {
+        "name": "Poison the Preacher",
+        "listeners": 2590,
+        "playcount": 18871,
+        "genres": [
+            "crossover",
+            "hardcore",
+            "Colombia"
+        ]
+    },
+    "tss": {
+        "name": "TSS",
+        "listeners": 56469,
+        "playcount": 991449,
+        "genres": [
+            "pop",
+            "punk",
+            "jungle"
+        ]
+    },
+    "pustulant flesh": {
+        "name": "Pustulant Flesh",
+        "listeners": 1172,
+        "playcount": 10256,
+        "genres": [
+            "death metal",
+            "metal",
+            "new wave of old school death metal"
+        ]
+    },
+    "extreme": {
+        "name": "Extreme",
+        "listeners": 1097205,
+        "playcount": 12438364,
+        "genres": [
+            "hard rock",
+            "rock",
+            "funk metal"
+        ]
+    },
+    "satanic surfers": {
+        "name": "Satanic Surfers",
+        "listeners": 134387,
+        "playcount": 3194420,
+        "genres": [
+            "punk rock",
+            "skate punk",
+            "melodic hardcore"
+        ]
+    },
+    "paleface swiss": {
+        "name": "PALEFACE SWISS",
+        "listeners": 180196,
+        "playcount": 6019122,
+        "genres": [
+            "deathcore",
+            "beatdown hardcore",
+            "hardcore"
+        ]
+    },
+    "the narrator": {
+        "name": "The Narrator",
+        "listeners": 46139,
+        "playcount": 739330,
+        "genres": [
+            "metalcore",
+            "spotify",
+            "chicago"
+        ]
+    },
+    "donuts hole": {
+        "name": "Donuts hole",
+        "listeners": 1148,
+        "playcount": 5634,
+        "genres": [
+            "Deftones",
+            "alternative metal",
+            "kannon"
+        ]
+    },
+    "max grimm": {
+        "name": "Max Grimm",
+        "listeners": 4023,
+        "playcount": 50346,
+        "genres": []
+    },
+    "arroganz": {
+        "name": "Arroganz",
+        "listeners": 1731,
+        "playcount": 32360,
+        "genres": [
+            "black metal",
+            "german",
+            "death metal"
+        ]
+    },
+    "danko jones": {
+        "name": "Danko Jones",
+        "listeners": 381334,
+        "playcount": 11665399,
+        "genres": [
+            "hard rock",
+            "rock",
+            "Canadian"
+        ]
+    },
+    "blood vulture": {
+        "name": "Blood Vulture",
+        "listeners": 2979,
+        "playcount": 29662,
+        "genres": [
+            "doom metal",
+            "metal",
+            "Progressive metal"
+        ]
+    },
+    "harm's way": {
+        "name": "Harm's Way",
+        "listeners": 20958,
+        "playcount": 986566,
+        "genres": [
+            "hardcore",
+            "powerviolence",
+            "Straight Edge"
+        ]
+    },
+    "sabaton": {
+        "name": "Sabaton",
+        "listeners": 846132,
+        "playcount": 93743939,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "metal"
+        ]
+    },
+    "born hanged": {
+        "name": "BORN HANGED",
+        "listeners": 668,
+        "playcount": 3536,
+        "genres": [
+            "death metal"
+        ]
+    },
+    "ricky warwick": {
+        "name": "Ricky Warwick",
+        "listeners": 8483,
+        "playcount": 124105,
+        "genres": [
+            "rock",
+            "guitar",
+            "hard rock"
+        ]
+    },
+    "sólstafir": {
+        "name": "Sólstafir",
+        "listeners": 164695,
+        "playcount": 7182474,
+        "genres": [
+            "black metal",
+            "Post-Black Metal",
+            "Progressive metal"
+        ]
+    },
+    "periphery": {
+        "name": "Periphery",
+        "listeners": 339704,
+        "playcount": 31942719,
+        "genres": [
+            "Progressive metal",
+            "DJENT",
+            "math metal"
+        ]
+    },
+    "warkings": {
+        "name": "Warkings",
+        "listeners": 39699,
+        "playcount": 707382,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "metal"
+        ]
+    },
+    "ad infinitum": {
+        "name": "Ad Infinitum",
+        "listeners": 53214,
+        "playcount": 1975247,
+        "genres": [
+            "symphonic metal",
+            "Power metal",
+            "metal"
+        ]
+    },
+    "shelter": {
+        "name": "Shelter",
+        "listeners": 73136,
+        "playcount": 1750960,
+        "genres": [
+            "hardcore",
+            "krishnacore",
+            "Straight Edge"
+        ]
+    },
+    "cân bardd": {
+        "name": "Cân Bardd",
+        "listeners": 15240,
+        "playcount": 354426,
+        "genres": [
+            "atmospheric black metal",
+            "black metal",
+            "epic black metal"
+        ]
+    },
+    "soulfly": {
+        "name": "Soulfly",
+        "listeners": 860570,
+        "playcount": 27066246,
+        "genres": [
+            "thrash metal",
+            "Nu Metal",
+            "metal"
+        ]
+    },
+    "hamlet": {
+        "name": "Hamlet",
+        "listeners": 34351,
+        "playcount": 1095102,
+        "genres": [
+            "metal",
+            "alternative metal",
+            "Spanish Metal"
+        ]
+    },
+    "cruachan": {
+        "name": "Cruachan",
+        "listeners": 138100,
+        "playcount": 3564458,
+        "genres": [
+            "folk metal",
+            "celtic metal",
+            "pagan metal"
+        ]
+    },
+    "thy art is murder": {
+        "name": "Thy Art Is Murder",
+        "listeners": 281531,
+        "playcount": 13882237,
+        "genres": [
+            "deathcore",
+            "Technical Deathcore",
+            "death metal"
+        ]
+    },
+    "sondaschule": {
+        "name": "Sondaschule",
+        "listeners": 46296,
+        "playcount": 2635983,
+        "genres": [
+            "ska punk",
+            "ska",
+            "punk"
+        ]
+    },
+    "excrementory grindfuckers": {
+        "name": "Excrementory Grindfuckers",
+        "listeners": 44744,
+        "playcount": 3415986,
+        "genres": [
+            "grindcore",
+            "parody",
+            "german"
+        ]
+    },
+    "distant": {
+        "name": "Distant",
+        "listeners": 99545,
+        "playcount": 2004147,
+        "genres": [
+            "deathcore",
+            "brutal deathcore",
+            "Downtempo Deathcore"
+        ]
+    },
+    "trollfest": {
+        "name": "TrollfesT",
+        "listeners": 83358,
+        "playcount": 2711304,
+        "genres": [
+            "folk metal",
+            "Troll Metal",
+            "viking metal"
+        ]
+    },
+    "plume": {
+        "name": "Plume",
+        "listeners": 16401,
+        "playcount": 86086,
+        "genres": [
+            "punk",
+            "jazz",
+            "indie rock"
+        ]
+    },
+    "luna kills": {
+        "name": "Luna Kills",
+        "listeners": 15139,
+        "playcount": 180316,
+        "genres": [
+            "alternative metal",
+            "alternative rock",
+            "Pop Metal"
+        ]
+    },
+    "trelldom": {
+        "name": "Trelldom",
+        "listeners": 34715,
+        "playcount": 688069,
+        "genres": [
+            "black metal",
+            "Norwegian Black Metal",
+            "norwegian"
+        ]
+    },
+    "rise against": {
+        "name": "Rise Against",
+        "listeners": 2893950,
+        "playcount": 214346145,
+        "genres": [
+            "punk rock",
+            "melodic hardcore",
+            "punk"
+        ]
+    },
+    "blood incantation": {
+        "name": "Blood Incantation",
+        "listeners": 149658,
+        "playcount": 5070285,
+        "genres": [
+            "death metal",
+            "progressive death metal",
+            "Technical Death Metal"
+        ]
+    },
+    "anaal nathrakh": {
+        "name": "Anaal Nathrakh",
+        "listeners": 207660,
+        "playcount": 15826665,
+        "genres": [
+            "black metal",
+            "grindcore",
+            "industrial black metal"
+        ]
+    },
+    "life of agony": {
+        "name": "Life of Agony",
+        "listeners": 203323,
+        "playcount": 4428899,
+        "genres": [
+            "alternative metal",
+            "metal",
+            "hardcore"
+        ]
+    },
+    "tuxedoo": {
+        "name": "Tuxedoo",
+        "listeners": 1905,
+        "playcount": 10850,
+        "genres": [
+            "metalcore",
+            "Nu Metal",
+            "melodic metalcore"
+        ]
+    },
+    "motorjesus": {
+        "name": "Motorjesus",
+        "listeners": 25486,
+        "playcount": 604729,
+        "genres": [
+            "hard rock",
+            "heavy metal",
+            "german"
+        ]
+    },
+    "skynd": {
+        "name": "SKYND",
+        "listeners": 60679,
+        "playcount": 1699591,
+        "genres": [
+            "industrial",
+            "electronic",
+            "industrial rock"
+        ]
+    },
+    "fuet!": {
+        "name": "FUET!",
+        "listeners": 2967,
+        "playcount": 25752,
+        "genres": [
+            "hardcore punk",
+            "hardcore",
+            "spanish"
+        ]
+    },
+    "oranssi pazuzu": {
+        "name": "Oranssi Pazuzu",
+        "listeners": 120998,
+        "playcount": 3793403,
+        "genres": [
+            "black metal",
+            "psychedelic black metal",
+            "experimental"
+        ]
+    },
+    "old man's child": {
+        "name": "Old Man's Child",
+        "listeners": 166582,
+        "playcount": 4677419,
+        "genres": [
+            "black metal",
+            "melodic black metal",
+            "Symphonic Black Metal"
+        ]
+    },
+    "candlemass": {
+        "name": "Candlemass",
+        "listeners": 366776,
+        "playcount": 14697268,
+        "genres": [
+            "doom metal",
+            "Traditional Doom Metal",
+            "heavy metal"
+        ]
+    },
+    "stam1na": {
+        "name": "Stam1na",
+        "listeners": 136176,
+        "playcount": 16906996,
+        "genres": [
+            "thrash metal",
+            "Progressive metal",
+            "finnish"
+        ]
+    },
+    "amorphis": {
+        "name": "Amorphis",
+        "listeners": 559730,
+        "playcount": 45078642,
+        "genres": [
+            "Progressive metal",
+            "Melodic Death Metal",
+            "death metal"
+        ]
+    },
+    "vogelfrey": {
+        "name": "Vogelfrey",
+        "listeners": 22438,
+        "playcount": 426284,
+        "genres": [
+            "folk metal",
+            "medieval",
+            "folk rock"
+        ]
+    },
+    "ambush": {
+        "name": "Ambush",
+        "listeners": 29747,
+        "playcount": 595783,
+        "genres": [
+            "heavy metal",
+            "hardcore",
+            "beatdown hardcore"
+        ]
+    },
+    "200 stab wounds": {
+        "name": "200 Stab Wounds",
+        "listeners": 78163,
+        "playcount": 2337726,
+        "genres": [
+            "death metal",
+            "Brutal Death Metal",
+            "metal"
+        ]
+    },
+    "sun eater": {
+        "name": "Sun Eater",
+        "listeners": 13843,
+        "playcount": 129031,
+        "genres": [
+            "Brutal Death Metal",
+            "deathcore",
+            "Stoner Rock"
+        ]
+    },
+    "frontierer": {
+        "name": "Frontierer",
+        "listeners": 53228,
+        "playcount": 1717750,
+        "genres": [
+            "mathcore",
+            "hardcore",
+            "chaotic hardcore"
+        ]
+    },
+    "midnight odyssey": {
+        "name": "Midnight Odyssey",
+        "listeners": 35477,
+        "playcount": 1601020,
+        "genres": [
+            "atmospheric black metal",
+            "black metal",
+            "ambient black metal"
+        ]
+    },
+    "the pretty wild": {
+        "name": "The Pretty Wild",
+        "listeners": 70101,
+        "playcount": 1347629,
+        "genres": [
+            "metalcore",
+            "alternative metal",
+            "metal"
+        ]
+    },
+    "alien ant farm": {
+        "name": "Alien Ant Farm",
+        "listeners": 1650935,
+        "playcount": 21776663,
+        "genres": [
+            "alternative rock",
+            "rock",
+            "alternative"
+        ]
+    },
+    "hæresis": {
+        "name": "Hæresis",
+        "listeners": 2172,
+        "playcount": 21843,
+        "genres": [
+            "black metal",
+            "Post-Black Metal",
+            "Sludge"
+        ]
+    },
+    "soilwork": {
+        "name": "Soilwork",
+        "listeners": 663933,
+        "playcount": 47814725,
+        "genres": [
+            "Melodic Death Metal",
+            "death metal",
+            "metal"
+        ]
+    },
+    "misþyrming": {
+        "name": "Misþyrming",
+        "listeners": 58009,
+        "playcount": 2088744,
+        "genres": [
+            "black metal",
+            "atmospheric black metal",
+            "icelandic black metal"
+        ]
+    },
+    "todomal": {
+        "name": "Todomal",
+        "listeners": 2623,
+        "playcount": 27439,
+        "genres": [
+            "atmospheric doom metal",
+            "doom metal",
+            "spanish"
+        ]
+    },
+    "tailgunner": {
+        "name": "Tailgunner",
+        "listeners": 11253,
+        "playcount": 151859,
+        "genres": [
+            "heavy metal",
+            "hard rock",
+            "rock"
+        ]
+    },
+    "venom": {
+        "name": "Venom",
+        "listeners": 492720,
+        "playcount": 17159148,
+        "genres": [
+            "black metal",
+            "thrash metal",
+            "heavy metal"
+        ]
+    },
+    "cryptopsy": {
+        "name": "Cryptopsy",
+        "listeners": 284878,
+        "playcount": 11753170,
+        "genres": [
+            "death metal",
+            "Technical Death Metal",
+            "Brutal Death Metal"
+        ]
+    },
+    "rain city drive": {
+        "name": "Rain City Drive",
+        "listeners": 164646,
+        "playcount": 6785213,
+        "genres": [
+            "post-hardcore",
+            "alternative",
+            "alternative rock"
+        ]
+    },
+    "ultra vomit": {
+        "name": "Ultra vomit",
+        "listeners": 52275,
+        "playcount": 1916367,
+        "genres": [
+            "grindcore",
+            "death metal",
+            "french"
+        ]
+    },
+    "tesseract": {
+        "name": "TesseracT",
+        "listeners": 263346,
+        "playcount": 19820751,
+        "genres": [
+            "Progressive metal",
+            "DJENT",
+            "math metal"
+        ]
+    },
+    "1914": {
+        "name": "1914",
+        "listeners": 52245,
+        "playcount": 1699717,
+        "genres": [
+            "black metal",
+            "Blackened Death Metal",
+            "death metal"
+        ]
+    },
+    "amh": {
+        "name": "amh",
+        "listeners": 17663,
+        "playcount": 126315,
+        "genres": [
+            "classic rock",
+            "rock",
+            "hard rock"
+        ]
+    },
+    "crimson glory": {
+        "name": "Crimson Glory",
+        "listeners": 78974,
+        "playcount": 1876538,
+        "genres": [
+            "heavy metal",
+            "Progressive metal",
+            "Power metal"
+        ]
+    },
+    "cro-mags": {
+        "name": "Cro-Mags",
+        "listeners": 187479,
+        "playcount": 5293071,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "crossover"
+        ]
+    },
+    "last train": {
+        "name": "Last Train",
+        "listeners": 68771,
+        "playcount": 602741,
+        "genres": [
+            "french",
+            "rock",
+            "post-grunge"
+        ]
+    },
+    "fleddy melculy": {
+        "name": "Fleddy Melculy",
+        "listeners": 10834,
+        "playcount": 296695,
+        "genres": [
+            "metal",
+            "thrash metal",
+            "hardcore"
+        ]
+    },
+    "cursed abyss": {
+        "name": "Cursed Abyss",
+        "listeners": 42,
+        "playcount": 760,
+        "genres": []
+    },
+    "dogma": {
+        "name": "Dogma",
+        "listeners": 75675,
+        "playcount": 1079892,
+        "genres": [
+            "thrash metal",
+            "Progressive rock",
+            "groove metal"
+        ]
+    },
+    "stonem": {
+        "name": "Stonem",
+        "listeners": 815,
+        "playcount": 10909,
+        "genres": [
+            "House",
+            "metalcore"
+        ]
+    },
+    "sublime cadaveric decomposition": {
+        "name": "Sublime Cadaveric Decomposition",
+        "listeners": 23944,
+        "playcount": 486127,
+        "genres": [
+            "grindcore",
+            "goregrind",
+            "Brutal Death Metal"
+        ]
+    },
+    "deafheaven": {
+        "name": "Deafheaven",
+        "listeners": 523002,
+        "playcount": 26907759,
+        "genres": [
+            "black metal",
+            "Post-Black Metal",
+            "atmospheric black metal"
+        ]
+    },
+    "roy khan": {
+        "name": "Roy Khan",
+        "listeners": 285,
+        "playcount": 3307,
+        "genres": [
+            "favourite vocalists",
+            "Power metal",
+            "Progressive metal"
+        ]
+    },
+    "hand of juno": {
+        "name": "Hand of Juno",
+        "listeners": 5962,
+        "playcount": 38716,
+        "genres": [
+            "alternative metal",
+            "electronic",
+            "industrial metal"
+        ]
+    },
+    "kanonenfieber": {
+        "name": "Kanonenfieber",
+        "listeners": 51204,
+        "playcount": 2463406,
+        "genres": [
+            "black metal",
+            "death metal",
+            "Blackened Death Metal"
+        ]
+    },
+    "craft": {
+        "name": "Craft",
+        "listeners": 82746,
+        "playcount": 2600469,
+        "genres": [
+            "black metal",
+            "raw black metal",
+            "swedish black metal"
+        ]
+    },
+    "my dying bride": {
+        "name": "My Dying Bride",
+        "listeners": 390429,
+        "playcount": 22398795,
+        "genres": [
+            "doom metal",
+            "Gothic Metal",
+            "death metal"
+        ]
+    },
+    "running wild": {
+        "name": "Running Wild",
+        "listeners": 279352,
+        "playcount": 11613540,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "speed metal"
+        ]
+    },
+    "alter bridge": {
+        "name": "Alter Bridge",
+        "listeners": 1169022,
+        "playcount": 46572279,
+        "genres": [
+            "alternative rock",
+            "hard rock",
+            "rock"
+        ]
+    },
+    "hard-ons": {
+        "name": "Hard-Ons",
+        "listeners": 21768,
+        "playcount": 512381,
+        "genres": [
+            "punk rock",
+            "punk",
+            "australian"
+        ]
+    },
+    "tom morello": {
+        "name": "Tom Morello",
+        "listeners": 335926,
+        "playcount": 3085615,
+        "genres": [
+            "rock",
+            "alternative",
+            "great guitarists"
+        ]
+    },
+    "wake the dead": {
+        "name": "Wake the Dead",
+        "listeners": 4759,
+        "playcount": 37507,
+        "genres": [
+            "melodic hardcore",
+            "hardcore",
+            "hardcore punk"
+        ]
+    },
+    "pants off": {
+        "name": "PANTS OFF",
+        "listeners": 150,
+        "playcount": 1084,
+        "genres": [
+            "galiza",
+            "punk",
+            "gromo"
+        ]
+    },
+    "ciclonautas": {
+        "name": "Ciclonautas",
+        "listeners": 3052,
+        "playcount": 37748,
+        "genres": [
+            "rock",
+            "spain",
+            "navarra"
+        ]
+    },
+    "scour": {
+        "name": "Scour",
+        "listeners": 24496,
+        "playcount": 337415,
+        "genres": [
+            "black metal",
+            "death metal",
+            "grindcore"
+        ]
+    },
+    "alta rossa": {
+        "name": "ALTA ROSSA",
+        "listeners": 1299,
+        "playcount": 7379,
+        "genres": [
+            "sludge metal",
+            "france",
+            "post- metal"
+        ]
+    },
+    "crisix": {
+        "name": "Crisix",
+        "listeners": 27446,
+        "playcount": 574773,
+        "genres": [
+            "thrash metal",
+            "New Wave Of Thrash Metal",
+            "spanish"
+        ]
+    },
+    "maamuut": {
+        "name": "MAAMUUT",
+        "listeners": 11,
+        "playcount": 39,
+        "genres": []
+    },
+    "deicide": {
+        "name": "Deicide",
+        "listeners": 375341,
+        "playcount": 18140977,
+        "genres": [
+            "death metal",
+            "Brutal Death Metal",
+            "american"
+        ]
+    },
+    "betontod": {
+        "name": "Betontod",
+        "listeners": 49822,
+        "playcount": 2730053,
+        "genres": [
+            "punk",
+            "deutschpunk",
+            "punk rock"
+        ]
+    },
+    "clawfinger": {
+        "name": "Clawfinger",
+        "listeners": 365902,
+        "playcount": 9114784,
+        "genres": [
+            "rapcore",
+            "crossover",
+            "industrial metal"
+        ]
+    },
+    "feuerschwanz": {
+        "name": "Feuerschwanz",
+        "listeners": 114952,
+        "playcount": 4434132,
+        "genres": [
+            "folk rock",
+            "medieval",
+            "folk"
+        ]
+    },
+    "yngwie malmsteen": {
+        "name": "Yngwie Malmsteen",
+        "listeners": 488325,
+        "playcount": 11758971,
+        "genres": [
+            "heavy metal",
+            "guitar virtuoso",
+            "Power metal"
+        ]
+    },
+    "rival sons": {
+        "name": "Rival Sons",
+        "listeners": 357997,
+        "playcount": 8782579,
+        "genres": [
+            "blues rock",
+            "hard rock",
+            "rock"
+        ]
+    },
+    "heavysaurus": {
+        "name": "Heavysaurus",
+        "listeners": 7976,
+        "playcount": 250166,
+        "genres": [
+            "germany",
+            "metal-heavy"
+        ]
+    },
+    "john 5": {
+        "name": "John 5",
+        "listeners": 127479,
+        "playcount": 2907136,
+        "genres": [
+            "instrumental",
+            "guitar virtuoso",
+            "metal"
+        ]
+    },
+    "death to all": {
+        "name": "Death To All",
+        "listeners": 555,
+        "playcount": 1147,
+        "genres": []
+    },
+    "fange": {
+        "name": "Fange",
+        "listeners": 10075,
+        "playcount": 156443,
+        "genres": [
+            "Sludge",
+            "sludge metal",
+            "doom metal"
+        ]
+    },
+    "randale": {
+        "name": "Randale",
+        "listeners": 4595,
+        "playcount": 80948,
+        "genres": [
+            "hard rock",
+            "rock"
+        ]
+    },
+    "eläkeläiset": {
+        "name": "Eläkeläiset",
+        "listeners": 72877,
+        "playcount": 3469651,
+        "genres": [
+            "humppa",
+            "finnish",
+            "folk"
+        ]
+    },
+    "nailed to obscurity": {
+        "name": "Nailed To Obscurity",
+        "listeners": 38143,
+        "playcount": 526345,
+        "genres": [
+            "Melodic Death Metal",
+            "doom metal",
+            "Death Doom Metal"
+        ]
+    },
+    "basement": {
+        "name": "Basement",
+        "listeners": 1051318,
+        "playcount": 35151712,
+        "genres": [
+            "melodic hardcore",
+            "hardcore",
+            "hardcore punk"
+        ]
+    },
+    "savatage": {
+        "name": "Savatage",
+        "listeners": 325381,
+        "playcount": 12810838,
+        "genres": [
+            "heavy metal",
+            "Progressive metal",
+            "Power metal"
+        ]
+    },
+    "the other": {
+        "name": "The Other",
+        "listeners": 60814,
+        "playcount": 863427,
+        "genres": [
+            "horror punk",
+            "punk",
+            "punk rock"
+        ]
+    },
+    "blacktoothed": {
+        "name": "blacktoothed",
+        "listeners": 9430,
+        "playcount": 68025,
+        "genres": [
+            "alternative rock",
+            "alternative metal",
+            "german"
+        ]
+    },
+    "thrown": {
+        "name": "Thrown",
+        "listeners": 250040,
+        "playcount": 7941174,
+        "genres": [
+            "metalcore",
+            "hardcore",
+            "nu metalcore"
+        ]
+    },
+    "black veil brides": {
+        "name": "Black Veil Brides",
+        "listeners": 849098,
+        "playcount": 35134000,
+        "genres": [
+            "post-hardcore",
+            "screamo",
+            "rock"
+        ]
+    },
+    "black maracas": {
+        "name": "Black Maracas",
+        "listeners": 806,
+        "playcount": 3242,
+        "genres": [
+            "emo",
+            "screamo"
+        ]
+    },
+    "diabolisches werk": {
+        "name": "Diabolisches Werk",
+        "listeners": 243,
+        "playcount": 6507,
+        "genres": [
+            "death metal",
+            "german",
+            "black metal"
+        ]
+    },
+    "yarostan": {
+        "name": "Yarostan",
+        "listeners": 1470,
+        "playcount": 14598,
+        "genres": [
+            "screamo",
+            "Post-Metal",
+            "real screamo"
+        ]
+    },
+    "social distortion": {
+        "name": "Social Distortion",
+        "listeners": 866673,
+        "playcount": 23815299,
+        "genres": [
+            "punk rock",
+            "punk",
+            "rockabilly"
+        ]
+    },
+    "dark tranquillity": {
+        "name": "Dark Tranquillity",
+        "listeners": 572666,
+        "playcount": 54408736,
+        "genres": [
+            "Melodic Death Metal",
+            "death metal",
+            "swedish"
+        ]
+    },
+    "behemoth": {
+        "name": "Behemoth",
+        "listeners": 621973,
+        "playcount": 50483636,
+        "genres": [
+            "death metal",
+            "black metal",
+            "Blackened Death Metal"
+        ]
+    },
+    "opeth": {
+        "name": "Opeth",
+        "listeners": 1187168,
+        "playcount": 129098863,
+        "genres": [
+            "Progressive metal",
+            "progressive death metal",
+            "death metal"
+        ]
+    },
+    "ponte del diavolo": {
+        "name": "Ponte del Diavolo",
+        "listeners": 4700,
+        "playcount": 53902,
+        "genres": [
+            "doom metal",
+            "black metal",
+            "blackened doom metal"
+        ]
+    },
+    "cavalera conspiracy": {
+        "name": "Cavalera Conspiracy",
+        "listeners": 206581,
+        "playcount": 6421910,
+        "genres": [
+            "thrash metal",
+            "groove metal",
+            "metal"
+        ]
+    },
+    "802": {
+        "name": "802",
+        "listeners": 1099,
+        "playcount": 4109,
+        "genres": []
+    },
+    "babymetal": {
+        "name": "BABYMETAL",
+        "listeners": 960134,
+        "playcount": 58362044,
+        "genres": [
+            "kawaii metal",
+            "metal",
+            "japanese"
+        ]
+    },
+    "amenra": {
+        "name": "Amenra",
+        "listeners": 159817,
+        "playcount": 7422265,
+        "genres": [
+            "Sludge",
+            "Post-Metal",
+            "post-hardcore"
+        ]
+    },
+    "gutalax": {
+        "name": "Gutalax",
+        "listeners": 78286,
+        "playcount": 3220751,
+        "genres": [
+            "goregrind",
+            "grindcore",
+            "porngrind"
+        ]
+    },
+    "alcest": {
+        "name": "Alcest",
+        "listeners": 486680,
+        "playcount": 29487376,
+        "genres": [
+            "shoegaze",
+            "black metal",
+            "post-rock"
+        ]
+    },
+    "loathe": {
+        "name": "Loathe",
+        "listeners": 859797,
+        "playcount": 46750499,
+        "genres": [
+            "metalcore",
+            "alternative metal",
+            "Progressive Metalcore"
+        ]
+    },
+    "possessed": {
+        "name": "Possessed",
+        "listeners": 150219,
+        "playcount": 4326569,
+        "genres": [
+            "death metal",
+            "thrash metal",
+            "old school death metal"
+        ]
+    },
+    "morild": {
+        "name": "Morild",
+        "listeners": 2534,
+        "playcount": 30829,
+        "genres": [
+            "Progressive rock",
+            "black metal",
+            "atmospheric black metal"
+        ]
+    },
+    "lacuna coil": {
+        "name": "Lacuna Coil",
+        "listeners": 1057401,
+        "playcount": 56659009,
+        "genres": [
+            "Gothic Metal",
+            "metal",
+            "Female fronted metal"
+        ]
+    },
+    "linkin park": {
+        "name": "Linkin Park",
+        "listeners": 6935278,
+        "playcount": 745089021,
+        "genres": [
+            "Nu Metal",
+            "rock",
+            "alternative rock"
+        ]
+    },
+    "dritte wahl": {
+        "name": "Dritte Wahl",
+        "listeners": 75882,
+        "playcount": 2591364,
+        "genres": [
+            "punk",
+            "punk rock",
+            "deutschpunk"
+        ]
+    },
+    "testament": {
+        "name": "Testament",
+        "listeners": 1075955,
+        "playcount": 35942523,
+        "genres": [
+            "thrash metal",
+            "heavy metal",
+            "metal"
+        ]
+    },
+    "eyehategod": {
+        "name": "Eyehategod",
+        "listeners": 263640,
+        "playcount": 11085866,
+        "genres": [
+            "Sludge",
+            "doom metal",
+            "sludge metal"
+        ]
+    },
+    "uncle acid & the deadbeats": {
+        "name": "Uncle Acid & the Deadbeats",
+        "listeners": 209430,
+        "playcount": 5616539,
+        "genres": [
+            "Psychedelic Rock",
+            "Stoner Rock",
+            "doom metal"
+        ]
+    },
+    "inner space": {
+        "name": "Inner Space",
+        "listeners": 2754,
+        "playcount": 14521,
+        "genres": [
+            "psytrance",
+            "hardcore",
+            "hard rock"
+        ]
+    },
+    "palaye royale": {
+        "name": "Palaye Royale",
+        "listeners": 512875,
+        "playcount": 29058845,
+        "genres": [
+            "alternative rock",
+            "alternative",
+            "glam rock"
+        ]
+    },
+    "orbit culture": {
+        "name": "Orbit Culture",
+        "listeners": 132885,
+        "playcount": 6989852,
+        "genres": [
+            "Melodic Death Metal",
+            "groove metal",
+            "death metal"
+        ]
+    },
+    "sortilège": {
+        "name": "Sortilège",
+        "listeners": 15622,
+        "playcount": 515023,
+        "genres": [
+            "heavy metal",
+            "french",
+            "french heavy metal"
+        ]
+    },
+    "vended": {
+        "name": "Vended",
+        "listeners": 103612,
+        "playcount": 1314419,
+        "genres": [
+            "Nu Metal",
+            "alternative metal",
+            "groove metal"
+        ]
+    },
+    "slay squad": {
+        "name": "Slay Squad",
+        "listeners": 10637,
+        "playcount": 76959,
+        "genres": [
+            "rapcore",
+            "rap",
+            "hip hop"
+        ]
+    },
+    "spectral wound": {
+        "name": "Spectral Wound",
+        "listeners": 58727,
+        "playcount": 1448092,
+        "genres": [
+            "black metal",
+            "canada",
+            "Canadian"
+        ]
+    },
+    "the inspector cluzo": {
+        "name": "The Inspector Cluzo",
+        "listeners": 27837,
+        "playcount": 283825,
+        "genres": [
+            "Funk Rock",
+            "rock",
+            "french"
+        ]
+    },
+    "skaphos": {
+        "name": "skaphos",
+        "listeners": 3543,
+        "playcount": 40976,
+        "genres": [
+            "black metal",
+            "death metal",
+            "france"
+        ]
+    },
+    "marilyn manson": {
+        "name": "Marilyn Manson",
+        "listeners": 3165175,
+        "playcount": 196896729,
+        "genres": [
+            "industrial",
+            "industrial metal",
+            "metal"
+        ]
+    },
+    "self deception": {
+        "name": "Self Deception",
+        "listeners": 135952,
+        "playcount": 3359241,
+        "genres": [
+            "alternative rock",
+            "modern rock",
+            "rock"
+        ]
+    },
+    "rectal smegma": {
+        "name": "Rectal Smegma",
+        "listeners": 26940,
+        "playcount": 519101,
+        "genres": [
+            "goregrind",
+            "grindcore",
+            "porngrind"
+        ]
+    },
+    "madmess": {
+        "name": "Madmess",
+        "listeners": 2942,
+        "playcount": 17702,
+        "genres": [
+            "Psychedelic Rock",
+            "Stoner Rock",
+            "ska"
+        ]
+    },
+    "nytt land": {
+        "name": "Nytt Land",
+        "listeners": 42267,
+        "playcount": 575060,
+        "genres": [
+            "neofolk",
+            "dark folk",
+            "folk"
+        ]
+    },
+    "rose tattoo": {
+        "name": "Rose Tattoo",
+        "listeners": 86872,
+        "playcount": 1210282,
+        "genres": [
+            "hard rock",
+            "rock",
+            "australian"
+        ]
+    },
+    "god complex": {
+        "name": "God Complex",
+        "listeners": 79858,
+        "playcount": 1189553,
+        "genres": [
+            "metalcore",
+            "hardcore",
+            "nu metalcore"
+        ]
+    },
+    "karen dió": {
+        "name": "Karen Dió",
+        "listeners": 52062,
+        "playcount": 364016,
+        "genres": [
+            "punk",
+            "punk rock",
+            "brazil"
+        ]
+    },
+    "evergrey": {
+        "name": "Evergrey",
+        "listeners": 263536,
+        "playcount": 12551715,
+        "genres": [
+            "Progressive metal",
+            "Power metal",
+            "metal"
+        ]
+    },
+    "emperor": {
+        "name": "Emperor",
+        "listeners": 443043,
+        "playcount": 18406760,
+        "genres": [
+            "black metal",
+            "Symphonic Black Metal",
+            "norwegian"
+        ]
+    },
+    "visions of atlantis": {
+        "name": "Visions of Atlantis",
+        "listeners": 226098,
+        "playcount": 5805427,
+        "genres": [
+            "symphonic metal",
+            "Power metal",
+            "Female fronted metal"
+        ]
+    },
+    "septicflesh": {
+        "name": "Septicflesh",
+        "listeners": 145772,
+        "playcount": 8119093,
+        "genres": [
+            "death metal",
+            "symphonic death metal",
+            "atmospheric death metal"
+        ]
+    },
+    "brunhilde": {
+        "name": "Brunhilde",
+        "listeners": 3027,
+        "playcount": 19876,
+        "genres": [
+            "hard rock",
+            "rock",
+            "germany"
+        ]
+    },
+    "dying wish": {
+        "name": "Dying Wish",
+        "listeners": 120908,
+        "playcount": 4586675,
+        "genres": [
+            "metalcore",
+            "hardcore",
+            "Melodic Death Metal"
+        ]
+    },
+    "ochmoneks": {
+        "name": "Ochmoneks",
+        "listeners": 2189,
+        "playcount": 71036,
+        "genres": [
+            "punk",
+            "rock",
+            "german"
+        ]
+    },
+    "deep purple": {
+        "name": "Deep Purple",
+        "listeners": 3036864,
+        "playcount": 82165088,
+        "genres": [
+            "hard rock",
+            "classic rock",
+            "rock"
+        ]
+    },
+    "trold": {
+        "name": "Trold",
+        "listeners": 6650,
+        "playcount": 82283,
+        "genres": [
+            "psytrance",
+            "psychedelic trance",
+            "folk metal"
+        ]
+    },
+    "black oak county": {
+        "name": "Black Oak County",
+        "listeners": 11741,
+        "playcount": 99461,
+        "genres": [
+            "hard rock",
+            "rock",
+            "denmark"
+        ]
+    },
+    "get the shot": {
+        "name": "Get The Shot",
+        "listeners": 56242,
+        "playcount": 1170673,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "thrash metal"
+        ]
+    },
+    "lamb of god": {
+        "name": "Lamb of God",
+        "listeners": 1461582,
+        "playcount": 82800209,
+        "genres": [
+            "groove metal",
+            "metalcore",
+            "thrash metal"
+        ]
+    },
+    "vltimas": {
+        "name": "VLTIMAS",
+        "listeners": 18318,
+        "playcount": 296107,
+        "genres": [
+            "death metal",
+            "Blackened Death Metal",
+            "black metal"
+        ]
+    },
+    "of mice & men": {
+        "name": "Of Mice & Men",
+        "listeners": 644017,
+        "playcount": 32766570,
+        "genres": [
+            "post-hardcore",
+            "metalcore",
+            "screamo"
+        ]
+    },
+    "waves like walls": {
+        "name": "Waves Like Walls",
+        "listeners": 3696,
+        "playcount": 19037,
+        "genres": [
+            "hardcore",
+            "metalcore",
+            "melodic hardcore"
+        ]
+    },
+    "focus.": {
+        "name": "Focus.",
+        "listeners": 5179,
+        "playcount": 112466,
+        "genres": [
+            "punk",
+            "deutschpunk",
+            "Focus"
+        ]
+    },
+    "return to dust": {
+        "name": "return to dust",
+        "listeners": 64436,
+        "playcount": 761802,
+        "genres": [
+            "Grunge",
+            "rock",
+            "punk"
+        ]
+    },
+    "robin mcauley": {
+        "name": "Robin McAuley",
+        "listeners": 10718,
+        "playcount": 87393,
+        "genres": [
+            "hard rock",
+            "AOR",
+            "melodic hard rock"
+        ]
+    },
+    "mambo kurt": {
+        "name": "Mambo Kurt",
+        "listeners": 11897,
+        "playcount": 111958,
+        "genres": [
+            "heimorgel",
+            "covers",
+            "electronic"
+        ]
+    },
+    "filth": {
+        "name": "Filth",
+        "listeners": 61264,
+        "playcount": 724286,
+        "genres": [
+            "deathcore",
+            "grindcore",
+            "Crust"
+        ]
+    },
+    "overkill": {
+        "name": "Overkill",
+        "listeners": 381566,
+        "playcount": 15031364,
+        "genres": [
+            "thrash metal",
+            "speed metal",
+            "heavy metal"
+        ]
+    },
+    "powerwolf": {
+        "name": "Powerwolf",
+        "listeners": 394378,
+        "playcount": 29426665,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "german"
+        ]
+    },
+    "the plot in you": {
+        "name": "The Plot in You",
+        "listeners": 447246,
+        "playcount": 21883347,
+        "genres": [
+            "metalcore",
+            "post-hardcore",
+            "hardcore"
+        ]
+    },
+    "masterplan": {
+        "name": "Masterplan",
+        "listeners": 207100,
+        "playcount": 7373788,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "melodic metal"
+        ]
+    },
+    "enhancer": {
+        "name": "Enhancer",
+        "listeners": 23006,
+        "playcount": 554627,
+        "genres": [
+            "rapcore",
+            "frenchcore",
+            "Nu Metal"
+        ]
+    },
+    "grave": {
+        "name": "Grave",
+        "listeners": 124220,
+        "playcount": 4413800,
+        "genres": [
+            "death metal",
+            "old school death metal",
+            "Swedish Death Metal"
+        ]
+    },
+    "sacred steel": {
+        "name": "Sacred Steel",
+        "listeners": 18511,
+        "playcount": 349099,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "speed metal"
+        ]
+    },
+    "the ataris": {
+        "name": "The Ataris",
+        "listeners": 929328,
+        "playcount": 17915388,
+        "genres": [
+            "pop punk",
+            "punk rock",
+            "punk"
+        ]
+    },
+    "malevolence": {
+        "name": "Malevolence",
+        "listeners": 117218,
+        "playcount": 2994626,
+        "genres": [
+            "hardcore",
+            "metalcore",
+            "groove metal"
+        ]
+    },
+    "brymir": {
+        "name": "Brymir",
+        "listeners": 38114,
+        "playcount": 1215540,
+        "genres": [
+            "folk metal",
+            "Melodic Death Metal",
+            "viking metal"
+        ]
+    },
+    "accept": {
+        "name": "Accept",
+        "listeners": 720835,
+        "playcount": 22170190,
+        "genres": [
+            "heavy metal",
+            "hard rock",
+            "german"
+        ]
+    },
+    "her anxiety": {
+        "name": "Her Anxiety",
+        "listeners": 278,
+        "playcount": 1258,
+        "genres": [
+            "industrial metal",
+            "metalcore",
+            "industrial black metal"
+        ]
+    },
+    "iscream never ground": {
+        "name": "ISCREAM NEVER GROUND",
+        "listeners": 17466,
+        "playcount": 148176,
+        "genres": [
+            "japanese",
+            "metal",
+            "alternative metal"
+        ]
+    },
+    "crypt sermon": {
+        "name": "Crypt Sermon",
+        "listeners": 36974,
+        "playcount": 720001,
+        "genres": [
+            "doom metal",
+            "Epic Doom Metal",
+            "Traditional Doom Metal"
+        ]
+    },
+    "soilent green": {
+        "name": "Soilent Green",
+        "listeners": 74658,
+        "playcount": 1393533,
+        "genres": [
+            "grindcore",
+            "Sludge",
+            "sludge metal"
+        ]
+    },
+    "hardline": {
+        "name": "Hardline",
+        "listeners": 106827,
+        "playcount": 1683987,
+        "genres": [
+            "hard rock",
+            "hair metal",
+            "melodic rock"
+        ]
+    },
+    "future palace": {
+        "name": "Future Palace",
+        "listeners": 91142,
+        "playcount": 2549772,
+        "genres": [
+            "post-hardcore",
+            "alternative rock",
+            "german"
+        ]
+    },
+    "maceration": {
+        "name": "Maceration",
+        "listeners": 4682,
+        "playcount": 56983,
+        "genres": [
+            "death metal",
+            "old school death metal",
+            "denmark"
+        ]
+    },
+    "the crown": {
+        "name": "The Crown",
+        "listeners": 92150,
+        "playcount": 3268988,
+        "genres": [
+            "death metal",
+            "thrash metal",
+            "Melodic Death Metal"
+        ]
+    },
+    "within temptation": {
+        "name": "Within Temptation",
+        "listeners": 1375169,
+        "playcount": 102698392,
+        "genres": [
+            "bad tagged",
+            "within temptation",
+            "Female fronted metal"
+        ]
+    },
+    "we came as romans": {
+        "name": "We Came as Romans",
+        "listeners": 822297,
+        "playcount": 29526129,
+        "genres": [
+            "post-hardcore",
+            "metalcore",
+            "screamo"
+        ]
+    },
+    "president": {
+        "name": "President",
+        "listeners": 105081,
+        "playcount": 3168872,
+        "genres": [
+            "metalcore",
+            "hardcore",
+            "thrash metal"
+        ]
+    },
+    "sepultura": {
+        "name": "Sepultura",
+        "listeners": 1409967,
+        "playcount": 68048330,
+        "genres": [
+            "thrash metal",
+            "death metal",
+            "metal"
+        ]
+    },
+    "the subways": {
+        "name": "The Subways",
+        "listeners": 1158683,
+        "playcount": 28383825,
+        "genres": [
+            "indie rock",
+            "indie",
+            "british"
+        ]
+    },
+    "kublai khan tx": {
+        "name": "Kublai Khan TX",
+        "listeners": 340592,
+        "playcount": 12451646,
+        "genres": [
+            "hardcore",
+            "metalcore",
+            "metallic hardcore"
+        ]
+    },
+    "magnus uggla": {
+        "name": "Magnus Uggla",
+        "listeners": 115560,
+        "playcount": 3227038,
+        "genres": [
+            "swedish",
+            "pop",
+            "rock"
+        ]
+    },
+    "vicious rumors": {
+        "name": "Vicious Rumors",
+        "listeners": 42183,
+        "playcount": 982251,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "thrash metal"
+        ]
+    },
+    "kruddö": {
+        "name": "Kruddö",
+        "listeners": 50,
+        "playcount": 359,
+        "genres": []
+    },
+    "ten56.": {
+        "name": "ten56.",
+        "listeners": 72838,
+        "playcount": 1514507,
+        "genres": [
+            "nu metalcore",
+            "deathcore",
+            "metalcore"
+        ]
+    },
+    "h-blockx": {
+        "name": "H-Blockx",
+        "listeners": 219429,
+        "playcount": 3761962,
+        "genres": [
+            "crossover",
+            "rock",
+            "alternative rock"
+        ]
+    },
+    "the flower kings": {
+        "name": "The Flower Kings",
+        "listeners": 119820,
+        "playcount": 3728597,
+        "genres": [
+            "Progressive rock",
+            "symphonic prog",
+            "swedish"
+        ]
+    },
+    "inhuman nature": {
+        "name": "Inhuman Nature",
+        "listeners": 9090,
+        "playcount": 99100,
+        "genres": [
+            "thrash metal",
+            "crossover",
+            "hardcore"
+        ]
+    },
+    "family man": {
+        "name": "Family Man",
+        "listeners": 5632,
+        "playcount": 29309,
+        "genres": [
+            "hardcore punk",
+            "punk",
+            "hardcore"
+        ]
+    },
+    "skindred": {
+        "name": "Skindred",
+        "listeners": 642037,
+        "playcount": 16442491,
+        "genres": [
+            "reggae metal",
+            "rapcore",
+            "metal"
+        ]
+    },
+    "groza": {
+        "name": "Groza",
+        "listeners": 26540,
+        "playcount": 494560,
+        "genres": [
+            "black metal",
+            "melodic black metal",
+            "german"
+        ]
+    },
+    "gridiron": {
+        "name": "Gridiron",
+        "listeners": 33567,
+        "playcount": 896575,
+        "genres": [
+            "hardcore",
+            "rapcore",
+            "metalcore"
+        ]
+    },
+    "blues pills": {
+        "name": "Blues Pills",
+        "listeners": 127538,
+        "playcount": 3039734,
+        "genres": [
+            "blues rock",
+            "Psychedelic Rock",
+            "Stoner Rock"
+        ]
+    },
+    "lucifer": {
+        "name": "Lucifer",
+        "listeners": 106591,
+        "playcount": 1646743,
+        "genres": [
+            "doom metal",
+            "occult rock",
+            "hard rock"
+        ]
+    },
+    "mastodon": {
+        "name": "Mastodon",
+        "listeners": 1254724,
+        "playcount": 85409250,
+        "genres": [
+            "Progressive metal",
+            "Sludge",
+            "sludge metal"
+        ]
+    },
+    "adept": {
+        "name": "Adept",
+        "listeners": 281885,
+        "playcount": 12317547,
+        "genres": [
+            "post-hardcore",
+            "screamo",
+            "hardcore"
+        ]
+    },
+    "drowning pool": {
+        "name": "Drowning Pool",
+        "listeners": 2143118,
+        "playcount": 37418186,
+        "genres": [
+            "Nu Metal",
+            "alternative metal",
+            "metal"
+        ]
+    },
+    "manntra": {
+        "name": "Manntra",
+        "listeners": 32025,
+        "playcount": 798347,
+        "genres": [
+            "industrial metal",
+            "folk metal",
+            "croatian"
+        ]
+    },
+    "eivør": {
+        "name": "Eivør",
+        "listeners": 131461,
+        "playcount": 3464761,
+        "genres": []
+    },
+    "alice cooper": {
+        "name": "Alice Cooper",
+        "listeners": 2131846,
+        "playcount": 50743229,
+        "genres": [
+            "hard rock",
+            "classic rock",
+            "glam rock"
+        ]
+    },
+    "fireborn": {
+        "name": "Fireborn",
+        "listeners": 1103,
+        "playcount": 9783,
+        "genres": [
+            "death metal",
+            "Swedish Death Metal",
+            "Melodic Death Metal"
+        ]
+    },
+    "misery index": {
+        "name": "Misery Index",
+        "listeners": 130460,
+        "playcount": 5572241,
+        "genres": [
+            "death metal",
+            "grindcore",
+            "deathgrind"
+        ]
+    },
+    "defecto": {
+        "name": "Defecto",
+        "listeners": 14730,
+        "playcount": 171917,
+        "genres": [
+            "Progressive metal",
+            "Power metal",
+            "denmark"
+        ]
+    },
+    "skeleton pit": {
+        "name": "Skeleton Pit",
+        "listeners": 3004,
+        "playcount": 34964,
+        "genres": [
+            "thrash metal",
+            "german",
+            "speed metal"
+        ]
+    },
+    "velvet rush": {
+        "name": "Velvet Rush",
+        "listeners": 1609,
+        "playcount": 8194,
+        "genres": [
+            "hard rock",
+            "rock",
+            "classic rock"
+        ]
+    },
+    "esodic": {
+        "name": "Esodic",
+        "listeners": 1967,
+        "playcount": 7057,
+        "genres": [
+            "thrash metal",
+            "death metal",
+            "death thrash metal"
+        ]
+    },
+    "bilmuri": {
+        "name": "Bilmuri",
+        "listeners": 252693,
+        "playcount": 16060145,
+        "genres": [
+            "post-hardcore",
+            "alternative rock",
+            "pop punk"
+        ]
+    },
+    "miracle of sound": {
+        "name": "Miracle of Sound",
+        "listeners": 241341,
+        "playcount": 9008138,
+        "genres": [
+            "rock",
+            "video game music",
+            "irish"
+        ]
+    },
+    "thundermother": {
+        "name": "Thundermother",
+        "listeners": 62707,
+        "playcount": 837973,
+        "genres": [
+            "hard rock",
+            "Psychedelic Rock",
+            "rock"
+        ]
+    },
+    "grand magus": {
+        "name": "Grand Magus",
+        "listeners": 103422,
+        "playcount": 3599614,
+        "genres": [
+            "heavy metal",
+            "doom metal",
+            "stoner metal"
+        ]
+    },
+    "borknagar": {
+        "name": "Borknagar",
+        "listeners": 205760,
+        "playcount": 8709539,
+        "genres": [
+            "black metal",
+            "viking metal",
+            "Progressive metal"
+        ]
+    },
+    "bruit ≤": {
+        "name": "BRUIT ≤",
+        "listeners": 6611,
+        "playcount": 91253,
+        "genres": [
+            "post-rock",
+            "instrumental",
+            "ambient"
+        ]
+    },
+    "not yet": {
+        "name": "Not yet",
+        "listeners": 7278,
+        "playcount": 425989,
+        "genres": [
+            "j-pop",
+            "japanese",
+            "idol"
+        ]
+    },
+    "from north": {
+        "name": "From North",
+        "listeners": 1379,
+        "playcount": 15786,
+        "genres": [
+            "viking metal",
+            "easy listening",
+            "instrumental"
+        ]
+    },
+    "majestica": {
+        "name": "Majestica",
+        "listeners": 56001,
+        "playcount": 1172669,
+        "genres": [
+            "Power metal",
+            "symphonic power metal",
+            "symphonic metal"
+        ]
+    },
+    "bear mccreary": {
+        "name": "Bear McCreary",
+        "listeners": 550420,
+        "playcount": 21446035,
+        "genres": [
+            "Soundtrack",
+            "instrumental",
+            "Battlestar Galactica"
+        ]
+    },
+    "alfahanne": {
+        "name": "Alfahanne",
+        "listeners": 7033,
+        "playcount": 149019,
+        "genres": [
+            "black metal",
+            "Black n Roll",
+            "Black Rock"
+        ]
+    },
+    "stellvris": {
+        "name": "STELLVRIS",
+        "listeners": 8744,
+        "playcount": 77762,
+        "genres": [
+            "metalcore",
+            "Czech",
+            "Progressive Metalcore"
+        ]
+    },
+    "all time low": {
+        "name": "All Time Low",
+        "listeners": 2580715,
+        "playcount": 145992424,
+        "genres": [
+            "pop punk",
+            "powerpop",
+            "rock"
+        ]
+    },
+    "ceremony": {
+        "name": "Ceremony",
+        "listeners": 257861,
+        "playcount": 14024597,
+        "genres": [
+            "hardcore",
+            "shoegaze",
+            "hardcore punk"
+        ]
+    },
+    "buzzcocks": {
+        "name": "Buzzcocks",
+        "listeners": 1095302,
+        "playcount": 19175837,
+        "genres": [
+            "punk",
+            "punk rock",
+            "british"
+        ]
+    },
+    "ashes of billy": {
+        "name": "Ashes of Billy",
+        "listeners": 3954,
+        "playcount": 28766,
+        "genres": []
+    },
+    "the bones": {
+        "name": "The Bones",
+        "listeners": 67097,
+        "playcount": 1829529,
+        "genres": [
+            "punk rock",
+            "Punk N Roll",
+            "punk"
+        ]
+    },
+    "circle jerks": {
+        "name": "Circle Jerks",
+        "listeners": 405866,
+        "playcount": 8456139,
+        "genres": [
+            "hardcore punk",
+            "punk",
+            "hardcore"
+        ]
+    },
+    "dvrk": {
+        "name": "DVRK",
+        "listeners": 7399,
+        "playcount": 33238,
+        "genres": [
+            "metalcore",
+            "electronic",
+            "nu metalcore"
+        ]
+    },
+    "breaking benjamin": {
+        "name": "Breaking Benjamin",
+        "listeners": 2887052,
+        "playcount": 136074503,
+        "genres": [
+            "alternative rock",
+            "rock",
+            "hard rock"
+        ]
+    },
+    "paradise lost": {
+        "name": "Paradise Lost",
+        "listeners": 567677,
+        "playcount": 45157319,
+        "genres": [
+            "Paradise Lost",
+            "Gothic Metal",
+            "death metal"
+        ]
+    },
+    "die habenichtse": {
+        "name": "Die Habenichtse",
+        "listeners": 2571,
+        "playcount": 34121,
+        "genres": [
+            "folk",
+            "Mittelalter",
+            "mittelalter-folk"
+        ]
+    },
+    "kittie": {
+        "name": "Kittie",
+        "listeners": 790120,
+        "playcount": 19585874,
+        "genres": [
+            "Nu Metal",
+            "metal",
+            "metalcore"
+        ]
+    },
+    "down": {
+        "name": "Down",
+        "listeners": 425841,
+        "playcount": 17745312,
+        "genres": [
+            "stoner metal",
+            "Southern metal",
+            "Stoner Rock"
+        ]
+    },
+    "orden ogan": {
+        "name": "Orden Ogan",
+        "listeners": 130966,
+        "playcount": 4777038,
+        "genres": [
+            "Power metal",
+            "folk metal",
+            "german"
+        ]
+    },
+    "badflower": {
+        "name": "Badflower",
+        "listeners": 294304,
+        "playcount": 10289878,
+        "genres": [
+            "my top songs",
+            "alternative rock",
+            "rock"
+        ]
+    },
+    "revnoir": {
+        "name": "Revnoir",
+        "listeners": 23817,
+        "playcount": 313993,
+        "genres": [
+            "metalcore",
+            "electronic",
+            "metal"
+        ]
+    },
+    "sex pistols & frank carter": {
+        "name": "Sex Pistols & Frank Carter",
+        "listeners": 16,
+        "playcount": 33,
+        "genres": []
+    },
+    "iotunn": {
+        "name": "Iotunn",
+        "listeners": 21574,
+        "playcount": 517481,
+        "genres": [
+            "Progressive metal",
+            "Melodic Death Metal",
+            "progressive death metal"
+        ]
+    },
+    "the young gods": {
+        "name": "The Young Gods",
+        "listeners": 105751,
+        "playcount": 2280144,
+        "genres": [
+            "industrial",
+            "industrial rock",
+            "experimental"
+        ]
+    },
+    "bury tomorrow": {
+        "name": "Bury Tomorrow",
+        "listeners": 279539,
+        "playcount": 15916266,
+        "genres": [
+            "metalcore",
+            "melodic metalcore",
+            "hardcore"
+        ]
+    },
+    "suicidal tendencies": {
+        "name": "Suicidal Tendencies",
+        "listeners": 800552,
+        "playcount": 22022139,
+        "genres": [
+            "hardcore",
+            "crossover",
+            "thrash metal"
+        ]
+    },
+    "conjurer": {
+        "name": "Conjurer",
+        "listeners": 72740,
+        "playcount": 1283322,
+        "genres": [
+            "doom metal",
+            "sludge metal",
+            "Post-Metal"
+        ]
+    },
+    "finch": {
+        "name": "Finch",
+        "listeners": 819943,
+        "playcount": 21332119,
+        "genres": [
+            "post-hardcore",
+            "emo",
+            "screamo"
+        ]
+    },
+    "lionheart": {
+        "name": "Lionheart",
+        "listeners": 121254,
+        "playcount": 2816948,
+        "genres": [
+            "hardcore",
+            "metalcore",
+            "moshcore"
+        ]
+    },
+    "fit for an autopsy": {
+        "name": "Fit for an Autopsy",
+        "listeners": 167595,
+        "playcount": 9096200,
+        "genres": [
+            "deathcore",
+            "brutal deathcore",
+            "death metal"
+        ]
+    },
+    "caskets": {
+        "name": "Caskets",
+        "listeners": 280652,
+        "playcount": 9117354,
+        "genres": [
+            "post-hardcore",
+            "alternative rock",
+            "metalcore"
+        ]
+    },
+    "northlane": {
+        "name": "Northlane",
+        "listeners": 294928,
+        "playcount": 20518823,
+        "genres": [
+            "metalcore",
+            "Progressive Metalcore",
+            "australian"
+        ]
+    },
+    "imminence": {
+        "name": "Imminence",
+        "listeners": 207624,
+        "playcount": 11409899,
+        "genres": [
+            "metalcore",
+            "post-hardcore",
+            "swedish"
+        ]
+    },
+    "jayler": {
+        "name": "JAYLER",
+        "listeners": 5074,
+        "playcount": 25504,
+        "genres": [
+            "hard rock",
+            "rock",
+            "UK"
+        ]
+    },
+    "igorrr": {
+        "name": "Igorrr",
+        "listeners": 282337,
+        "playcount": 10986857,
+        "genres": [
+            "breakcore",
+            "experimental",
+            "electronic"
+        ]
+    },
+    "angelus apatrida": {
+        "name": "Angelus Apatrida",
+        "listeners": 45940,
+        "playcount": 1386855,
+        "genres": [
+            "thrash metal",
+            "heavy metal",
+            "spanish"
+        ]
+    },
+    "the rasmus": {
+        "name": "The Rasmus",
+        "listeners": 1172418,
+        "playcount": 32478405,
+        "genres": [
+            "rock",
+            "alternative rock",
+            "finnish"
+        ]
+    },
+    "thormesis": {
+        "name": "Thormesis",
+        "listeners": 5673,
+        "playcount": 99782,
+        "genres": [
+            "pagan metal",
+            "pagan black metal",
+            "black metal"
+        ]
+    },
+    "temple of the absurd": {
+        "name": "Temple Of The Absurd",
+        "listeners": 1664,
+        "playcount": 32367,
+        "genres": [
+            "thrash metal",
+            "german",
+            "Female fronted metal"
+        ]
+    },
+    "vanir": {
+        "name": "Vanir",
+        "listeners": 28234,
+        "playcount": 399635,
+        "genres": [
+            "folk metal",
+            "viking metal",
+            "denmark"
+        ]
+    },
+    "architects": {
+        "name": "Architects",
+        "listeners": 825878,
+        "playcount": 78017031,
+        "genres": [
+            "metalcore",
+            "mathcore",
+            "hardcore"
+        ]
+    },
+    "sinsaenum": {
+        "name": "Sinsaenum",
+        "listeners": 32523,
+        "playcount": 336811,
+        "genres": [
+            "death metal",
+            "black metal",
+            "Blackened Death Metal"
+        ]
+    },
+    "phantom": {
+        "name": "Phantom",
+        "listeners": 50991,
+        "playcount": 524655,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "speed metal"
+        ]
+    },
+    "lýsis": {
+        "name": "LÝSIS",
+        "listeners": 1544,
+        "playcount": 7606,
+        "genres": [
+            "metal",
+            "metalcore",
+            "Melodic Death Metal"
+        ]
+    },
+    "pigs pigs pigs pigs pigs pigs pigs": {
+        "name": "Pigs Pigs Pigs Pigs Pigs Pigs Pigs",
+        "listeners": 80352,
+        "playcount": 874940,
+        "genres": [
+            "Stoner Rock",
+            "stoner metal",
+            "Sludge"
+        ]
+    },
+    "blaas of glory": {
+        "name": "Blaas of Glory",
+        "listeners": 2239,
+        "playcount": 24311,
+        "genres": [
+            "hardrock",
+            "cajun",
+            "hard rock"
+        ]
+    },
+    "ankor": {
+        "name": "Ankor",
+        "listeners": 60113,
+        "playcount": 1217288,
+        "genres": [
+            "alternative metal",
+            "metal",
+            "metalcore"
+        ]
+    },
+    "corrosion of conformity": {
+        "name": "Corrosion of Conformity",
+        "listeners": 405866,
+        "playcount": 9906513,
+        "genres": [
+            "Stoner Rock",
+            "stoner metal",
+            "heavy metal"
+        ]
+    },
+    "the story so far": {
+        "name": "The Story So Far",
+        "listeners": 466360,
+        "playcount": 42292185,
+        "genres": [
+            "pop punk",
+            "melodic hardcore",
+            "Pop-punk"
+        ]
+    },
+    "any given day": {
+        "name": "Any Given Day",
+        "listeners": 99495,
+        "playcount": 2169623,
+        "genres": [
+            "metalcore",
+            "german",
+            "melodic metalcore"
+        ]
+    },
+    "asrock": {
+        "name": "AsRock",
+        "listeners": 171,
+        "playcount": 400,
+        "genres": [
+            "Take Me Away",
+            "dance track",
+            "wacken 2014"
+        ]
+    },
+    "lion's share": {
+        "name": "Lion's Share",
+        "listeners": 10603,
+        "playcount": 160077,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "Sweden"
+        ]
+    },
+    "katerfahrt": {
+        "name": "Katerfahrt",
+        "listeners": 768,
+        "playcount": 7497,
+        "genres": []
+    },
+    "scowl": {
+        "name": "Scowl",
+        "listeners": 154885,
+        "playcount": 3324082,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "punk"
+        ]
+    },
+    "castle rat": {
+        "name": "Castle Rat",
+        "listeners": 66077,
+        "playcount": 1062646,
+        "genres": [
+            "doom metal",
+            "Traditional Doom Metal",
+            "metal"
+        ]
+    },
+    "our promise": {
+        "name": "Our Promise",
+        "listeners": 61812,
+        "playcount": 1073493,
+        "genres": [
+            "metalcore",
+            "german",
+            "post-hardcore"
+        ]
+    },
+    "cancer bats": {
+        "name": "Cancer Bats",
+        "listeners": 214765,
+        "playcount": 7897549,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "Southern Rock"
+        ]
+    },
+    "from fall to spring": {
+        "name": "From Fall to Spring",
+        "listeners": 41634,
+        "playcount": 648235,
+        "genres": [
+            "electronic",
+            "Nu Metal",
+            "german"
+        ]
+    },
+    "coroner": {
+        "name": "Coroner",
+        "listeners": 129422,
+        "playcount": 5243188,
+        "genres": [
+            "thrash metal",
+            "Technical Thrash Metal",
+            "progressive thrash metal"
+        ]
+    },
+    "der weg einer freiheit": {
+        "name": "Der Weg einer Freiheit",
+        "listeners": 53990,
+        "playcount": 2204088,
+        "genres": [
+            "black metal",
+            "atmospheric black metal",
+            "german"
+        ]
+    },
+    "ice nine kills": {
+        "name": "Ice Nine Kills",
+        "listeners": 487729,
+        "playcount": 40074217,
+        "genres": [
+            "post-hardcore",
+            "metalcore",
+            "screamo"
+        ]
+    },
+    "volbeat": {
+        "name": "Volbeat",
+        "listeners": 984725,
+        "playcount": 56410826,
+        "genres": [
+            "heavy metal",
+            "metal",
+            "rockabilly"
+        ]
+    },
+    "battlecreek": {
+        "name": "Battlecreek",
+        "listeners": 992,
+        "playcount": 12535,
+        "genres": [
+            "thrash metal",
+            "german",
+            "german thrash metal"
+        ]
+    },
+    "insanity alert": {
+        "name": "Insanity Alert",
+        "listeners": 22816,
+        "playcount": 273535,
+        "genres": [
+            "thrash metal",
+            "crossover",
+            "Austria"
+        ]
+    },
+    "lampr3a": {
+        "name": "LAMPR3A",
+        "listeners": 2535,
+        "playcount": 18872,
+        "genres": [
+            "Progressive metal",
+            "instrumental",
+            "math metal"
+        ]
+    },
+    "tx2": {
+        "name": "TX2",
+        "listeners": 147225,
+        "playcount": 3894427,
+        "genres": [
+            "pop punk",
+            "alternative",
+            "emo"
+        ]
+    },
+    "silhouette": {
+        "name": "Silhouette",
+        "listeners": 15462,
+        "playcount": 187046,
+        "genres": [
+            "Progressive metal",
+            "Progressive rock",
+            "atmospheric black metal"
+        ]
+    },
+    "rodscha aus kambodscha und tom palme": {
+        "name": "Rodscha aus Kambodscha und Tom Palme",
+        "listeners": 2136,
+        "playcount": 24132,
+        "genres": [
+            "under 2000 listeners"
+        ]
+    },
+    "in flames": {
+        "name": "In Flames",
+        "listeners": 1594799,
+        "playcount": 196577726,
+        "genres": [
+            "Melodic Death Metal",
+            "death metal",
+            "metal"
+        ]
+    },
+    "embryonic autopsy": {
+        "name": "Embryonic Autopsy",
+        "listeners": 2558,
+        "playcount": 15074,
+        "genres": [
+            "Brutal Death Metal",
+            "death metal",
+            "metal"
+        ]
+    },
+    "profanation": {
+        "name": "Profanation",
+        "listeners": 3342,
+        "playcount": 46246,
+        "genres": [
+            "Brutal Death Metal",
+            "death metal",
+            "goregrind"
+        ]
+    },
+    "asomvel": {
+        "name": "Asomvel",
+        "listeners": 8234,
+        "playcount": 95762,
+        "genres": [
+            "heavy metal",
+            "hard rock",
+            "traditional heavy metal"
+        ]
+    },
+    "mehnersmoos": {
+        "name": "Mehnersmoos",
+        "listeners": 34260,
+        "playcount": 1658488,
+        "genres": [
+            "Deutschrap",
+            "hip hop",
+            "asozialster gangstarap"
+        ]
+    },
+    "carcass": {
+        "name": "Carcass",
+        "listeners": 581414,
+        "playcount": 27015414,
+        "genres": [
+            "death metal",
+            "grindcore",
+            "Melodic Death Metal"
+        ]
+    },
+    "dirkschneider": {
+        "name": "dirkschneider",
+        "listeners": 6965,
+        "playcount": 102238,
+        "genres": [
+            "heavy metal",
+            "hard rock",
+            "udo dirkschneider"
+        ]
+    },
+    "dundertåget": {
+        "name": "Dundertåget",
+        "listeners": 17590,
+        "playcount": 252459,
+        "genres": [
+            "rock",
+            "swedish",
+            "Psychedelic Rock"
+        ]
+    },
+    "devangelic": {
+        "name": "Devangelic",
+        "listeners": 6411,
+        "playcount": 155234,
+        "genres": [
+            "Brutal Death Metal",
+            "death metal",
+            "Technical Death Metal"
+        ]
+    },
+    "the great sea": {
+        "name": "The Great Sea",
+        "listeners": 2022,
+        "playcount": 11925,
+        "genres": [
+            "atmospheric black metal",
+            "black metal",
+            "germany"
+        ]
+    },
+    "only human": {
+        "name": "only human",
+        "listeners": 2224,
+        "playcount": 16648,
+        "genres": [
+            "punk",
+            "classic rock",
+            "70s"
+        ]
+    },
+    "cwfen": {
+        "name": "Cwfen",
+        "listeners": 2795,
+        "playcount": 33119,
+        "genres": [
+            "doom metal",
+            "DOOMGAZE",
+            "experimental"
+        ]
+    },
+    "king 810": {
+        "name": "King 810",
+        "listeners": 77393,
+        "playcount": 2430779,
+        "genres": [
+            "Nu Metal",
+            "hardcore",
+            "metalcore"
+        ]
+    },
+    "blue benders": {
+        "name": "Blue Benders",
+        "listeners": 947,
+        "playcount": 3722,
+        "genres": []
+    },
+    "employed to serve": {
+        "name": "Employed to Serve",
+        "listeners": 65198,
+        "playcount": 1127967,
+        "genres": [
+            "mathcore",
+            "hardcore",
+            "metalcore"
+        ]
+    },
+    "trash talk": {
+        "name": "Trash Talk",
+        "listeners": 150501,
+        "playcount": 7899273,
+        "genres": [
+            "hardcore",
+            "hardcore punk",
+            "thrashcore"
+        ]
+    },
+    "mittel alta": {
+        "name": "Mittel Alta",
+        "listeners": 9299,
+        "playcount": 222990,
+        "genres": [
+            "kacke",
+            "medieval",
+            "mixed-deutschrap"
+        ]
+    },
+    "nergal": {
+        "name": "Nergal",
+        "listeners": 2416,
+        "playcount": 34761,
+        "genres": [
+            "black metal",
+            "Greek Black Metal",
+            "Hellenic Black Metal"
+        ]
+    },
+    "konvent": {
+        "name": "Konvent",
+        "listeners": 22783,
+        "playcount": 349108,
+        "genres": [
+            "doom metal",
+            "death metal",
+            "Death Doom Metal"
+        ]
+    },
+    "blaze the trail": {
+        "name": "Blaze The Trail",
+        "listeners": 1328,
+        "playcount": 6200,
+        "genres": [
+            "hardcore",
+            "metalcore"
+        ]
+    },
+    "escuela grind": {
+        "name": "Escuela Grind",
+        "listeners": 37274,
+        "playcount": 525639,
+        "genres": [
+            "grindcore",
+            "powerviolence",
+            "hardcore"
+        ]
+    },
+    "sagenbringer": {
+        "name": "Sagenbringer",
+        "listeners": 2690,
+        "playcount": 39790,
+        "genres": [
+            "pagan metal",
+            "folk metal",
+            "pagan black metal"
+        ]
+    },
+    "papa roach": {
+        "name": "Papa Roach",
+        "listeners": 3696808,
+        "playcount": 127700381,
+        "genres": [
+            "Nu Metal",
+            "rock",
+            "alternative rock"
+        ]
+    },
+    "the limit": {
+        "name": "The Limit",
+        "listeners": 8514,
+        "playcount": 48470,
+        "genres": [
+            "funk",
+            "punk",
+            "new wave"
+        ]
+    },
+    "a.a. williams": {
+        "name": "A.A. Williams",
+        "listeners": 42007,
+        "playcount": 906232,
+        "genres": [
+            "post-rock",
+            "dark folk",
+            "singer-songwriter"
+        ]
+    },
+    "year of the goat": {
+        "name": "Year of the Goat",
+        "listeners": 47130,
+        "playcount": 894067,
+        "genres": [
+            "Psychedelic Rock",
+            "occult rock",
+            "hard rock"
+        ]
+    },
+    "minotaurus": {
+        "name": "Minotaurus",
+        "listeners": 4284,
+        "playcount": 74999,
+        "genres": [
+            "folk metal",
+            "Progressive rock",
+            "celtic metal"
+        ]
+    },
+    "(0)": {
+        "name": "(0)",
+        "listeners": 1913,
+        "playcount": 19944,
+        "genres": [
+            "black metal",
+            "Progressive metal",
+            "denmark"
+        ]
+    },
+    "blasmusik illenschwang": {
+        "name": "BLASMUSIK ILLENSCHWANG",
+        "listeners": 2,
+        "playcount": 30,
+        "genres": []
+    },
+    "stoned jesus": {
+        "name": "Stoned Jesus",
+        "listeners": 142632,
+        "playcount": 2287425,
+        "genres": [
+            "Stoner Rock",
+            "stoner doom",
+            "doom metal"
+        ]
+    },
+    "all them witches": {
+        "name": "All Them Witches",
+        "listeners": 303128,
+        "playcount": 8427149,
+        "genres": [
+            "Stoner Rock",
+            "Psychedelic Rock",
+            "blues rock"
+        ]
+    },
+    "storm seeker": {
+        "name": "Storm Seeker",
+        "listeners": 25261,
+        "playcount": 317514,
+        "genres": [
+            "folk metal",
+            "pirate metal",
+            "german"
+        ]
+    },
+    "hällas": {
+        "name": "Hällas",
+        "listeners": 50102,
+        "playcount": 1484611,
+        "genres": [
+            "hard rock",
+            "Progressive rock",
+            "Psychedelic Rock"
+        ]
+    },
+    "aneuma": {
+        "name": "Aneuma",
+        "listeners": 1961,
+        "playcount": 10496,
+        "genres": [
+            "death metal",
+            "Melodic Death Metal",
+            "Female fronted metal"
+        ]
+    },
+    "nevermore": {
+        "name": "Nevermore",
+        "listeners": 325255,
+        "playcount": 15774032,
+        "genres": [
+            "Progressive metal",
+            "thrash metal",
+            "Power metal"
+        ]
+    },
+    "kadavar": {
+        "name": "Kadavar",
+        "listeners": 160116,
+        "playcount": 3602327,
+        "genres": [
+            "Psychedelic Rock",
+            "Stoner Rock",
+            "hard rock"
+        ]
+    },
+    "carach angren": {
+        "name": "Carach Angren",
+        "listeners": 96077,
+        "playcount": 4806148,
+        "genres": [
+            "Symphonic Black Metal",
+            "black metal",
+            "melodic black metal"
+        ]
+    },
+    "sylosis": {
+        "name": "Sylosis",
+        "listeners": 208237,
+        "playcount": 8389761,
+        "genres": [
+            "Melodic Death Metal",
+            "thrash metal",
+            "metalcore"
+        ]
+    },
+    "the garden": {
+        "name": "The Garden",
+        "listeners": 838753,
+        "playcount": 55095404,
+        "genres": [
+            "post-punk",
+            "art punk",
+            "punk"
+        ]
+    },
+    "the browning": {
+        "name": "The Browning",
+        "listeners": 140321,
+        "playcount": 5666235,
+        "genres": [
+            "deathcore",
+            "electronic",
+            "experimental"
+        ]
+    },
+    "authority zero": {
+        "name": "Authority Zero",
+        "listeners": 235970,
+        "playcount": 5135722,
+        "genres": [
+            "punk rock",
+            "punk",
+            "ska punk"
+        ]
+    },
+    "brothers of metal": {
+        "name": "Brothers of Metal",
+        "listeners": 143091,
+        "playcount": 5595920,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "folk metal"
+        ]
+    },
+    "voice of baceprot": {
+        "name": "Voice Of Baceprot",
+        "listeners": 17803,
+        "playcount": 136674,
+        "genres": [
+            "metal",
+            "alternative metal",
+            "indonesian"
+        ]
+    },
+    "belvedere": {
+        "name": "Belvedere",
+        "listeners": 90793,
+        "playcount": 2552438,
+        "genres": [
+            "melodic hardcore",
+            "punk rock",
+            "skate punk"
+        ]
+    },
+    "twenty one children": {
+        "name": "Twenty One Children",
+        "listeners": 4575,
+        "playcount": 15999,
+        "genres": [
+            "punk rock",
+            "punk",
+            "hardcore punk"
+        ]
+    },
+    "letlive.": {
+        "name": "letlive.",
+        "listeners": 135515,
+        "playcount": 5499918,
+        "genres": [
+            "post-hardcore",
+            "hardcore",
+            "experimental"
+        ]
+    },
+    "marteria": {
+        "name": "Marteria",
+        "listeners": 265639,
+        "playcount": 8390609,
+        "genres": [
+            "Deutschrap",
+            "rap",
+            "german"
+        ]
+    },
+    "anthrax": {
+        "name": "Anthrax",
+        "listeners": 1238906,
+        "playcount": 41599998,
+        "genres": [
+            "thrash metal",
+            "heavy metal",
+            "speed metal"
+        ]
+    },
+    "thornhill": {
+        "name": "Thornhill",
+        "listeners": 229737,
+        "playcount": 16651827,
+        "genres": [
+            "metalcore",
+            "alternative metal",
+            "Progressive Metalcore"
+        ]
+    },
+    "truckfighters": {
+        "name": "Truckfighters",
+        "listeners": 206808,
+        "playcount": 5028956,
+        "genres": [
+            "Stoner Rock",
+            "desert rock",
+            "stoner"
+        ]
+    },
+    "the hives": {
+        "name": "The Hives",
+        "listeners": 2102849,
+        "playcount": 57851618,
+        "genres": [
+            "Garage Rock",
+            "rock",
+            "indie"
+        ]
+    },
+    "obscura": {
+        "name": "Obscura",
+        "listeners": 137691,
+        "playcount": 6091371,
+        "genres": [
+            "Technical Death Metal",
+            "progressive death metal",
+            "death metal"
+        ]
+    },
+    "violent magic orchestra": {
+        "name": "Violent Magic Orchestra",
+        "listeners": 8046,
+        "playcount": 94659,
+        "genres": [
+            "black metal",
+            "noise",
+            "Avant-garde Metal"
+        ]
+    },
+    "high vis": {
+        "name": "High Vis",
+        "listeners": 175476,
+        "playcount": 2862710,
+        "genres": [
+            "post-punk",
+            "Crank wave",
+            "post-brexit new wave"
+        ]
+    },
+    "saviourself": {
+        "name": "SaviourSelf",
+        "listeners": 1594,
+        "playcount": 12434,
+        "genres": [
+            "metalcore",
+            "melodic hardcore",
+            "german"
+        ]
+    },
+    "nanowar of steel": {
+        "name": "Nanowar of Steel",
+        "listeners": 61671,
+        "playcount": 1652135,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "parody"
+        ]
+    },
+    "queensrÿche": {
+        "name": "Queensrÿche",
+        "listeners": 559231,
+        "playcount": 16985797,
+        "genres": [
+            "Progressive metal",
+            "heavy metal",
+            "Progressive rock"
+        ]
+    },
+    "dieter birr": {
+        "name": "Dieter Birr",
+        "listeners": 2639,
+        "playcount": 14272,
+        "genres": [
+            "Ostrock",
+            "ddr",
+            "deutsch"
+        ]
+    },
+    "kupfergold": {
+        "name": "Kupfergold",
+        "listeners": 2960,
+        "playcount": 57326,
+        "genres": [
+            "folk",
+            "rock",
+            "german"
+        ]
+    },
+    "burning witches": {
+        "name": "Burning Witches",
+        "listeners": 35285,
+        "playcount": 619043,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "metal"
+        ]
+    },
+    "wüstenberg": {
+        "name": "Wüstenberg",
+        "listeners": 876,
+        "playcount": 3291,
+        "genres": []
+    },
+    "dubioza kolektiv": {
+        "name": "Dubioza Kolektiv",
+        "listeners": 98723,
+        "playcount": 3286214,
+        "genres": [
+            "dub",
+            "reggae",
+            "Bosnian"
+        ]
+    },
+    "green lung": {
+        "name": "Green Lung",
+        "listeners": 75528,
+        "playcount": 1661223,
+        "genres": [
+            "Stoner Rock",
+            "doom metal",
+            "stoner metal"
+        ]
+    },
+    "set it off": {
+        "name": "Set It Off",
+        "listeners": 818369,
+        "playcount": 38368382,
+        "genres": [
+            "pop punk",
+            "powerpop",
+            "alternative"
+        ]
+    },
+    "illdisposed": {
+        "name": "Illdisposed",
+        "listeners": 75043,
+        "playcount": 3378360,
+        "genres": [
+            "death metal",
+            "Melodic Death Metal",
+            "danish"
+        ]
+    },
+    "allt": {
+        "name": "Allt",
+        "listeners": 61188,
+        "playcount": 2029709,
+        "genres": [
+            "Progressive Metalcore",
+            "metalcore",
+            "DJENT"
+        ]
+    },
+    "bark": {
+        "name": "Bark",
+        "listeners": 8822,
+        "playcount": 67203,
+        "genres": [
+            "groove metal",
+            "trip-hop",
+            "electronic"
+        ]
+    },
+    "annisokay": {
+        "name": "Annisokay",
+        "listeners": 156527,
+        "playcount": 6635498,
+        "genres": [
+            "post-hardcore",
+            "metalcore",
+            "german"
+        ]
+    },
+    "hellbutcher": {
+        "name": "Hellbutcher",
+        "listeners": 6383,
+        "playcount": 70559,
+        "genres": [
+            "thrash metal",
+            "black metal",
+            "blackened thrash metal"
+        ]
+    },
+    "phantom corporation": {
+        "name": "Phantom Corporation",
+        "listeners": 1387,
+        "playcount": 14152,
+        "genres": [
+            "death metal",
+            "Crust",
+            "crust punk"
+        ]
+    },
+    "eisbrecher": {
+        "name": "Eisbrecher",
+        "listeners": 295961,
+        "playcount": 15485346,
+        "genres": [
+            "industrial metal",
+            "industrial",
+            "german"
+        ]
+    },
+    "saor": {
+        "name": "Saor",
+        "listeners": 54795,
+        "playcount": 1398539,
+        "genres": [
+            "atmospheric black metal",
+            "black metal",
+            "folk metal"
+        ]
+    },
+    "majak": {
+        "name": "Majak",
+        "listeners": 376,
+        "playcount": 4418,
+        "genres": [
+            "heavy metal",
+            "black metal",
+            "hardcore"
+        ]
+    },
+    "converge": {
+        "name": "Converge",
+        "listeners": 632820,
+        "playcount": 51810539,
+        "genres": [
+            "hardcore",
+            "mathcore",
+            "metalcore"
+        ]
+    },
+    "syracusæ": {
+        "name": "SYRACUSÆ",
+        "listeners": 1039,
+        "playcount": 5039,
+        "genres": [
+            "mathcore",
+            "metal",
+            "deathcore"
+        ]
+    },
+    "boundaries": {
+        "name": "Boundaries",
+        "listeners": 84989,
+        "playcount": 5741413,
+        "genres": [
+            "metalcore",
+            "hardcore",
+            "beatdown hardcore"
+        ]
+    },
+    "landmvrks": {
+        "name": "LANDMVRKS",
+        "listeners": 225050,
+        "playcount": 9802886,
+        "genres": [
+            "metalcore",
+            "post-hardcore",
+            "french"
+        ]
+    },
+    "vulvarine": {
+        "name": "Vulvarine",
+        "listeners": 1861,
+        "playcount": 15483,
+        "genres": [
+            "hard rock",
+            "rock",
+            "female vocal"
+        ]
+    },
+    "treat": {
+        "name": "Treat",
+        "listeners": 41453,
+        "playcount": 955684,
+        "genres": [
+            "hard rock",
+            "melodic rock",
+            "AOR"
+        ]
+    },
+    "the sons of huens": {
+        "name": "The Sons Of Huens",
+        "listeners": 3048,
+        "playcount": 29097,
+        "genres": [
+            "german lyrics",
+            "german",
+            "sons of huen"
+        ]
+    },
+    "lightchapter": {
+        "name": "LIGHTCHAPTER",
+        "listeners": 5220,
+        "playcount": 21281,
+        "genres": [
+            "death metal",
+            "metal",
+            "melodic metal"
+        ]
+    },
+    "mushroomhead": {
+        "name": "Mushroomhead",
+        "listeners": 667598,
+        "playcount": 13939010,
+        "genres": [
+            "Nu Metal",
+            "alternative metal",
+            "industrial metal"
+        ]
+    },
+    "crashdïet": {
+        "name": "Crashdïet",
+        "listeners": 61528,
+        "playcount": 2160766,
+        "genres": [
+            "hard rock",
+            "sleaze rock",
+            "glam rock"
+        ]
+    },
+    "the dillinger escape plan": {
+        "name": "The Dillinger Escape Plan",
+        "listeners": 622431,
+        "playcount": 35149598,
+        "genres": [
+            "mathcore",
+            "experimental",
+            "hardcore"
+        ]
+    },
+    "ecca vandal": {
+        "name": "Ecca Vandal",
+        "listeners": 106445,
+        "playcount": 802890,
+        "genres": [
+            "Hip-Hop",
+            "electronic",
+            "alternative rock"
+        ]
+    },
+    "judas priest": {
+        "name": "Judas Priest",
+        "listeners": 2109169,
+        "playcount": 108305555,
+        "genres": [
+            "heavy metal",
+            "metal",
+            "hard rock"
+        ]
+    },
+    "lovebites": {
+        "name": "Lovebites",
+        "listeners": 30912,
+        "playcount": 1370407,
+        "genres": [
+            "Power metal",
+            "heavy metal",
+            "japanese"
+        ]
+    },
+    "god is an astronaut": {
+        "name": "God Is an Astronaut",
+        "listeners": 829009,
+        "playcount": 57674948,
+        "genres": [
+            "post-rock",
+            "instrumental",
+            "ambient"
+        ]
+    },
+    "mammoth": {
+        "name": "Mammoth",
+        "listeners": 46703,
+        "playcount": 589617,
+        "genres": [
+            "Post-Metal",
+            "post-rock",
+            "Sludge"
+        ]
+    },
+    "cabal": {
+        "name": "Cabal",
+        "listeners": 78095,
+        "playcount": 1252385,
+        "genres": [
+            "death metal",
+            "thrash metal",
+            "deathcore"
+        ]
+    },
+    "calva louise": {
+        "name": "Calva Louise",
+        "listeners": 91629,
+        "playcount": 1517909,
+        "genres": [
+            "rock",
+            "Garage Rock",
+            "alternative metal"
+        ]
+    },
+    "not scientists": {
+        "name": "Not Scientists",
+        "listeners": 5536,
+        "playcount": 80173,
+        "genres": [
+            "french",
+            "punk rock",
+            "motocultor 2019"
+        ]
+    }
+}
