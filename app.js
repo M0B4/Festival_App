@@ -1,6 +1,7 @@
 /**
- * FESTIVAL GUIDE 2026 - FINAL STABLE
- * Fixed: Strict alphabetical sorting within genres.
+ * FESTIVAL GUIDE 2026 - ULTIMATE EDITION
+ * Features: Toggle Ascending/Descending Sort, Non-breaking Badges, 
+ * Title Case Genres, Last.fm Integration.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -12,7 +13,10 @@ let currentFestival = null;
 let currentBands = [];
 let favorites = [];
 let showExclusiveOnly = false;
+
+// --- NEU: SORTIER-EINSTELLUNGEN ---
 let currentSortMode = 'listeners';
+let isSortAsc = false; // Bei Hörern starten wir standardmäßig absteigend (Große zuerst)
 
 const selector = document.getElementById('festival-selector');
 const tbody = document.getElementById('table-body');
@@ -23,7 +27,6 @@ const contentArea = document.querySelector('.content-area');
 const searchContainer = document.getElementById('search-container');
 const searchToggle = document.getElementById('search-toggle-btn');
 
-// --- HILFSFUNKTIONEN ---
 function formatGenre(str) {
     if (!str || str === '-' || str === 'Unknown') return '-';
     return str.split(' ').map(function(word) {
@@ -42,12 +45,14 @@ async function initApp() {
             const masterRes = await fetch(MASTER_DATA_PATH);
             if (masterRes.ok) bandMasterData = await masterRes.json();
         } catch (e) { console.warn("Master-Daten nicht verfügbar."); }
+
         const loads = festivalRegistry.map(async(fest) => {
             try {
                 const res = await fetch(BASE_PATH + fest.file);
                 if (res.ok) allFestivalsData[fest.id] = await res.json();
             } catch (e) { console.error("Fehler bei " + fest.file); }
         });
+
         await Promise.all(loads);
         if (festivalRegistry.length > 0) {
             currentFestival = festivalRegistry[0];
@@ -73,6 +78,20 @@ function switchTab(targetViewId) {
     if (targetViewId === 'stats-view') renderGenreStats();
 }
 
+// --- NEU: LOGIK FÜR DEN SORTIER-KLICK ---
+function handleSort(mode) {
+    if (currentSortMode === mode) {
+        // Wenn bereits aktiv: Richtung umkehren
+        isSortAsc = !isSortAsc;
+    } else {
+        // Neuer Modus: Standard-Richtung festlegen
+        currentSortMode = mode;
+        // Bei Hörerzahlen wollen wir meistens die Großen zuerst (desc), bei Text A-Z (asc)
+        isSortAsc = (mode === 'name' || mode === 'genre');
+    }
+    renderTable();
+}
+
 function setupUI() {
     if (selector) {
         festivalRegistry.forEach(fest => {
@@ -91,12 +110,9 @@ function setupUI() {
     const sortBtnList = document.getElementById('sort-listeners');
     const sortBtnGenre = document.getElementById('sort-genre');
 
-    if (sortBtnName) sortBtnName.onclick = () => { currentSortMode = 'name';
-        renderTable(); };
-    if (sortBtnList) sortBtnList.onclick = () => { currentSortMode = 'listeners';
-        renderTable(); };
-    if (sortBtnGenre) sortBtnGenre.onclick = () => { currentSortMode = 'genre';
-        renderTable(); };
+    if (sortBtnName) sortBtnName.onclick = () => handleSort('name');
+    if (sortBtnList) sortBtnList.onclick = () => handleSort('listeners');
+    if (sortBtnGenre) sortBtnGenre.onclick = () => handleSort('genre');
 
     if (searchToggle) {
         searchToggle.onclick = () => {
@@ -147,9 +163,21 @@ function renderTable() {
     const sortBtnName = document.getElementById('sort-name');
     const sortBtnList = document.getElementById('sort-listeners');
     const sortBtnGenre = document.getElementById('sort-genre');
-    if (sortBtnName) sortBtnName.classList.toggle('active-sort', currentSortMode === 'name');
-    if (sortBtnList) sortBtnList.classList.toggle('active-sort', currentSortMode === 'listeners');
-    if (sortBtnGenre) sortBtnGenre.classList.toggle('active-sort', currentSortMode === 'genre');
+
+    // --- Pfeile im Header aktualisieren ---
+    const arrow = isSortAsc ? " ▲" : " ▼";
+    if (sortBtnName) {
+        sortBtnName.innerHTML = "Band" + (currentSortMode === 'name' ? arrow : " ↕");
+        sortBtnName.classList.toggle('active-sort', currentSortMode === 'name');
+    }
+    if (sortBtnList) {
+        sortBtnList.innerHTML = "Hörer" + (currentSortMode === 'listeners' ? arrow : " ↕");
+        sortBtnList.classList.toggle('active-sort', currentSortMode === 'listeners');
+    }
+    if (sortBtnGenre) {
+        sortBtnGenre.innerHTML = "Genre" + (currentSortMode === 'genre' ? arrow : " ↕");
+        sortBtnGenre.classList.toggle('active-sort', currentSortMode === 'genre');
+    }
 
     let overlaps = 0;
     let filtered = currentBands.filter(band => {
@@ -169,31 +197,35 @@ function renderTable() {
         return match;
     });
 
-    // --- KORRIGIERTE SORTIER LOGIK ---
+    // --- SORTIER LOGIK MIT RICHTUNG ---
     filtered.sort((a, b) => {
-        const mDataA = bandMasterData[a.name.toLowerCase()];
-        const mDataB = bandMasterData[b.name.toLowerCase()];
+        const nameA = a.name.toLowerCase();
+        const nameB = b.name.toLowerCase();
+        const mDataA = bandMasterData[nameA];
+        const mDataB = bandMasterData[nameB];
+
+        let result = 0;
 
         if (currentSortMode === 'listeners') {
             const lA = mDataA ? mDataA.listeners : 0;
             const lB = mDataB ? mDataB.listeners : 0;
-            return lB - lA || a.name.localeCompare(b.name);
+            result = lA - lB; // Basis: aufsteigend
         } else if (currentSortMode === 'genre') {
-            const gA = formatGenre((mDataA && mDataA.genres) ? mDataA.genres[0] : (a.genres[0] || '-'));
-            const gB = formatGenre((mDataB && mDataB.genres) ? mDataB.genres[0] : (b.genres[0] || '-'));
+            const gA = formatGenre((mDataA && mDataA.genres && mDataA.genres[0]) ? mDataA.genres[0] : (a.genres && a.genres[0] ? a.genres[0] : '-'));
+            const gB = formatGenre((mDataB && mDataB.genres && mDataB.genres[0]) ? mDataB.genres[0] : (b.genres && b.genres[0] ? b.genres[0] : '-'));
 
-            // 1. Unbekannte Genres (-) nach unten
             if (gA === '-' && gB !== '-') return 1;
             if (gA !== '-' && gB === '-') return -1;
-
-            // 2. Primär nach Genre alphabetisch
-            if (gA !== gB) return gA.localeCompare(gB);
-
-            // 3. Innerhalb des Genres REIN ALPHABETISCH (Hörer spielen hier keine Rolle mehr)
-            return a.name.localeCompare(b.name);
+            result = gA.localeCompare(gB);
+        } else {
+            result = a.name.localeCompare(b.name);
         }
-        // Standard: Alphabetisch
-        return a.name.localeCompare(b.name);
+
+        // Wenn die Werte gleich sind, immer alphabetisch nach Name als Fallback
+        if (result === 0) return a.name.localeCompare(b.name);
+
+        // Richtung anwenden
+        return isSortAsc ? result : -result;
     });
 
     if (stats) stats.innerHTML = "<b>" + filtered.length + "</b> Bands | <span style='color:var(--acc)'>" + overlaps + "</span> Overlaps";
@@ -215,7 +247,7 @@ function renderTable() {
         if (lCount >= 1000000) lDisplay = (lCount / 1000000).toFixed(1) + "M";
         else if (lCount >= 1000) lDisplay = (lCount / 1000).toFixed(0) + "k";
 
-        const rawGenre = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (band.genres[0] || '-');
+        const rawGenre = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (band.genres && band.genres[0] ? band.genres[0] : '-');
         const genre = formatGenre(rawGenre);
 
         tr.innerHTML = "<td><span style='color:" + (isFav ? 'var(--acc)' : '#333') + "'>" + (isFav ? '★' : '☆') + "</span></td>" +
@@ -256,7 +288,7 @@ function renderGenreStats() {
     const counts = {};
     currentBands.forEach(b => {
         const mData = bandMasterData[b.name.toLowerCase()];
-        let g = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (b.genres[0] || "Unknown");
+        let g = (mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (b.genres && b.genres[0] ? b.genres[0] : "Unknown");
         g = formatGenre(g);
         const low = g.toLowerCase();
         if (low.includes("thrash")) g = "Thrash Metal";
