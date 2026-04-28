@@ -337,6 +337,11 @@ tbody td {
     -webkit-mask-image: url('icons/genre.svg');
 }
 
+.icon-festivals {
+    mask-image: url('icons/festivals.svg');
+    -webkit-mask-image: url('icons/festivals.svg');
+}
+
 .icon-settings {
     mask-image: url('icons/settings.svg');
     -webkit-mask-image: url('icons/settings.svg');
@@ -444,4 +449,67 @@ tbody td {
     height: 100%;
     border-radius: 4px;
     transition: width 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+
+/* --- FESTIVAL TAB STYLES --- */
+
+#festivals-summary {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--surf), var(--bg));
+    border-bottom: 1px solid var(--brd);
+}
+
+.summary-big-note {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--acc);
+    display: block;
+}
+
+.summary-sub {
+    font-size: 0.75rem;
+    color: var(--txt-sec);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.fest-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+    background: var(--bg);
+}
+
+.fest-card-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--txt);
+}
+
+.fest-card-stats {
+    font-size: 0.8rem;
+    color: var(--txt-sec);
+    margin-top: 4px;
+}
+
+.fest-card-metric {
+    text-align: right;
+}
+
+.metric-value {
+    display: block;
+    font-weight: bold;
+    color: var(--acc);
+    font-size: 1rem;
+    font-family: monospace;
+}
+
+.metric-unit {
+    font-size: 0.6rem;
+    color: var(--txt-sec);
+    text-transform: uppercase;
 }

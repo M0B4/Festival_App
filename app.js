@@ -1,7 +1,6 @@
 /**
- * FESTIVAL GUIDE 2026 - FINAL MOBILE STABLE
- * Features: Persistent Metric Selection, Cache-Safe UI, 
- * Non-breaking Badges, Title Case Genres.
+ * FESTIVAL GUIDE 2026 - MASTER BUNDLE
+ * Features: New Festival Tab, Dynamic Metric Stats, Deduplication.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -33,6 +32,13 @@ function formatGenre(str) {
     return str.split(' ').map(function(word) {
         return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
     }).join(' ');
+}
+
+// Hilfsfunktion für Zahlenformatierung (M/k)
+function formatNumber(num) {
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
+    if (num >= 1000) return (num / 1000).toFixed(0) + "k";
+    return num;
 }
 
 async function initApp() {
@@ -70,13 +76,19 @@ function switchTab(targetViewId) {
     const activeBtn = document.querySelector('[data-target="' + targetViewId + '"]');
     if (activeBtn) activeBtn.classList.add('active');
     target.classList.add('active');
+
+    // UI-Elemente Steuerung
     document.body.classList.toggle('hide-search', targetViewId !== 'lineup-view');
     document.body.classList.toggle('hide-nav', targetViewId === 'settings-view');
+
     if (searchContainer) {
         searchContainer.classList.add('collapsed');
         if (searchToggle) searchToggle.classList.remove('active');
     }
+
+    // Trigger für die speziellen Views
     if (targetViewId === 'stats-view') renderGenreStats();
+    if (targetViewId === 'festivals-view') renderFestivalsView();
 }
 
 function handleSort(mode) {
@@ -111,7 +123,6 @@ function setupUI() {
     if (sortBtnList) sortBtnList.onclick = () => handleSort('listeners');
     if (sortBtnGenre) sortBtnGenre.onclick = () => handleSort('genre');
 
-    // --- METRIK SELECTOR (PERSISTENT) ---
     const metricSelector = document.getElementById('metric-selector');
     if (metricSelector) {
         metricSelector.value = currentMetric;
@@ -119,6 +130,8 @@ function setupUI() {
             currentMetric = this.value;
             localStorage.setItem('pref_metric', currentMetric);
             renderTable();
+            // Falls man im Festival-Tab ist, auch dort aktualisieren
+            if (document.getElementById('festivals-view').classList.contains('active')) renderFestivalsView();
         };
     }
 
@@ -161,6 +174,74 @@ function loadFestival(fest) {
     currentBands = allFestivalsData[fest.id] || [];
     favorites = JSON.parse(localStorage.getItem('favs_' + fest.id)) || [];
     renderTable();
+}
+
+/**
+ * NEU: FESTIVAL ÜBERSICHT RENDERN
+ */
+function renderFestivalsView() {
+    const summary = document.getElementById('festivals-summary');
+    const list = document.getElementById('festivals-list-container');
+    if (!summary || !list) return;
+
+    list.innerHTML = "";
+    const uniqueBands = new Set();
+    const metricLabel = (currentMetric === 'listeners' ? "Hörer" : "Scrobbles");
+
+    festivalRegistry.forEach(fest => {
+        const bands = allFestivalsData[fest.id] || [];
+        let totalMetric = 0;
+
+        bands.forEach(band => {
+            uniqueBands.add(band.name.toLowerCase());
+            const mData = bandMasterData[band.name.toLowerCase()];
+            if (mData) totalMetric += (mData[currentMetric] || 0);
+        });
+
+        const card = document.createElement('div');
+        card.className = "fest-card";
+        card.innerHTML = `
+            <div class="fest-card-info">
+                <h3>${fest.name}</h3>
+                <div class="fest-card-stats">${bands.length} Bands insgesamt</div>
+            </div>
+            <div class="fest-card-metric">
+                <span class="metric-value">${formatNumber(totalMetric)}</span>
+                <span class="metric-unit">${metricLabel}</span>
+            </div>
+        `;
+        // Optional: Klick auf Karte lädt das Festival
+        card.onclick = () => {
+            loadFestival(fest);
+            switchTab('lineup-view');
+        };
+        list.appendChild(card);
+    });
+
+    summary.innerHTML = `
+        <span class="summary-sub">Festival Saison 2026</span>
+        <span class="summary-big-note">${uniqueBands.size} Eindeutige Bands</span>
+        <p style="font-size:0.7rem; color:var(--txt-sec); margin-top:5px;">Verteilt auf ${festivalRegistry.length} Festivals</p>
+    `;
+}
+
+// ... Rest der renderTable(), renderGenreStats() und setupSwipeHandlers() bleibt wie gehabt ...
+// Achte darauf, dass du am Ende der app.js noch die Swipe-Liste aktualisierst:
+function setupSwipeHandlers() {
+    if (!contentArea) return;
+    let touchStartX = 0;
+    // Neue View in die Swipe-Reihenfolge aufnehmen!
+    const views = ['lineup-view', 'festivals-view', 'stats-view', 'settings-view'];
+    contentArea.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    contentArea.addEventListener('touchend', e => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const threshold = 80;
+        const activeView = document.querySelector('.view-container.active');
+        if (!activeView) return;
+        const currentIndex = views.indexOf(activeView.id);
+        if (touchEndX < touchStartX - threshold && currentIndex < views.length - 1) switchTab(views[currentIndex + 1]);
+        if (touchEndX > touchStartX + threshold && currentIndex > 0) switchTab(views[currentIndex - 1]);
+    }, { passive: true });
 }
 
 function renderTable() {
@@ -268,22 +349,6 @@ function renderTable() {
         };
         tbody.appendChild(tr);
     });
-}
-
-function setupSwipeHandlers() {
-    if (!contentArea) return;
-    let touchStartX = 0;
-    const views = ['lineup-view', 'stats-view', 'settings-view'];
-    contentArea.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
-    contentArea.addEventListener('touchend', e => {
-        const touchEndX = e.changedTouches[0].screenX;
-        const threshold = 80;
-        const activeView = document.querySelector('.view-container.active');
-        if (!activeView) return;
-        const currentIndex = views.indexOf(activeView.id);
-        if (touchEndX < touchStartX - threshold && currentIndex < views.length - 1) switchTab(views[currentIndex + 1]);
-        if (touchEndX > touchStartX + threshold && currentIndex > 0) switchTab(views[currentIndex - 1]);
-    }, { passive: true });
 }
 
 function renderGenreStats() {
