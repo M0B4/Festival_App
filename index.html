@@ -61,8 +61,11 @@
                 <h2>Einstellungen</h2>
                 <div class="settings-group">
                     <h3>Daten-Quelle</h3>
-                    <p>Wähle, wonach die Spalte "Größe" berechnet wird:</p>
-                    <button id="toggle-metric-btn" class="action-btn gold-btn">Metrik: Hörer (All-time)</button>
+                    <p>Wähle die Metrik für die Spalte "Größe":</p>
+                    <select id="metric-selector" class="action-btn" style="background: var(--surf); color: var(--txt); border: 2px solid var(--brd); cursor: pointer;">
+                    <option value="listeners">Last.FM Hörer (All-time)</option>
+                    <option value="playcount">Last.FM Scrobbles (Total)</option>
+    </select>
                 </div>
                 <div class="settings-group">
                     <p>Aktualisiere die App, um die neuesten Band-Bestätigungen und Design-Änderungen zu laden.</p>

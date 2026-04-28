@@ -1,7 +1,7 @@
 /**
  * FESTIVAL GUIDE 2026 - ULTIMATE EDITION
- * Features: Toggle Metric (Listeners/Playcount), Sorting, 
- * Non-breaking Badges, Title Case Genres.
+ * Features: Dropdown Metric Selection (Listeners/Playcount), 
+ * Toggle Sorting, Title Case Genres, Last.fm Integration.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -17,7 +17,7 @@ let showExclusiveOnly = false;
 // --- SORTIER- & METRIK-EINSTELLUNGEN ---
 let currentSortMode = 'listeners';
 let isSortAsc = false;
-let currentMetric = 'listeners'; // 'listeners' oder 'playcount'
+let currentMetric = 'listeners';
 
 const selector = document.getElementById('festival-selector');
 const tbody = document.getElementById('table-body');
@@ -111,12 +111,12 @@ function setupUI() {
     if (sortBtnList) sortBtnList.onclick = () => handleSort('listeners');
     if (sortBtnGenre) sortBtnGenre.onclick = () => handleSort('genre');
 
-    // --- METRIK TOGGLE (NEU) ---
-    const metricBtn = document.getElementById('toggle-metric-btn');
-    if (metricBtn) {
-        metricBtn.onclick = function() {
-            currentMetric = (currentMetric === 'listeners') ? 'playcount' : 'listeners';
-            this.textContent = "Metrik: " + (currentMetric === 'listeners' ? "Hörer (All-time)" : "Scrobbles (Total)");
+    // --- DROPDOWN METRIK (NEU) ---
+    const metricSelector = document.getElementById('metric-selector');
+    if (metricSelector) {
+        metricSelector.value = currentMetric; // Setzt den Initialwert (listeners)
+        metricSelector.onchange = function() {
+            currentMetric = this.value;
             renderTable();
         };
     }
@@ -214,7 +214,6 @@ function renderTable() {
         let result = 0;
 
         if (currentSortMode === 'listeners') {
-            // Hier nutzen wir jetzt die gewählte Metrik (listeners oder playcount)
             const valA = mDataA ? mDataA[currentMetric] : 0;
             const valB = mDataB ? mDataB[currentMetric] : 0;
             result = valA - valB;
@@ -249,7 +248,6 @@ function renderTable() {
         const countValue = mData ? mData[currentMetric] : 0;
         let lDisplay = "-";
 
-        // Formatierung der Zahlen
         if (countValue >= 1000000) lDisplay = (countValue / 1000000).toFixed(1) + "M";
         else if (countValue >= 1000) lDisplay = (countValue / 1000).toFixed(0) + "k";
         else if (countValue > 0) lDisplay = countValue;
