@@ -75,6 +75,6 @@ const festivalRegistry = [{
         id: "download_uk_2026",
         name: "Download Festival UK 2026",
         file: "download_uk_2026_raw_bands.json",
-        country: "united_kingdom"
+        country: "United Kingdom"
     }
 ];
