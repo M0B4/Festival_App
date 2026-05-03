@@ -16,8 +16,8 @@ let favorites = [];
 let showExclusiveOnly = false;
 
 // Persistente Einstellungen (lokal gespeichert)
-let currentSortMode = 'listeners';
-let isSortAsc = false;
+let currentSortMode = 'name';
+let isSortAsc = true;
 let currentMetric = localStorage.getItem('pref_metric') || 'listeners';
 let festSortMode = 'name';
 let festSortAsc = true;
