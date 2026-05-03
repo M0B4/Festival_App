@@ -258,13 +258,14 @@ tbody td {
 .fest-badge {
     display: inline-block;
     white-space: nowrap;
-    border: 1px solid var(--acc);
-    color: var(--acc);
+    /* border-color und color werden jetzt per JS gesetzt */
+    border-width: 1px;
+    border-style: solid;
     font-size: 0.55rem;
     padding: 1px 6px;
     border-radius: 3px;
     text-transform: uppercase;
-    background: rgba(231, 76, 60, 0.05);
+    /* background wird ebenfalls per JS gesetzt (mit Transparenz) */
 }
 
 .listener-cell {

@@ -1,0 +1,562 @@
+[
+    {
+        "name": "Accept",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Airbourne",
+        "origin": "Australia",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Alcest",
+        "origin": "France",
+        "genres": [
+            "Blackgaze"
+        ]
+    },
+    {
+        "name": "Allt",
+        "origin": "Sweden",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Amorphis",
+        "origin": "Finland",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Animals As Leaders",
+        "origin": "United States",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Annisokay",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Arch Enemy",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Black Label Society",
+        "origin": "United States",
+        "genres": [
+            "Southern Metal"
+        ]
+    },
+    {
+        "name": "Bleed From Within",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Bucovina",
+        "origin": "Romania",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Candlemass",
+        "origin": "Sweden",
+        "genres": [
+            "Epic Doom Metal"
+        ]
+    },
+    {
+        "name": "Carcass",
+        "origin": "United Kingdom",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Conservative Military Image",
+        "origin": "United States",
+        "genres": [
+            "Street Punk"
+        ]
+    },
+    {
+        "name": "Coroner",
+        "origin": "Switzerland",
+        "genres": [
+            "Technical Thrash Metal"
+        ]
+    },
+    {
+        "name": "Crippling Alcoholism",
+        "origin": "United States",
+        "genres": [
+            "Gothic Rock"
+        ]
+    },
+    {
+        "name": "Crowbar",
+        "origin": "United States",
+        "genres": [
+            "Sludge Metal"
+        ]
+    },
+    {
+        "name": "Cryptopsy",
+        "origin": "Canada",
+        "genres": [
+            "Technical Death Metal"
+        ]
+    },
+    {
+        "name": "Deafheaven",
+        "origin": "United States",
+        "genres": [
+            "Blackgaze"
+        ]
+    },
+    {
+        "name": "Death Angel",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Decapitated",
+        "origin": "Poland",
+        "genres": [
+            "Technical Death Metal"
+        ]
+    },
+    {
+        "name": "Deicide",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Elder",
+        "origin": "United States",
+        "genres": [
+            "Stoner Metal"
+        ]
+    },
+    {
+        "name": "Employed To Serve",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Evergrey",
+        "origin": "Sweden",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Feuerschwanz",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Metal"
+        ]
+    },
+    {
+        "name": "Fit For An Autopsy",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Fu Manchu",
+        "origin": "United States",
+        "genres": [
+            "Stoner Rock"
+        ]
+    },
+    {
+        "name": "Godsmack",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Grave",
+        "origin": "Sweden",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Gutalax",
+        "origin": "Czechia",
+        "genres": [
+            "Goregrind"
+        ]
+    },
+    {
+        "name": "Hackneyed",
+        "origin": "Germany",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Hatebreed",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Heaven Shall Burn",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Metalcore"
+        ]
+    },
+    {
+        "name": "Heavy//Hitter",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Helloween",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Hvnds",
+        "origin": "Romania",
+        "genres": [
+            "Post-Hardcore"
+        ]
+    },
+    {
+        "name": "Igorrr",
+        "origin": "France",
+        "genres": [
+            "Avant-Garde Electronic Metal"
+        ]
+    },
+    {
+        "name": "Immolation",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Implant Pentru Refuz",
+        "origin": "Romania",
+        "genres": [
+            "Post-Grunge"
+        ]
+    },
+    {
+        "name": "In Extremo",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Metal"
+        ]
+    },
+    {
+        "name": "In Flames",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Insomnium",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Lamb Of God",
+        "origin": "United States",
+        "genres": [
+            "Groove Metal"
+        ]
+    },
+    {
+        "name": "Left To Die",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Machukha",
+        "origin": "Germany",
+        "genres": [
+            "Post-Metal"
+        ]
+    },
+    {
+        "name": "Malevolence",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Marilyn Manson",
+        "origin": "United States",
+        "genres": [
+            "Industrial Rock"
+        ]
+    },
+    {
+        "name": "Misþyrming",
+        "origin": "Iceland",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Monolord",
+        "origin": "Sweden",
+        "genres": [
+            "Doom Metal"
+        ]
+    },
+    {
+        "name": "Municipal Waste",
+        "origin": "United States",
+        "genres": [
+            "Crossover Thrash"
+        ]
+    },
+    {
+        "name": "Necrotted",
+        "origin": "Germany",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Nergal",
+        "origin": "Poland",
+        "genres": [
+            "Blackened Death Metal"
+        ]
+    },
+    {
+        "name": "Nevermore",
+        "origin": "United States",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Non Est Deus",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Black Metal"
+        ]
+    },
+    {
+        "name": "Northlane",
+        "origin": "Australia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Novembers Doom",
+        "origin": "United States",
+        "genres": [
+            "Death Doom Metal"
+        ]
+    },
+    {
+        "name": "Of Mice & Men",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Orbit Culture",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Panzerfaust",
+        "origin": "Canada",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Periphery",
+        "origin": "United States",
+        "genres": [
+            "Djent"
+        ]
+    },
+    {
+        "name": "Perturbator",
+        "origin": "France",
+        "genres": [
+            "Darksynth"
+        ]
+    },
+    {
+        "name": "Psychonaut",
+        "origin": "Belgium",
+        "genres": [
+            "Progressive Post-Metal"
+        ]
+    },
+    {
+        "name": "Raised By Owls",
+        "origin": "United Kingdom",
+        "genres": [
+            "Grindcore"
+        ]
+    },
+    {
+        "name": "Sabaton",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Satyricon",
+        "origin": "Norway",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Serrabulho",
+        "origin": "Portugal",
+        "genres": [
+            "Goregrind"
+        ]
+    },
+    {
+        "name": "Signs Of The Swarm",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Slaughter To Prevail",
+        "origin": "Russian Federation",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Slow Crush",
+        "origin": "Belgium",
+        "genres": [
+            "Shoegaze"
+        ]
+    },
+    {
+        "name": "The Gathering",
+        "origin": "Netherlands",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "The Ghost Inside",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "The Prodigy",
+        "origin": "United Kingdom",
+        "genres": [
+            "Big Beat"
+        ]
+    },
+    {
+        "name": "Thy Art Is Murder",
+        "origin": "Australia",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Tribulation",
+        "origin": "Sweden",
+        "genres": [
+            "Gothic Metal"
+        ]
+    },
+    {
+        "name": "Trooper",
+        "origin": "Romania",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Vader",
+        "origin": "Poland",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Vended",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Voivod",
+        "origin": "Canada",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Wolves In The Throne Room",
+        "origin": "United States",
+        "genres": [
+            "Atmospheric Black Metal"
+        ]
+    }
+]

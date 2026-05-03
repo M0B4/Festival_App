@@ -1,12 +1,13 @@
 /**
- * FESTIVAL GUIDE 2026 - ULTIMATE MASTER
- * Features: Sortable Festival Table, Auto-Hide Nav, 
- * Persistent Metrics, Deduplication.
+ * FESTIVAL GUIDE 2026 - ULTIMATE MASTER EDITION
+ * Features: Auto-Color Hashing, Multi-Metric Support, 
+ * Country Flags, Sortable Festival Table, Cache-Breaker.
  */
 
 const BASE_PATH = 'festivaldata/';
 const MASTER_DATA_PATH = 'bands_master_data.json';
 
+// Globale Daten-Container
 let allFestivalsData = {};
 let bandMasterData = {};
 let currentFestival = null;
@@ -14,15 +15,14 @@ let currentBands = [];
 let favorites = [];
 let showExclusiveOnly = false;
 
-// --- PERSISTENTE EINSTELLUNGEN ---
+// Persistente Einstellungen (lokal gespeichert)
 let currentSortMode = 'listeners';
 let isSortAsc = false;
 let currentMetric = localStorage.getItem('pref_metric') || 'listeners';
-
-// --- NEU: FESTIVAL TAB SORTIERUNG ---
 let festSortMode = 'name';
 let festSortAsc = true;
 
+// UI-Elemente
 const selector = document.getElementById('festival-selector');
 const tbody = document.getElementById('table-body');
 const searchInput = document.getElementById('search');
@@ -32,34 +32,49 @@ const contentArea = document.querySelector('.content-area');
 const searchContainer = document.getElementById('search-container');
 const searchToggle = document.getElementById('search-toggle-btn');
 
-function formatGenre(str) {
-    if (!str || str === '-' || str === 'Unknown') return '-';
-    return str.split(' ').map(function(word) {
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    }).join(' ');
+/**
+ * Hilfsfunktion: Generiert automatisch eine konsistente Farbe für Festival-Badges
+ */
+function getAutoColor(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const h = Math.abs(hash % 360);
+    return `hsl(${h}, 70%, 65%)`;
 }
 
-function formatNumber(num) {
+function formatGenre(str) {
+    if (!str || str === '-' || str === 'Unknown') return '-';
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+}
+
+function formatNumber(num, metric) {
+    if (metric === 'spotify_popularity') return num;
     if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
     if (num >= 1000) return (num / 1000).toFixed(0) + "k";
     return num;
 }
 
+/**
+ * Initialisierung der App
+ */
 async function initApp() {
     try {
         if (typeof festivalRegistry !== 'undefined') {
-            festivalRegistry.sort(function(a, b) { return a.name.localeCompare(b.name); });
+            festivalRegistry.sort((a, b) => a.name.localeCompare(b.name));
         }
         setupUI();
         setupSwipeHandlers();
-        try {
-            const masterRes = await fetch(MASTER_DATA_PATH);
-            if (masterRes.ok) bandMasterData = await masterRes.json();
-        } catch (e) { console.warn("Master-Daten nicht verfügbar."); }
 
+        // Master-Daten laden mit Cache-Busting
+        const masterRes = await fetch(MASTER_DATA_PATH + '?v=' + Date.now());
+        if (masterRes.ok) bandMasterData = await masterRes.json();
+
+        // Alle Festival-JSONs parallel laden
         const loads = festivalRegistry.map(async(fest) => {
             try {
-                const res = await fetch(BASE_PATH + fest.file);
+                const res = await fetch(BASE_PATH + fest.file + '?v=' + Date.now());
                 if (res.ok) allFestivalsData[fest.id] = await res.json();
             } catch (e) { console.error("Fehler bei " + fest.file); }
         });
@@ -69,23 +84,30 @@ async function initApp() {
             currentFestival = festivalRegistry[0];
             loadFestival(currentFestival);
         }
-    } catch (err) { console.error("Kritischer Fehler:", err); }
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function() {});
+    } catch (err) { console.error("Start-Fehler:", err); }
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+    }
 }
 
+/**
+ * Tab-Wechsel Logik mit UI-Anpassung
+ */
 function switchTab(targetViewId) {
     const target = document.getElementById(targetViewId);
     if (!target) return;
+
     document.querySelectorAll('.tab-btn, .view-container').forEach(el => el.classList.remove('active'));
     const activeBtn = document.querySelector('[data-target="' + targetViewId + '"]');
     if (activeBtn) activeBtn.classList.add('active');
     target.classList.add('active');
 
-    // UI-LOGIK: Nav verstecken in Settings UND Festivals
-    const isLineup = targetViewId === 'lineup-view';
-    const isSettings = targetViewId === 'settings-view';
-    const isFestTab = targetViewId === 'festivals-view';
+    const isLineup = (targetViewId === 'lineup-view');
+    const isSettings = (targetViewId === 'settings-view');
+    const isFestTab = (targetViewId === 'festivals-view');
 
+    // UI-Elemente je nach Tab verstecken oder zeigen
     document.body.classList.toggle('hide-search', !isLineup);
     document.body.classList.toggle('hide-nav', isSettings || isFestTab);
 
@@ -98,25 +120,9 @@ function switchTab(targetViewId) {
     if (targetViewId === 'festivals-view') renderFestivalsView();
 }
 
-function handleSort(mode) {
-    if (currentSortMode === mode) isSortAsc = !isSortAsc;
-    else {
-        currentSortMode = mode;
-        isSortAsc = (mode === 'name' || mode === 'genre');
-    }
-    renderTable();
-}
-
-// NEU: Sortierung für die Festival-Tabelle
-function handleFestSort(mode) {
-    if (festSortMode === mode) festSortAsc = !festSortAsc;
-    else {
-        festSortMode = mode;
-        festSortAsc = (mode === 'name');
-    }
-    renderFestivalsView();
-}
-
+/**
+ * Event-Listener Setup
+ */
 function setupUI() {
     if (selector) {
         festivalRegistry.forEach(fest => {
@@ -127,20 +133,21 @@ function setupUI() {
         });
         selector.onchange = (e) => loadFestival(festivalRegistry.find(f => f.id === e.target.value));
     }
+
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.onclick = () => switchTab(btn.dataset.target);
     });
 
-    // Lineup Sortierung
-    if (document.getElementById('sort-name')) document.getElementById('sort-name').onclick = () => handleSort('name');
-    if (document.getElementById('sort-listeners')) document.getElementById('sort-listeners').onclick = () => handleSort('listeners');
-    if (document.getElementById('sort-genre')) document.getElementById('sort-genre').onclick = () => handleSort('genre');
+    // Sortier-Header Klicks
+    document.getElementById('sort-name').onclick = () => handleSort('name');
+    document.getElementById('sort-listeners').onclick = () => handleSort('listeners');
+    document.getElementById('sort-genre').onclick = () => handleSort('genre');
 
-    // NEU: Festival Sortierung
-    if (document.getElementById('fest-sort-name')) document.getElementById('fest-sort-name').onclick = () => handleFestSort('name');
-    if (document.getElementById('fest-sort-bands')) document.getElementById('fest-sort-bands').onclick = () => handleFestSort('bands');
-    if (document.getElementById('fest-sort-metric')) document.getElementById('fest-sort-metric').onclick = () => handleFestSort('metric');
+    document.getElementById('fest-sort-name').onclick = () => handleFestSort('name');
+    document.getElementById('fest-sort-bands').onclick = () => handleFestSort('bands');
+    document.getElementById('fest-sort-metric').onclick = () => handleFestSort('metric');
 
+    // Metrik-Selektor (Settings)
     const metricSelector = document.getElementById('metric-selector');
     if (metricSelector) {
         metricSelector.value = currentMetric;
@@ -148,21 +155,34 @@ function setupUI() {
             currentMetric = this.value;
             localStorage.setItem('pref_metric', currentMetric);
             renderTable();
-            if (document.getElementById('festivals-view').classList.contains('active')) renderFestivalsView();
         };
     }
 
+    // HEAVY DUTY UPDATE BUTTON
+    const updateBtn = document.getElementById('update-app-btn');
+    if (updateBtn) {
+        updateBtn.onclick = async function() {
+            this.textContent = "Updating...";
+            try {
+                if ('caches' in window) {
+                    const names = await caches.keys();
+                    await Promise.all(names.map(n => caches.delete(n)));
+                }
+                if ('serviceWorker' in navigator) {
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    for (let r of registrations) await r.unregister();
+                }
+                window.location.replace(window.location.href.split('?')[0] + '?u=' + Date.now());
+            } catch (e) { window.location.reload(true); }
+        };
+    }
+
+    // Suche & Filter
     if (searchToggle) {
         searchToggle.onclick = () => {
             const isCollapsed = searchContainer.classList.toggle('collapsed');
             searchToggle.classList.toggle('active', !isCollapsed);
             if (!isCollapsed && searchInput) setTimeout(() => searchInput.focus(), 300);
-            else {
-                if (searchInput) {
-                    searchInput.value = "";
-                    renderTable();
-                }
-            }
         };
     }
     const exclBtn = document.getElementById('exclusive-btn');
@@ -172,46 +192,11 @@ function setupUI() {
         renderTable();
     };
     if (searchInput) searchInput.oninput = renderTable;
-
-    const updateBtn = document.getElementById('update-app-btn');
-    if (updateBtn) {
-        updateBtn.onclick = async function() {
-            this.textContent = "Updating...";
-            this.style.background = "#555";
-
-            try {
-                // 1. Alle Caches löschen
-                if ('caches' in window) {
-                    const cacheNames = await caches.keys();
-                    await Promise.all(
-                        cacheNames.map(name => caches.delete(name))
-                    );
-                }
-
-                // 2. Alle Service Worker finden und unregistrieren
-                if ('serviceWorker' in navigator) {
-                    const registrations = await navigator.serviceWorker.getRegistrations();
-                    for (let registration of registrations) {
-                        await registration.unregister();
-                    }
-                }
-
-                // 3. Kurze Pause für das System
-                await new Promise(resolve => setTimeout(resolve, 500));
-
-                // 4. Hard Reload mit Cache-Busting-Parameter
-                // Das fügt ?v=TIMESTAMP an die URL an, was das Handy zwingt, alles neu zu laden
-                const cleanURL = window.location.href.split('?')[0];
-                window.location.replace(cleanURL + '?update=' + Date.now());
-
-            } catch (e) {
-                // Notfall-Fallback
-                window.location.reload(true);
-            }
-        };
-    }
 }
 
+/**
+ * Ein spezifisches Festival laden
+ */
 function loadFestival(fest) {
     if (!fest) return;
     currentFestival = fest;
@@ -222,24 +207,111 @@ function loadFestival(fest) {
 }
 
 /**
- * ÜBERSICHT RENDERN ALS TABELLE
+ * RENDERING: Das Band-Lineup
+ */
+function renderTable() {
+    if (!tbody) return;
+    const term = (searchInput && searchInput.value) ? searchInput.value.toLowerCase().trim() : "";
+    tbody.innerHTML = "";
+
+    // Header-Update
+    const arrow = isSortAsc ? " ▲" : " ▼";
+    let metricLabel = "Hörer";
+    if (currentMetric === 'playcount') metricLabel = "Plays";
+    if (currentMetric === 'spotify_listeners') metricLabel = "S-Hörer";
+    if (currentMetric === 'spotify_popularity') metricLabel = "Rating";
+
+    document.getElementById('sort-name').innerHTML = "Band" + (currentSortMode === 'name' ? arrow : " ↕");
+    document.getElementById('sort-listeners').innerHTML = metricLabel + (currentSortMode === 'listeners' ? arrow : " ↕");
+    document.getElementById('sort-genre').innerHTML = "Genre" + (currentSortMode === 'genre' ? arrow : " ↕");
+
+    let overlaps = 0;
+    let filtered = currentBands.filter(band => {
+        const match = (band.name + " " + band.origin).toLowerCase().includes(term);
+        const matches = [];
+        for (const id in allFestivalsData) {
+            if (id !== currentFestival.id && allFestivalsData[id].some(b => b.name.toLowerCase() === band.name.toLowerCase())) {
+                const fInfo = festivalRegistry.find(f => f.id === id);
+                if (fInfo) matches.push(fInfo);
+            }
+        }
+        if (matches.length > 0) overlaps++;
+        if (showExclusiveOnly && matches.length > 0) return false;
+        band.currentMatches = matches;
+        return match;
+    });
+
+    // Sortierung
+    filtered.sort((a, b) => {
+        const mDataA = bandMasterData[a.name.toLowerCase()] || {};
+        const mDataB = bandMasterData[b.name.toLowerCase()] || {};
+        let result = 0;
+        if (currentSortMode === 'listeners') {
+            result = (mDataA[currentMetric] || 0) - (mDataB[currentMetric] || 0);
+        } else if (currentSortMode === 'genre') {
+            const gA = formatGenre(mDataA.genres ? mDataA.genres[0] : (a.genres ? a.genres[0] : '-'));
+            const gB = formatGenre(mDataB.genres ? mDataB.genres[0] : (b.genres ? b.genres[0] : '-'));
+            result = gA.localeCompare(gB);
+        } else result = a.name.localeCompare(b.name);
+        return isSortAsc ? result : -result;
+    });
+
+    if (stats) stats.innerHTML = `<b>${filtered.length}</b> Bands | <span style="color:var(--acc)">${overlaps}</span> Overlaps`;
+
+    filtered.forEach(band => {
+        const isFav = favorites.includes(band.name);
+        const mData = bandMasterData[band.name.toLowerCase()] || {};
+
+        // Flaggen Logik
+        const iso = countryCodes[(band.origin || "").toLowerCase().trim()] || null;
+        let flagHtml = "🏳️ ";
+        if (iso === "world") flagHtml = "🌎 ";
+        else if (iso) flagHtml = `<img src="https://flagcdn.com/w40/${iso}.png" width="18" style="margin-right:8px; border-radius:2px;">`;
+
+        // Bunte Badges Logik
+        const badgesHtml = band.currentMatches.map(f => {
+            const color = getAutoColor(f.name);
+            return `<span class="fest-badge" style="border-color:${color}; color:${color}; background:${color}1a;">${f.name}</span>`;
+        }).join('');
+
+        const tr = document.createElement('tr');
+        if (isFav) tr.classList.add('is-fav');
+        tr.innerHTML = `
+            <td><span style="color:${isFav ? 'var(--acc)' : '#333'}">${isFav ? '★' : '☆'}</span></td>
+            <td>
+                <div class="band-info-wrapper">
+                    <div class="band-main-line">${flagHtml}<span>${band.name}</span></div>
+                    <div class="badge-container">${badgesHtml}</div>
+                </div>
+            </td>
+            <td class="listener-cell">${formatNumber(mData[currentMetric] || 0, currentMetric)}</td>
+            <td class="genre-cell">${formatGenre(mData.genres ? mData.genres[0] : (band.genres ? band.genres[0] : '-'))}</td>
+        `;
+        tr.onclick = () => {
+            if (favorites.includes(band.name)) favorites = favorites.filter(n => n !== band.name);
+            else favorites.push(band.name);
+            localStorage.setItem('favs_' + currentFestival.id, JSON.stringify(favorites));
+            renderTable();
+        };
+        tbody.appendChild(tr);
+    });
+}
+
+/**
+ * RENDERING: Die Festival-Übersicht (Tabelle)
  */
 function renderFestivalsView() {
     const summary = document.getElementById('festivals-summary');
     const fTbody = document.getElementById('festivals-table-body');
     if (!summary || !fTbody) return;
-
     fTbody.innerHTML = "";
     const uniqueBands = new Set();
-    const metricLabel = (currentMetric === 'listeners' ? "Hörer" : "Plays");
-
-    // Header aktualisieren
     const arrow = festSortAsc ? " ▲" : " ▼";
+
     document.getElementById('fest-sort-name').innerHTML = "Festival" + (festSortMode === 'name' ? arrow : " ↕");
     document.getElementById('fest-sort-bands').innerHTML = "Bands" + (festSortMode === 'bands' ? arrow : " ↕");
-    document.getElementById('fest-sort-metric').innerHTML = metricLabel + (festSortMode === 'metric' ? arrow : " ↕");
+    document.getElementById('fest-sort-metric').innerHTML = "Power" + (festSortMode === 'metric' ? arrow : " ↕");
 
-    // Daten für Sortierung vorbereiten
     let festList = festivalRegistry.map(fest => {
         const bands = allFestivalsData[fest.id] || [];
         let totalMetric = 0;
@@ -251,126 +323,48 @@ function renderFestivalsView() {
         return { id: fest.id, name: fest.name, bandCount: bands.length, metric: totalMetric, raw: fest };
     });
 
-    // Sortierung anwenden
     festList.sort((a, b) => {
-        let res = 0;
-        if (festSortMode === 'bands') res = a.bandCount - b.bandCount;
-        else if (festSortMode === 'metric') res = a.metric - b.metric;
-        else res = a.name.localeCompare(b.name);
+        let res = (festSortMode === 'bands') ? a.bandCount - b.bandCount :
+            (festSortMode === 'metric') ? a.metric - b.metric : a.name.localeCompare(b.name);
         return festSortAsc ? res : -res;
     });
 
     festList.forEach(item => {
+        const autoColor = getAutoColor(item.name);
+        const iso = countryCodes[(item.raw.country || "").toLowerCase()] || null;
+        let flagHtml = iso ? `<img src="https://flagcdn.com/w40/${iso}.png" width="18" style="margin-right:8px; border-radius:2px; vertical-align:middle;">` : "🏳️ ";
+
         const tr = document.createElement('tr');
         tr.innerHTML = `
-            <td style="font-weight:600;">${item.name}</td>
+            <td style="font-weight:600;">
+                <div style="display:flex; align-items:center;">
+                    <div style="width:4px; height:18px; background:${autoColor}; margin-right:10px; border-radius:2px;"></div>
+                    ${flagHtml} <span>${item.name}</span>
+                </div>
+            </td>
             <td style="text-align:right;">${item.bandCount}</td>
-            <td class="listener-cell">${formatNumber(item.metric)}</td>
+            <td class="listener-cell">${formatNumber(item.metric, currentMetric)}</td>
         `;
-        tr.onclick = () => {
-            loadFestival(item.raw);
-            switchTab('lineup-view');
-        };
+        tr.onclick = () => { loadFestival(item.raw);
+            switchTab('lineup-view'); };
         fTbody.appendChild(tr);
     });
 
-    summary.innerHTML = `
-        <span class="summary-sub">Festival Saison 2026</span>
-        <span class="summary-big-note">${uniqueBands.size} Eindeutige Bands</span>
-    `;
+    summary.innerHTML = `<span class="summary-sub">Festival Saison 2026</span><span class="summary-big-note">${uniqueBands.size} Eindeutige Bands</span>`;
 }
 
-function renderTable() {
-    if (!tbody) return;
-    const term = (searchInput && searchInput.value) ? searchInput.value.toLowerCase().trim() : "";
-    tbody.innerHTML = "";
+function handleSort(mode) {
+    if (currentSortMode === mode) isSortAsc = !isSortAsc;
+    else { currentSortMode = mode;
+        isSortAsc = (mode === 'name' || mode === 'genre'); }
+    renderTable();
+}
 
-    const sortBtnName = document.getElementById('sort-name');
-    const sortBtnList = document.getElementById('sort-listeners');
-    const sortBtnGenre = document.getElementById('sort-genre');
-
-    const arrow = isSortAsc ? " ▲" : " ▼";
-    const metricLabel = (currentMetric === 'listeners' ? "Hörer" : "Plays");
-
-    if (sortBtnName) {
-        sortBtnName.innerHTML = "Band" + (currentSortMode === 'name' ? arrow : " ↕");
-        sortBtnName.classList.toggle('active-sort', currentSortMode === 'name');
-    }
-    if (sortBtnList) {
-        sortBtnList.innerHTML = metricLabel + (currentSortMode === 'listeners' ? arrow : " ↕");
-        sortBtnList.classList.toggle('active-sort', currentSortMode === 'listeners');
-    }
-    if (sortBtnGenre) {
-        sortBtnGenre.innerHTML = "Genre" + (currentSortMode === 'genre' ? arrow : " ↕");
-        sortBtnGenre.classList.toggle('active-sort', currentSortMode === 'genre');
-    }
-
-    let overlaps = 0;
-    let filtered = currentBands.filter(band => {
-        const match = (band.name + " " + band.origin).toLowerCase().includes(term);
-        const fests = [];
-        for (const id in allFestivalsData) {
-            if (id !== currentFestival.id) {
-                if (allFestivalsData[id].some(b => b.name.toLowerCase() === band.name.toLowerCase())) {
-                    const fInfo = festivalRegistry.find(f => f.id === id);
-                    if (fInfo) fests.push(fInfo.name);
-                }
-            }
-        }
-        if (fests.length > 0) overlaps++;
-        if (showExclusiveOnly && fests.length > 0) return false;
-        band.currentMatches = fests;
-        return match;
-    });
-
-    filtered.sort((a, b) => {
-        const nameA = a.name.toLowerCase();
-        const nameB = b.name.toLowerCase();
-        const mDataA = bandMasterData[nameA];
-        const mDataB = bandMasterData[nameB];
-        let result = 0;
-        if (currentSortMode === 'listeners') {
-            const valA = mDataA ? mDataA[currentMetric] : 0;
-            const valB = mDataB ? mDataB[currentMetric] : 0;
-            result = valA - valB;
-        } else if (currentSortMode === 'genre') {
-            const gA = formatGenre((mDataA && mDataA.genres && mDataA.genres[0]) ? mDataA.genres[0] : (a.genres && a.genres[0] ? a.genres[0] : '-'));
-            const gB = formatGenre((mDataB && mDataB.genres && mDataB.genres[0]) ? mDataB.genres[0] : (b.genres && b.genres[0] ? b.genres[0] : '-'));
-            if (gA === '-' && gB !== '-') return 1;
-            if (gA !== '-' && gB === '-') return -1;
-            result = gA.localeCompare(gB);
-        } else result = a.name.localeCompare(b.name);
-        if (result === 0) return a.name.localeCompare(b.name);
-        return isSortAsc ? result : -result;
-    });
-
-    if (stats) stats.innerHTML = "<b>" + filtered.length + "</b> Bands | <span style='color:var(--acc)'>" + overlaps + "</span> Overlaps";
-
-    filtered.forEach(band => {
-        const isFav = favorites.includes(band.name);
-        const tr = document.createElement('tr');
-        if (isFav) tr.classList.add('is-fav');
-        const originClean = (band.origin || "").toLowerCase().trim();
-        const iso = countryCodes[originClean] || null;
-        let flagHtml = "🏳️ ";
-        if (iso === "world") flagHtml = "<span style='font-size: 1.1rem; margin-right: 8px;'>🌎</span>";
-        else if (iso) flagHtml = "<img src='https://flagcdn.com/w40/" + iso + ".png' width='18' style='margin-right:8px; border-radius:2px;'>";
-        const mData = bandMasterData[band.name.toLowerCase()];
-        const countValue = mData ? mData[currentMetric] : 0;
-        let lDisplay = "-";
-        if (countValue >= 1000000) lDisplay = (countValue / 1000000).toFixed(1) + "M";
-        else if (countValue >= 1000) lDisplay = (countValue / 1000).toFixed(0) + "k";
-        else if (countValue > 0) lDisplay = countValue;
-        const genre = formatGenre((mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (band.genres && band.genres[0] ? band.genres[0] : '-'));
-        tr.innerHTML = "<td><span style='color:" + (isFav ? 'var(--acc)' : '#333') + "'>" + (isFav ? '★' : '☆') + "</span></td><td><div class='band-info-wrapper'><div class='band-main-line'>" + flagHtml + " <span>" + band.name + "</span></div><div class='badge-container'>" + band.currentMatches.map(m => "<span class='fest-badge'>" + m + "</span>").join('') + "</div></div></td><td class='listener-cell'>" + lDisplay + "</td><td class='genre-cell'>" + genre + "</td>";
-        tr.onclick = () => {
-            if (favorites.includes(band.name)) favorites = favorites.filter(n => n !== band.name);
-            else favorites.push(band.name);
-            localStorage.setItem('favs_' + currentFestival.id, JSON.stringify(favorites));
-            renderTable();
-        };
-        tbody.appendChild(tr);
-    });
+function handleFestSort(mode) {
+    if (festSortMode === mode) festSortAsc = !festSortAsc;
+    else { festSortMode = mode;
+        festSortAsc = (mode === 'name'); }
+    renderFestivalsView();
 }
 
 function setupSwipeHandlers() {
@@ -395,20 +389,17 @@ function renderGenreStats() {
     const counts = {};
     currentBands.forEach(b => {
         const mData = bandMasterData[b.name.toLowerCase()];
-        let g = formatGenre((mData && mData.genres && mData.genres[0]) ? mData.genres[0] : (b.genres && b.genres[0] ? b.genres[0] : "Unknown"));
-        const low = g.toLowerCase();
-        if (low.includes("thrash")) g = "Thrash Metal";
-        else if (low.includes("death")) g = "Death Metal";
-        else if (low.includes("black")) g = "Black Metal";
-        else if (low.includes("power")) g = "Power Metal";
-        else if (low.includes("heavy")) g = "Heavy Metal";
+        let g = formatGenre((mData && mData.genres) ? mData.genres[0] : (b.genres ? b.genres[0] : "Unknown"));
+        if (g.toLowerCase().includes("thrash")) g = "Thrash Metal";
+        else if (g.toLowerCase().includes("death")) g = "Death Metal";
+        else if (g.toLowerCase().includes("black")) g = "Black Metal";
         counts[g] = (counts[g] || 0) + 1;
     });
     const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 10);
     const max = sorted[0] ? sorted[0][1] : 0;
     sorted.forEach(([n, c]) => {
         const p = (c / max) * 100;
-        genreContent.innerHTML += "<div class='genre-row'><div class='genre-info'><span>" + n + "</span><span>" + c + "</span></div><div class='genre-bar-bg'><div class='genre-bar-fill' style='width:" + p + "%'></div></div></div>";
+        genreContent.innerHTML += `<div class="genre-row"><div class="genre-info"><span>${n}</span><span>${c}</span></div><div class="genre-bar-bg"><div class="genre-bar-fill" style="width:${p}%"></div></div></div>`;
     });
 }
 

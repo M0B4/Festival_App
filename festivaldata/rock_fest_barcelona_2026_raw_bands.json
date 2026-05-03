@@ -1,0 +1,261 @@
+[
+    {
+        "name": "AMH",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Accept",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Bad Religion",
+        "origin": "United States",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Bleed From Within",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Blues Pills",
+        "origin": "Sweden",
+        "genres": [
+            "Blues Rock"
+        ]
+    },
+    {
+        "name": "Breaking Benjamin",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Cavalera Conspiracy",
+        "origin": "United States",
+        "genres": [
+            "Groove / Thrash / Death Metal"
+        ]
+    },
+    {
+        "name": "Chevelle",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Chino Banzai",
+        "origin": "Spain",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Dünedain",
+        "origin": "Spain",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Evaristo",
+        "origin": "Spain",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Gotthard",
+        "origin": "Switzerland",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Helloween",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Hiraes",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Latzen",
+        "origin": "Spain",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Los Barones",
+        "origin": "Spain",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Loudness",
+        "origin": "Japan",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Machete Law",
+        "origin": "Spain",
+        "genres": [
+            "Thrash/Crossover"
+        ]
+    },
+    {
+        "name": "Megadeth",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Motörhits",
+        "origin": "Spain",
+        "genres": [
+            "Tribute to Motörhead"
+        ]
+    },
+    {
+        "name": "Napalm Death",
+        "origin": "United Kingdom",
+        "genres": [
+            "Grindcore"
+        ]
+    },
+    {
+        "name": "Orden Ogan",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Powerwolf",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Pretty Maids",
+        "origin": "Denmark",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Primal Fear",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Rat-Zinger",
+        "origin": "Spain",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Rienda Suelta",
+        "origin": "Spain",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Sabaton",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Sex Pistols & Frank Carter",
+        "origin": "United Kingdom",
+        "genres": [
+            "Punk Rock"
+        ]
+    },
+    {
+        "name": "Starace",
+        "origin": "Portugal",
+        "genres": [
+            "Rock N roll"
+        ]
+    },
+    {
+        "name": "Steel Panther",
+        "origin": "United States",
+        "genres": [
+            "Glam Metal"
+        ]
+    },
+    {
+        "name": "Stingers",
+        "origin": "Spain",
+        "genres": [
+            "Tribute to Scorpions"
+        ]
+    },
+    {
+        "name": "Tankard",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Testament",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "The Offspring",
+        "origin": "United States",
+        "genres": [
+            "Pop Punk"
+        ]
+    },
+    {
+        "name": "Tnt",
+        "origin": "Spain",
+        "genres": [
+            "Tribute band - AC/DC"
+        ]
+    },
+    {
+        "name": "Tyketto",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    }
+]
