@@ -373,8 +373,10 @@ function setupUI() {
 
 function handleSort(mode) {
     if (currentSortMode === mode) isSortAsc = !isSortAsc;
-    else { currentSortMode = mode;
-        isSortAsc = true; }
+    else {
+        currentSortMode = mode;
+        isSortAsc = true;
+    }
     renderTable();
 }
 
@@ -396,5 +398,3 @@ async function initApp() {
 }
 
 initApp();
-``
-` 🤘
