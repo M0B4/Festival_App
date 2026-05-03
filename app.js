@@ -1,6 +1,6 @@
 /**
- * FESTIVAL GUIDE 2026 - ROCK SOLID EDITION
- * Fehlerbehebung: Genre-Anzeige und Statistik-Logik wiederhergestellt.
+ * FESTIVAL GUIDE 2026 - REPAIR EDITION
+ * Fixes: Alphabetical Registry, Flags in Overview, Genre Stats.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -14,7 +14,7 @@ var currentBands = [];
 var favorites = [];
 var showExclusiveOnly = false;
 
-// Einstellungen (Alphabetisch als Default)
+// Einstellungen (A-Z Standard)
 var currentSortMode = 'name';
 var isSortAsc = true;
 var currentMetric = localStorage.getItem('pref_metric') || 'listeners';
@@ -22,7 +22,7 @@ var festSortMode = 'name';
 var festSortAsc = true;
 
 /**
- * Farblogik für Festival-Badges (Golden Ratio)
+ * Farblogik für Badges
  */
 function getAutoColor(str) {
     var hash = 0;
@@ -51,7 +51,7 @@ function formatGenre(str) {
 }
 
 /**
- * Kernfunktion: Tabs wechseln & UI anpassen
+ * Tab-Steuerung & Exklusiv-Button Sichtbarkeit
  */
 function switchTab(targetViewId) {
     var targetEl = document.getElementById(targetViewId);
@@ -68,7 +68,6 @@ function switchTab(targetViewId) {
     var isLineup = (targetViewId === 'lineup-view');
     document.body.classList.toggle('hide-search', !isLineup);
 
-    // Exklusiv-Button nur im Lineup zeigen
     var exBtn = document.getElementById('exclusive-btn');
     if (exBtn) {
         exBtn.style.display = isLineup ? 'inline-block' : 'none';
@@ -79,7 +78,7 @@ function switchTab(targetViewId) {
 }
 
 /**
- * Lädt ein Festival und aktualisiert die Ansichten
+ * Festival laden & Ansichten triggern
  */
 function loadFestival(fest) {
     if (!fest) return;
@@ -96,7 +95,7 @@ function loadFestival(fest) {
 }
 
 /**
- * RENDERING: Die Band-Tabelle mit Genre-Spalte
+ * Rendering: Lineup-Tabelle
  */
 function renderTable() {
     var tBody = document.getElementById('table-body');
@@ -163,10 +162,7 @@ function renderTable() {
             return '<span class="fest-badge" style="border-color:' + color + '; color:' + color + '; background:' + color + '1a;">' + f.name + '</span>';
         }).join('');
 
-        // Genre-Logik: Erst Master-Daten, dann Band-Daten, sonst "-"
-        var genreStr = "-";
-        if (mData.genres && mData.genres.length > 0) genreStr = mData.genres[0];
-        else if (band.genres && band.genres.length > 0) genreStr = band.genres[0];
+        var genreStr = mData.genres && mData.genres.length > 0 ? mData.genres[0] : (band.genres && band.genres.length > 0 ? band.genres[0] : "-");
 
         var tr = document.createElement('tr');
         if (isFav) tr.classList.add('is-fav');
@@ -187,38 +183,7 @@ function renderTable() {
 }
 
 /**
- * RENDERING: Genre-Statistik (Balkendiagramm)
- */
-function renderGenreStats() {
-    if (!genreContent) return;
-    genreContent.innerHTML = "<h2 style='color:var(--acc); text-align:center; font-size:1rem; margin:20px 0;'>Top 10 Genres</h2>";
-
-    var counts = {};
-    currentBands.forEach(function(b) {
-        var mData = bandMasterData[b.name.toLowerCase()] || {};
-        var g = "Unknown";
-        if (mData.genres && mData.genres.length > 0) g = mData.genres[0];
-        else if (b.genres && b.genres.length > 0) g = b.genres[0];
-
-        var formatted = formatGenre(g);
-        counts[formatted] = (counts[formatted] || 0) + 1;
-    });
-
-    var sorted = Object.entries(counts).sort(function(a, b) { return b[1] - a[1]; }).slice(0, 10);
-    var max = sorted[0] ? sorted[0][1] : 1;
-
-    sorted.forEach(function(item) {
-        var p = (item[1] / max) * 100;
-        var row = document.createElement('div');
-        row.className = 'genre-row';
-        row.innerHTML = '<div class="genre-info"><span>' + item[0] + '</span><span>' + item[1] + '</span></div>' +
-            '<div class="genre-bar-bg"><div class="genre-bar-fill" style="width:' + p + '%"></div></div>';
-        genreContent.appendChild(row);
-    });
-}
-
-/**
- * RENDERING: Festival-Übersicht
+ * Rendering: Festival-Übersicht (Flaggen repariert)
  */
 function renderFestivalsView() {
     var fTbody = document.getElementById('festivals-table-body');
@@ -234,12 +199,12 @@ function renderFestivalsView() {
             var mData = bandMasterData[b.name.toLowerCase()];
             if (mData) totalMetric += (mData[currentMetric] || 0);
 
-            var foundElsewhere = festivalRegistry.some(function(o) {
+            var isElsewhere = festivalRegistry.some(function(o) {
                 if (o.id === fest.id) return false;
                 var otherBands = allFestivalsData[o.id] || [];
                 return otherBands.some(function(ob) { return ob.name.toLowerCase() === b.name.toLowerCase(); });
             });
-            if (!foundElsewhere) exclusiveCount++;
+            if (!isElsewhere) exclusiveCount++;
         });
 
         return { id: fest.id, name: fest.name, bandCount: bands.length, exclusiveCount: exclusiveCount, metric: totalMetric, raw: fest };
@@ -247,14 +212,53 @@ function renderFestivalsView() {
 
     festList.forEach(function(item) {
         var autoColor = getAutoColor(item.name);
+
+        // Flaggen-Logik für Übersicht
+        var iso = (typeof countryCodes !== 'undefined') ? countryCodes[(item.raw.country || "").toLowerCase()] : null;
+        var flagHtml = iso ? '<img src="https://flagcdn.com/w40/' + iso + '.png" width="18" style="margin-right:8px; border-radius:2px; vertical-align:middle;">' : "🏳️ ";
+
         var tr = document.createElement('tr');
-        tr.innerHTML = '<td><div style="display:flex; align-items:center;"><div style="background:' + autoColor + '; width:4px; height:18px; margin-right:10px; border-radius:2px;"></div><span>' + item.name + '</span></div></td>' +
+        tr.innerHTML = '<td><div style="display:flex; align-items:center;"><div style="background:' + autoColor + '; width:4px; height:18px; margin-right:10px; border-radius:2px;"></div>' + flagHtml + '<span>' + item.name + '</span></div></td>' +
             '<td style="text-align:right;">' + item.bandCount + '</td>' +
             '<td style="text-align:right; color:var(--acc); font-weight:bold;">' + item.exclusiveCount + '</td>' +
             '<td class="listener-cell">' + formatNumber(item.metric, currentMetric) + '</td>';
         tr.onclick = function() { loadFestival(item.raw);
             switchTab('lineup-view'); };
         fTbody.appendChild(tr);
+    });
+}
+
+/**
+ * Rendering: Genre-Statistik (Tab gefixt)
+ */
+function renderGenreStats() {
+    var genreContent = document.getElementById('genre-stats-content');
+    if (!genreContent) return;
+    genreContent.innerHTML = "<h2 style='color:var(--acc); text-align:center; font-size:1rem; margin:20px 0;'>Top 10 Genres</h2>";
+
+    var counts = {};
+    currentBands.forEach(function(b) {
+        var mData = bandMasterData[b.name.toLowerCase()] || {};
+        var g = mData.genres && mData.genres.length > 0 ? mData.genres[0] : (b.genres && b.genres.length > 0 ? b.genres[0] : "Unknown");
+        var formatted = formatGenre(g);
+        counts[formatted] = (counts[formatted] || 0) + 1;
+    });
+
+    var sorted = Object.keys(counts).map(function(key) {
+        return [key, counts[key]];
+    }).sort(function(a, b) {
+        return b[1] - a[1];
+    }).slice(0, 10);
+
+    var max = sorted[0] ? sorted[0][1] : 1;
+
+    sorted.forEach(function(item) {
+        var p = (item[1] / max) * 100;
+        var row = document.createElement('div');
+        row.className = 'genre-row';
+        row.innerHTML = '<div class="genre-info"><span>' + item[0] + '</span><span>' + item[1] + '</span></div>' +
+            '<div class="genre-bar-bg"><div class="genre-bar-fill" style="width:' + p + '%"></div></div>';
+        genreContent.appendChild(row);
     });
 }
 
@@ -266,11 +270,14 @@ function handleSort(mode) {
 }
 
 /**
- * Setup & Initialisierung
+ * Setup & Initialisierung (A-Z Sortierung Registry)
  */
 function setupUI() {
     var sel = document.getElementById('festival-selector');
     if (sel && typeof festivalRegistry !== 'undefined') {
+        // Alphabetische Sortierung der Registry für das Dropdown
+        festivalRegistry.sort(function(a, b) { return a.name.localeCompare(b.name); });
+
         sel.innerHTML = "";
         festivalRegistry.forEach(function(fest) {
             var opt = document.createElement('option');
@@ -279,7 +286,7 @@ function setupUI() {
             sel.appendChild(opt);
         });
         sel.onchange = function(e) {
-            var f = festivalRegistry.find(function(fest) { return fest.id === e.target.value; });
+            var f = festivalRegistry.find(function(f) { return f.id === e.target.value; });
             loadFestival(f);
         };
     }
@@ -305,11 +312,11 @@ async function initApp() {
     if (typeof festivalRegistry === 'undefined') return;
     setupUI();
 
-    var masterRes = await fetch(MASTER_DATA_PATH + '?v=' + Date.now());
+    const masterRes = await fetch(MASTER_DATA_PATH + '?v=' + Date.now());
     if (masterRes.ok) bandMasterData = await masterRes.json();
 
-    var loads = festivalRegistry.map(async function(fest) {
-        var res = await fetch(BASE_PATH + fest.file + '?v=' + Date.now());
+    const loads = festivalRegistry.map(async function(fest) {
+        const res = await fetch(BASE_PATH + fest.file + '?v=' + Date.now());
         if (res.ok) allFestivalsData[fest.id] = await res.json();
     });
 
