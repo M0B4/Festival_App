@@ -1,6 +1,6 @@
 /**
- * FESTIVAL GUIDE 2026 - CLEAN & STABLE EDITION
- * Fixes: Update-Button, Hide Selector in Overview, Search Removed.
+ * FESTIVAL GUIDE 2026 - ULTIMATE STABLE EDITION
+ * Swipe-Reihenfolge: Lineup -> Stats -> Festivals -> Settings
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -18,8 +18,6 @@ var showExclusiveOnly = false;
 var currentSortMode = 'name';
 var isSortAsc = true;
 var currentMetric = localStorage.getItem('pref_metric') || 'listeners';
-var festSortMode = 'name';
-var festSortAsc = true;
 
 /**
  * Farblogik für Badges (Golden Ratio)
@@ -65,13 +63,13 @@ function switchTab(targetViewId) {
     if (activeBtn) activeBtn.classList.add('active');
     targetEl.classList.add('active');
 
-    // Sichtbarkeit des Selektors steuern
+    // Sichtbarkeit des Festival-Selektors oben steuern
     var topNav = document.querySelector('.top-nav');
     var isFestivalsTab = (targetViewId === 'festivals-view');
     var isSettingsTab = (targetViewId === 'settings-view');
 
     if (topNav) {
-        // Selektor ausblenden in der Festivalübersicht und den Einstellungen
+        // Selektor nur im Lineup und in den Stats zeigen
         topNav.style.display = (isFestivalsTab || isSettingsTab) ? 'none' : 'flex';
     }
 
@@ -97,7 +95,7 @@ function loadFestival(fest) {
 }
 
 /**
- * Rendering: Lineup-Tabelle (Ohne Suche)
+ * Rendering: Lineup-Tabelle (Ohne Suchfunktion)
  */
 function renderTable() {
     var tBody = document.getElementById('table-body');
@@ -105,8 +103,18 @@ function renderTable() {
     tBody.innerHTML = "";
 
     var arrow = isSortAsc ? " ▲" : " ▼";
-    var sortHeader = document.getElementById('sort-name');
-    if (sortHeader) sortHeader.innerHTML = "Band" + (currentSortMode === 'name' ? arrow : " ↕");
+
+    // Dynamische Spaltenbeschriftung
+    var metricLabel = "Hörer";
+    if (currentMetric === 'playcount') metricLabel = "Scrobbles";
+    if (currentMetric === 'spotify_listeners') metricLabel = "S-Hörer";
+    if (currentMetric === 'spotify_popularity') metricLabel = "Rating";
+
+    var sortNameHeader = document.getElementById('sort-name');
+    if (sortNameHeader) sortNameHeader.innerHTML = "Band" + (currentSortMode === 'name' ? arrow : " ↕");
+
+    var sortMetricHeader = document.getElementById('sort-listeners');
+    if (sortMetricHeader) sortMetricHeader.innerHTML = metricLabel + (currentSortMode === 'listeners' ? arrow : " ↕");
 
     var filtered = currentBands.filter(function(band) {
         var matches = [];
@@ -124,7 +132,7 @@ function renderTable() {
         }
         band.currentMatches = matches;
         if (showExclusiveOnly && matches.length > 0) return false;
-        return true; // Kein Such-Filter mehr
+        return true;
     });
 
     var statsEl = document.getElementById('stats');
@@ -181,7 +189,7 @@ function renderTable() {
 }
 
 /**
- * Rendering: Festival-Übersicht
+ * Rendering: Festival-Übersicht (Bleibt auf Seite)
  */
 function renderFestivalsView() {
     var fTbody = document.getElementById('festivals-table-body');
@@ -254,13 +262,14 @@ function renderGenreStats() {
 }
 
 /**
- * Swipe-Logik
+ * Swipe-Logik (Exakt deine Reihenfolge)
  */
 function setupSwipeHandlers() {
     var area = document.querySelector('.content-area');
     if (!area) return;
 
     var startX = 0;
+    // DEINE GEWÜNSCHTE REIHENFOLGE:
     var views = ['lineup-view', 'stats-view', 'festivals-view', 'settings-view'];
 
     area.addEventListener('touchstart', function(e) {
@@ -316,21 +325,44 @@ function setupUI() {
         };
     }
 
+    // METRIK-SELECTOR FIX (Listeners / Scrobbles)
+    var metricSel = document.getElementById('metric-selector');
+    if (metricSel) {
+        metricSel.value = currentMetric;
+        metricSel.onchange = function() {
+            currentMetric = this.value;
+            localStorage.setItem('pref_metric', currentMetric);
+            renderTable();
+        };
+    }
+
+    // SORTIER-HEADER
+    var sName = document.getElementById('sort-name');
+    if (sName) sName.onclick = function() { handleSort('name'); };
+    var sList = document.getElementById('sort-listeners');
+    if (sList) sList.onclick = function() { handleSort('listeners'); };
+    var sGenre = document.getElementById('sort-genre');
+    if (sGenre) sGenre.onclick = function() { handleSort('genre'); };
+
     // AKTUALISIEREN BUTTON FIX
     var updateBtn = document.getElementById('update-app-btn');
     if (updateBtn) {
         updateBtn.onclick = async function() {
-            this.textContent = "Updating...";
+            var btn = this;
+            btn.textContent = "Updating...";
             try {
                 if ('caches' in window) {
-                    const names = await caches.keys();
-                    await Promise.all(names.map(n => caches.delete(n)));
+                    var names = await caches.keys();
+                    for (var i = 0; i < names.length; i++) {
+                        await caches.delete(names[i]);
+                    }
                 }
                 if ('serviceWorker' in navigator) {
-                    const registrations = await navigator.serviceWorker.getRegistrations();
-                    for (let r of registrations) await r.unregister();
+                    var registrations = await navigator.serviceWorker.getRegistrations();
+                    for (var j = 0; j < registrations.length; j++) {
+                        await registrations[j].unregister();
+                    }
                 }
-                // Cache-Busting durch Zeitstempel
                 window.location.replace(window.location.href.split('?')[0] + '?u=' + Date.now());
             } catch (e) {
                 window.location.reload(true);
@@ -341,10 +373,8 @@ function setupUI() {
 
 function handleSort(mode) {
     if (currentSortMode === mode) isSortAsc = !isSortAsc;
-    else {
-        currentSortMode = mode;
-        isSortAsc = true;
-    }
+    else { currentSortMode = mode;
+        isSortAsc = true; }
     renderTable();
 }
 
@@ -366,3 +396,5 @@ async function initApp() {
 }
 
 initApp();
+``
+` 🤘
