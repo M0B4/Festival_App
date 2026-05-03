@@ -133,13 +133,6 @@
         ]
     },
     {
-        "name": "Bush",
-        "origin": "United Kingdom",
-        "genres": [
-            "Alternative Rock"
-        ]
-    },
-    {
         "name": "Carpenter Brut",
         "origin": "France",
         "genres": [
@@ -273,6 +266,13 @@
         ]
     },
     {
+        "name": "Evergrey",
+        "origin": "Sweden",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
         "name": "Extreme",
         "origin": "United States",
         "genres": [
@@ -298,13 +298,6 @@
         "origin": "Belgium",
         "genres": [
             "Metalcore"
-        ]
-    },
-    {
-        "name": "Forbidden",
-        "origin": "United States",
-        "genres": [
-            "Thrash Metal"
         ]
     },
     {
@@ -357,13 +350,6 @@
         ]
     },
     {
-        "name": "Harm's Way",
-        "origin": "United States",
-        "genres": [
-            "Hardcore"
-        ]
-    },
-    {
         "name": "Hollywood Undead",
         "origin": "United States",
         "genres": [
@@ -382,6 +368,13 @@
         "origin": "United States",
         "genres": [
             "Metalcore"
+        ]
+    },
+    {
+        "name": "Infected Rain",
+        "origin": "Moldova",
+        "genres": [
+            "Nu Metal"
         ]
     },
     {
@@ -413,10 +406,24 @@
         ]
     },
     {
+        "name": "King 810",
+        "origin": "United States",
+        "genres": [
+            "Nu Metal / Metalcore"
+        ]
+    },
+    {
         "name": "Knocked Loose",
         "origin": "United States",
         "genres": [
             "Metalcore"
+        ]
+    },
+    {
+        "name": "Kuazar",
+        "origin": "Paraguay",
+        "genres": [
+            "Thrash Metal"
         ]
     },
     {
@@ -508,6 +515,13 @@
         "origin": "United States",
         "genres": [
             "Hard Rock"
+        ]
+    },
+    {
+        "name": "Mantah",
+        "origin": "Belgium",
+        "genres": [
+            "Nu Metal"
         ]
     },
     {
@@ -644,13 +658,6 @@
         ]
     },
     {
-        "name": "Scowl",
-        "origin": "United States",
-        "genres": [
-            "Alternative Rock"
-        ]
-    },
-    {
         "name": "Septicflesh",
         "origin": "Greece",
         "genres": [
@@ -725,6 +732,13 @@
         "origin": "United States",
         "genres": [
             "Industrial Metal"
+        ]
+    },
+    {
+        "name": "Suicidal Angels",
+        "origin": "Greece",
+        "genres": [
+            "Thrash Metal"
         ]
     },
     {
@@ -826,6 +840,13 @@
         ]
     },
     {
+        "name": "Triggerfinger",
+        "origin": "Belgium",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
         "name": "Trivium",
         "origin": "United States",
         "genres": [
@@ -875,6 +896,13 @@
         ]
     },
     {
+        "name": "Vower",
+        "origin": "United Kingdom",
+        "genres": [
+            "Progressive Rock"
+        ]
+    },
+    {
         "name": "Wargasm",
         "origin": "United Kingdom",
         "genres": [
@@ -907,6 +935,13 @@
         "origin": "United States",
         "genres": [
             "Atmospheric Black Metal"
+        ]
+    },
+    {
+        "name": "Zetra",
+        "origin": "United Kingdom",
+        "genres": [
+            "Shoegaze"
         ]
     }
 ]
