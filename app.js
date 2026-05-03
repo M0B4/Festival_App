@@ -188,13 +188,29 @@ function setupUI() {
     if (searchInput) searchInput.oninput = renderTable;
 }
 
+/**
+ * Ein spezifisches Festival laden und alle aktiven Ansichten aktualisieren
+ */
 function loadFestival(fest) {
     if (!fest) return;
     currentFestival = fest;
+
+    // UI-Selector synchronisieren
     if (selector) selector.value = fest.id;
+
+    // Daten für das neue Festival setzen
     currentBands = allFestivalsData[fest.id] || [];
     favorites = JSON.parse(localStorage.getItem('favs_' + fest.id)) || [];
-    renderTable();
+
+    // WICHTIG: Alle Ansichten aktualisieren, die von currentBands abhängen
+    renderTable(); // Aktualisiert die Lineup-Liste
+    renderGenreStats(); // Aktualisiert die Balkendiagramme auf der Stats-Seite
+
+    // Falls du in der Festival-Übersicht bist, aktualisieren wir diese ebenfalls
+    const activeView = document.querySelector('.view-container.active');
+    if (activeView && activeView.id === 'festivals-view') {
+        renderFestivalsView();
+    }
 }
 
 /**
