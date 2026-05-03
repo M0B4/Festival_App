@@ -42,21 +42,20 @@ const searchToggle = document.getElementById('search-toggle-btn');
 function getAutoColor(str) {
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
-        // Ein stabilerer Hash-Algorithmus
         hash = str.charCodeAt(i) + ((hash << 5) - hash);
     }
 
-    // Die "magische" Zahl des Goldenen Schnitts (1 / phi)
     const goldenRatioConjugate = 0.618033988749895;
-
-    // Wir nutzen den Hash, um eine Startposition zu finden und multiplizieren mit phi
     let h = (Math.abs(hash) * goldenRatioConjugate) % 1;
+    h = h * 360;
 
-    // Umwandeln in Grad (0-360)
-    h = Math.floor(h * 360);
+    // Dynamische Quantisierung
+    // Wir nehmen die Anzahl der Festivals (mindestens 12 als Puffer)
+    const festivalCount = (typeof festivalRegistry !== 'undefined') ? festivalRegistry.length : 12;
+    const step = Math.floor(360 / Math.max(festivalCount, 12));
 
-    // Wir fixieren Sättigung und Helligkeit für das Metal-Design (dunkler Hintergrund)
-    // Sättigung: 75%, Helligkeit: 60%
+    h = Math.floor(h / step) * step;
+
     return `hsl(${h}, 75%, 60%)`;
 }
 
