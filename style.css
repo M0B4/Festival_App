@@ -1,53 +1,200 @@
-/* 
-    FESTIVAL GUIDE 2026 - GRIM & FROSTY THEME
-    Focus: Metallic surfaces, Blood Red accents, and high readability.
-*/
+/* --- BASIS & LAYOUT --- */
 
-:root {
-    --bg-dark: #0a0a0a;
-    /* Deep Black */
-    --panel-bg: #141414;
-    /* Dark Anthracite */
-    --acc: #8b0000;
-    /* Blood Red */
-    --acc-bright: #cc0000;
-    --text-main: #d1d1d1;
-    /* Frosty Light Gray */
-    --text-dim: #888;
-    --border-metal: #2a2a2a;
-    /* Machined Metal Look */
-    --panel-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
-    --nav-height: 65px;
-}
-
-
-/* --- Base Styles --- */
-
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
 }
 
+:root {
+    /* Grim & Frosty Palette */
+    --bg: #0a0a0a;
+    /* Deep Black */
+    --surf: #141414;
+    /* Dark Anthracite */
+    --acc: #8b0000;
+    /* Blood Red */
+    --acc-bright: #cc0000;
+    --txt: #d1d1d1;
+    /* Frosty Light Gray */
+    --txt-sec: #888;
+    --brd: #2a2a2a;
+    /* Machined Metal Look */
+    --panel-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+}
+
+html,
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    height: 100vh;
+    height: -webkit-fill-available;
     margin: 0;
-    padding: 0;
-    line-height: 1.5;
-    /* Frosty Grain Texture */
+    overflow: hidden;
+    background-color: var(--bg);
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--txt);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Frosty Grain Texture Overlay */
     background-image: radial-gradient(circle at 50% 50%, rgba(20, 20, 20, 0.4) 0%, rgba(10, 10, 10, 1) 100%), url("https://www.transparenttextures.com/patterns/dark-matter.png");
-    overflow-x: hidden;
 }
 
 
-/* --- Layout --- */
+/* --- HEADER & NAVIGATION --- */
+
+header {
+    flex: 0 0 auto;
+    background: var(--surf);
+    z-index: 100;
+    border-bottom: 2px solid var(--acc);
+    box-shadow: var(--panel-shadow);
+}
+
+.app-logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 5px 0;
+    transition: padding 0.3s ease;
+}
+
+.app-header-logo {
+    height: 30px !important;
+    width: auto !important;
+    max-width: 60% !important;
+    display: block;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 15px 10px 15px;
+    gap: 12px;
+}
+
+
+/* Verstecken des Selektors in bestimmten Tabs */
+
+.hide-nav .top-nav {
+    display: none !important;
+}
+
+.hide-nav .app-logo-container {
+    padding: 25px 0 15px 0;
+}
+
+.selector-row {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    gap: 10px;
+}
+
+#festival-selector {
+    flex: 1;
+    background: #1a1a1a;
+    color: var(--txt);
+    border: 1px solid var(--brd);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+#search-toggle-btn {
+    background: #1a1a1a;
+    border: 1px solid var(--brd);
+    border-radius: 4px;
+    padding: 0 12px;
+    color: var(--txt);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#search-toggle-btn.active {
+    border-color: var(--acc);
+    color: var(--acc-bright);
+}
+
+#exclusive-btn {
+    background: transparent;
+    color: var(--acc-bright);
+    border: 1px solid var(--acc);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#exclusive-btn.active {
+    background: var(--acc);
+    color: #fff;
+}
+
+
+/* --- SUCHE (Collapsible) --- */
+
+#search-container {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--brd);
+    overflow: hidden;
+    max-height: 100px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+#search-container.collapsed {
+    max-height: 0;
+    padding: 0 15px;
+    opacity: 0;
+    border-bottom: none;
+}
+
+#search {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 4px;
+    border: 1px solid var(--brd);
+    background: #1a1a1a;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+#search:focus {
+    border-color: var(--acc);
+}
+
+#stats {
+    font-size: 0.65rem;
+    color: var(--txt-sec);
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+/* --- CONTENT AREAS --- */
+
+.content-area {
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+}
 
 .view-container {
     display: none;
-    padding: 15px;
-    padding-bottom: calc(var(--nav-height) + 20px);
-    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .view-container.active {
@@ -66,116 +213,90 @@ body {
     }
 }
 
-
-/* --- Header & Search --- */
-
-header {
-    background: var(--panel-bg);
-    padding: 15px;
-    border-bottom: 2px solid var(--acc);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: var(--panel-shadow);
-}
-
-.search-container {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    max-height: 200px;
-    overflow: hidden;
-    margin-top: 10px;
-}
-
-.search-container.collapsed {
-    max-height: 0;
-    margin-top: 0;
-    opacity: 0;
-}
-
-input[type="text"],
-select {
+.scroll-box {
     width: 100%;
-    background: #1a1a1a;
-    border: 1px solid var(--border-metal);
-    color: white;
-    padding: 12px;
-    border-radius: 4px;
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-input:focus {
-    outline: none;
-    border-color: var(--acc);
-    box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 40px;
+    -webkit-overflow-scrolling: touch;
 }
 
 
-/* --- Table Design (Metallic) --- */
-
-.table-wrapper {
-    background: rgba(20, 20, 20, 0.5);
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid var(--border-metal);
-}
+/* --- TABELLEN STYLING --- */
 
 table {
     width: 100%;
     border-collapse: collapse;
+    background: rgba(20, 20, 20, 0.5);
 }
 
-th {
-    background: var(--panel-bg);
-    color: var(--text-dim);
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    letter-spacing: 1.5px;
-    padding: 12px 8px;
+thead th {
+    position: sticky;
+    top: 0;
+    background: var(--surf);
+    z-index: 2;
+    padding: 12px 15px;
     text-align: left;
-    border-bottom: 2px solid var(--border-metal);
+    color: var(--txt-sec);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    user-select: none;
+    border-bottom: 2px solid var(--brd);
+}
+
+
+/* Highlight für Alphabet-Sortierung (Standard) */
+
+thead th#sort-name {
+    color: var(--acc-bright);
+}
+
+thead th.sortable {
     cursor: pointer;
 }
 
-th:hover {
-    color: var(--text-main);
-    background: #1c1c1c;
+tbody td {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--brd);
+    vertical-align: middle;
 }
 
-tr {
-    border-bottom: 1px solid var(--border-metal);
-    transition: all 0.2s ease;
-}
 
-tr:last-child {
-    border-bottom: none;
-}
+/* Metallic Hover & Click Effect */
 
-tr:hover {
+tbody tr:hover {
     background: linear-gradient(90deg, rgba(139, 0, 0, 0.1) 0%, rgba(20, 20, 20, 1) 100%);
-}
-
-td {
-    padding: 12px 8px;
-    font-size: 0.9rem;
-}
-
-.listener-cell {
-    text-align: right;
-    font-family: 'Courier New', monospace;
-    color: var(--text-dim);
-}
-
-.genre-cell {
-    font-size: 0.75rem;
-    color: var(--text-dim);
+    box-shadow: inset 2px 0 0 var(--acc);
 }
 
 
-/* --- Badges & Elements --- */
+/* Band Details & Badges */
+
+.band-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.band-main-line {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--txt);
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 2px;
+}
 
 .fest-badge {
     display: inline-block;
+    white-space: nowrap;
     border-width: 1px;
     border-style: solid;
     font-size: 0.55rem;
@@ -184,133 +305,233 @@ td {
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.5px;
-    margin: 2px 2px 0 0;
 }
 
-.band-info-wrapper {
-    display: flex;
-    flex-direction: column;
+.listener-cell {
+    text-align: right;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: var(--txt-sec);
 }
 
-.band-main-line {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
+.genre-cell {
+    color: var(--txt-sec);
+    font-size: 0.65rem;
+    text-align: right;
+    line-height: 1.1;
+    white-space: normal;
+    word-wrap: break-word;
+    min-width: 80px;
+    padding-left: 8px;
 }
 
-.badge-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 4px;
+
+/* Favoriten Markierung */
+
+tr.is-fav {
+    background: rgba(139, 0, 0, 0.05);
 }
 
 
-/* --- Bottom Navigation --- */
+/* --- FESTIVAL SUMMARY --- */
 
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: var(--nav-height);
-    background: var(--panel-bg);
+#festivals-summary {
+    padding: 25px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--surf), var(--bg));
+    border-bottom: 1px solid var(--brd);
+}
+
+.summary-big-note {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--acc-bright);
+    display: block;
+    margin-top: 5px;
+}
+
+.summary-sub {
+    font-size: 0.7rem;
+    color: var(--txt-sec);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* --- TAB BAR (Bottom) --- */
+
+.tab-bar {
+    flex: 0 0 65px;
     display: flex;
-    border-top: 1px solid var(--border-metal);
-    z-index: 1000;
+    background: var(--surf);
+    border-top: 1px solid var(--brd);
+    z-index: 200;
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .tab-btn {
     flex: 1;
+    background: transparent;
     border: none;
-    background: none;
-    color: var(--text-dim);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--txt-sec);
+    cursor: pointer;
+    gap: 4px;
+    position: relative;
     transition: all 0.3s ease;
 }
 
-.tab-btn i {
-    font-style: normal;
-    font-size: 1.2rem;
-    margin-bottom: 4px;
+.tab-icon {
+    width: 22px;
+    height: 22px;
+    background-color: currentColor;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+
+/* Icon Masken */
+
+.icon-bands {
+    mask-image: url('icons/bands.svg');
+    -webkit-mask-image: url('icons/bands.svg');
+}
+
+.icon-festivals {
+    mask-image: url('icons/festivals.svg');
+    -webkit-mask-image: url('icons/festivals.svg');
+}
+
+.icon-genre {
+    mask-image: url('icons/genre.svg');
+    -webkit-mask-image: url('icons/genre.svg');
+}
+
+.icon-settings {
+    mask-image: url('icons/settings.svg');
+    -webkit-mask-image: url('icons/settings.svg');
+}
+
+.icon-search {
+    mask-image: url('icons/search.svg');
+    -webkit-mask-image: url('icons/search.svg');
+    width: 18px;
+}
+
+.tab-label {
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .tab-btn.active {
     color: var(--acc-bright);
     background: rgba(139, 0, 0, 0.05);
-    box-shadow: inset 0 3px 0 var(--acc);
+}
+
+.tab-btn.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 3px;
+    background: var(--acc-bright);
+    border-radius: 0 0 4px 4px;
 }
 
 
-/* --- Stats View --- */
+/* --- SETTINGS --- */
+
+.settings-page {
+    padding: 25px;
+}
+
+.settings-group {
+    background: var(--surf);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid var(--brd);
+    box-shadow: var(--panel-shadow);
+}
+
+.settings-group h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: var(--acc-bright);
+}
+
+.settings-group p {
+    font-size: 0.8rem;
+    color: var(--txt-sec);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+.gold-btn {
+    background: var(--acc);
+    color: #fff;
+}
+
+.red-btn {
+    background: transparent;
+    color: var(--acc-bright);
+    border: 2px solid var(--acc);
+    margin-top: 10px;
+}
+
+
+/* --- GENRE STATS --- */
 
 .genre-row {
-    margin-bottom: 12px;
+    padding: 15px 20px;
 }
 
 .genre-info {
     display: flex;
     justify-content: space-between;
-    font-size: 0.8rem;
-    margin-bottom: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
 }
 
 .genre-bar-bg {
-    height: 6px;
     background: #1a1a1a;
+    height: 6px;
     border-radius: 3px;
-    overflow: hidden;
 }
 
 .genre-bar-fill {
+    background: linear-gradient(90deg, var(--acc) 0%, var(--acc-bright) 100%);
     height: 100%;
-    background: linear-gradient(90deg, var(--acc) 0%, #ff4d4d 100%);
     border-radius: 3px;
+    transition: width 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 
-/* --- Utility --- */
+/* Hide Search logic */
 
-.stats-summary {
-    text-align: center;
-    padding: 20px;
-    background: var(--panel-bg);
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border: 1px solid var(--border-metal);
-}
-
-.summary-big-note {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: var(--acc-bright);
-}
-
-.summary-sub {
-    color: var(--text-dim);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-}
-
-#update-app-btn {
-    background: var(--acc);
-    color: white;
-    border: none;
-    padding: 12px;
-    width: 100%;
-    border-radius: 4px;
-    font-weight: 700;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-#update-app-btn:active {
-    transform: scale(0.98);
+.hide-search #search-container {
+    display: none !important;
 }
