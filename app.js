@@ -35,13 +35,29 @@ const searchToggle = document.getElementById('search-toggle-btn');
 /**
  * Hilfsfunktion: Generiert automatisch eine konsistente Farbe für Festival-Badges
  */
+/**
+ * Generiert Farben mit maximaler Distanz durch den Goldenen Schnitt.
+ * Verhindert, dass sich Farben bei ähnlichen Namen zu stark ähneln.
+ */
 function getAutoColor(str) {
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
+        // Ein stabilerer Hash-Algorithmus
         hash = str.charCodeAt(i) + ((hash << 5) - hash);
     }
-    const h = Math.abs(hash % 360);
-    return `hsl(${h}, 70%, 65%)`;
+
+    // Die "magische" Zahl des Goldenen Schnitts (1 / phi)
+    const goldenRatioConjugate = 0.618033988749895;
+
+    // Wir nutzen den Hash, um eine Startposition zu finden und multiplizieren mit phi
+    let h = (Math.abs(hash) * goldenRatioConjugate) % 1;
+
+    // Umwandeln in Grad (0-360)
+    h = Math.floor(h * 360);
+
+    // Wir fixieren Sättigung und Helligkeit für das Metal-Design (dunkler Hintergrund)
+    // Sättigung: 75%, Helligkeit: 60%
+    return `hsl(${h}, 75%, 60%)`;
 }
 
 function formatGenre(str) {
@@ -345,8 +361,10 @@ function renderFestivalsView() {
             <td style="text-align:right;">${item.bandCount}</td>
             <td class="listener-cell">${formatNumber(item.metric, currentMetric)}</td>
         `;
-        tr.onclick = () => { loadFestival(item.raw);
-            switchTab('lineup-view'); };
+        tr.onclick = () => {
+            loadFestival(item.raw);
+            switchTab('lineup-view');
+        };
         fTbody.appendChild(tr);
     });
 
@@ -355,15 +373,19 @@ function renderFestivalsView() {
 
 function handleSort(mode) {
     if (currentSortMode === mode) isSortAsc = !isSortAsc;
-    else { currentSortMode = mode;
-        isSortAsc = (mode === 'name' || mode === 'genre'); }
+    else {
+        currentSortMode = mode;
+        isSortAsc = (mode === 'name' || mode === 'genre');
+    }
     renderTable();
 }
 
 function handleFestSort(mode) {
     if (festSortMode === mode) festSortAsc = !festSortAsc;
-    else { festSortMode = mode;
-        festSortAsc = (mode === 'name'); }
+    else {
+        festSortMode = mode;
+        festSortAsc = (mode === 'name');
+    }
     renderFestivalsView();
 }
 
