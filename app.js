@@ -1,6 +1,6 @@
 /**
- * FESTIVAL GUIDE 2026 - REPAIR EDITION
- * Fixes: Alphabetical Registry, Flags in Overview, Genre Stats.
+ * FESTIVAL GUIDE 2026 - UX OPTIMIZED EDITION
+ * Fixes: Swiping restored, Festival-Click stays on page, A-Z Sorting.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -14,7 +14,7 @@ var currentBands = [];
 var favorites = [];
 var showExclusiveOnly = false;
 
-// Einstellungen (A-Z Standard)
+// Einstellungen
 var currentSortMode = 'name';
 var isSortAsc = true;
 var currentMetric = localStorage.getItem('pref_metric') || 'listeners';
@@ -51,7 +51,7 @@ function formatGenre(str) {
 }
 
 /**
- * Tab-Steuerung & Exklusiv-Button Sichtbarkeit
+ * Tab-Steuerung
  */
 function switchTab(targetViewId) {
     var targetEl = document.getElementById(targetViewId);
@@ -78,7 +78,7 @@ function switchTab(targetViewId) {
 }
 
 /**
- * Festival laden & Ansichten triggern
+ * Festival laden
  */
 function loadFestival(fest) {
     if (!fest) return;
@@ -183,7 +183,7 @@ function renderTable() {
 }
 
 /**
- * Rendering: Festival-Übersicht (Flaggen repariert)
+ * Rendering: Festival-Übersicht (Flaggen fix & Klick bleibt hier)
  */
 function renderFestivalsView() {
     var fTbody = document.getElementById('festivals-table-body');
@@ -212,8 +212,6 @@ function renderFestivalsView() {
 
     festList.forEach(function(item) {
         var autoColor = getAutoColor(item.name);
-
-        // Flaggen-Logik für Übersicht
         var iso = (typeof countryCodes !== 'undefined') ? countryCodes[(item.raw.country || "").toLowerCase()] : null;
         var flagHtml = iso ? '<img src="https://flagcdn.com/w40/' + iso + '.png" width="18" style="margin-right:8px; border-radius:2px; vertical-align:middle;">' : "🏳️ ";
 
@@ -222,14 +220,15 @@ function renderFestivalsView() {
             '<td style="text-align:right;">' + item.bandCount + '</td>' +
             '<td style="text-align:right; color:var(--acc); font-weight:bold;">' + item.exclusiveCount + '</td>' +
             '<td class="listener-cell">' + formatNumber(item.metric, currentMetric) + '</td>';
-        tr.onclick = function() { loadFestival(item.raw);
-            switchTab('lineup-view'); };
+
+        // Klick lädt das Festival nur im Hintergrund, kein Tab-Wechsel
+        tr.onclick = function() { loadFestival(item.raw); };
         fTbody.appendChild(tr);
     });
 }
 
 /**
- * Rendering: Genre-Statistik (Tab gefixt)
+ * Rendering: Genre-Statistik
  */
 function renderGenreStats() {
     var genreContent = document.getElementById('genre-stats-content');
@@ -244,12 +243,7 @@ function renderGenreStats() {
         counts[formatted] = (counts[formatted] || 0) + 1;
     });
 
-    var sorted = Object.keys(counts).map(function(key) {
-        return [key, counts[key]];
-    }).sort(function(a, b) {
-        return b[1] - a[1];
-    }).slice(0, 10);
-
+    var sorted = Object.keys(counts).map(function(k) { return [k, counts[k]]; }).sort(function(a, b) { return b[1] - a[1]; }).slice(0, 10);
     var max = sorted[0] ? sorted[0][1] : 1;
 
     sorted.forEach(function(item) {
@@ -262,41 +256,59 @@ function renderGenreStats() {
     });
 }
 
-function handleSort(mode) {
-    if (currentSortMode === mode) isSortAsc = !isSortAsc;
-    else { currentSortMode = mode;
-        isSortAsc = true; }
-    renderTable();
+/**
+ * Swipe-Logik repariert
+ */
+function setupSwipeHandlers() {
+    var area = document.querySelector('.content-area');
+    if (!area) return;
+
+    var startX = 0;
+    var views = ['lineup-view', 'festivals-view', 'stats-view', 'settings-view'];
+
+    area.addEventListener('touchstart', function(e) {
+        startX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    area.addEventListener('touchend', function(e) {
+        var diff = e.changedTouches[0].screenX - startX;
+        var activeView = document.querySelector('.view-container.active');
+        if (!activeView) return;
+
+        var currentIndex = views.indexOf(activeView.id);
+        var threshold = 80;
+
+        if (diff < -threshold && currentIndex < views.length - 1) {
+            switchTab(views[currentIndex + 1]);
+        } else if (diff > threshold && currentIndex > 0) {
+            switchTab(views[currentIndex - 1]);
+        }
+    }, { passive: true });
 }
 
 /**
- * Setup & Initialisierung (A-Z Sortierung Registry)
+ * Setup & Init
  */
 function setupUI() {
     var sel = document.getElementById('festival-selector');
     if (sel && typeof festivalRegistry !== 'undefined') {
-        // Alphabetische Sortierung der Registry für das Dropdown
         festivalRegistry.sort(function(a, b) { return a.name.localeCompare(b.name); });
-
         sel.innerHTML = "";
-        festivalRegistry.forEach(function(fest) {
+        festivalRegistry.forEach(function(f) {
             var opt = document.createElement('option');
-            opt.value = fest.id;
-            opt.textContent = fest.name;
+            opt.value = f.id;
+            opt.textContent = f.name;
             sel.appendChild(opt);
         });
         sel.onchange = function(e) {
-            var f = festivalRegistry.find(function(f) { return f.id === e.target.value; });
-            loadFestival(f);
+            var fest = festivalRegistry.find(function(r) { return r.id === e.target.value; });
+            loadFestival(fest);
         };
     }
 
     document.querySelectorAll('.tab-btn').forEach(function(btn) {
         btn.onclick = function() { switchTab(btn.dataset.target); };
     });
-
-    var sName = document.getElementById('sort-name');
-    if (sName) sName.onclick = function() { handleSort('name'); };
 
     var exBtn = document.getElementById('exclusive-btn');
     if (exBtn) {
@@ -311,12 +323,13 @@ function setupUI() {
 async function initApp() {
     if (typeof festivalRegistry === 'undefined') return;
     setupUI();
+    setupSwipeHandlers();
 
-    const masterRes = await fetch(MASTER_DATA_PATH + '?v=' + Date.now());
+    var masterRes = await fetch(MASTER_DATA_PATH + '?v=' + Date.now());
     if (masterRes.ok) bandMasterData = await masterRes.json();
 
-    const loads = festivalRegistry.map(async function(fest) {
-        const res = await fetch(BASE_PATH + fest.file + '?v=' + Date.now());
+    var loads = festivalRegistry.map(async function(fest) {
+        var res = await fetch(BASE_PATH + fest.file + '?v=' + Date.now());
         if (res.ok) allFestivalsData[fest.id] = await res.json();
     });
 
