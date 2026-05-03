@@ -261,7 +261,7 @@ function setupSwipeHandlers() {
     if (!area) return;
 
     var startX = 0;
-    var views = ['lineup-view', 'festivals-view', 'stats-view', 'settings-view'];
+    var views = ['lineup-view', 'stats-view', 'festivals-view', 'settings-view'];
 
     area.addEventListener('touchstart', function(e) {
         startX = e.changedTouches[0].screenX;
@@ -341,8 +341,10 @@ function setupUI() {
 
 function handleSort(mode) {
     if (currentSortMode === mode) isSortAsc = !isSortAsc;
-    else { currentSortMode = mode;
-        isSortAsc = true; }
+    else {
+        currentSortMode = mode;
+        isSortAsc = true;
+    }
     renderTable();
 }
 
