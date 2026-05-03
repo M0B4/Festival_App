@@ -1,6 +1,6 @@
 /**
- * FESTIVAL GUIDE 2026 - UX OPTIMIZED EDITION
- * Fixes: Swiping restored, Festival-Click stays on page, A-Z Sorting.
+ * FESTIVAL GUIDE 2026 - CLEAN & STABLE EDITION
+ * Fixes: Update-Button, Hide Selector in Overview, Search Removed.
  */
 
 const BASE_PATH = 'festivaldata/';
@@ -22,7 +22,7 @@ var festSortMode = 'name';
 var festSortAsc = true;
 
 /**
- * Farblogik für Badges
+ * Farblogik für Badges (Golden Ratio)
  */
 function getAutoColor(str) {
     var hash = 0;
@@ -51,7 +51,7 @@ function formatGenre(str) {
 }
 
 /**
- * Tab-Steuerung
+ * Tab-Steuerung & Element-Sichtbarkeit
  */
 function switchTab(targetViewId) {
     var targetEl = document.getElementById(targetViewId);
@@ -65,12 +65,14 @@ function switchTab(targetViewId) {
     if (activeBtn) activeBtn.classList.add('active');
     targetEl.classList.add('active');
 
-    var isLineup = (targetViewId === 'lineup-view');
-    document.body.classList.toggle('hide-search', !isLineup);
+    // Sichtbarkeit des Selektors steuern
+    var topNav = document.querySelector('.top-nav');
+    var isFestivalsTab = (targetViewId === 'festivals-view');
+    var isSettingsTab = (targetViewId === 'settings-view');
 
-    var exBtn = document.getElementById('exclusive-btn');
-    if (exBtn) {
-        exBtn.style.display = isLineup ? 'inline-block' : 'none';
+    if (topNav) {
+        // Selektor ausblenden in der Festivalübersicht und den Einstellungen
+        topNav.style.display = (isFestivalsTab || isSettingsTab) ? 'none' : 'flex';
     }
 
     if (targetViewId === 'stats-view') renderGenreStats();
@@ -95,14 +97,11 @@ function loadFestival(fest) {
 }
 
 /**
- * Rendering: Lineup-Tabelle
+ * Rendering: Lineup-Tabelle (Ohne Suche)
  */
 function renderTable() {
     var tBody = document.getElementById('table-body');
     if (!tBody) return;
-
-    var sInp = document.getElementById('search');
-    var term = sInp ? sInp.value.toLowerCase().trim() : "";
     tBody.innerHTML = "";
 
     var arrow = isSortAsc ? " ▲" : " ▼";
@@ -124,9 +123,8 @@ function renderTable() {
             }
         }
         band.currentMatches = matches;
-        var nameMatch = band.name.toLowerCase().indexOf(term) !== -1;
         if (showExclusiveOnly && matches.length > 0) return false;
-        return nameMatch;
+        return true; // Kein Such-Filter mehr
     });
 
     var statsEl = document.getElementById('stats');
@@ -183,7 +181,7 @@ function renderTable() {
 }
 
 /**
- * Rendering: Festival-Übersicht (Flaggen fix & Klick bleibt hier)
+ * Rendering: Festival-Übersicht
  */
 function renderFestivalsView() {
     var fTbody = document.getElementById('festivals-table-body');
@@ -221,7 +219,6 @@ function renderFestivalsView() {
             '<td style="text-align:right; color:var(--acc); font-weight:bold;">' + item.exclusiveCount + '</td>' +
             '<td class="listener-cell">' + formatNumber(item.metric, currentMetric) + '</td>';
 
-        // Klick lädt das Festival nur im Hintergrund, kein Tab-Wechsel
         tr.onclick = function() { loadFestival(item.raw); };
         fTbody.appendChild(tr);
     });
@@ -257,7 +254,7 @@ function renderGenreStats() {
 }
 
 /**
- * Swipe-Logik repariert
+ * Swipe-Logik
  */
 function setupSwipeHandlers() {
     var area = document.querySelector('.content-area');
@@ -287,7 +284,7 @@ function setupSwipeHandlers() {
 }
 
 /**
- * Setup & Init
+ * Setup UI
  */
 function setupUI() {
     var sel = document.getElementById('festival-selector');
@@ -318,6 +315,35 @@ function setupUI() {
             renderTable();
         };
     }
+
+    // AKTUALISIEREN BUTTON FIX
+    var updateBtn = document.getElementById('update-app-btn');
+    if (updateBtn) {
+        updateBtn.onclick = async function() {
+            this.textContent = "Updating...";
+            try {
+                if ('caches' in window) {
+                    const names = await caches.keys();
+                    await Promise.all(names.map(n => caches.delete(n)));
+                }
+                if ('serviceWorker' in navigator) {
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    for (let r of registrations) await r.unregister();
+                }
+                // Cache-Busting durch Zeitstempel
+                window.location.replace(window.location.href.split('?')[0] + '?u=' + Date.now());
+            } catch (e) {
+                window.location.reload(true);
+            }
+        };
+    }
+}
+
+function handleSort(mode) {
+    if (currentSortMode === mode) isSortAsc = !isSortAsc;
+    else { currentSortMode = mode;
+        isSortAsc = true; }
+    renderTable();
 }
 
 async function initApp() {
