@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Belzebong",
+        "origin": "Poland",
+        "genres": [
+            "Stoner Metal"
+        ]
+    },
+    {
+        "name": "Children Of Bodom",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Hypocrisy",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Kanonenfieber",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Black Metal"
+        ]
+    },
+    {
+        "name": "Left To Suffer",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Mgla",
+        "origin": "Poland",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Onslaught",
+        "origin": "United Kingdom",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Prong",
+        "origin": "United States",
+        "genres": [
+            "Groove Metal"
+        ]
+    },
+    {
+        "name": "Sylosis",
+        "origin": "United Kingdom",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "The Stone",
+        "origin": "Serbia",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Tlmntr",
+        "origin": "Slovenia",
+        "genres": [
+            "Crossover Thrash"
+        ]
+    },
+    {
+        "name": "Truckfighters",
+        "origin": "Sweden",
+        "genres": [
+            "Stoner Rock"
+        ]
+    },
+    {
+        "name": "Vulture Industries",
+        "origin": "Norway",
+        "genres": [
+            "Avant-garde/progressive Metal"
+        ]
+    }
+]

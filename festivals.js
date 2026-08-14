@@ -35,6 +35,24 @@ const festivalSeasons = {
             name: "Summer Breeze 2027",
             file: "summer_breeze_2027_raw_bands.json",
             country: "germany"
+        },
+        {
+            id: "tolminator_2027",
+            name: "Tolminator 2027",
+            file: "tolminator_2027_raw_bands.json",
+            country: "slovenia"
+        },
+        {
+            id: "rockharz_open_air_2027",
+            name: "Rockharz Open Air 2027",
+            file: "rockharz_open_air_2027_raw_bands.json",
+            country: "germany"
+        },
+        {
+            id: "leyendas_del_rock_2027",
+            name: "Leyendas Del Rock 2027",
+            file: "leyendas_del_rock_2027_raw_bands.json",
+            country: "spain"
         }
     ],
     "2026": [{
@@ -114,7 +132,13 @@ const festivalSeasons = {
         id: "download_uk_2026",
         name: "Download Festival UK 2026",
         file: "download_uk_2026_raw_bands.json",
-        country: "United Kingdom"
+        country: "united kingdom"
+    },
+    {
+        id: "dynamo_metal_fest_2026",
+        name: "Dynamo Metal Fest 2026",
+        file: "dynamo_metal_fest_2026_raw_bands.json",
+        country: "netherlands"
     }
     ]
 };

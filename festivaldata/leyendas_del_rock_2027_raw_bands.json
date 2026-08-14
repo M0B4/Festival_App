@@ -1,0 +1,184 @@
+[
+    {
+        "name": "Alestorm",
+        "origin": "United Kingdom",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Amaranthe",
+        "origin": "Sweden",
+        "genres": [
+            "Trance Metal"
+        ]
+    },
+    {
+        "name": "Architects",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Atreyu",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Blue Medusa",
+        "origin": "Canada",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Celtian",
+        "origin": "Spain",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Dalriada",
+        "origin": "Hungary",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Dethklok",
+        "origin": "United States",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "DevilDriver",
+        "origin": "United States",
+        "genres": [
+            "Groove Metal"
+        ]
+    },
+    {
+        "name": "Doro",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "False Reality",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Feuerschwanz",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Metal"
+        ]
+    },
+    {
+        "name": "Gutalax",
+        "origin": "Czechia",
+        "genres": [
+            "Goregrind"
+        ]
+    },
+    {
+        "name": "Halestorm",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Left To Suffer",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Make Them Suffer",
+        "origin": "Australia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Mercyful Fate",
+        "origin": "Denmark",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "PeelingFlesh",
+        "origin": "United States",
+        "genres": [
+            "Slam Death Metal"
+        ]
+    },
+    {
+        "name": "Revnoir",
+        "origin": "France",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Roses Of Thieves",
+        "origin": "Hungary",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Saltatio Mortis",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Metal"
+        ]
+    },
+    {
+        "name": "Shadow Of Intent",
+        "origin": "United States",
+        "genres": [
+            "Symphonic Deathcore"
+        ]
+    },
+    {
+        "name": "Therion",
+        "origin": "Sweden",
+        "genres": [
+            "Symphonic Metal"
+        ]
+    },
+    {
+        "name": "Tierra Santa",
+        "origin": "Spain",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Twilight Force",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Wind Rose",
+        "origin": "Italy",
+        "genres": [
+            "Power Metal"
+        ]
+    }
+]

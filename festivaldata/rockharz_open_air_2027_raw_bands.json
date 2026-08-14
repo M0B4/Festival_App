@@ -1,0 +1,205 @@
+[
+    {
+        "name": "Accept",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Alestorm",
+        "origin": "United Kingdom",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "All For Metal",
+        "origin": "Germany",
+        "genres": [
+            "Heavy / Power Metal"
+        ]
+    },
+    {
+        "name": "Arch Enemy",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Bruce Dickinson",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Coppelius",
+        "origin": "Germany",
+        "genres": [
+            "Symphonic Metal"
+        ]
+    },
+    {
+        "name": "Dartagnan",
+        "origin": "Germany",
+        "genres": [
+            "Folk Rock"
+        ]
+    },
+    {
+        "name": "Dust Bolt",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Eisbrecher",
+        "origin": "Germany",
+        "genres": [
+            "Industrial Metal"
+        ]
+    },
+    {
+        "name": "Emil Bulls",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Equilibrium",
+        "origin": "Germany",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Grave Digger",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Gutalax",
+        "origin": "Czechia",
+        "genres": [
+            "Goregrind"
+        ]
+    },
+    {
+        "name": "GWAR",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "H-Blockx",
+        "origin": "Germany",
+        "genres": [
+            "Rap Rock"
+        ]
+    },
+    {
+        "name": "Håndgemeng",
+        "origin": "Norway",
+        "genres": [
+            "Stoner Metal"
+        ]
+    },
+    {
+        "name": "Igel vs. Shark",
+        "origin": "Austria",
+        "genres": [
+            "Rock"
+        ]
+    },
+    {
+        "name": "Katerfahrt",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Rock"
+        ]
+    },
+    {
+        "name": "Korpiklaani",
+        "origin": "Finland",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Lord Of The Lost",
+        "origin": "Germany",
+        "genres": [
+            "Gothic Metal"
+        ]
+    },
+    {
+        "name": "Marduk",
+        "origin": "Sweden",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Metal Church",
+        "origin": "United States",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Nestor",
+        "origin": "Sweden",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "SETYØURSAILS",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "SKÁLD",
+        "origin": "France",
+        "genres": [
+            "Nordic Folk Music"
+        ]
+    },
+    {
+        "name": "Storm Seeker",
+        "origin": "Germany",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Tankard",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "The Sisters Of Mercy",
+        "origin": "United Kingdom",
+        "genres": [
+            "Gothic Rock"
+        ]
+    },
+    {
+        "name": "Turbobier",
+        "origin": "Austria",
+        "genres": [
+            "Pop Punk"
+        ]
+    }
+]

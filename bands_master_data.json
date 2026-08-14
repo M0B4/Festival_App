@@ -8540,5 +8540,300 @@
             "party",
             "germany"
         ]
+    },
+    "all for metal": {
+        "name": "All for Metal",
+        "listeners": 13418,
+        "playcount": 208501,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "motocultor 2025"
+        ]
+    },
+    "amaranthe": {
+        "name": "Amaranthe",
+        "listeners": 358014,
+        "playcount": 25698847,
+        "genres": [
+            "Melodic Death Metal",
+            "Power metal",
+            "modern metal"
+        ]
+    },
+    "belzebong": {
+        "name": "Belzebong",
+        "listeners": 65190,
+        "playcount": 799307,
+        "genres": [
+            "doom metal",
+            "stoner metal",
+            "stoner doom"
+        ]
+    },
+    "bruce dickinson": {
+        "name": "Bruce Dickinson",
+        "listeners": 496355,
+        "playcount": 15629448,
+        "genres": [
+            "heavy metal",
+            "hard rock",
+            "metal"
+        ]
+    },
+    "celtian": {
+        "name": "Celtian",
+        "listeners": 9745,
+        "playcount": 284107,
+        "genres": [
+            "folk metal",
+            "Power metal",
+            "spanish"
+        ]
+    },
+    "coppelius": {
+        "name": "Coppelius",
+        "listeners": 37045,
+        "playcount": 1450422,
+        "genres": [
+            "german",
+            "kammercore",
+            "Gothic"
+        ]
+    },
+    "dalriada": {
+        "name": "Dalriada",
+        "listeners": 47690,
+        "playcount": 1999563,
+        "genres": [
+            "folk metal",
+            "hungarian",
+            "hungarian folk metal"
+        ]
+    },
+    "doro": {
+        "name": "Doro",
+        "listeners": 199880,
+        "playcount": 5539986,
+        "genres": [
+            "heavy metal",
+            "hard rock",
+            "Female fronted metal"
+        ]
+    },
+    "dust bolt": {
+        "name": "Dust Bolt",
+        "listeners": 28099,
+        "playcount": 421653,
+        "genres": [
+            "thrash metal",
+            "german",
+            "metal"
+        ]
+    },
+    "gwar": {
+        "name": "GWAR",
+        "listeners": 247700,
+        "playcount": 8032354,
+        "genres": [
+            "thrash metal",
+            "heavy metal",
+            "metal"
+        ]
+    },
+    "grave digger": {
+        "name": "Grave Digger",
+        "listeners": 260108,
+        "playcount": 9344867,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "speed metal"
+        ]
+    },
+    "hyro the hero": {
+        "name": "Hyro The Hero",
+        "listeners": 54518,
+        "playcount": 411535,
+        "genres": [
+            "Nu Metal",
+            "rap metal",
+            "rapcore"
+        ]
+    },
+    "igel vs. shark": {
+        "name": "Igel vs. Shark",
+        "listeners": 839,
+        "playcount": 5758,
+        "genres": [
+            "Austria",
+            "rock"
+        ]
+    },
+    "korpiklaani": {
+        "name": "Korpiklaani",
+        "listeners": 592290,
+        "playcount": 38827891,
+        "genres": [
+            "folk metal",
+            "viking metal",
+            "finnish"
+        ]
+    },
+    "necrot": {
+        "name": "Necrot",
+        "listeners": 38912,
+        "playcount": 827132,
+        "genres": [
+            "death metal",
+            "old school death metal",
+            "metal"
+        ]
+    },
+    "nestor": {
+        "name": "Nestor",
+        "listeners": 16813,
+        "playcount": 445420,
+        "genres": [
+            "hard rock",
+            "swedish",
+            "AOR"
+        ]
+    },
+    "onslaught": {
+        "name": "Onslaught",
+        "listeners": 131633,
+        "playcount": 2714715,
+        "genres": [
+            "thrash metal",
+            "speed metal",
+            "metal"
+        ]
+    },
+    "primus": {
+        "name": "Primus",
+        "listeners": 1197040,
+        "playcount": 44898935,
+        "genres": [
+            "funk metal",
+            "alternative rock",
+            "alternative"
+        ]
+    },
+    "prong": {
+        "name": "Prong",
+        "listeners": 248550,
+        "playcount": 4098331,
+        "genres": [
+            "thrash metal",
+            "industrial metal",
+            "metal"
+        ]
+    },
+    "revocation": {
+        "name": "Revocation",
+        "listeners": 122152,
+        "playcount": 5492070,
+        "genres": [
+            "Technical Death Metal",
+            "thrash metal",
+            "death metal"
+        ]
+    },
+    "ronker": {
+        "name": "Ronker",
+        "listeners": 6056,
+        "playcount": 89778,
+        "genres": [
+            "post-hardcore",
+            "noise rock",
+            "Belgium"
+        ]
+    },
+    "roses of thieves": {
+        "name": "Roses Of Thieves",
+        "listeners": 3409,
+        "playcount": 26328,
+        "genres": [
+            "Power metal",
+            "alternative metal",
+            "hungary"
+        ]
+    },
+    "the cost": {
+        "name": "The Cost",
+        "listeners": 24324,
+        "playcount": 236808,
+        "genres": [
+            "metal",
+            "rock",
+            "Progressive metal"
+        ]
+    },
+    "the stone": {
+        "name": "The Stone",
+        "listeners": 5789,
+        "playcount": 193806,
+        "genres": [
+            "black metal",
+            "serbian",
+            "serbian black metal"
+        ]
+    },
+    "therion": {
+        "name": "Therion",
+        "listeners": 492710,
+        "playcount": 34749733,
+        "genres": [
+            "symphonic metal",
+            "Gothic Metal",
+            "death metal"
+        ]
+    },
+    "tierra santa": {
+        "name": "Tierra Santa",
+        "listeners": 76113,
+        "playcount": 2256838,
+        "genres": [
+            "heavy metal",
+            "Power metal",
+            "spanish"
+        ]
+    },
+    "tlmntr": {
+        "name": "TLMNTR",
+        "listeners": 38,
+        "playcount": 244,
+        "genres": []
+    },
+    "turbobier": {
+        "name": "Turbobier",
+        "listeners": 6598,
+        "playcount": 144443,
+        "genres": [
+            "punk",
+            "punk rock",
+            "Austria"
+        ]
+    },
+    "twilight force": {
+        "name": "Twilight Force",
+        "listeners": 63321,
+        "playcount": 2365472,
+        "genres": [
+            "Power metal",
+            "symphonic metal",
+            "symphonic power metal"
+        ]
+    },
+    "vulture industries": {
+        "name": "Vulture Industries",
+        "listeners": 50461,
+        "playcount": 1140567,
+        "genres": [
+            "Avant-garde Metal",
+            "Progressive metal",
+            "norwegian"
+        ]
     }
 }
