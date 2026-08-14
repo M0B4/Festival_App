@@ -1,0 +1,261 @@
+[
+    {
+        "name": "Azarath",
+        "origin": "Poland",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Belphegor",
+        "origin": "Austria",
+        "genres": [
+            "Blackened Death Metal"
+        ]
+    },
+    {
+        "name": "Benediction",
+        "origin": "United Kingdom",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Brand Of Sacrifice",
+        "origin": "Canada",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Carcass",
+        "origin": "United Kingdom",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Children Of Bodom",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Defleshed",
+        "origin": "Sweden",
+        "genres": [
+            "Death / Thrash Metal"
+        ]
+    },
+    {
+        "name": "Destruction",
+        "origin": "Germany",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Dethklok",
+        "origin": "United States",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "DevilDriver",
+        "origin": "United States",
+        "genres": [
+            "Groove Metal"
+        ]
+    },
+    {
+        "name": "Dismember",
+        "origin": "Sweden",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Emperor",
+        "origin": "Norway",
+        "genres": [
+            "Symphonic Black Metal"
+        ]
+    },
+    {
+        "name": "Gruesome",
+        "origin": "United States",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Heaven Shall Burn",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Metalcore"
+        ]
+    },
+    {
+        "name": "Hypocrisy",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Igorrr",
+        "origin": "France",
+        "genres": [
+            "Avant-garde Metal"
+        ]
+    },
+    {
+        "name": "Insanity Alert",
+        "origin": "Austria",
+        "genres": [
+            "Crossover Thrash"
+        ]
+    },
+    {
+        "name": "John 5",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "John Bush",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Kanonenfieber",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Black Metal"
+        ]
+    },
+    {
+        "name": "Left To Suffer",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Make Them Suffer",
+        "origin": "Australia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Malevolence",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Mercyful Fate",
+        "origin": "Denmark",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Mgla",
+        "origin": "Poland",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Mucky Pup",
+        "origin": "United States",
+        "genres": [
+            "Crossover Thrash / Punk Rock"
+        ]
+    },
+    {
+        "name": "Norther",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "PeelingFlesh",
+        "origin": "United States",
+        "genres": [
+            "Slam Death Metal"
+        ]
+    },
+    {
+        "name": "Perchta",
+        "origin": "Austria",
+        "genres": [
+            "Atmospheric Black Metal"
+        ]
+    },
+    {
+        "name": "Plebeian Grandstand",
+        "origin": "France",
+        "genres": [
+            "Avant-garde Black Metal / Mathcore / Powerviolence"
+        ]
+    },
+    {
+        "name": "Shadow Of Intent",
+        "origin": "United States",
+        "genres": [
+            "Symphonic Deathcore"
+        ]
+    },
+    {
+        "name": "Suicidal Angels",
+        "origin": "Greece",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Sylosis",
+        "origin": "United Kingdom",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "The Obsessed",
+        "origin": "United States",
+        "genres": [
+            "Doom Metal"
+        ]
+    },
+    {
+        "name": "The Sisters Of Mercy",
+        "origin": "United Kingdom",
+        "genres": [
+            "Gothic Rock"
+        ]
+    },
+    {
+        "name": "Towards The Sinister",
+        "origin": "United Kingdom",
+        "genres": [
+            "Doom Metal"
+        ]
+    },
+    {
+        "name": "Uncle Acid & The Deadbeats",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Psych"
+        ]
+    }
+]

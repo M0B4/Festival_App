@@ -1,4 +1,4 @@
-const CACHE_NAME = 'metal-fest-guide-v1.1';
+const CACHE_NAME = 'metal-fest-guide-v1.2';
 
 // 1. Installation: Dateien in den Cache laden
 self.addEventListener('install', event => {

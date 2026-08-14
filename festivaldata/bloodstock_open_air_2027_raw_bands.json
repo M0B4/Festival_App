@@ -1,0 +1,191 @@
+[
+    {
+        "name": "Acid Bath",
+        "origin": "United States",
+        "genres": [
+            "Sludge Metal"
+        ]
+    },
+    {
+        "name": "Children Of Bodom",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Conan",
+        "origin": "United Kingdom",
+        "genres": [
+            "Doom Metal"
+        ]
+    },
+    {
+        "name": "Corrosion Of Conformity",
+        "origin": "United States",
+        "genres": [
+            "Stoner Metal"
+        ]
+    },
+    {
+        "name": "Decapitated",
+        "origin": "Poland",
+        "genres": [
+            "Technical Death Metal"
+        ]
+    },
+    {
+        "name": "Dethklok",
+        "origin": "United States",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "DevilDriver",
+        "origin": "United States",
+        "genres": [
+            "Groove Metal"
+        ]
+    },
+    {
+        "name": "Dool",
+        "origin": "Netherlands",
+        "genres": [
+            "Psychedelic Rock"
+        ]
+    },
+    {
+        "name": "Electric Callboy",
+        "origin": "Germany",
+        "genres": [
+            "Electronicore"
+        ]
+    },
+    {
+        "name": "Fulci",
+        "origin": "Italy",
+        "genres": [
+            "Brutal Death Metal"
+        ]
+    },
+    {
+        "name": "Gaerea",
+        "origin": "Portugal",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Green Lung",
+        "origin": "United Kingdom",
+        "genres": [
+            "Stoner Metal"
+        ]
+    },
+    {
+        "name": "Gutalax",
+        "origin": "Czechia",
+        "genres": [
+            "Goregrind"
+        ]
+    },
+    {
+        "name": "Hammerfall",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Humanity's Last Breath",
+        "origin": "Sweden",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Hypocrisy",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Imminence",
+        "origin": "Sweden",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Kanonenfieber",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Black Metal"
+        ]
+    },
+    {
+        "name": "Madball",
+        "origin": "United States",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Mercyful Fate",
+        "origin": "Denmark",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Motionless In White",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Pig Destroyer",
+        "origin": "United States",
+        "genres": [
+            "Grindcore"
+        ]
+    },
+    {
+        "name": "Sylosis",
+        "origin": "United Kingdom",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "The Halo Effect",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Tortured Demon",
+        "origin": "United Kingdom",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Wind Rose",
+        "origin": "Italy",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Witch Club Satan",
+        "origin": "Norway",
+        "genres": [
+            "Black Metal"
+        ]
+    }
+]

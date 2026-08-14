@@ -1,0 +1,359 @@
+[
+    {
+        "name": "Abbath",
+        "origin": "Norway",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Avatar",
+        "origin": "Sweden",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Beast In Black",
+        "origin": "Finland",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Belphegor",
+        "origin": "Austria",
+        "genres": [
+            "Blackened Death Metal"
+        ]
+    },
+    {
+        "name": "Blue Medusa",
+        "origin": "Canada",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Carnifex",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Cavalera Conspiracy",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Children Of Bodom",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Creeper",
+        "origin": "United Kingdom",
+        "genres": [
+            "Gothic Rock"
+        ]
+    },
+    {
+        "name": "Crypta",
+        "origin": "Brazil",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Dark Tranquillity",
+        "origin": "Sweden",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Dethklok",
+        "origin": "United States",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Dragonforce",
+        "origin": "United Kingdom",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Edguy",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Electric Callboy",
+        "origin": "Germany",
+        "genres": [
+            "Electronicore"
+        ]
+    },
+    {
+        "name": "Feuerschwanz",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Metal"
+        ]
+    },
+    {
+        "name": "Five Finger Death Punch",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Gaerea",
+        "origin": "Portugal",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Halestorm",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Hammerfall",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Heaven Shall Burn",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Metalcore"
+        ]
+    },
+    {
+        "name": "Heavens Gate",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Power Metal"
+        ]
+    },
+    {
+        "name": "Helloween",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Hiraes",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Ice Dale Und Armagedda",
+        "origin": "Norway",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Imminence",
+        "origin": "Sweden",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Jinjer",
+        "origin": "Ukraine",
+        "genres": [
+            "Progressive Metalcore"
+        ]
+    },
+    {
+        "name": "John 5",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "John Bush",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Kanonenfieber",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Black Metal"
+        ]
+    },
+    {
+        "name": "Knocked Loose",
+        "origin": "United States",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Make Them Suffer",
+        "origin": "Australia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Malevolence",
+        "origin": "United Kingdom",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Metal Church",
+        "origin": "United States",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Mittel Alta",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Rap"
+        ]
+    },
+    {
+        "name": "Napalm Death",
+        "origin": "United Kingdom",
+        "genres": [
+            "Grindcore"
+        ]
+    },
+    {
+        "name": "Norther",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Overkill",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Primordial",
+        "origin": "Ireland",
+        "genres": [
+            "Pagan Black Metal"
+        ]
+    },
+    {
+        "name": "Seven Blood",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Shadow Of Intent",
+        "origin": "United States",
+        "genres": [
+            "Symphonic Deathcore"
+        ]
+    },
+    {
+        "name": "Sylosis",
+        "origin": "United Kingdom",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Tailgunner",
+        "origin": "United Kingdom",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "The Browning",
+        "origin": "United States",
+        "genres": [
+            "Electronicore"
+        ]
+    },
+    {
+        "name": "The Narrator",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "The New Roses",
+        "origin": "Germany",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Towards The Sinister",
+        "origin": "United Kingdom",
+        "genres": [
+            "Doom Metal"
+        ]
+    },
+    {
+        "name": "Tyketto",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "U.D.O.",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Victorius",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Witch Club Satan",
+        "origin": "Norway",
+        "genres": [
+            "Black Metal"
+        ]
+    }
+]

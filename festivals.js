@@ -1,5 +1,42 @@
 const festivalSeasons = {
-    "2027": [],
+    "2027": [
+        {
+            id: "wacken_2027",
+            name: "Wacken Open Air 2027",
+            file: "wacken_2027_raw_bands.json",
+            country: "germany"
+        },
+        {
+            id: "brutal_assault_2027",
+            name: "Brutal Assault 2027",
+            file: "brutal_assault_2027_raw_bands.json",
+            country: "czech republic"
+        },
+        {
+            id: "alcatraz_metal_festival_2027",
+            name: "Alcatraz Metal Festival 2027",
+            file: "alcatraz_metal_festival_2027_raw_bands.json",
+            country: "belgium"
+        },
+        {
+            id: "bloodstock_open_air_2027",
+            name: "Bloodstock Open Air 2027",
+            file: "bloodstock_open_air_2027_raw_bands.json",
+            country: "united kingdom"
+        },
+        {
+            id: "reload_festival_2027",
+            name: "Reload Festival 2027",
+            file: "reload_festival_2027_raw_bands.json",
+            country: "germany"
+        },
+        {
+            id: "summer_breeze_2027",
+            name: "Summer Breeze 2027",
+            file: "summer_breeze_2027_raw_bands.json",
+            country: "germany"
+        }
+    ],
     "2026": [{
         id: "wacken_2026",
         name: "Wacken Open Air 2026",

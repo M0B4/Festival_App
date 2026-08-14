@@ -1,0 +1,441 @@
+[
+    {
+        "name": "Abbie Falls",
+        "origin": "Czechia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Accvsed",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Ahab",
+        "origin": "Germany",
+        "genres": [
+            "Funeral Doom Metal"
+        ]
+    },
+    {
+        "name": "Anaal Nathrakh",
+        "origin": "United Kingdom",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Angelus Apatrida",
+        "origin": "Spain",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Any Given Day",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Asenblut",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Death / Black Metal"
+        ]
+    },
+    {
+        "name": "Atreyu",
+        "origin": "United States",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Blue Medusa",
+        "origin": "Canada",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Burning Witches",
+        "origin": "Switzerland",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Capacopter",
+        "origin": "Germany",
+        "genres": [
+            "Stoner Rock"
+        ]
+    },
+    {
+        "name": "Carnifex",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Children Of Bodom",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Clawfinger",
+        "origin": "Sweden",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Combichrist",
+        "origin": "Norway",
+        "genres": [
+            "Industrial Metal"
+        ]
+    },
+    {
+        "name": "Dark Funeral",
+        "origin": "Sweden",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Defiance",
+        "origin": "Germany",
+        "genres": [
+            "Hardcore Punk"
+        ]
+    },
+    {
+        "name": "Edguy",
+        "origin": "Germany",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Electric Callboy",
+        "origin": "Germany",
+        "genres": [
+            "Electronicore"
+        ]
+    },
+    {
+        "name": "Ellende",
+        "origin": "Austria",
+        "genres": [
+            "Atmospheric Black Metal"
+        ]
+    },
+    {
+        "name": "Eluveitie",
+        "origin": "Switzerland",
+        "genres": [
+            "Celtic Metal"
+        ]
+    },
+    {
+        "name": "Emil Bulls",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "End Of Green",
+        "origin": "Germany",
+        "genres": [
+            "Alternative Metal"
+        ]
+    },
+    {
+        "name": "Equilibrium",
+        "origin": "Germany",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Evil Invaders",
+        "origin": "Belgium",
+        "genres": [
+            "Speed Metal"
+        ]
+    },
+    {
+        "name": "Finntroll",
+        "origin": "Finland",
+        "genres": [
+            "Folk Metal"
+        ]
+    },
+    {
+        "name": "Fleshgod Apocalypse",
+        "origin": "Italy",
+        "genres": [
+            "Symphonic Death Metal"
+        ]
+    },
+    {
+        "name": "Gaerea",
+        "origin": "Portugal",
+        "genres": [
+            "Black Metal"
+        ]
+    },
+    {
+        "name": "Gloryhammer",
+        "origin": "United Kingdom",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Gutalax",
+        "origin": "Czechia",
+        "genres": [
+            "Goregrind"
+        ]
+    },
+    {
+        "name": "H-Blockx",
+        "origin": "Germany",
+        "genres": [
+            "Rap Rock"
+        ]
+    },
+    {
+        "name": "Halestorm",
+        "origin": "United States",
+        "genres": [
+            "Hard Rock"
+        ]
+    },
+    {
+        "name": "Hammerfall",
+        "origin": "Sweden",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Hiraes",
+        "origin": "Germany",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "Insomnium",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    },
+    {
+        "name": "John Bush",
+        "origin": "United States",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Kataklysm",
+        "origin": "Canada",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "Kupfergold",
+        "origin": "Germany",
+        "genres": [
+            "Folk-Rock"
+        ]
+    },
+    {
+        "name": "Lavina",
+        "origin": "Serbia",
+        "genres": [
+            "Progressive Metal"
+        ]
+    },
+    {
+        "name": "Left To Suffer",
+        "origin": "United States",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Legion Of The Damned",
+        "origin": "Netherlands",
+        "genres": [
+            "Thrash Metal"
+        ]
+    },
+    {
+        "name": "Long Distance Calling",
+        "origin": "Germany",
+        "genres": [
+            "Progressive Rock"
+        ]
+    },
+    {
+        "name": "Lord Of The Lost",
+        "origin": "Germany",
+        "genres": [
+            "Gothic Metal"
+        ]
+    },
+    {
+        "name": "Make Them Suffer",
+        "origin": "Australia",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Mittel Alta",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Rap"
+        ]
+    },
+    {
+        "name": "Mono Inc.",
+        "origin": "Germany",
+        "genres": [
+            "Gothic Rock"
+        ]
+    },
+    {
+        "name": "Nasty",
+        "origin": "Belgium",
+        "genres": [
+            "Beatdown Hardcore"
+        ]
+    },
+    {
+        "name": "Necrotted",
+        "origin": "Germany",
+        "genres": [
+            "Death Metal"
+        ]
+    },
+    {
+        "name": "PeelingFlesh",
+        "origin": "United States",
+        "genres": [
+            "Slam Death Metal"
+        ]
+    },
+    {
+        "name": "Primal Fear",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Regarde Les Hommes Tomber",
+        "origin": "France",
+        "genres": [
+            "Atmospheric Black Metal"
+        ]
+    },
+    {
+        "name": "Saltatio Mortis",
+        "origin": "Germany",
+        "genres": [
+            "Medieval Metal"
+        ]
+    },
+    {
+        "name": "Samurai Pizza Cats",
+        "origin": "Germany",
+        "genres": [
+            "Metalcore"
+        ]
+    },
+    {
+        "name": "Shadow Of Intent",
+        "origin": "United States",
+        "genres": [
+            "Symphonic Deathcore"
+        ]
+    },
+    {
+        "name": "Spitting Glass",
+        "origin": "United Kingdom",
+        "genres": [
+            "Deathcore"
+        ]
+    },
+    {
+        "name": "Summer Breeze Legends & Orchestra",
+        "origin": "Germany",
+        "genres": []
+    },
+    {
+        "name": "Sunborn",
+        "origin": "France",
+        "genres": [
+            "Alternative Rock"
+        ]
+    },
+    {
+        "name": "Swiss + Die Andern",
+        "origin": "Germany",
+        "genres": [
+            "Rap Rock"
+        ]
+    },
+    {
+        "name": "The Browning",
+        "origin": "United States",
+        "genres": [
+            "Electronicore"
+        ]
+    },
+    {
+        "name": "The Night Eternal",
+        "origin": "Germany",
+        "genres": [
+            "Heavy Metal"
+        ]
+    },
+    {
+        "name": "Warkings",
+        "origin": "Europe",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Wind Rose",
+        "origin": "Italy",
+        "genres": [
+            "Power Metal"
+        ]
+    },
+    {
+        "name": "Wolfheart",
+        "origin": "Finland",
+        "genres": [
+            "Melodic Death Metal"
+        ]
+    }
+]
