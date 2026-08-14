@@ -1,4 +1,6 @@
-const festivalRegistry = [{
+const festivalSeasons = {
+    "2027": [],
+    "2026": [{
         id: "wacken_2026",
         name: "Wacken Open Air 2026",
         file: "wacken_2026_raw_bands.json",
@@ -77,4 +79,10 @@ const festivalRegistry = [{
         file: "download_uk_2026_raw_bands.json",
         country: "United Kingdom"
     }
-];
+    ]
+};
+
+const DEFAULT_SEASON = "2027";
+const requestedSeason = new URLSearchParams(window.location.search).get("year");
+const activeSeason = Object.prototype.hasOwnProperty.call(festivalSeasons, requestedSeason) ? requestedSeason : DEFAULT_SEASON;
+const festivalRegistry = festivalSeasons[activeSeason];

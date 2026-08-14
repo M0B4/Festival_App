@@ -535,3 +535,51 @@ tr.is-fav {
 .hide-search #search-container {
     display: none !important;
 }
+
+.season-nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 auto 6px;
+}
+
+.season-nav a {
+    border: 1px solid var(--brd);
+    border-radius: 999px;
+    color: var(--txt);
+    font-size: .78rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    text-decoration: none;
+}
+
+.season-nav a.active {
+    background: var(--acc);
+    border-color: var(--acc);
+    color: #fff;
+}
+
+.season-status {
+    color: #888;
+    font-size: .68rem;
+    letter-spacing: .08em;
+    margin-bottom: 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.empty-season {
+    align-items: center;
+    color: var(--txt);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    min-height: 45vh;
+    padding: 32px;
+    text-align: center;
+}
+
+.empty-season span { color: #999; }
+.empty-season a { color: var(--acc); font-weight: 700; }
+.empty-season[hidden] { display: none; }

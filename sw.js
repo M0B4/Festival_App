@@ -1,4 +1,4 @@
-const CACHE_NAME = 'metal-fest-guide-v' + Date.now(); // Zeitstempel macht den Cache-Namen immer einzigartig
+const CACHE_NAME = 'metal-fest-guide-v1.1';
 
 // 1. Installation: Dateien in den Cache laden
 self.addEventListener('install', event => {

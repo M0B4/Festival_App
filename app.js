@@ -1,5 +1,5 @@
 /**
- * FESTIVAL GUIDE 2026 - ULTIMATE STABLE EDITION
+ * FESTIVAL GUIDE - gemeinsame App für aktuelle Saison und Archiv
  * Swipe-Reihenfolge: Lineup -> Stats -> Festivals -> Settings
  */
 
@@ -296,6 +296,15 @@ function setupSwipeHandlers() {
  * Setup UI
  */
 function setupUI() {
+    document.title = 'FestGuide ' + activeSeason;
+    document.querySelectorAll('[data-season]').forEach(function(link) {
+        link.classList.toggle('active', link.dataset.season === activeSeason);
+    });
+    var seasonStatus = document.getElementById('season-status');
+    if (seasonStatus) seasonStatus.textContent = activeSeason === DEFAULT_SEASON ? 'Aktuelle Saison' : 'Archiv · Festivalsaison ' + activeSeason;
+    var buildSeason = document.getElementById('build-season');
+    if (buildSeason) buildSeason.textContent = activeSeason;
+
     var sel = document.getElementById('festival-selector');
     if (sel && typeof festivalRegistry !== 'undefined') {
         festivalRegistry.sort(function(a, b) { return a.name.localeCompare(b.name); });
@@ -363,7 +372,9 @@ function setupUI() {
                         await registrations[j].unregister();
                     }
                 }
-                window.location.replace(window.location.href.split('?')[0] + '?u=' + Date.now());
+                var refreshUrl = new URL(window.location.href);
+                refreshUrl.searchParams.set('u', Date.now());
+                window.location.replace(refreshUrl.toString());
             } catch (e) {
                 window.location.reload(true);
             }
@@ -385,6 +396,13 @@ async function initApp() {
     setupUI();
     setupSwipeHandlers();
 
+    var emptySeason = document.getElementById('empty-season');
+    if (emptySeason) emptySeason.hidden = festivalRegistry.length !== 0;
+    var scrollBox = document.querySelector('#lineup-view .scroll-box');
+    if (scrollBox && festivalRegistry.length === 0) scrollBox.hidden = true;
+    var topNav = document.querySelector('.top-nav');
+    if (topNav && festivalRegistry.length === 0) topNav.style.display = 'none';
+
     var masterRes = await fetch(MASTER_DATA_PATH + '?v=' + Date.now());
     if (masterRes.ok) bandMasterData = await masterRes.json();
 
@@ -395,6 +413,10 @@ async function initApp() {
 
     await Promise.all(loads);
     if (festivalRegistry.length > 0) loadFestival(festivalRegistry[0]);
+    else {
+        var statsEl = document.getElementById('stats');
+        if (statsEl) statsEl.textContent = 'Noch keine Festivals eingetragen';
+    }
 }
 
 initApp();
